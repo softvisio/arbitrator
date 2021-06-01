@@ -1,1 +1,1 @@
-[**API documentation**](./api/)
+[**API documentation**](api/)
