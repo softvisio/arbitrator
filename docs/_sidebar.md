@@ -1,4 +1,4 @@
--   [Introduction](introduction)
+-   [API](api/)
 -   [Quick Start](quick-start)
 -   [Themes](themes)
 -   [Customization](customization)
