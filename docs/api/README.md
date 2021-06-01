@@ -2,8 +2,8 @@
 
 -   API documentation
     -   v1
-        -   [**/v1/admin/api-call-log** - App API call log.](./v1/admin/api-call-log.md)
-        -   [**/v1/admin/settings** - App settings.](./v1/admin/settings.md)
+        -   [**/v1/admin/api-call-log** - App API call log.](v1/admin/api-call-log.md)
+        -   [**/v1/admin/settings** - App settings.](v1/admin/settings.md)
         -   [**/v1/admin/users** - App users management.](./v1/admin/users.md)
         -   [**/v1/api-tokens** - User API access tokens management.](./v1/api-tokens.md)
         -   [**/v1/profile** - Profile.](./v1/profile.md)
