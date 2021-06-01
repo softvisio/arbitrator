@@ -24,8 +24,8 @@ App users management.
 
 Create user.
 
-```
-const res = await api.call( "/v1/admin/users/create", fields );
+```js
+const res = await api.call("/v1/admin/users/create", fields);
 ```
 
 #### Permissions
@@ -36,7 +36,7 @@ const res = await api.call( "/v1/admin/users/create", fields );
 
 -   **fields** `[required]`
 
-    ```
+    ```yaml
     type: object
     properties:
         username:
@@ -63,8 +63,8 @@ const res = await api.call( "/v1/admin/users/create", fields );
 
 Remove user.
 
-```
-const res = await api.call( "/v1/admin/users/delete", userId );
+```js
+const res = await api.call("/v1/admin/users/delete", userId);
 ```
 
 #### Permissions
@@ -75,7 +75,7 @@ const res = await api.call( "/v1/admin/users/delete", userId );
 
 -   **userId** `[required]`
 
-    ```
+    ```yaml
     type: string
     ```
 
@@ -85,8 +85,8 @@ const res = await api.call( "/v1/admin/users/delete", userId );
 
 Get user permissions.
 
-```
-const res = await api.call( "/v1/admin/users/get-permissions", userId );
+```js
+const res = await api.call("/v1/admin/users/get-permissions", userId);
 ```
 
 #### Permissions
@@ -97,7 +97,7 @@ const res = await api.call( "/v1/admin/users/get-permissions", userId );
 
 -   **userId** `[required]`
 
-    ```
+    ```yaml
     type: string
     ```
 
@@ -107,8 +107,8 @@ const res = await api.call( "/v1/admin/users/get-permissions", userId );
 
 Read users.
 
-```
-const res = await api.call( "/v1/admin/users/read", [options] );
+```js
+const res = await api.call("/v1/admin/users/read", [options]);
 ```
 
 #### Permissions
@@ -119,7 +119,7 @@ const res = await api.call( "/v1/admin/users/read", [options] );
 
 -   **options** `[not required]`
 
-    ```
+    ```yaml
     apiRead:
         id:
             type: string
@@ -144,8 +144,8 @@ const res = await api.call( "/v1/admin/users/read", [options] );
 
 Set user enabled.
 
-```
-const res = await api.call( "/v1/admin/users/set-enabled", userId, enabled );
+```js
+const res = await api.call("/v1/admin/users/set-enabled", userId, enabled);
 ```
 
 #### Permissions
@@ -156,13 +156,13 @@ const res = await api.call( "/v1/admin/users/set-enabled", userId, enabled );
 
 -   **userId** `[required]` - User id or name.
 
-    ```
+    ```yaml
     type: string
     ```
 
 -   **enabled** `[required]`
 
-    ```
+    ```yaml
     type: boolean
     ```
 
@@ -172,8 +172,8 @@ const res = await api.call( "/v1/admin/users/set-enabled", userId, enabled );
 
 Set user password.
 
-```
-const res = await api.call( "/v1/admin/users/set-password", userId, [pasword] );
+```js
+const res = await api.call("/v1/admin/users/set-password", userId, [pasword]);
 ```
 
 #### Permissions
@@ -184,13 +184,13 @@ const res = await api.call( "/v1/admin/users/set-password", userId, [pasword] );
 
 -   **userId** `[required]` - User id or name.
 
-    ```
+    ```yaml
     type: string
     ```
 
 -   **pasword** `[not required]`
 
-    ```
+    ```yaml
     type: string
     ```
 
@@ -200,8 +200,8 @@ const res = await api.call( "/v1/admin/users/set-password", userId, [pasword] );
 
 Set user permissions.
 
-```
-const res = await api.call( "/v1/admin/users/set-permissions", userId, permissions );
+```js
+const res = await api.call("/v1/admin/users/set-permissions", userId, permissions);
 ```
 
 #### Permissions
@@ -212,13 +212,13 @@ const res = await api.call( "/v1/admin/users/set-permissions", userId, permissio
 
 -   **userId** `[required]`
 
-    ```
+    ```yaml
     type: string
     ```
 
 -   **permissions** `[required]`
 
-    ```
+    ```yaml
     type: object
     additionalProperties:
         type: boolean
@@ -230,8 +230,8 @@ const res = await api.call( "/v1/admin/users/set-permissions", userId, permissio
 
 Change user name.
 
-```
-const res = await api.call( "/v1/admin/users/set-username", user_id, new_username, [new_password] );
+```js
+const res = await api.call("/v1/admin/users/set-username", user_id, new_username, [new_password]);
 ```
 
 #### Permissions
@@ -242,19 +242,19 @@ const res = await api.call( "/v1/admin/users/set-username", user_id, new_usernam
 
 -   **user_id** `[required]`
 
-    ```
+    ```yaml
     type: string
     ```
 
 -   **new_username** `[required]`
 
-    ```
+    ```yaml
     type: string
     ```
 
 -   **new_password** `[not required]`
 
-    ```
+    ```yaml
     type: string
     ```
 
@@ -264,8 +264,8 @@ const res = await api.call( "/v1/admin/users/set-username", user_id, new_usernam
 
 Suggest user name.
 
-```
-const res = await api.call( "/v1/admin/users/suggest", [options] );
+```js
+const res = await api.call("/v1/admin/users/suggest", [options]);
 ```
 
 #### Permissions
@@ -276,7 +276,7 @@ const res = await api.call( "/v1/admin/users/suggest", [options] );
 
 -   **options** `[not required]`
 
-    ```
+    ```yaml
     type: object
     properties:
         where:
@@ -284,7 +284,7 @@ const res = await api.call( "/v1/admin/users/suggest", [options] );
             properties:
                 name:
                     type: array
-                    items: [{operator: {type: string, enum: [like]}}, {name: {type: string}}]
+                    items: [{ operator: { type: string, enum: [like] } }, { name: { type: string } }]
     ```
 
 <a id="/v1/admin/users/update-permissions"></a>
@@ -293,8 +293,8 @@ const res = await api.call( "/v1/admin/users/suggest", [options] );
 
 Set user permissions.
 
-```
-const res = await api.call( "/v1/admin/users/update-permissions", userId, permissions );
+```js
+const res = await api.call("/v1/admin/users/update-permissions", userId, permissions);
 ```
 
 #### Permissions
@@ -305,13 +305,13 @@ const res = await api.call( "/v1/admin/users/update-permissions", userId, permis
 
 -   **userId** `[required]`
 
-    ```
+    ```yaml
     type: string
     ```
 
 -   **permissions** `[required]`
 
-    ```
+    ```yaml
     type: object
     additionalProperties:
         type: boolean

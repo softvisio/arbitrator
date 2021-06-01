@@ -16,8 +16,8 @@ Test.
 
 Test method.
 
-```
-const res = await api.call( "/v1/test/test", [args] );
+```js
+const res = await api.call("/v1/test/test", [args]);
 ```
 
 #### Permissions
@@ -28,7 +28,7 @@ const res = await api.call( "/v1/test/test", [args] );
 
 -   **args** `[not required]`
 
-    ```
+    ```yaml
     type: string
     ```
 
@@ -38,8 +38,8 @@ const res = await api.call( "/v1/test/test", [args] );
 
 Test method.
 
-```
-const res = await api.call( "/v1/test/upload", [request], [data] );
+```js
+const res = await api.call("/v1/test/upload", [request], [data]);
 ```
 
 #### Permissions
@@ -50,12 +50,12 @@ const res = await api.call( "/v1/test/upload", [request], [data] );
 
 -   **request** `[not required]`
 
-    ```
+    ```yaml
     type: object
     ```
 
 -   **data** `[not required]`
 
-    ```
+    ```yaml
     type: object
     ```

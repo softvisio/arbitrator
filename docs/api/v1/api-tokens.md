@@ -21,8 +21,8 @@ User API access tokens management.
 
 Generate new API token.
 
-```
-const res = await api.call( "/v1/api-tokens/create", name );
+```js
+const res = await api.call("/v1/api-tokens/create", name);
 ```
 
 #### Permissions
@@ -33,7 +33,7 @@ const res = await api.call( "/v1/api-tokens/create", name );
 
 -   **name** `[required]`
 
-    ```
+    ```yaml
     type: string
     ```
 
@@ -43,8 +43,8 @@ const res = await api.call( "/v1/api-tokens/create", name );
 
 Remove API token.
 
-```
-const res = await api.call( "/v1/api-tokens/delete", tokenId );
+```js
+const res = await api.call("/v1/api-tokens/delete", tokenId);
 ```
 
 #### Permissions
@@ -55,7 +55,7 @@ const res = await api.call( "/v1/api-tokens/delete", tokenId );
 
 -   **tokenId** `[required]`
 
-    ```
+    ```yaml
     type: string
     ```
 
@@ -65,8 +65,8 @@ const res = await api.call( "/v1/api-tokens/delete", tokenId );
 
 Get user permissions.
 
-```
-const res = await api.call( "/v1/api-tokens/get-permissions", tokenId );
+```js
+const res = await api.call("/v1/api-tokens/get-permissions", tokenId);
 ```
 
 #### Permissions
@@ -77,7 +77,7 @@ const res = await api.call( "/v1/api-tokens/get-permissions", tokenId );
 
 -   **tokenId** `[required]`
 
-    ```
+    ```yaml
     type: string
     ```
 
@@ -87,8 +87,8 @@ const res = await api.call( "/v1/api-tokens/get-permissions", tokenId );
 
 Read api tokens.
 
-```
-const res = await api.call( "/v1/api-tokens/read", [options] );
+```js
+const res = await api.call("/v1/api-tokens/read", [options]);
 ```
 
 #### Permissions
@@ -99,7 +99,7 @@ const res = await api.call( "/v1/api-tokens/read", [options] );
 
 -   **options** `[not required]`
 
-    ```
+    ```yaml
     type: object
     ```
 
@@ -109,8 +109,8 @@ const res = await api.call( "/v1/api-tokens/read", [options] );
 
 Set API token enabled.
 
-```
-const res = await api.call( "/v1/api-tokens/set-enabled", tokenId, enabled );
+```js
+const res = await api.call("/v1/api-tokens/set-enabled", tokenId, enabled);
 ```
 
 #### Permissions
@@ -121,13 +121,13 @@ const res = await api.call( "/v1/api-tokens/set-enabled", tokenId, enabled );
 
 -   **tokenId** `[required]`
 
-    ```
+    ```yaml
     type: string
     ```
 
 -   **enabled** `[required]`
 
-    ```
+    ```yaml
     type: boolean
     ```
 
@@ -137,8 +137,8 @@ const res = await api.call( "/v1/api-tokens/set-enabled", tokenId, enabled );
 
 Set user permissions.
 
-```
-const res = await api.call( "/v1/api-tokens/set-permissions", tokenId, permissions );
+```js
+const res = await api.call("/v1/api-tokens/set-permissions", tokenId, permissions);
 ```
 
 #### Permissions
@@ -149,13 +149,13 @@ const res = await api.call( "/v1/api-tokens/set-permissions", tokenId, permissio
 
 -   **tokenId** `[required]`
 
-    ```
+    ```yaml
     type: string
     ```
 
 -   **permissions** `[required]`
 
-    ```
+    ```yaml
     type: object
     additionalProperties:
         type: boolean
@@ -167,8 +167,8 @@ const res = await api.call( "/v1/api-tokens/set-permissions", tokenId, permissio
 
 Set user permissions.
 
-```
-const res = await api.call( "/v1/api-tokens/update-permissions", tokenId, permissions );
+```js
+const res = await api.call("/v1/api-tokens/update-permissions", tokenId, permissions);
 ```
 
 #### Permissions
@@ -179,13 +179,13 @@ const res = await api.call( "/v1/api-tokens/update-permissions", tokenId, permis
 
 -   **tokenId** `[required]`
 
-    ```
+    ```yaml
     type: string
     ```
 
 -   **permissions** `[required]`
 
-    ```
+    ```yaml
     type: object
     additionalProperties:
         type: boolean

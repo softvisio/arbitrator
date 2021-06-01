@@ -17,8 +17,8 @@ App API call log.
 
 Read statistics for the given API method for the last 30 days.
 
-```
-const res = await api.call( "/v1/admin/api-call-log/read-history-stat", method_id );
+```js
+const res = await api.call("/v1/admin/api-call-log/read-history-stat", method_id);
 ```
 
 Statistics updated every 1 minute. Data resolution is 10 minutes.
@@ -31,7 +31,7 @@ Statistics updated every 1 minute. Data resolution is 10 minutes.
 
 -   **method_id** `[required]`
 
-    ```
+    ```yaml
     type: string
     ```
 
@@ -41,8 +41,8 @@ Statistics updated every 1 minute. Data resolution is 10 minutes.
 
 Read statistics for the last 60 minutes.
 
-```
-const res = await api.call( "/v1/admin/api-call-log/read-latest-stat", [method_id] );
+```js
+const res = await api.call("/v1/admin/api-call-log/read-latest-stat", [method_id]);
 ```
 
 Statistics updated every 10 seconds. Data resolution is 1 minute.
@@ -55,7 +55,7 @@ Statistics updated every 10 seconds. Data resolution is 1 minute.
 
 -   **method_id** `[not required]`
 
-    ```
+    ```yaml
     type: string
     ```
 
@@ -65,8 +65,8 @@ Statistics updated every 10 seconds. Data resolution is 1 minute.
 
 Read users.
 
-```
-const res = await api.call( "/v1/admin/api-call-log/read-log", [options] );
+```js
+const res = await api.call("/v1/admin/api-call-log/read-log", [options]);
 ```
 
 #### Permissions
@@ -77,7 +77,7 @@ const res = await api.call( "/v1/admin/api-call-log/read-log", [options] );
 
 -   **options** `[not required]`
 
-    ```
+    ```yaml
     apiRead:
         method_id:
             type: string

@@ -17,8 +17,8 @@ App settings.
 
 Read application settings.
 
-```
-const res = await api.call( "/v1/admin/settings/read" );
+```js
+const res = await api.call("/v1/admin/settings/read");
 ```
 
 #### Permissions
@@ -35,8 +35,8 @@ Method require no parameters.
 
 Test SMTP server settings.
 
-```
-const res = await api.call( "/v1/admin/settings/test-smtp", settings );
+```js
+const res = await api.call("/v1/admin/settings/test-smtp", settings);
 ```
 
 #### Permissions
@@ -47,7 +47,7 @@ const res = await api.call( "/v1/admin/settings/test-smtp", settings );
 
 -   **settings** `[required]`
 
-    ```
+    ```yaml
     type: object
     properties:
         smtp_hostname:
@@ -70,8 +70,8 @@ const res = await api.call( "/v1/admin/settings/test-smtp", settings );
 
 Update application settings.
 
-```
-const res = await api.call( "/v1/admin/settings/update", settings );
+```js
+const res = await api.call("/v1/admin/settings/update", settings);
 ```
 
 #### Permissions
@@ -82,6 +82,6 @@ const res = await api.call( "/v1/admin/settings/update", settings );
 
 -   **settings** `[required]` - application settings object
 
-    ```
+    ```yaml
     type: object
     ```
