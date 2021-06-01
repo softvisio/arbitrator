@@ -3,22 +3,22 @@
 App users management.
 
 -   [Methods](#methods)
-    -   [**create** - Create user.](#/v1/admin/users/create)
-    -   [**delete** - Remove user.](#/v1/admin/users/delete)
-    -   [**get-permissions** - Get user permissions.](#/v1/admin/users/get-permissions)
-    -   [**read** - Read users.](#/v1/admin/users/read)
-    -   [**set-enabled** - Set user enabled.](#/v1/admin/users/set-enabled)
-    -   [**set-password** - Set user password.](#/v1/admin/users/set-password)
-    -   [**set-permissions** - Set user permissions.](#/v1/admin/users/set-permissions)
-    -   [**set-username** - Change user name.](#/v1/admin/users/set-username)
-    -   [**suggest** - Suggest user name.](#/v1/admin/users/suggest)
-    -   [**update-permissions** - Set user permissions.](#/v1/admin/users/update-permissions)
+    -   [**create** - Create user.](#create)
+    -   [**delete** - Remove user.](#delete)
+    -   [**get-permissions** - Get user permissions.](#get-permissions)
+    -   [**read** - Read users.](#read)
+    -   [**set-enabled** - Set user enabled.](#set-enabled)
+    -   [**set-password** - Set user password.](#set-password)
+    -   [**set-permissions** - Set user permissions.](#set-permissions)
+    -   [**set-username** - Change user name.](#set-username)
+    -   [**suggest** - Suggest user name.](#suggest)
+    -   [**update-permissions** - Set user permissions.](#update-permissions)
 
 <a id="methods"></a>
 
 # Methods
 
-<a id="/v1/admin/users/create"></a>
+<a id="create"></a>
 
 ## create
 
@@ -57,7 +57,7 @@ const res = await api.call("/v1/admin/users/create", fields);
         - username
     ```
 
-<a id="/v1/admin/users/delete"></a>
+<a id="delete"></a>
 
 ## delete
 
@@ -79,7 +79,7 @@ const res = await api.call("/v1/admin/users/delete", userId);
     type: string
     ```
 
-<a id="/v1/admin/users/get-permissions"></a>
+<a id="get-permissions"></a>
 
 ## get-permissions
 
@@ -101,7 +101,7 @@ const res = await api.call("/v1/admin/users/get-permissions", userId);
     type: string
     ```
 
-<a id="/v1/admin/users/read"></a>
+<a id="read"></a>
 
 ## read
 
@@ -138,7 +138,7 @@ const res = await api.call("/v1/admin/users/read", [options]);
             sortable: true
     ```
 
-<a id="/v1/admin/users/set-enabled"></a>
+<a id="set-enabled"></a>
 
 ## set-enabled
 
@@ -166,7 +166,7 @@ const res = await api.call("/v1/admin/users/set-enabled", userId, enabled);
     type: boolean
     ```
 
-<a id="/v1/admin/users/set-password"></a>
+<a id="set-password"></a>
 
 ## set-password
 
@@ -194,7 +194,7 @@ const res = await api.call("/v1/admin/users/set-password", userId, [pasword]);
     type: string
     ```
 
-<a id="/v1/admin/users/set-permissions"></a>
+<a id="set-permissions"></a>
 
 ## set-permissions
 
@@ -224,7 +224,7 @@ const res = await api.call("/v1/admin/users/set-permissions", userId, permission
         type: boolean
     ```
 
-<a id="/v1/admin/users/set-username"></a>
+<a id="set-username"></a>
 
 ## set-username
 
@@ -258,7 +258,7 @@ const res = await api.call("/v1/admin/users/set-username", user_id, new_username
     type: string
     ```
 
-<a id="/v1/admin/users/suggest"></a>
+<a id="suggest"></a>
 
 ## suggest
 
@@ -287,7 +287,7 @@ const res = await api.call("/v1/admin/users/suggest", [options]);
                     items: [{ operator: { type: string, enum: [like] } }, { name: { type: string } }]
     ```
 
-<a id="/v1/admin/users/update-permissions"></a>
+<a id="update-permissions"></a>
 
 ## update-permissions
 

@@ -3,19 +3,19 @@
 User API access tokens management.
 
 -   [Methods](#methods)
-    -   [**create** - Generate new API token.](#/v1/api-tokens/create)
-    -   [**delete** - Remove API token.](#/v1/api-tokens/delete)
-    -   [**get-permissions** - Get user permissions.](#/v1/api-tokens/get-permissions)
-    -   [**read** - Read api tokens.](#/v1/api-tokens/read)
-    -   [**set-enabled** - Set API token enabled.](#/v1/api-tokens/set-enabled)
-    -   [**set-permissions** - Set user permissions.](#/v1/api-tokens/set-permissions)
-    -   [**update-permissions** - Set user permissions.](#/v1/api-tokens/update-permissions)
+    -   [**create** - Generate new API token.](#create)
+    -   [**delete** - Remove API token.](#delete)
+    -   [**get-permissions** - Get user permissions.](#get-permissions)
+    -   [**read** - Read api tokens.](#read)
+    -   [**set-enabled** - Set API token enabled.](#set-enabled)
+    -   [**set-permissions** - Set user permissions.](#set-permissions)
+    -   [**update-permissions** - Set user permissions.](#update-permissions)
 
 <a id="methods"></a>
 
 # Methods
 
-<a id="/v1/api-tokens/create"></a>
+<a id="create"></a>
 
 ## create
 
@@ -37,7 +37,7 @@ const res = await api.call("/v1/api-tokens/create", name);
     type: string
     ```
 
-<a id="/v1/api-tokens/delete"></a>
+<a id="delete"></a>
 
 ## delete
 
@@ -59,7 +59,7 @@ const res = await api.call("/v1/api-tokens/delete", tokenId);
     type: string
     ```
 
-<a id="/v1/api-tokens/get-permissions"></a>
+<a id="get-permissions"></a>
 
 ## get-permissions
 
@@ -81,7 +81,7 @@ const res = await api.call("/v1/api-tokens/get-permissions", tokenId);
     type: string
     ```
 
-<a id="/v1/api-tokens/read"></a>
+<a id="read"></a>
 
 ## read
 
@@ -103,7 +103,7 @@ const res = await api.call("/v1/api-tokens/read", [options]);
     type: object
     ```
 
-<a id="/v1/api-tokens/set-enabled"></a>
+<a id="set-enabled"></a>
 
 ## set-enabled
 
@@ -131,7 +131,7 @@ const res = await api.call("/v1/api-tokens/set-enabled", tokenId, enabled);
     type: boolean
     ```
 
-<a id="/v1/api-tokens/set-permissions"></a>
+<a id="set-permissions"></a>
 
 ## set-permissions
 
@@ -161,7 +161,7 @@ const res = await api.call("/v1/api-tokens/set-permissions", tokenId, permission
         type: boolean
     ```
 
-<a id="/v1/api-tokens/update-permissions"></a>
+<a id="update-permissions"></a>
 
 ## update-permissions
 

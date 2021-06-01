@@ -5,17 +5,17 @@ Session.
 -   [Methods](#methods)
     -   [**confirm-email-by-token** - Confirm user email using email confirmation token.](#confirm-email-by-token)
     -   [**send-confirmation-email** - Send confirmation email.](#send-confirmation-email)
-    -   [**send-password-reset-email** - Send password reset email.](#/v1/session/send-password-reset-email)
-    -   [**set-password-by-token** - Set user password using password recovery token.](#/v1/session/set-password-by-token)
-    -   [**signin** - Signin user.](#/v1/session/signin)
-    -   [**signout** - Signout user, remove user session.](#/v1/session/signout)
-    -   [**signup** - Signup user.](#/v1/session/signup)
+    -   [**send-password-reset-email** - Send password reset email.](#send-password-reset-email)
+    -   [**set-password-by-token** - Set user password using password recovery token.](#set-password-by-token)
+    -   [**signin** - Signin user.](#signin)
+    -   [**signout** - Signout user, remove user session.](#signout)
+    -   [**signup** - Signup user.](#signup)
 
 <a id="methods"></a>
 
 # Methods
 
-<a id="/v1/session/confirm-email-by-token"></a>
+<a id="confirm-email-by-token"></a>
 
 ## confirm-email-by-token
 
@@ -37,7 +37,7 @@ const res = await api.call("/v1/session/confirm-email-by-token", token);
     type: string
     ```
 
-<a id="/v1/session/send-confirmation-email"></a>
+<a id="send-confirmation-email"></a>
 
 ## send-confirmation-email
 
@@ -59,7 +59,7 @@ const res = await api.call("/v1/session/send-confirmation-email", user_id);
     type: string
     ```
 
-<a id="/v1/session/send-password-reset-email"></a>
+<a id="send-password-reset-email"></a>
 
 ## send-password-reset-email
 
@@ -81,7 +81,7 @@ const res = await api.call("/v1/session/send-password-reset-email", user_id);
     type: string
     ```
 
-<a id="/v1/session/set-password-by-token"></a>
+<a id="set-password-by-token"></a>
 
 ## set-password-by-token
 
@@ -109,7 +109,7 @@ const res = await api.call("/v1/session/set-password-by-token", token, password)
     type: string
     ```
 
-<a id="/v1/session/signin"></a>
+<a id="signin"></a>
 
 ## signin
 
@@ -162,7 +162,7 @@ If `credentials` parameter is specified - will try to sign in user using usernam
               type: string
     ```
 
-<a id="/v1/session/signout"></a>
+<a id="signout"></a>
 
 ## signout
 
@@ -180,7 +180,7 @@ const res = await api.call("/v1/session/signout");
 
 Method require no parameters.
 
-<a id="/v1/session/signup"></a>
+<a id="signup"></a>
 
 ## signup
 

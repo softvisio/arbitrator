@@ -3,15 +3,15 @@
 Profile.
 
 -   [Methods](#methods)
-    -   [**read** - Read authenticated used profile.](#/v1/profile/read)
-    -   [**set-email** - Set user email.](#/v1/profile/set-email)
-    -   [**set-telegram-username** - Set user telegram name.](#/v1/profile/set-telegram-username)
+    -   [**read** - Read authenticated used profile.](#read)
+    -   [**set-email** - Set user email.](#set-email)
+    -   [**set-telegram-username** - Set user telegram name.](#set-telegram-username)
 
 <a id="methods"></a>
 
 # Methods
 
-<a id="/v1/profile/read"></a>
+<a id="read"></a>
 
 ## read
 
@@ -29,7 +29,7 @@ const res = await api.call("/v1/profile/read");
 
 Method require no parameters.
 
-<a id="/v1/profile/set-email"></a>
+<a id="set-email"></a>
 
 ## set-email
 
@@ -51,7 +51,7 @@ const res = await api.call("/v1/profile/set-email", [email]);
     type: string
     ```
 
-<a id="/v1/profile/set-telegram-username"></a>
+<a id="set-telegram-username"></a>
 
 ## set-telegram-username
 

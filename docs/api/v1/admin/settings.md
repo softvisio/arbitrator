@@ -3,15 +3,15 @@
 App settings.
 
 -   [Methods](#methods)
-    -   [**read** - Read application settings.](#/v1/admin/settings/read)
-    -   [**test-smtp** - Test SMTP server settings.](#/v1/admin/settings/test-smtp)
-    -   [**update** - Update application settings.](#/v1/admin/settings/update)
+    -   [**read** - Read application settings.](#read)
+    -   [**test-smtp** - Test SMTP server settings.](#test-smtp)
+    -   [**update** - Update application settings.](#update)
 
 <a id="methods"></a>
 
 # Methods
 
-<a id="/v1/admin/settings/read"></a>
+<a id="read"></a>
 
 ## read
 
@@ -29,7 +29,7 @@ const res = await api.call("/v1/admin/settings/read");
 
 Method require no parameters.
 
-<a id="/v1/admin/settings/test-smtp"></a>
+<a id="test-smtp"></a>
 
 ## test-smtp
 
@@ -64,7 +64,7 @@ const res = await api.call("/v1/admin/settings/test-smtp", settings);
     additionalProperties: false
     ```
 
-<a id="/v1/admin/settings/update"></a>
+<a id="update"></a>
 
 ## update
 

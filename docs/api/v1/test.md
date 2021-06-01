@@ -3,14 +3,14 @@
 Test.
 
 -   [Methods](#methods)
-    -   [**test** - Test method.](#/v1/test/test)
-    -   [**upload** - Test method.](#/v1/test/upload)
+    -   [**test** - Test method.](#test)
+    -   [**upload** - Test method.](#upload)
 
 <a id="methods"></a>
 
 # Methods
 
-<a id="/v1/test/test"></a>
+<a id="test"></a>
 
 ## test
 
@@ -32,7 +32,7 @@ const res = await api.call("/v1/test/test", [args]);
     type: string
     ```
 
-<a id="/v1/test/upload"></a>
+<a id="upload"></a>
 
 ## upload
 

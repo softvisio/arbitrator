@@ -3,15 +3,15 @@
 App API call log.
 
 -   [Methods](#methods)
-    -   [**read-history-stat** - Read statistics for the given API method for the last 30 days.](#/v1/admin/api-call-log/read-history-stat)
-    -   [**read-latest-stat** - Read statistics for the last 60 minutes.](#/v1/admin/api-call-log/read-latest-stat)
-    -   [**read-log** - Read users.](#/v1/admin/api-call-log/read-log)
+    -   [**read-history-stat** - Read statistics for the given API method for the last 30 days.](#read-history-stat)
+    -   [**read-latest-stat** - Read statistics for the last 60 minutes.](#read-latest-stat)
+    -   [**read-log** - Read users.](#read-log)
 
 <a id="methods"></a>
 
 # Methods
 
-<a id="/v1/admin/api-call-log/read-history-stat"></a>
+<a id="read-history-stat"></a>
 
 ## read-history-stat
 
@@ -35,7 +35,7 @@ Statistics updated every 1 minute. Data resolution is 10 minutes.
     type: string
     ```
 
-<a id="/v1/admin/api-call-log/read-latest-stat"></a>
+<a id="read-latest-stat"></a>
 
 ## read-latest-stat
 
@@ -59,7 +59,7 @@ Statistics updated every 10 seconds. Data resolution is 1 minute.
     type: string
     ```
 
-<a id="/v1/admin/api-call-log/read-log"></a>
+<a id="read-log"></a>
 
 ## read-log
 
