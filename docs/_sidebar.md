@@ -1,5 +1,5 @@
--   [API](api/)
--   [API-session](api/v1/session)
+-   [API](/api/)
+-   [API-session](/api/v1/session)
 -   [Changelog](changelog)
 -   **Links**
 -   [![Code](assets/img/code.svg)Demo Sandbox](https://codesandbox.io/s/xv36w4695o)
