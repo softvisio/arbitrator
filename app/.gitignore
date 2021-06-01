@@ -1,0 +1,16 @@
+# common
+/data/
+/wiki/
+
+# cordova
+/hooks/
+/platforms/
+/plugins/
+
+# node
+/node_modules/
+
+# vue
+/.env.local
+/.env.*.local
+/www/

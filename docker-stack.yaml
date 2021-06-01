@@ -1,0 +1,48 @@
+#!/usr/bin/env -S docker stack deploy --with-registry-auth arbitrator -c
+
+version: "3.9"
+
+# NOTE deploy
+# docker stack deploy --with-registry-auth -c docker-stack.yaml arbitrator
+
+services:
+  arbitrator:
+    image: zdm001/arbitrator
+    init: true
+    stop_grace_period: 5m
+
+    deploy:
+      replicas: 1
+      placement:
+        max_replicas_per_node: 3
+      labels:
+        nginx.server-name:
+        nginx.client-max-body-size: 10m
+        nginx.cache: "true"
+        nginx.cache.max-size: 10g
+        nginx.cache.inactive: 1w
+
+    configs:
+      - { source: .env.production.local.yaml, target: /var/local/package/.env.production.local.yaml }
+
+    networks: [private]
+
+    volumes:
+      - { type: tmpfs, target: /dev/shm, tmpfs: { size: 1073741824 } }
+      - { type: volume, source: databases, target: /var/lib/databases }
+
+    build:
+      context: .
+
+configs:
+  .env.production.local.yaml: { file: .env.production.local.yaml }
+
+networks:
+  private: { external: true }
+
+volumes:
+  databases: { external: true }
+
+x-build:
+  default_tag: latest
+  autobuild_tags: [main, devel, latest]

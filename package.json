@@ -1,0 +1,27 @@
+{
+    "name": "arbitrator",
+    "version": "0.0.0",
+    "private": true,
+    "type": "module",
+    "imports": {
+        "#core/*": "@softvisio/core/*",
+        "#lib/*": "./lib/*.js",
+        "#resources/*": "./resources/*"
+    },
+    "dependencies": {
+        "@softvisio/core": "^3.0.0"
+    },
+    "softvisio": {
+        "docs": {
+            "api": {
+                "lib/api": "api"
+            }
+        },
+        "lint": [
+            "**"
+        ],
+        "packages": [
+            "app"
+        ]
+    }
+}

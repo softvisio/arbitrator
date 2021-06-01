@@ -1,0 +1,22 @@
+summary: Test.
+permissions: ["*"]
+
+methods:
+  test:
+    summary: Test method.
+    params:
+      - name: args
+        schema:
+          type: string
+
+  upload:
+    summary: Test method.
+    upload: true
+    uploadMaxSize: 10000000
+    params:
+      - name: request
+        schema:
+          type: object
+      - name: data
+        schema:
+          type: object

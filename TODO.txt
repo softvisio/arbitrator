@@ -1,0 +1,26 @@
+- teams:
+    - when new user created - create default team???;
+        - restriction, user can be only other team member;
+    - create new team (if has permissions);
+    - default team should open by default;
+    - team dashboard;
+
+
+- project:
+    - offer
+    - destinations accounts;
+    - streams;
+
+- stream:
+    - source account;
+    - creo;
+    - destination account;
+
+- team:
+    - permissions:
+        - owner;
+        - manaher;
+        - buyer;
+    - projects;
+
+- profile + tokens;
