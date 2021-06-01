@@ -21,11 +21,11 @@ Read authenticated used profile.
 const res = await api.call("/v1/profile/read");
 ```
 
-#### Permissions
+**Permissions**
 
 -   "user" - any authenticated user;
 
-#### Parameters
+**Parameters**
 
 Method require no parameters.
 
@@ -39,11 +39,11 @@ Set user email.
 const res = await api.call("/v1/profile/set-email", [email]);
 ```
 
-#### Permissions
+**Permissions**
 
 -   "user" - any authenticated user;
 
-#### Parameters
+**Parameters**
 
 -   **email** `[not required]`
 
@@ -61,11 +61,11 @@ Set user telegram name.
 const res = await api.call("/v1/profile/set-telegram-username", [username]);
 ```
 
-#### Permissions
+**Permissions**
 
 -   "user" - any authenticated user;
 
-#### Parameters
+**Parameters**
 
 -   **username** `[not required]`
 

@@ -21,11 +21,11 @@ Read application settings.
 const res = await api.call("/v1/admin/settings/read");
 ```
 
-#### Permissions
+**Permissions**
 
 -   "admin";
 
-#### Parameters
+**Parameters**
 
 Method require no parameters.
 
@@ -39,11 +39,11 @@ Test SMTP server settings.
 const res = await api.call("/v1/admin/settings/test-smtp", settings);
 ```
 
-#### Permissions
+**Permissions**
 
 -   "admin";
 
-#### Parameters
+**Parameters**
 
 -   **settings** `[required]`
 
@@ -74,11 +74,11 @@ Update application settings.
 const res = await api.call("/v1/admin/settings/update", settings);
 ```
 
-#### Permissions
+**Permissions**
 
 -   "admin";
 
-#### Parameters
+**Parameters**
 
 -   **settings** `[required]` - application settings object
 

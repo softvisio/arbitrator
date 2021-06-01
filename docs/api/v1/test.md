@@ -20,11 +20,11 @@ Test method.
 const res = await api.call("/v1/test/test", [args]);
 ```
 
-#### Permissions
+**Permissions**
 
 -   "\*" - any connected user;
 
-#### Parameters
+**Parameters**
 
 -   **args** `[not required]`
 
@@ -42,11 +42,11 @@ Test method.
 const res = await api.call("/v1/test/upload", [request], [data]);
 ```
 
-#### Permissions
+**Permissions**
 
 -   "\*" - any connected user;
 
-#### Parameters
+**Parameters**
 
 -   **request** `[not required]`
 

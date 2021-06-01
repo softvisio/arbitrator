@@ -28,11 +28,11 @@ Create user.
 const res = await api.call("/v1/admin/users/create", fields);
 ```
 
-#### Permissions
+**Permissions**
 
 -   "admin";
 
-#### Parameters
+**Parameters**
 
 -   **fields** `[required]`
 
@@ -67,11 +67,11 @@ Remove user.
 const res = await api.call("/v1/admin/users/delete", userId);
 ```
 
-#### Permissions
+**Permissions**
 
 -   "admin";
 
-#### Parameters
+**Parameters**
 
 -   **userId** `[required]`
 
@@ -89,11 +89,11 @@ Get user permissions.
 const res = await api.call("/v1/admin/users/get-permissions", userId);
 ```
 
-#### Permissions
+**Permissions**
 
 -   "admin";
 
-#### Parameters
+**Parameters**
 
 -   **userId** `[required]`
 
@@ -111,11 +111,11 @@ Read users.
 const res = await api.call("/v1/admin/users/read", [options]);
 ```
 
-#### Permissions
+**Permissions**
 
 -   "admin";
 
-#### Parameters
+**Parameters**
 
 -   **options** `[not required]`
 
@@ -148,11 +148,11 @@ Set user enabled.
 const res = await api.call("/v1/admin/users/set-enabled", userId, enabled);
 ```
 
-#### Permissions
+**Permissions**
 
 -   "admin";
 
-#### Parameters
+**Parameters**
 
 -   **userId** `[required]` - User id or name.
 
@@ -176,11 +176,11 @@ Set user password.
 const res = await api.call("/v1/admin/users/set-password", userId, [pasword]);
 ```
 
-#### Permissions
+**Permissions**
 
 -   "admin";
 
-#### Parameters
+**Parameters**
 
 -   **userId** `[required]` - User id or name.
 
@@ -204,11 +204,11 @@ Set user permissions.
 const res = await api.call("/v1/admin/users/set-permissions", userId, permissions);
 ```
 
-#### Permissions
+**Permissions**
 
 -   "admin";
 
-#### Parameters
+**Parameters**
 
 -   **userId** `[required]`
 
@@ -234,11 +234,11 @@ Change user name.
 const res = await api.call("/v1/admin/users/set-username", user_id, new_username, [new_password]);
 ```
 
-#### Permissions
+**Permissions**
 
 -   "admin";
 
-#### Parameters
+**Parameters**
 
 -   **user_id** `[required]`
 
@@ -268,11 +268,11 @@ Suggest user name.
 const res = await api.call("/v1/admin/users/suggest", [options]);
 ```
 
-#### Permissions
+**Permissions**
 
 -   "admin";
 
-#### Parameters
+**Parameters**
 
 -   **options** `[not required]`
 
@@ -297,11 +297,11 @@ Set user permissions.
 const res = await api.call("/v1/admin/users/update-permissions", userId, permissions);
 ```
 
-#### Permissions
+**Permissions**
 
 -   "admin";
 
-#### Parameters
+**Parameters**
 
 -   **userId** `[required]`
 

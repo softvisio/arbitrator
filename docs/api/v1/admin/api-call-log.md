@@ -23,11 +23,11 @@ const res = await api.call("/v1/admin/api-call-log/read-history-stat", method_id
 
 Statistics updated every 1 minute. Data resolution is 10 minutes.
 
-#### Permissions
+**Permissions**
 
 -   "admin";
 
-#### Parameters
+**Parameters**
 
 -   **method_id** `[required]`
 
@@ -47,11 +47,11 @@ const res = await api.call("/v1/admin/api-call-log/read-latest-stat", [method_id
 
 Statistics updated every 10 seconds. Data resolution is 1 minute.
 
-#### Permissions
+**Permissions**
 
 -   "admin";
 
-#### Parameters
+**Parameters**
 
 -   **method_id** `[not required]`
 
@@ -69,11 +69,11 @@ Read users.
 const res = await api.call("/v1/admin/api-call-log/read-log", [options]);
 ```
 
-#### Permissions
+**Permissions**
 
 -   "admin";
 
-#### Parameters
+**Parameters**
 
 -   **options** `[not required]`
 

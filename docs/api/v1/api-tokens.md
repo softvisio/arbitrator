@@ -25,11 +25,11 @@ Generate new API token.
 const res = await api.call("/v1/api-tokens/create", name);
 ```
 
-#### Permissions
+**Permissions**
 
 -   "user" - any authenticated user;
 
-#### Parameters
+**Parameters**
 
 -   **name** `[required]`
 
@@ -47,11 +47,11 @@ Remove API token.
 const res = await api.call("/v1/api-tokens/delete", tokenId);
 ```
 
-#### Permissions
+**Permissions**
 
 -   "user" - any authenticated user;
 
-#### Parameters
+**Parameters**
 
 -   **tokenId** `[required]`
 
@@ -69,11 +69,11 @@ Get user permissions.
 const res = await api.call("/v1/api-tokens/get-permissions", tokenId);
 ```
 
-#### Permissions
+**Permissions**
 
 -   "user" - any authenticated user;
 
-#### Parameters
+**Parameters**
 
 -   **tokenId** `[required]`
 
@@ -91,11 +91,11 @@ Read api tokens.
 const res = await api.call("/v1/api-tokens/read", [options]);
 ```
 
-#### Permissions
+**Permissions**
 
 -   "user" - any authenticated user;
 
-#### Parameters
+**Parameters**
 
 -   **options** `[not required]`
 
@@ -113,11 +113,11 @@ Set API token enabled.
 const res = await api.call("/v1/api-tokens/set-enabled", tokenId, enabled);
 ```
 
-#### Permissions
+**Permissions**
 
 -   "user" - any authenticated user;
 
-#### Parameters
+**Parameters**
 
 -   **tokenId** `[required]`
 
@@ -141,11 +141,11 @@ Set user permissions.
 const res = await api.call("/v1/api-tokens/set-permissions", tokenId, permissions);
 ```
 
-#### Permissions
+**Permissions**
 
 -   "user" - any authenticated user;
 
-#### Parameters
+**Parameters**
 
 -   **tokenId** `[required]`
 
@@ -171,11 +171,11 @@ Set user permissions.
 const res = await api.call("/v1/api-tokens/update-permissions", tokenId, permissions);
 ```
 
-#### Permissions
+**Permissions**
 
 -   "user" - any authenticated user;
 
-#### Parameters
+**Parameters**
 
 -   **tokenId** `[required]`
 

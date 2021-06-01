@@ -25,11 +25,11 @@ Confirm user email using email confirmation token.
 const res = await api.call("/v1/session/confirm-email-by-token", token);
 ```
 
-#### Permissions
+**Permissions**
 
 -   "\*" - any connected user;
 
-#### Parameters
+**Parameters**
 
 -   **token** `[required]` - Email confirmation token.
 
@@ -47,11 +47,11 @@ Send confirmation email.
 const res = await api.call("/v1/session/send-confirmation-email", user_id);
 ```
 
-#### Permissions
+**Permissions**
 
 -   "\*" - any connected user;
 
-#### Parameters
+**Parameters**
 
 -   **user_id** `[required]` - User name or email.
 
@@ -69,11 +69,11 @@ Send password reset email.
 const res = await api.call("/v1/session/send-password-reset-email", user_id);
 ```
 
-#### Permissions
+**Permissions**
 
 -   "\*" - any connected user;
 
-#### Parameters
+**Parameters**
 
 -   **user_id** `[required]` - User name or email.
 
@@ -91,11 +91,11 @@ Set user password using password recovery token.
 const res = await api.call("/v1/session/set-password-by-token", token, password);
 ```
 
-#### Permissions
+**Permissions**
 
 -   "\*" - any connected user;
 
-#### Parameters
+**Parameters**
 
 -   **token** `[required]`
 
@@ -131,11 +131,11 @@ If `credentials` parameter is specified - will try to sign in user using usernam
 
 -   Any other status means bad request, internal or connection error. Refer to the response `reason` property for more information.
 
-#### Permissions
+**Permissions**
 
 -   "\*" - any connected user;
 
-#### Parameters
+**Parameters**
 
 -   **credentials** `[not required]`
 
@@ -172,11 +172,11 @@ Signout user, remove user session.
 const res = await api.call("/v1/session/signout");
 ```
 
-#### Permissions
+**Permissions**
 
 -   "\*" - any connected user;
 
-#### Parameters
+**Parameters**
 
 Method require no parameters.
 
@@ -190,11 +190,11 @@ Signup user.
 const res = await api.call("/v1/session/signup", fields);
 ```
 
-#### Permissions
+**Permissions**
 
 -   "\*" - any connected user;
 
-#### Parameters
+**Parameters**
 
 -   **fields** `[required]`
 
