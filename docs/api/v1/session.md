@@ -3,8 +3,8 @@
 Session.
 
 -   [Methods](#methods)
-    -   [**confirm-email-by-token** - Confirm user email using email confirmation token.](#/v1/session/confirm-email-by-token)
-    -   [**send-confirmation-email** - Send confirmation email.](#/v1/session/send-confirmation-email)
+    -   [**confirm-email-by-token** - Confirm user email using email confirmation token.](#confirm-email-by-token)
+    -   [**send-confirmation-email** - Send confirmation email.](#send-confirmation-email)
     -   [**send-password-reset-email** - Send password reset email.](#/v1/session/send-password-reset-email)
     -   [**set-password-by-token** - Set user password using password recovery token.](#/v1/session/set-password-by-token)
     -   [**signin** - Signin user.](#/v1/session/signin)
