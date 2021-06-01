@@ -16,7 +16,10 @@
                 coverpage: true,
                 loadSidebar: true,
                 logo: "assets/logo.png",
-                relativePath: true,
+                // relativePath: true,
+                alias: {
+                    ".*?/changelog": "https://raw.githubusercontent.com/jhildenbiddle/docsify-themeable/master/CHANGELOG.md",
+                },
             };
         </script>
         <script src="//cdn.jsdelivr.net/npm/docsify"></script>
