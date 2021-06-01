@@ -1,3 +1,4 @@
+-   [Test](/test.md)
 -   [API](/api/)
 -   [API-session](/api/v1/session)
 -   [Changelog](changelog)
