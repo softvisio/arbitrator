@@ -1,5 +1,5 @@
 -   [API](/api/)
--   API
+-   [API](/api/)
     -   [API v1](/api/v1)
     -   [API-session](/api/v1/session)
 -   [Changelog](changelog)
