@@ -17,9 +17,6 @@
                 "lib/api": "api"
             }
         },
-        "lint": [
-            "**"
-        ],
         "packages": [
             "app"
         ]

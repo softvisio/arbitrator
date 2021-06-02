@@ -12,13 +12,5 @@
     "devDependencies": {
         "@softvisio/vue-ext": "^3.0.0-alpha.0",
         "vue-cli-plugin-webpack-bundle-analyzer": "^4.0.0"
-    },
-    "softvisio": {
-        "lint": [
-            "*.*",
-            "public/**",
-            "resources/**",
-            "src/**"
-        ]
     }
 }
