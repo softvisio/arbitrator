@@ -1,7 +1,7 @@
--   [API](/api/)
--   [API 11111](/api/)
-    -   [API v1](/api/v1)
-    -   [API-session](/api/v1/session)
+-   API
+    -   [API SDK](https://raw.githubusercontent.com/softvisio/core/main/docs/api-sdk.md)
+    -   [v1](/api/v1.md)
+    -   [v2](/api/v1.md)
 -   [Changelog](changelog)
 
 -   **Links**
