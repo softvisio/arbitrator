@@ -1,8 +1,7 @@
 -   API
 
     -   [API SDK](https://raw.githubusercontent.com/softvisio/core/main/docs/api-sdk.md ":include")
-    -   [v1](api/v1.md)
-    -   [v2](api/v2.md)
+    -   [api](api)
 
 -   [Changelog](changelog)
 
