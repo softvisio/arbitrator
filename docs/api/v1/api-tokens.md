@@ -23,14 +23,14 @@ Generate new API token.
 
 <!-- tabs:start -->
 
-#### **Javascript**
+#### **JavaScript**
 
 <!-- prettier-ignore -->
 ```js
 const res = await api.call( "/v1/api-tokens/create", name );
 ```
 
-#### **Curl**
+#### **curl**
 
 <!-- prettier-ignore -->
 ```sh
@@ -60,14 +60,14 @@ Remove API token.
 
 <!-- tabs:start -->
 
-#### **Javascript**
+#### **JavaScript**
 
 <!-- prettier-ignore -->
 ```js
 const res = await api.call( "/v1/api-tokens/delete", tokenId );
 ```
 
-#### **Curl**
+#### **curl**
 
 <!-- prettier-ignore -->
 ```sh
@@ -97,14 +97,14 @@ Get user permissions.
 
 <!-- tabs:start -->
 
-#### **Javascript**
+#### **JavaScript**
 
 <!-- prettier-ignore -->
 ```js
 const res = await api.call( "/v1/api-tokens/get-permissions", tokenId );
 ```
 
-#### **Curl**
+#### **curl**
 
 <!-- prettier-ignore -->
 ```sh
@@ -134,14 +134,14 @@ Read api tokens.
 
 <!-- tabs:start -->
 
-#### **Javascript**
+#### **JavaScript**
 
 <!-- prettier-ignore -->
 ```js
 const res = await api.call( "/v1/api-tokens/read", [options] );
 ```
 
-#### **Curl**
+#### **curl**
 
 <!-- prettier-ignore -->
 ```sh
@@ -171,14 +171,14 @@ Set API token enabled.
 
 <!-- tabs:start -->
 
-#### **Javascript**
+#### **JavaScript**
 
 <!-- prettier-ignore -->
 ```js
 const res = await api.call( "/v1/api-tokens/set-enabled", tokenId, enabled );
 ```
 
-#### **Curl**
+#### **curl**
 
 <!-- prettier-ignore -->
 ```sh
@@ -215,14 +215,14 @@ Set user permissions.
 
 <!-- tabs:start -->
 
-#### **Javascript**
+#### **JavaScript**
 
 <!-- prettier-ignore -->
 ```js
 const res = await api.call( "/v1/api-tokens/set-permissions", tokenId, permissions );
 ```
 
-#### **Curl**
+#### **curl**
 
 <!-- prettier-ignore -->
 ```sh
@@ -261,14 +261,14 @@ Set user permissions.
 
 <!-- tabs:start -->
 
-#### **Javascript**
+#### **JavaScript**
 
 <!-- prettier-ignore -->
 ```js
 const res = await api.call( "/v1/api-tokens/update-permissions", tokenId, permissions );
 ```
 
-#### **Curl**
+#### **curl**
 
 <!-- prettier-ignore -->
 ```sh

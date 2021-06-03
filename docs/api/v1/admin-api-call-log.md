@@ -19,14 +19,14 @@ Read statistics for the given API method for the last 30 days.
 
 <!-- tabs:start -->
 
-#### **Javascript**
+#### **JavaScript**
 
 <!-- prettier-ignore -->
 ```js
 const res = await api.call( "/v1/admin/api-call-log/read-history-stat", method_id );
 ```
 
-#### **Curl**
+#### **curl**
 
 <!-- prettier-ignore -->
 ```sh
@@ -58,14 +58,14 @@ Read statistics for the last 60 minutes.
 
 <!-- tabs:start -->
 
-#### **Javascript**
+#### **JavaScript**
 
 <!-- prettier-ignore -->
 ```js
 const res = await api.call( "/v1/admin/api-call-log/read-latest-stat", [method_id] );
 ```
 
-#### **Curl**
+#### **curl**
 
 <!-- prettier-ignore -->
 ```sh
@@ -97,14 +97,14 @@ Read users.
 
 <!-- tabs:start -->
 
-#### **Javascript**
+#### **JavaScript**
 
 <!-- prettier-ignore -->
 ```js
 const res = await api.call( "/v1/admin/api-call-log/read-log", [options] );
 ```
 
-#### **Curl**
+#### **curl**
 
 <!-- prettier-ignore -->
 ```sh

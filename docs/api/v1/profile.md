@@ -19,14 +19,14 @@ Read authenticated used profile.
 
 <!-- tabs:start -->
 
-#### **Javascript**
+#### **JavaScript**
 
 <!-- prettier-ignore -->
 ```js
 const res = await api.call( "/v1/profile/read" );
 ```
 
-#### **Curl**
+#### **curl**
 
 <!-- prettier-ignore -->
 ```sh
@@ -51,14 +51,14 @@ Set user email.
 
 <!-- tabs:start -->
 
-#### **Javascript**
+#### **JavaScript**
 
 <!-- prettier-ignore -->
 ```js
 const res = await api.call( "/v1/profile/set-email", [email] );
 ```
 
-#### **Curl**
+#### **curl**
 
 <!-- prettier-ignore -->
 ```sh
@@ -88,14 +88,14 @@ Set user telegram name.
 
 <!-- tabs:start -->
 
-#### **Javascript**
+#### **JavaScript**
 
 <!-- prettier-ignore -->
 ```js
 const res = await api.call( "/v1/profile/set-telegram-username", [username] );
 ```
 
-#### **Curl**
+#### **curl**
 
 <!-- prettier-ignore -->
 ```sh

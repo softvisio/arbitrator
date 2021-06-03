@@ -18,14 +18,14 @@ Test method.
 
 <!-- tabs:start -->
 
-#### **Javascript**
+#### **JavaScript**
 
 <!-- prettier-ignore -->
 ```js
 const res = await api.call( "/v1/test/test", [args] );
 ```
 
-#### **Curl**
+#### **curl**
 
 <!-- prettier-ignore -->
 ```sh
@@ -55,14 +55,14 @@ Test method.
 
 <!-- tabs:start -->
 
-#### **Javascript**
+#### **JavaScript**
 
 <!-- prettier-ignore -->
 ```js
 const res = await api.call( "/v1/test/upload", [request], [data] );
 ```
 
-#### **Curl**
+#### **curl**
 
 <!-- prettier-ignore -->
 ```sh

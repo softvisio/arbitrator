@@ -26,14 +26,14 @@ Create user.
 
 <!-- tabs:start -->
 
-#### **Javascript**
+#### **JavaScript**
 
 <!-- prettier-ignore -->
 ```js
 const res = await api.call( "/v1/admin/users/create", fields );
 ```
 
-#### **Curl**
+#### **curl**
 
 <!-- prettier-ignore -->
 ```sh
@@ -80,14 +80,14 @@ Remove user.
 
 <!-- tabs:start -->
 
-#### **Javascript**
+#### **JavaScript**
 
 <!-- prettier-ignore -->
 ```js
 const res = await api.call( "/v1/admin/users/delete", userId );
 ```
 
-#### **Curl**
+#### **curl**
 
 <!-- prettier-ignore -->
 ```sh
@@ -117,14 +117,14 @@ Get user permissions.
 
 <!-- tabs:start -->
 
-#### **Javascript**
+#### **JavaScript**
 
 <!-- prettier-ignore -->
 ```js
 const res = await api.call( "/v1/admin/users/get-permissions", userId );
 ```
 
-#### **Curl**
+#### **curl**
 
 <!-- prettier-ignore -->
 ```sh
@@ -154,14 +154,14 @@ Read users.
 
 <!-- tabs:start -->
 
-#### **Javascript**
+#### **JavaScript**
 
 <!-- prettier-ignore -->
 ```js
 const res = await api.call( "/v1/admin/users/read", [options] );
 ```
 
-#### **Curl**
+#### **curl**
 
 <!-- prettier-ignore -->
 ```sh
@@ -206,14 +206,14 @@ Set user enabled.
 
 <!-- tabs:start -->
 
-#### **Javascript**
+#### **JavaScript**
 
 <!-- prettier-ignore -->
 ```js
 const res = await api.call( "/v1/admin/users/set-enabled", userId, enabled );
 ```
 
-#### **Curl**
+#### **curl**
 
 <!-- prettier-ignore -->
 ```sh
@@ -250,14 +250,14 @@ Set user password.
 
 <!-- tabs:start -->
 
-#### **Javascript**
+#### **JavaScript**
 
 <!-- prettier-ignore -->
 ```js
 const res = await api.call( "/v1/admin/users/set-password", userId, [pasword] );
 ```
 
-#### **Curl**
+#### **curl**
 
 <!-- prettier-ignore -->
 ```sh
@@ -294,14 +294,14 @@ Set user permissions.
 
 <!-- tabs:start -->
 
-#### **Javascript**
+#### **JavaScript**
 
 <!-- prettier-ignore -->
 ```js
 const res = await api.call( "/v1/admin/users/set-permissions", userId, permissions );
 ```
 
-#### **Curl**
+#### **curl**
 
 <!-- prettier-ignore -->
 ```sh
@@ -340,14 +340,14 @@ Change user name.
 
 <!-- tabs:start -->
 
-#### **Javascript**
+#### **JavaScript**
 
 <!-- prettier-ignore -->
 ```js
 const res = await api.call( "/v1/admin/users/set-username", user_id, new_username, [new_password] );
 ```
 
-#### **Curl**
+#### **curl**
 
 <!-- prettier-ignore -->
 ```sh
@@ -391,14 +391,14 @@ Suggest user name.
 
 <!-- tabs:start -->
 
-#### **Javascript**
+#### **JavaScript**
 
 <!-- prettier-ignore -->
 ```js
 const res = await api.call( "/v1/admin/users/suggest", [options] );
 ```
 
-#### **Curl**
+#### **curl**
 
 <!-- prettier-ignore -->
 ```sh
@@ -435,14 +435,14 @@ Set user permissions.
 
 <!-- tabs:start -->
 
-#### **Javascript**
+#### **JavaScript**
 
 <!-- prettier-ignore -->
 ```js
 const res = await api.call( "/v1/admin/users/update-permissions", userId, permissions );
 ```
 
-#### **Curl**
+#### **curl**
 
 <!-- prettier-ignore -->
 ```sh
