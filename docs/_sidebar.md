@@ -1,12 +1,8 @@
 -   [Overview](README.md)
--   API
+-   [API](api)
 
-    -   [API SDK](https://raw.githubusercontent.com/softvisio/core/main/docs/api-sdk.md ":include")
-    -   [v1](/api/v1/)
-
--   RPC
-
-    -   [v1](/rpc/v1/)
+    -   [API v1](/api/v1/)
+    -   [RPC v1](/rpc/v1/)
 
 -   [Changelog](changelog)
 

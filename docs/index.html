@@ -5,16 +5,24 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
 
+        <title>Arbitrator</title>
+
+        <link rel="icon" href="assets/logo.png" />
         <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-themeable/dist/css/theme-simple-dark.css" />
     </head>
     <body>
+        <nav>
+            <a href="#changelog">CHANGELOG</a>
+            •
+            <a href="#changelog">☽ DARK MODE</a>
+        </nav>
         <div id="app"></div>
         <script>
             window.$docsify = {
                 name: "arbitrator",
                 repo: "https://github.com/softvisio/arbitrator",
                 loadSidebar: true,
-                logo: "assets/logo.png",
+                logo: "assets/logo.png height='80px'",
                 auto2top: true,
                 relativePath: true,
                 maxLevel: 3,
@@ -25,8 +33,6 @@
                 },
                 search: {
                     depth: 3,
-                    noData: "No results!",
-                    placeholder: "Search...",
                 },
                 tabs: {},
             };
