@@ -18,15 +18,17 @@ App settings.
 Read application settings.
 
 <!-- tabs:start -->
-<!-- prettier-ignore -->
+
 #### **Javascript**
 
+<!-- prettier-ignore -->
 ```js
-const res = await api.call("/v1/admin/settings/read");
+const res = await api.call( "/v1/admin/settings/read" );
 ```
 
 #### **Curl**
 
+<!-- prettier-ignore -->
 ```sh
 curl -X POST ...
 ```
@@ -48,15 +50,17 @@ Method require no parameters.
 Test SMTP server settings.
 
 <!-- tabs:start -->
-<!-- prettier-ignore -->
+
 #### **Javascript**
 
+<!-- prettier-ignore -->
 ```js
-const res = await api.call("/v1/admin/settings/test-smtp", settings);
+const res = await api.call( "/v1/admin/settings/test-smtp", settings );
 ```
 
 #### **Curl**
 
+<!-- prettier-ignore -->
 ```sh
 curl -X POST ...
 ```
@@ -96,15 +100,17 @@ curl -X POST ...
 Update application settings.
 
 <!-- tabs:start -->
-<!-- prettier-ignore -->
+
 #### **Javascript**
 
+<!-- prettier-ignore -->
 ```js
-const res = await api.call("/v1/admin/settings/update", settings);
+const res = await api.call( "/v1/admin/settings/update", settings );
 ```
 
 #### **Curl**
 
+<!-- prettier-ignore -->
 ```sh
 curl -X POST ...
 ```

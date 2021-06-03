@@ -18,15 +18,17 @@ App API call log.
 Read statistics for the given API method for the last 30 days.
 
 <!-- tabs:start -->
-<!-- prettier-ignore -->
+
 #### **Javascript**
 
+<!-- prettier-ignore -->
 ```js
-const res = await api.call("/v1/admin/api-call-log/read-history-stat", method_id);
+const res = await api.call( "/v1/admin/api-call-log/read-history-stat", method_id );
 ```
 
 #### **Curl**
 
+<!-- prettier-ignore -->
 ```sh
 curl -X POST ...
 ```
@@ -55,15 +57,17 @@ Statistics updated every 1 minute. Data resolution is 10 minutes.
 Read statistics for the last 60 minutes.
 
 <!-- tabs:start -->
-<!-- prettier-ignore -->
+
 #### **Javascript**
 
+<!-- prettier-ignore -->
 ```js
-const res = await api.call("/v1/admin/api-call-log/read-latest-stat", [method_id]);
+const res = await api.call( "/v1/admin/api-call-log/read-latest-stat", [method_id] );
 ```
 
 #### **Curl**
 
+<!-- prettier-ignore -->
 ```sh
 curl -X POST ...
 ```
@@ -92,15 +96,17 @@ Statistics updated every 10 seconds. Data resolution is 1 minute.
 Read users.
 
 <!-- tabs:start -->
-<!-- prettier-ignore -->
+
 #### **Javascript**
 
+<!-- prettier-ignore -->
 ```js
-const res = await api.call("/v1/admin/api-call-log/read-log", [options]);
+const res = await api.call( "/v1/admin/api-call-log/read-log", [options] );
 ```
 
 #### **Curl**
 
+<!-- prettier-ignore -->
 ```sh
 curl -X POST ...
 ```

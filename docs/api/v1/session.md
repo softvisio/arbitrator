@@ -22,15 +22,17 @@ Session.
 Confirm user email using email confirmation token.
 
 <!-- tabs:start -->
-<!-- prettier-ignore -->
+
 #### **Javascript**
 
+<!-- prettier-ignore -->
 ```js
-const res = await api.call("/v1/session/confirm-email-by-token", token);
+const res = await api.call( "/v1/session/confirm-email-by-token", token );
 ```
 
 #### **Curl**
 
+<!-- prettier-ignore -->
 ```sh
 curl -X POST ...
 ```
@@ -57,15 +59,17 @@ curl -X POST ...
 Send confirmation email.
 
 <!-- tabs:start -->
-<!-- prettier-ignore -->
+
 #### **Javascript**
 
+<!-- prettier-ignore -->
 ```js
-const res = await api.call("/v1/session/send-confirmation-email", user_id);
+const res = await api.call( "/v1/session/send-confirmation-email", user_id );
 ```
 
 #### **Curl**
 
+<!-- prettier-ignore -->
 ```sh
 curl -X POST ...
 ```
@@ -92,15 +96,17 @@ curl -X POST ...
 Send password reset email.
 
 <!-- tabs:start -->
-<!-- prettier-ignore -->
+
 #### **Javascript**
 
+<!-- prettier-ignore -->
 ```js
-const res = await api.call("/v1/session/send-password-reset-email", user_id);
+const res = await api.call( "/v1/session/send-password-reset-email", user_id );
 ```
 
 #### **Curl**
 
+<!-- prettier-ignore -->
 ```sh
 curl -X POST ...
 ```
@@ -127,15 +133,17 @@ curl -X POST ...
 Set user password using password recovery token.
 
 <!-- tabs:start -->
-<!-- prettier-ignore -->
+
 #### **Javascript**
 
+<!-- prettier-ignore -->
 ```js
-const res = await api.call("/v1/session/set-password-by-token", token, password);
+const res = await api.call( "/v1/session/set-password-by-token", token, password );
 ```
 
 #### **Curl**
 
+<!-- prettier-ignore -->
 ```sh
 curl -X POST ...
 ```
@@ -169,15 +177,17 @@ curl -X POST ...
 Signin user.
 
 <!-- tabs:start -->
-<!-- prettier-ignore -->
+
 #### **Javascript**
 
+<!-- prettier-ignore -->
 ```js
-const res = await api.call("/v1/session/signin", [credentials], [signinPermissions]);
+const res = await api.call( "/v1/session/signin", [credentials], [signinPermissions] );
 ```
 
 #### **Curl**
 
+<!-- prettier-ignore -->
 ```sh
 curl -X POST ...
 ```
@@ -238,15 +248,17 @@ If `credentials` parameter is specified - will try to sign in user using usernam
 Signout user, remove user session.
 
 <!-- tabs:start -->
-<!-- prettier-ignore -->
+
 #### **Javascript**
 
+<!-- prettier-ignore -->
 ```js
-const res = await api.call("/v1/session/signout");
+const res = await api.call( "/v1/session/signout" );
 ```
 
 #### **Curl**
 
+<!-- prettier-ignore -->
 ```sh
 curl -X POST ...
 ```
@@ -268,15 +280,17 @@ Method require no parameters.
 Signup user.
 
 <!-- tabs:start -->
-<!-- prettier-ignore -->
+
 #### **Javascript**
 
+<!-- prettier-ignore -->
 ```js
-const res = await api.call("/v1/session/signup", fields);
+const res = await api.call( "/v1/session/signup", fields );
 ```
 
 #### **Curl**
 
+<!-- prettier-ignore -->
 ```sh
 curl -X POST ...
 ```

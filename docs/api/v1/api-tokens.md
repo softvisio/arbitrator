@@ -22,15 +22,17 @@ User API access tokens management.
 Generate new API token.
 
 <!-- tabs:start -->
-<!-- prettier-ignore -->
+
 #### **Javascript**
 
+<!-- prettier-ignore -->
 ```js
-const res = await api.call("/v1/api-tokens/create", name);
+const res = await api.call( "/v1/api-tokens/create", name );
 ```
 
 #### **Curl**
 
+<!-- prettier-ignore -->
 ```sh
 curl -X POST ...
 ```
@@ -57,15 +59,17 @@ curl -X POST ...
 Remove API token.
 
 <!-- tabs:start -->
-<!-- prettier-ignore -->
+
 #### **Javascript**
 
+<!-- prettier-ignore -->
 ```js
-const res = await api.call("/v1/api-tokens/delete", tokenId);
+const res = await api.call( "/v1/api-tokens/delete", tokenId );
 ```
 
 #### **Curl**
 
+<!-- prettier-ignore -->
 ```sh
 curl -X POST ...
 ```
@@ -92,15 +96,17 @@ curl -X POST ...
 Get user permissions.
 
 <!-- tabs:start -->
-<!-- prettier-ignore -->
+
 #### **Javascript**
 
+<!-- prettier-ignore -->
 ```js
-const res = await api.call("/v1/api-tokens/get-permissions", tokenId);
+const res = await api.call( "/v1/api-tokens/get-permissions", tokenId );
 ```
 
 #### **Curl**
 
+<!-- prettier-ignore -->
 ```sh
 curl -X POST ...
 ```
@@ -127,15 +133,17 @@ curl -X POST ...
 Read api tokens.
 
 <!-- tabs:start -->
-<!-- prettier-ignore -->
+
 #### **Javascript**
 
+<!-- prettier-ignore -->
 ```js
-const res = await api.call("/v1/api-tokens/read", [options]);
+const res = await api.call( "/v1/api-tokens/read", [options] );
 ```
 
 #### **Curl**
 
+<!-- prettier-ignore -->
 ```sh
 curl -X POST ...
 ```
@@ -162,15 +170,17 @@ curl -X POST ...
 Set API token enabled.
 
 <!-- tabs:start -->
-<!-- prettier-ignore -->
+
 #### **Javascript**
 
+<!-- prettier-ignore -->
 ```js
-const res = await api.call("/v1/api-tokens/set-enabled", tokenId, enabled);
+const res = await api.call( "/v1/api-tokens/set-enabled", tokenId, enabled );
 ```
 
 #### **Curl**
 
+<!-- prettier-ignore -->
 ```sh
 curl -X POST ...
 ```
@@ -204,15 +214,17 @@ curl -X POST ...
 Set user permissions.
 
 <!-- tabs:start -->
-<!-- prettier-ignore -->
+
 #### **Javascript**
 
+<!-- prettier-ignore -->
 ```js
-const res = await api.call("/v1/api-tokens/set-permissions", tokenId, permissions);
+const res = await api.call( "/v1/api-tokens/set-permissions", tokenId, permissions );
 ```
 
 #### **Curl**
 
+<!-- prettier-ignore -->
 ```sh
 curl -X POST ...
 ```
@@ -248,15 +260,17 @@ curl -X POST ...
 Set user permissions.
 
 <!-- tabs:start -->
-<!-- prettier-ignore -->
+
 #### **Javascript**
 
+<!-- prettier-ignore -->
 ```js
-const res = await api.call("/v1/api-tokens/update-permissions", tokenId, permissions);
+const res = await api.call( "/v1/api-tokens/update-permissions", tokenId, permissions );
 ```
 
 #### **Curl**
 
+<!-- prettier-ignore -->
 ```sh
 curl -X POST ...
 ```

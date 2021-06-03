@@ -25,15 +25,17 @@ App users management.
 Create user.
 
 <!-- tabs:start -->
-<!-- prettier-ignore -->
+
 #### **Javascript**
 
+<!-- prettier-ignore -->
 ```js
-const res = await api.call("/v1/admin/users/create", fields);
+const res = await api.call( "/v1/admin/users/create", fields );
 ```
 
 #### **Curl**
 
+<!-- prettier-ignore -->
 ```sh
 curl -X POST ...
 ```
@@ -77,15 +79,17 @@ curl -X POST ...
 Remove user.
 
 <!-- tabs:start -->
-<!-- prettier-ignore -->
+
 #### **Javascript**
 
+<!-- prettier-ignore -->
 ```js
-const res = await api.call("/v1/admin/users/delete", userId);
+const res = await api.call( "/v1/admin/users/delete", userId );
 ```
 
 #### **Curl**
 
+<!-- prettier-ignore -->
 ```sh
 curl -X POST ...
 ```
@@ -112,15 +116,17 @@ curl -X POST ...
 Get user permissions.
 
 <!-- tabs:start -->
-<!-- prettier-ignore -->
+
 #### **Javascript**
 
+<!-- prettier-ignore -->
 ```js
-const res = await api.call("/v1/admin/users/get-permissions", userId);
+const res = await api.call( "/v1/admin/users/get-permissions", userId );
 ```
 
 #### **Curl**
 
+<!-- prettier-ignore -->
 ```sh
 curl -X POST ...
 ```
@@ -147,15 +153,17 @@ curl -X POST ...
 Read users.
 
 <!-- tabs:start -->
-<!-- prettier-ignore -->
+
 #### **Javascript**
 
+<!-- prettier-ignore -->
 ```js
-const res = await api.call("/v1/admin/users/read", [options]);
+const res = await api.call( "/v1/admin/users/read", [options] );
 ```
 
 #### **Curl**
 
+<!-- prettier-ignore -->
 ```sh
 curl -X POST ...
 ```
@@ -197,15 +205,17 @@ curl -X POST ...
 Set user enabled.
 
 <!-- tabs:start -->
-<!-- prettier-ignore -->
+
 #### **Javascript**
 
+<!-- prettier-ignore -->
 ```js
-const res = await api.call("/v1/admin/users/set-enabled", userId, enabled);
+const res = await api.call( "/v1/admin/users/set-enabled", userId, enabled );
 ```
 
 #### **Curl**
 
+<!-- prettier-ignore -->
 ```sh
 curl -X POST ...
 ```
@@ -239,15 +249,17 @@ curl -X POST ...
 Set user password.
 
 <!-- tabs:start -->
-<!-- prettier-ignore -->
+
 #### **Javascript**
 
+<!-- prettier-ignore -->
 ```js
-const res = await api.call("/v1/admin/users/set-password", userId, [pasword]);
+const res = await api.call( "/v1/admin/users/set-password", userId, [pasword] );
 ```
 
 #### **Curl**
 
+<!-- prettier-ignore -->
 ```sh
 curl -X POST ...
 ```
@@ -281,15 +293,17 @@ curl -X POST ...
 Set user permissions.
 
 <!-- tabs:start -->
-<!-- prettier-ignore -->
+
 #### **Javascript**
 
+<!-- prettier-ignore -->
 ```js
-const res = await api.call("/v1/admin/users/set-permissions", userId, permissions);
+const res = await api.call( "/v1/admin/users/set-permissions", userId, permissions );
 ```
 
 #### **Curl**
 
+<!-- prettier-ignore -->
 ```sh
 curl -X POST ...
 ```
@@ -325,15 +339,17 @@ curl -X POST ...
 Change user name.
 
 <!-- tabs:start -->
-<!-- prettier-ignore -->
+
 #### **Javascript**
 
+<!-- prettier-ignore -->
 ```js
-const res = await api.call("/v1/admin/users/set-username", user_id, new_username, [new_password]);
+const res = await api.call( "/v1/admin/users/set-username", user_id, new_username, [new_password] );
 ```
 
 #### **Curl**
 
+<!-- prettier-ignore -->
 ```sh
 curl -X POST ...
 ```
@@ -374,15 +390,17 @@ curl -X POST ...
 Suggest user name.
 
 <!-- tabs:start -->
-<!-- prettier-ignore -->
+
 #### **Javascript**
 
+<!-- prettier-ignore -->
 ```js
-const res = await api.call("/v1/admin/users/suggest", [options]);
+const res = await api.call( "/v1/admin/users/suggest", [options] );
 ```
 
 #### **Curl**
 
+<!-- prettier-ignore -->
 ```sh
 curl -X POST ...
 ```
@@ -416,15 +434,17 @@ curl -X POST ...
 Set user permissions.
 
 <!-- tabs:start -->
-<!-- prettier-ignore -->
+
 #### **Javascript**
 
+<!-- prettier-ignore -->
 ```js
-const res = await api.call("/v1/admin/users/update-permissions", userId, permissions);
+const res = await api.call( "/v1/admin/users/update-permissions", userId, permissions );
 ```
 
 #### **Curl**
 
+<!-- prettier-ignore -->
 ```sh
 curl -X POST ...
 ```

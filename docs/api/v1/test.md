@@ -17,15 +17,17 @@ Test.
 Test method.
 
 <!-- tabs:start -->
-<!-- prettier-ignore -->
+
 #### **Javascript**
 
+<!-- prettier-ignore -->
 ```js
-const res = await api.call("/v1/test/test", [args]);
+const res = await api.call( "/v1/test/test", [args] );
 ```
 
 #### **Curl**
 
+<!-- prettier-ignore -->
 ```sh
 curl -X POST ...
 ```
@@ -52,15 +54,17 @@ curl -X POST ...
 Test method.
 
 <!-- tabs:start -->
-<!-- prettier-ignore -->
+
 #### **Javascript**
 
+<!-- prettier-ignore -->
 ```js
-const res = await api.call("/v1/test/upload", [request], [data]);
+const res = await api.call( "/v1/test/upload", [request], [data] );
 ```
 
 #### **Curl**
 
+<!-- prettier-ignore -->
 ```sh
 curl -X POST ...
 ```

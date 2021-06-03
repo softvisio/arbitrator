@@ -18,15 +18,17 @@ Profile.
 Read authenticated used profile.
 
 <!-- tabs:start -->
-<!-- prettier-ignore -->
+
 #### **Javascript**
 
+<!-- prettier-ignore -->
 ```js
-const res = await api.call("/v1/profile/read");
+const res = await api.call( "/v1/profile/read" );
 ```
 
 #### **Curl**
 
+<!-- prettier-ignore -->
 ```sh
 curl -X POST ...
 ```
@@ -48,15 +50,17 @@ Method require no parameters.
 Set user email.
 
 <!-- tabs:start -->
-<!-- prettier-ignore -->
+
 #### **Javascript**
 
+<!-- prettier-ignore -->
 ```js
-const res = await api.call("/v1/profile/set-email", [email]);
+const res = await api.call( "/v1/profile/set-email", [email] );
 ```
 
 #### **Curl**
 
+<!-- prettier-ignore -->
 ```sh
 curl -X POST ...
 ```
@@ -83,15 +87,17 @@ curl -X POST ...
 Set user telegram name.
 
 <!-- tabs:start -->
-<!-- prettier-ignore -->
+
 #### **Javascript**
 
+<!-- prettier-ignore -->
 ```js
-const res = await api.call("/v1/profile/set-telegram-username", [username]);
+const res = await api.call( "/v1/profile/set-telegram-username", [username] );
 ```
 
 #### **Curl**
 
+<!-- prettier-ignore -->
 ```sh
 curl -X POST ...
 ```
