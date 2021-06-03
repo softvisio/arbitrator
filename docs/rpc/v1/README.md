@@ -1,3 +1,3 @@
-# API **v1** endpoints:
+# RPC **v1** endpoints:
 
 -   [test](test.md) - Test.
