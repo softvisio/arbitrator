@@ -16,8 +16,9 @@ Test.
 
 Test method.
 
+<!-- prettier-ignore -->
 ```js
-const res = await api.call("/v1/test/test", [args]);
+const res = await api.call( "/v1/test/test", [args] );
 ```
 
 **Permissions**
@@ -28,6 +29,7 @@ const res = await api.call("/v1/test/test", [args]);
 
 -   **args** `[not required]`
 
+    <!-- prettier-ignore -->
     ```yaml
     type: string
     ```
@@ -38,8 +40,9 @@ const res = await api.call("/v1/test/test", [args]);
 
 Test method.
 
+<!-- prettier-ignore -->
 ```js
-const res = await api.call("/v1/test/upload", [request], [data]);
+const res = await api.call( "/v1/test/upload", [request], [data] );
 ```
 
 **Permissions**
@@ -50,12 +53,14 @@ const res = await api.call("/v1/test/upload", [request], [data]);
 
 -   **request** `[not required]`
 
+    <!-- prettier-ignore -->
     ```yaml
     type: object
     ```
 
 -   **data** `[not required]`
 
+    <!-- prettier-ignore -->
     ```yaml
     type: object
     ```

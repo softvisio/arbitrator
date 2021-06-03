@@ -21,8 +21,9 @@ User API access tokens management.
 
 Generate new API token.
 
+<!-- prettier-ignore -->
 ```js
-const res = await api.call("/v1/api-tokens/create", name);
+const res = await api.call( "/v1/api-tokens/create", name );
 ```
 
 **Permissions**
@@ -33,6 +34,7 @@ const res = await api.call("/v1/api-tokens/create", name);
 
 -   **name** `[required]`
 
+    <!-- prettier-ignore -->
     ```yaml
     type: string
     ```
@@ -43,8 +45,9 @@ const res = await api.call("/v1/api-tokens/create", name);
 
 Remove API token.
 
+<!-- prettier-ignore -->
 ```js
-const res = await api.call("/v1/api-tokens/delete", tokenId);
+const res = await api.call( "/v1/api-tokens/delete", tokenId );
 ```
 
 **Permissions**
@@ -55,6 +58,7 @@ const res = await api.call("/v1/api-tokens/delete", tokenId);
 
 -   **tokenId** `[required]`
 
+    <!-- prettier-ignore -->
     ```yaml
     type: string
     ```
@@ -65,8 +69,9 @@ const res = await api.call("/v1/api-tokens/delete", tokenId);
 
 Get user permissions.
 
+<!-- prettier-ignore -->
 ```js
-const res = await api.call("/v1/api-tokens/get-permissions", tokenId);
+const res = await api.call( "/v1/api-tokens/get-permissions", tokenId );
 ```
 
 **Permissions**
@@ -77,6 +82,7 @@ const res = await api.call("/v1/api-tokens/get-permissions", tokenId);
 
 -   **tokenId** `[required]`
 
+    <!-- prettier-ignore -->
     ```yaml
     type: string
     ```
@@ -87,8 +93,9 @@ const res = await api.call("/v1/api-tokens/get-permissions", tokenId);
 
 Read api tokens.
 
+<!-- prettier-ignore -->
 ```js
-const res = await api.call("/v1/api-tokens/read", [options]);
+const res = await api.call( "/v1/api-tokens/read", [options] );
 ```
 
 **Permissions**
@@ -99,6 +106,7 @@ const res = await api.call("/v1/api-tokens/read", [options]);
 
 -   **options** `[not required]`
 
+    <!-- prettier-ignore -->
     ```yaml
     type: object
     ```
@@ -109,8 +117,9 @@ const res = await api.call("/v1/api-tokens/read", [options]);
 
 Set API token enabled.
 
+<!-- prettier-ignore -->
 ```js
-const res = await api.call("/v1/api-tokens/set-enabled", tokenId, enabled);
+const res = await api.call( "/v1/api-tokens/set-enabled", tokenId, enabled );
 ```
 
 **Permissions**
@@ -121,12 +130,14 @@ const res = await api.call("/v1/api-tokens/set-enabled", tokenId, enabled);
 
 -   **tokenId** `[required]`
 
+    <!-- prettier-ignore -->
     ```yaml
     type: string
     ```
 
 -   **enabled** `[required]`
 
+    <!-- prettier-ignore -->
     ```yaml
     type: boolean
     ```
@@ -137,8 +148,9 @@ const res = await api.call("/v1/api-tokens/set-enabled", tokenId, enabled);
 
 Set user permissions.
 
+<!-- prettier-ignore -->
 ```js
-const res = await api.call("/v1/api-tokens/set-permissions", tokenId, permissions);
+const res = await api.call( "/v1/api-tokens/set-permissions", tokenId, permissions );
 ```
 
 **Permissions**
@@ -149,12 +161,14 @@ const res = await api.call("/v1/api-tokens/set-permissions", tokenId, permission
 
 -   **tokenId** `[required]`
 
+    <!-- prettier-ignore -->
     ```yaml
     type: string
     ```
 
 -   **permissions** `[required]`
 
+    <!-- prettier-ignore -->
     ```yaml
     type: object
     additionalProperties:
@@ -167,8 +181,9 @@ const res = await api.call("/v1/api-tokens/set-permissions", tokenId, permission
 
 Set user permissions.
 
+<!-- prettier-ignore -->
 ```js
-const res = await api.call("/v1/api-tokens/update-permissions", tokenId, permissions);
+const res = await api.call( "/v1/api-tokens/update-permissions", tokenId, permissions );
 ```
 
 **Permissions**
@@ -179,12 +194,14 @@ const res = await api.call("/v1/api-tokens/update-permissions", tokenId, permiss
 
 -   **tokenId** `[required]`
 
+    <!-- prettier-ignore -->
     ```yaml
     type: string
     ```
 
 -   **permissions** `[required]`
 
+    <!-- prettier-ignore -->
     ```yaml
     type: object
     additionalProperties:

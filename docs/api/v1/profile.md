@@ -17,8 +17,9 @@ Profile.
 
 Read authenticated used profile.
 
+<!-- prettier-ignore -->
 ```js
-const res = await api.call("/v1/profile/read");
+const res = await api.call( "/v1/profile/read" );
 ```
 
 **Permissions**
@@ -35,8 +36,9 @@ Method require no parameters.
 
 Set user email.
 
+<!-- prettier-ignore -->
 ```js
-const res = await api.call("/v1/profile/set-email", [email]);
+const res = await api.call( "/v1/profile/set-email", [email] );
 ```
 
 **Permissions**
@@ -47,6 +49,7 @@ const res = await api.call("/v1/profile/set-email", [email]);
 
 -   **email** `[not required]`
 
+    <!-- prettier-ignore -->
     ```yaml
     type: string
     ```
@@ -57,8 +60,9 @@ const res = await api.call("/v1/profile/set-email", [email]);
 
 Set user telegram name.
 
+<!-- prettier-ignore -->
 ```js
-const res = await api.call("/v1/profile/set-telegram-username", [username]);
+const res = await api.call( "/v1/profile/set-telegram-username", [username] );
 ```
 
 **Permissions**
@@ -69,6 +73,7 @@ const res = await api.call("/v1/profile/set-telegram-username", [username]);
 
 -   **username** `[not required]`
 
+    <!-- prettier-ignore -->
     ```yaml
     type: string
     ```

@@ -21,8 +21,9 @@ Session.
 
 Confirm user email using email confirmation token.
 
+<!-- prettier-ignore -->
 ```js
-const res = await api.call("/v1/session/confirm-email-by-token", token);
+const res = await api.call( "/v1/session/confirm-email-by-token", token );
 ```
 
 **Permissions**
@@ -33,6 +34,7 @@ const res = await api.call("/v1/session/confirm-email-by-token", token);
 
 -   **token** `[required]` - Email confirmation token.
 
+    <!-- prettier-ignore -->
     ```yaml
     type: string
     ```
@@ -43,8 +45,9 @@ const res = await api.call("/v1/session/confirm-email-by-token", token);
 
 Send confirmation email.
 
+<!-- prettier-ignore -->
 ```js
-const res = await api.call("/v1/session/send-confirmation-email", user_id);
+const res = await api.call( "/v1/session/send-confirmation-email", user_id );
 ```
 
 **Permissions**
@@ -55,6 +58,7 @@ const res = await api.call("/v1/session/send-confirmation-email", user_id);
 
 -   **user_id** `[required]` - User name or email.
 
+    <!-- prettier-ignore -->
     ```yaml
     type: string
     ```
@@ -65,8 +69,9 @@ const res = await api.call("/v1/session/send-confirmation-email", user_id);
 
 Send password reset email.
 
+<!-- prettier-ignore -->
 ```js
-const res = await api.call("/v1/session/send-password-reset-email", user_id);
+const res = await api.call( "/v1/session/send-password-reset-email", user_id );
 ```
 
 **Permissions**
@@ -77,6 +82,7 @@ const res = await api.call("/v1/session/send-password-reset-email", user_id);
 
 -   **user_id** `[required]` - User name or email.
 
+    <!-- prettier-ignore -->
     ```yaml
     type: string
     ```
@@ -87,8 +93,9 @@ const res = await api.call("/v1/session/send-password-reset-email", user_id);
 
 Set user password using password recovery token.
 
+<!-- prettier-ignore -->
 ```js
-const res = await api.call("/v1/session/set-password-by-token", token, password);
+const res = await api.call( "/v1/session/set-password-by-token", token, password );
 ```
 
 **Permissions**
@@ -99,12 +106,14 @@ const res = await api.call("/v1/session/set-password-by-token", token, password)
 
 -   **token** `[required]`
 
+    <!-- prettier-ignore -->
     ```yaml
     type: string
     ```
 
 -   **password** `[required]`
 
+    <!-- prettier-ignore -->
     ```yaml
     type: string
     ```
@@ -115,8 +124,9 @@ const res = await api.call("/v1/session/set-password-by-token", token, password)
 
 Signin user.
 
+<!-- prettier-ignore -->
 ```js
-const res = await api.call("/v1/session/signin", [credentials], [signinPermissions]);
+const res = await api.call( "/v1/session/signin", [credentials], [signinPermissions] );
 ```
 
 If `credentials` parameter is specified - will try to sign in user using username and password, otherwise will try to sign in user, using currently used api token.
@@ -139,6 +149,7 @@ If `credentials` parameter is specified - will try to sign in user using usernam
 
 -   **credentials** `[not required]`
 
+    <!-- prettier-ignore -->
     ```yaml
     type: object
     properties:
@@ -154,12 +165,15 @@ If `credentials` parameter is specified - will try to sign in user using usernam
 
 -   **signinPermissions** `[not required]` - Array of permissions. Only user, who has this permissions can sign in. If `null` permissions will not check.
 
+    <!-- prettier-ignore -->
     ```yaml
     anyOf:
-        - type: "null"
-        - type: array
-          items:
-              type: string
+        -
+            type: "null"
+        -
+            type: array
+            items:
+                type: string
     ```
 
 <a id="signout"></a>
@@ -168,8 +182,9 @@ If `credentials` parameter is specified - will try to sign in user using usernam
 
 Signout user, remove user session.
 
+<!-- prettier-ignore -->
 ```js
-const res = await api.call("/v1/session/signout");
+const res = await api.call( "/v1/session/signout" );
 ```
 
 **Permissions**
@@ -186,8 +201,9 @@ Method require no parameters.
 
 Signup user.
 
+<!-- prettier-ignore -->
 ```js
-const res = await api.call("/v1/session/signup", fields);
+const res = await api.call( "/v1/session/signup", fields );
 ```
 
 **Permissions**
@@ -198,6 +214,7 @@ const res = await api.call("/v1/session/signup", fields);
 
 -   **fields** `[required]`
 
+    <!-- prettier-ignore -->
     ```yaml
     type: object
     properties:

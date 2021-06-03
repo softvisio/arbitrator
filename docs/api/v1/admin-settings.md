@@ -17,8 +17,9 @@ App settings.
 
 Read application settings.
 
+<!-- prettier-ignore -->
 ```js
-const res = await api.call("/v1/admin/settings/read");
+const res = await api.call( "/v1/admin/settings/read" );
 ```
 
 **Permissions**
@@ -35,8 +36,9 @@ Method require no parameters.
 
 Test SMTP server settings.
 
+<!-- prettier-ignore -->
 ```js
-const res = await api.call("/v1/admin/settings/test-smtp", settings);
+const res = await api.call( "/v1/admin/settings/test-smtp", settings );
 ```
 
 **Permissions**
@@ -47,6 +49,7 @@ const res = await api.call("/v1/admin/settings/test-smtp", settings);
 
 -   **settings** `[required]`
 
+    <!-- prettier-ignore -->
     ```yaml
     type: object
     properties:
@@ -70,8 +73,9 @@ const res = await api.call("/v1/admin/settings/test-smtp", settings);
 
 Update application settings.
 
+<!-- prettier-ignore -->
 ```js
-const res = await api.call("/v1/admin/settings/update", settings);
+const res = await api.call( "/v1/admin/settings/update", settings );
 ```
 
 **Permissions**
@@ -82,6 +86,7 @@ const res = await api.call("/v1/admin/settings/update", settings);
 
 -   **settings** `[required]` - application settings object
 
+    <!-- prettier-ignore -->
     ```yaml
     type: object
     ```

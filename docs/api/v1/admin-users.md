@@ -24,8 +24,9 @@ App users management.
 
 Create user.
 
+<!-- prettier-ignore -->
 ```js
-const res = await api.call("/v1/admin/users/create", fields);
+const res = await api.call( "/v1/admin/users/create", fields );
 ```
 
 **Permissions**
@@ -36,6 +37,7 @@ const res = await api.call("/v1/admin/users/create", fields);
 
 -   **fields** `[required]`
 
+    <!-- prettier-ignore -->
     ```yaml
     type: object
     properties:
@@ -63,8 +65,9 @@ const res = await api.call("/v1/admin/users/create", fields);
 
 Remove user.
 
+<!-- prettier-ignore -->
 ```js
-const res = await api.call("/v1/admin/users/delete", userId);
+const res = await api.call( "/v1/admin/users/delete", userId );
 ```
 
 **Permissions**
@@ -75,6 +78,7 @@ const res = await api.call("/v1/admin/users/delete", userId);
 
 -   **userId** `[required]`
 
+    <!-- prettier-ignore -->
     ```yaml
     type: string
     ```
@@ -85,8 +89,9 @@ const res = await api.call("/v1/admin/users/delete", userId);
 
 Get user permissions.
 
+<!-- prettier-ignore -->
 ```js
-const res = await api.call("/v1/admin/users/get-permissions", userId);
+const res = await api.call( "/v1/admin/users/get-permissions", userId );
 ```
 
 **Permissions**
@@ -97,6 +102,7 @@ const res = await api.call("/v1/admin/users/get-permissions", userId);
 
 -   **userId** `[required]`
 
+    <!-- prettier-ignore -->
     ```yaml
     type: string
     ```
@@ -107,8 +113,9 @@ const res = await api.call("/v1/admin/users/get-permissions", userId);
 
 Read users.
 
+<!-- prettier-ignore -->
 ```js
-const res = await api.call("/v1/admin/users/read", [options]);
+const res = await api.call( "/v1/admin/users/read", [options] );
 ```
 
 **Permissions**
@@ -119,6 +126,7 @@ const res = await api.call("/v1/admin/users/read", [options]);
 
 -   **options** `[not required]`
 
+    <!-- prettier-ignore -->
     ```yaml
     apiRead:
         id:
@@ -144,8 +152,9 @@ const res = await api.call("/v1/admin/users/read", [options]);
 
 Set user enabled.
 
+<!-- prettier-ignore -->
 ```js
-const res = await api.call("/v1/admin/users/set-enabled", userId, enabled);
+const res = await api.call( "/v1/admin/users/set-enabled", userId, enabled );
 ```
 
 **Permissions**
@@ -156,12 +165,14 @@ const res = await api.call("/v1/admin/users/set-enabled", userId, enabled);
 
 -   **userId** `[required]` - User id or name.
 
+    <!-- prettier-ignore -->
     ```yaml
     type: string
     ```
 
 -   **enabled** `[required]`
 
+    <!-- prettier-ignore -->
     ```yaml
     type: boolean
     ```
@@ -172,8 +183,9 @@ const res = await api.call("/v1/admin/users/set-enabled", userId, enabled);
 
 Set user password.
 
+<!-- prettier-ignore -->
 ```js
-const res = await api.call("/v1/admin/users/set-password", userId, [pasword]);
+const res = await api.call( "/v1/admin/users/set-password", userId, [pasword] );
 ```
 
 **Permissions**
@@ -184,12 +196,14 @@ const res = await api.call("/v1/admin/users/set-password", userId, [pasword]);
 
 -   **userId** `[required]` - User id or name.
 
+    <!-- prettier-ignore -->
     ```yaml
     type: string
     ```
 
 -   **pasword** `[not required]`
 
+    <!-- prettier-ignore -->
     ```yaml
     type: string
     ```
@@ -200,8 +214,9 @@ const res = await api.call("/v1/admin/users/set-password", userId, [pasword]);
 
 Set user permissions.
 
+<!-- prettier-ignore -->
 ```js
-const res = await api.call("/v1/admin/users/set-permissions", userId, permissions);
+const res = await api.call( "/v1/admin/users/set-permissions", userId, permissions );
 ```
 
 **Permissions**
@@ -212,12 +227,14 @@ const res = await api.call("/v1/admin/users/set-permissions", userId, permission
 
 -   **userId** `[required]`
 
+    <!-- prettier-ignore -->
     ```yaml
     type: string
     ```
 
 -   **permissions** `[required]`
 
+    <!-- prettier-ignore -->
     ```yaml
     type: object
     additionalProperties:
@@ -230,8 +247,9 @@ const res = await api.call("/v1/admin/users/set-permissions", userId, permission
 
 Change user name.
 
+<!-- prettier-ignore -->
 ```js
-const res = await api.call("/v1/admin/users/set-username", user_id, new_username, [new_password]);
+const res = await api.call( "/v1/admin/users/set-username", user_id, new_username, [new_password] );
 ```
 
 **Permissions**
@@ -242,18 +260,21 @@ const res = await api.call("/v1/admin/users/set-username", user_id, new_username
 
 -   **user_id** `[required]`
 
+    <!-- prettier-ignore -->
     ```yaml
     type: string
     ```
 
 -   **new_username** `[required]`
 
+    <!-- prettier-ignore -->
     ```yaml
     type: string
     ```
 
 -   **new_password** `[not required]`
 
+    <!-- prettier-ignore -->
     ```yaml
     type: string
     ```
@@ -264,8 +285,9 @@ const res = await api.call("/v1/admin/users/set-username", user_id, new_username
 
 Suggest user name.
 
+<!-- prettier-ignore -->
 ```js
-const res = await api.call("/v1/admin/users/suggest", [options]);
+const res = await api.call( "/v1/admin/users/suggest", [options] );
 ```
 
 **Permissions**
@@ -276,6 +298,7 @@ const res = await api.call("/v1/admin/users/suggest", [options]);
 
 -   **options** `[not required]`
 
+    <!-- prettier-ignore -->
     ```yaml
     type: object
     properties:
@@ -284,7 +307,7 @@ const res = await api.call("/v1/admin/users/suggest", [options]);
             properties:
                 name:
                     type: array
-                    items: [{ operator: { type: string, enum: [like] } }, { name: { type: string } }]
+                    items: [{operator: {type: string, enum: [like]}}, {name: {type: string}}]
     ```
 
 <a id="update-permissions"></a>
@@ -293,8 +316,9 @@ const res = await api.call("/v1/admin/users/suggest", [options]);
 
 Set user permissions.
 
+<!-- prettier-ignore -->
 ```js
-const res = await api.call("/v1/admin/users/update-permissions", userId, permissions);
+const res = await api.call( "/v1/admin/users/update-permissions", userId, permissions );
 ```
 
 **Permissions**
@@ -305,12 +329,14 @@ const res = await api.call("/v1/admin/users/update-permissions", userId, permiss
 
 -   **userId** `[required]`
 
+    <!-- prettier-ignore -->
     ```yaml
     type: string
     ```
 
 -   **permissions** `[required]`
 
+    <!-- prettier-ignore -->
     ```yaml
     type: object
     additionalProperties:
