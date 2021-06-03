@@ -24,10 +24,21 @@ App users management.
 
 Create user.
 
+<!-- tabs:start -->
 <!-- prettier-ignore -->
+#### **Javascript**
+
 ```js
-const res = await api.call( "/v1/admin/users/create", fields );
+const res = await api.call("/v1/admin/users/create", fields);
 ```
+
+#### **Curl**
+
+```sh
+curl -X POST ...
+```
+
+<!-- tabs:end -->
 
 **Permissions**
 
@@ -65,10 +76,21 @@ const res = await api.call( "/v1/admin/users/create", fields );
 
 Remove user.
 
+<!-- tabs:start -->
 <!-- prettier-ignore -->
+#### **Javascript**
+
 ```js
-const res = await api.call( "/v1/admin/users/delete", userId );
+const res = await api.call("/v1/admin/users/delete", userId);
 ```
+
+#### **Curl**
+
+```sh
+curl -X POST ...
+```
+
+<!-- tabs:end -->
 
 **Permissions**
 
@@ -89,10 +111,21 @@ const res = await api.call( "/v1/admin/users/delete", userId );
 
 Get user permissions.
 
+<!-- tabs:start -->
 <!-- prettier-ignore -->
+#### **Javascript**
+
 ```js
-const res = await api.call( "/v1/admin/users/get-permissions", userId );
+const res = await api.call("/v1/admin/users/get-permissions", userId);
 ```
+
+#### **Curl**
+
+```sh
+curl -X POST ...
+```
+
+<!-- tabs:end -->
 
 **Permissions**
 
@@ -113,10 +146,21 @@ const res = await api.call( "/v1/admin/users/get-permissions", userId );
 
 Read users.
 
+<!-- tabs:start -->
 <!-- prettier-ignore -->
+#### **Javascript**
+
 ```js
-const res = await api.call( "/v1/admin/users/read", [options] );
+const res = await api.call("/v1/admin/users/read", [options]);
 ```
+
+#### **Curl**
+
+```sh
+curl -X POST ...
+```
+
+<!-- tabs:end -->
 
 **Permissions**
 
@@ -152,10 +196,21 @@ const res = await api.call( "/v1/admin/users/read", [options] );
 
 Set user enabled.
 
+<!-- tabs:start -->
 <!-- prettier-ignore -->
+#### **Javascript**
+
 ```js
-const res = await api.call( "/v1/admin/users/set-enabled", userId, enabled );
+const res = await api.call("/v1/admin/users/set-enabled", userId, enabled);
 ```
+
+#### **Curl**
+
+```sh
+curl -X POST ...
+```
+
+<!-- tabs:end -->
 
 **Permissions**
 
@@ -183,10 +238,21 @@ const res = await api.call( "/v1/admin/users/set-enabled", userId, enabled );
 
 Set user password.
 
+<!-- tabs:start -->
 <!-- prettier-ignore -->
+#### **Javascript**
+
 ```js
-const res = await api.call( "/v1/admin/users/set-password", userId, [pasword] );
+const res = await api.call("/v1/admin/users/set-password", userId, [pasword]);
 ```
+
+#### **Curl**
+
+```sh
+curl -X POST ...
+```
+
+<!-- tabs:end -->
 
 **Permissions**
 
@@ -214,10 +280,21 @@ const res = await api.call( "/v1/admin/users/set-password", userId, [pasword] );
 
 Set user permissions.
 
+<!-- tabs:start -->
 <!-- prettier-ignore -->
+#### **Javascript**
+
 ```js
-const res = await api.call( "/v1/admin/users/set-permissions", userId, permissions );
+const res = await api.call("/v1/admin/users/set-permissions", userId, permissions);
 ```
+
+#### **Curl**
+
+```sh
+curl -X POST ...
+```
+
+<!-- tabs:end -->
 
 **Permissions**
 
@@ -247,10 +324,21 @@ const res = await api.call( "/v1/admin/users/set-permissions", userId, permissio
 
 Change user name.
 
+<!-- tabs:start -->
 <!-- prettier-ignore -->
+#### **Javascript**
+
 ```js
-const res = await api.call( "/v1/admin/users/set-username", user_id, new_username, [new_password] );
+const res = await api.call("/v1/admin/users/set-username", user_id, new_username, [new_password]);
 ```
+
+#### **Curl**
+
+```sh
+curl -X POST ...
+```
+
+<!-- tabs:end -->
 
 **Permissions**
 
@@ -285,10 +373,21 @@ const res = await api.call( "/v1/admin/users/set-username", user_id, new_usernam
 
 Suggest user name.
 
+<!-- tabs:start -->
 <!-- prettier-ignore -->
+#### **Javascript**
+
 ```js
-const res = await api.call( "/v1/admin/users/suggest", [options] );
+const res = await api.call("/v1/admin/users/suggest", [options]);
 ```
+
+#### **Curl**
+
+```sh
+curl -X POST ...
+```
+
+<!-- tabs:end -->
 
 **Permissions**
 
@@ -316,10 +415,21 @@ const res = await api.call( "/v1/admin/users/suggest", [options] );
 
 Set user permissions.
 
+<!-- tabs:start -->
 <!-- prettier-ignore -->
+#### **Javascript**
+
 ```js
-const res = await api.call( "/v1/admin/users/update-permissions", userId, permissions );
+const res = await api.call("/v1/admin/users/update-permissions", userId, permissions);
 ```
+
+#### **Curl**
+
+```sh
+curl -X POST ...
+```
+
+<!-- tabs:end -->
 
 **Permissions**
 

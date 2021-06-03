@@ -17,10 +17,21 @@ App settings.
 
 Read application settings.
 
+<!-- tabs:start -->
 <!-- prettier-ignore -->
+#### **Javascript**
+
 ```js
-const res = await api.call( "/v1/admin/settings/read" );
+const res = await api.call("/v1/admin/settings/read");
 ```
+
+#### **Curl**
+
+```sh
+curl -X POST ...
+```
+
+<!-- tabs:end -->
 
 **Permissions**
 
@@ -36,10 +47,21 @@ Method require no parameters.
 
 Test SMTP server settings.
 
+<!-- tabs:start -->
 <!-- prettier-ignore -->
+#### **Javascript**
+
 ```js
-const res = await api.call( "/v1/admin/settings/test-smtp", settings );
+const res = await api.call("/v1/admin/settings/test-smtp", settings);
 ```
+
+#### **Curl**
+
+```sh
+curl -X POST ...
+```
+
+<!-- tabs:end -->
 
 **Permissions**
 
@@ -73,10 +95,21 @@ const res = await api.call( "/v1/admin/settings/test-smtp", settings );
 
 Update application settings.
 
+<!-- tabs:start -->
 <!-- prettier-ignore -->
+#### **Javascript**
+
 ```js
-const res = await api.call( "/v1/admin/settings/update", settings );
+const res = await api.call("/v1/admin/settings/update", settings);
 ```
+
+#### **Curl**
+
+```sh
+curl -X POST ...
+```
+
+<!-- tabs:end -->
 
 **Permissions**
 

@@ -16,10 +16,21 @@ Test.
 
 Test method.
 
+<!-- tabs:start -->
 <!-- prettier-ignore -->
+#### **Javascript**
+
 ```js
-const res = await api.call( "/v1/test/test", [args] );
+const res = await api.call("/v1/test/test", [args]);
 ```
+
+#### **Curl**
+
+```sh
+curl -X POST ...
+```
+
+<!-- tabs:end -->
 
 **Permissions**
 
@@ -40,10 +51,21 @@ const res = await api.call( "/v1/test/test", [args] );
 
 Test method.
 
+<!-- tabs:start -->
 <!-- prettier-ignore -->
+#### **Javascript**
+
 ```js
-const res = await api.call( "/v1/test/upload", [request], [data] );
+const res = await api.call("/v1/test/upload", [request], [data]);
 ```
+
+#### **Curl**
+
+```sh
+curl -X POST ...
+```
+
+<!-- tabs:end -->
 
 **Permissions**
 

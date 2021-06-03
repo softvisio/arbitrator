@@ -17,10 +17,21 @@ Profile.
 
 Read authenticated used profile.
 
+<!-- tabs:start -->
 <!-- prettier-ignore -->
+#### **Javascript**
+
 ```js
-const res = await api.call( "/v1/profile/read" );
+const res = await api.call("/v1/profile/read");
 ```
+
+#### **Curl**
+
+```sh
+curl -X POST ...
+```
+
+<!-- tabs:end -->
 
 **Permissions**
 
@@ -36,10 +47,21 @@ Method require no parameters.
 
 Set user email.
 
+<!-- tabs:start -->
 <!-- prettier-ignore -->
+#### **Javascript**
+
 ```js
-const res = await api.call( "/v1/profile/set-email", [email] );
+const res = await api.call("/v1/profile/set-email", [email]);
 ```
+
+#### **Curl**
+
+```sh
+curl -X POST ...
+```
+
+<!-- tabs:end -->
 
 **Permissions**
 
@@ -60,10 +82,21 @@ const res = await api.call( "/v1/profile/set-email", [email] );
 
 Set user telegram name.
 
+<!-- tabs:start -->
 <!-- prettier-ignore -->
+#### **Javascript**
+
 ```js
-const res = await api.call( "/v1/profile/set-telegram-username", [username] );
+const res = await api.call("/v1/profile/set-telegram-username", [username]);
 ```
+
+#### **Curl**
+
+```sh
+curl -X POST ...
+```
+
+<!-- tabs:end -->
 
 **Permissions**
 

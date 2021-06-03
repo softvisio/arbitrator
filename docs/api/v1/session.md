@@ -21,10 +21,21 @@ Session.
 
 Confirm user email using email confirmation token.
 
+<!-- tabs:start -->
 <!-- prettier-ignore -->
+#### **Javascript**
+
 ```js
-const res = await api.call( "/v1/session/confirm-email-by-token", token );
+const res = await api.call("/v1/session/confirm-email-by-token", token);
 ```
+
+#### **Curl**
+
+```sh
+curl -X POST ...
+```
+
+<!-- tabs:end -->
 
 **Permissions**
 
@@ -45,10 +56,21 @@ const res = await api.call( "/v1/session/confirm-email-by-token", token );
 
 Send confirmation email.
 
+<!-- tabs:start -->
 <!-- prettier-ignore -->
+#### **Javascript**
+
 ```js
-const res = await api.call( "/v1/session/send-confirmation-email", user_id );
+const res = await api.call("/v1/session/send-confirmation-email", user_id);
 ```
+
+#### **Curl**
+
+```sh
+curl -X POST ...
+```
+
+<!-- tabs:end -->
 
 **Permissions**
 
@@ -69,10 +91,21 @@ const res = await api.call( "/v1/session/send-confirmation-email", user_id );
 
 Send password reset email.
 
+<!-- tabs:start -->
 <!-- prettier-ignore -->
+#### **Javascript**
+
 ```js
-const res = await api.call( "/v1/session/send-password-reset-email", user_id );
+const res = await api.call("/v1/session/send-password-reset-email", user_id);
 ```
+
+#### **Curl**
+
+```sh
+curl -X POST ...
+```
+
+<!-- tabs:end -->
 
 **Permissions**
 
@@ -93,10 +126,21 @@ const res = await api.call( "/v1/session/send-password-reset-email", user_id );
 
 Set user password using password recovery token.
 
+<!-- tabs:start -->
 <!-- prettier-ignore -->
+#### **Javascript**
+
 ```js
-const res = await api.call( "/v1/session/set-password-by-token", token, password );
+const res = await api.call("/v1/session/set-password-by-token", token, password);
 ```
+
+#### **Curl**
+
+```sh
+curl -X POST ...
+```
+
+<!-- tabs:end -->
 
 **Permissions**
 
@@ -124,10 +168,21 @@ const res = await api.call( "/v1/session/set-password-by-token", token, password
 
 Signin user.
 
+<!-- tabs:start -->
 <!-- prettier-ignore -->
+#### **Javascript**
+
 ```js
-const res = await api.call( "/v1/session/signin", [credentials], [signinPermissions] );
+const res = await api.call("/v1/session/signin", [credentials], [signinPermissions]);
 ```
+
+#### **Curl**
+
+```sh
+curl -X POST ...
+```
+
+<!-- tabs:end -->
 
 If `credentials` parameter is specified - will try to sign in user using username and password, otherwise will try to sign in user, using currently used api token.
 
@@ -182,10 +237,21 @@ If `credentials` parameter is specified - will try to sign in user using usernam
 
 Signout user, remove user session.
 
+<!-- tabs:start -->
 <!-- prettier-ignore -->
+#### **Javascript**
+
 ```js
-const res = await api.call( "/v1/session/signout" );
+const res = await api.call("/v1/session/signout");
 ```
+
+#### **Curl**
+
+```sh
+curl -X POST ...
+```
+
+<!-- tabs:end -->
 
 **Permissions**
 
@@ -201,10 +267,21 @@ Method require no parameters.
 
 Signup user.
 
+<!-- tabs:start -->
 <!-- prettier-ignore -->
+#### **Javascript**
+
 ```js
-const res = await api.call( "/v1/session/signup", fields );
+const res = await api.call("/v1/session/signup", fields);
 ```
+
+#### **Curl**
+
+```sh
+curl -X POST ...
+```
+
+<!-- tabs:end -->
 
 **Permissions**
 
