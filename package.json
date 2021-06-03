@@ -11,15 +11,7 @@
     "dependencies": {
         "@softvisio/core": "^3.0.0"
     },
-    "softvisio": {
-        "docs": {
-            "api": {
-                "lib/api": "api",
-                "lib/rpc": "rpc"
-            }
-        },
-        "packages": [
-            "app"
-        ]
-    }
+    "packages": [
+        "app"
+    ]
 }
