@@ -14,7 +14,8 @@
     "softvisio": {
         "docs": {
             "api": {
-                "lib/api": "api"
+                "lib/api": "api",
+                "lib/rpc": "rpc"
             }
         },
         "packages": [
