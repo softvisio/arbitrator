@@ -1,46 +1,28 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <title>Core</title>
+
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-        <title>Arbitrator</title>
-
         <link rel="icon" href="assets/logo.png" />
-
-        <link rel="stylesheet" href="assets/theme.css" />
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@softvisio/cli/docs/assets/theme/theme.css" />
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" />
     </head>
     <body>
         <nav>
-            <a href="#changelog">CHANGELOG</a>
-            •
-            <a href="javascript:" data-link-theme>◐ THEME</a>
+            <a href="#/changelog">CHANGE LOG</a> • <a href="https://github.com/softvisio/arbitrator/discussions" title="Discussions"><i class="far fa-comments"></i></a> • <a href="https://github.com/softvisio/arbitrator/issues" title="Issues"><i class="fas fa-bug"></i></a> • <a href="javascript:" data-link-theme><i class="fas fa-adjust"></i> THEME</a>
         </nav>
         <div id="app"></div>
+
         <script>
-            window.$docsify = {
-                name: "arbitrator",
-                repo: "https://github.com/softvisio/arbitrator",
-                loadSidebar: true,
-                logo: "assets/logo.png height='80px'",
-                auto2top: true,
-                relativePath: true,
-                maxLevel: 3,
-                externalLinkTarget: "_self",
-                subMaxLevel: 3,
-                alias: {
-                    ".*?/changelog": "https://raw.github.com/softvisio/arbitrator/main/CHANGELOG.md",
-                },
-                search: {
-                    depth: 3,
-                },
-                tabs: {},
-            };
+            window.$docsify = { name: "arbitrator", repo: "https://github.com/softvisio/arbitrator", loadSidebar: true, auto2top: true, relativePath: true, maxLevel: 3, externalLinkTarget: "_self", subMaxLevel: 3, search: { depth: 3 }, tabs: {}, alias: { "/api-sdk": "https://raw.githubusercontent.com/softvisio/core/main/docs/api-sdk.md", "/changelog": "https://raw.githubusercontent.com/softvisio/arbitrator/main/CHANGELOG.md" }, logo: 'assets/logo.png height="50"' };
         </script>
-        <script src="assets/theme.js"></script>
+
+        <script src="//cdn.jsdelivr.net/npm/@softvisio/cli/docs/assets/theme/theme.js"></script>
         <script src="//cdn.jsdelivr.net/npm/docsify"></script>
-        <script src="//cdn.jsdelivr.net/npm/docsify-themeable"></script>
         <script src="//cdn.jsdelivr.net/npm/prismjs"></script>
         <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
         <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>

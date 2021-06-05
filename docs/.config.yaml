@@ -1,10 +1,10 @@
-api:
-  lib/api:
-    target: api
-    options:
-      type: "API"
+logo: true
 
-  lib/rpc:
-    target: rpc
-    options:
-      type: "RPC"
+aliases:
+  /api-sdk: https://raw.githubusercontent.com/softvisio/core/main/docs/api-sdk.md
+
+api:
+  - { source: lib/api, target: api }
+
+rpc:
+  - { source: lib/rpc, target: rpc }
