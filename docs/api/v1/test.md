@@ -25,11 +25,15 @@ Test method.
 const res = await api.call( "/v1/test/test", [args] );
 ```
 
-#### **curl**
+#### **cURL**
 
 <!-- prettier-ignore -->
 ```sh
-curl -X POST ...
+curl -X POST \
+    -H "Authorization: Basic <YOUR-API-TOKEN>" \
+    -H "Content-Type: application/json" \
+    -d '[...PARAMETERS]' \
+    "https://api.domain.com/v1/test/test"
 ```
 
 <!-- tabs:end -->
@@ -62,11 +66,15 @@ Test method.
 const res = await api.call( "/v1/test/upload", [request], [data] );
 ```
 
-#### **curl**
+#### **cURL**
 
 <!-- prettier-ignore -->
 ```sh
-curl -X POST ...
+curl -X POST \
+    -H "Authorization: Basic <YOUR-API-TOKEN>" \
+    -H "Content-Type: application/json" \
+    -d '[...PARAMETERS]' \
+    "https://api.domain.com/v1/test/upload"
 ```
 
 <!-- tabs:end -->

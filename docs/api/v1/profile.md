@@ -26,11 +26,15 @@ Read authenticated used profile.
 const res = await api.call( "/v1/profile/read" );
 ```
 
-#### **curl**
+#### **cURL**
 
 <!-- prettier-ignore -->
 ```sh
-curl -X POST ...
+curl -X POST \
+    -H "Authorization: Basic <YOUR-API-TOKEN>" \
+    -H "Content-Type: application/json" \
+    -d '[...PARAMETERS]' \
+    "https://api.domain.com/v1/profile/read"
 ```
 
 <!-- tabs:end -->
@@ -58,11 +62,15 @@ Set user email.
 const res = await api.call( "/v1/profile/set-email", [email] );
 ```
 
-#### **curl**
+#### **cURL**
 
 <!-- prettier-ignore -->
 ```sh
-curl -X POST ...
+curl -X POST \
+    -H "Authorization: Basic <YOUR-API-TOKEN>" \
+    -H "Content-Type: application/json" \
+    -d '[...PARAMETERS]' \
+    "https://api.domain.com/v1/profile/set-email"
 ```
 
 <!-- tabs:end -->
@@ -95,11 +103,15 @@ Set user telegram name.
 const res = await api.call( "/v1/profile/set-telegram-username", [username] );
 ```
 
-#### **curl**
+#### **cURL**
 
 <!-- prettier-ignore -->
 ```sh
-curl -X POST ...
+curl -X POST \
+    -H "Authorization: Basic <YOUR-API-TOKEN>" \
+    -H "Content-Type: application/json" \
+    -d '[...PARAMETERS]' \
+    "https://api.domain.com/v1/profile/set-telegram-username"
 ```
 
 <!-- tabs:end -->

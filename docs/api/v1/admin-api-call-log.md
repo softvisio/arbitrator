@@ -26,11 +26,15 @@ Read statistics for the given API method for the last 30 days.
 const res = await api.call( "/v1/admin/api-call-log/read-history-stat", method_id );
 ```
 
-#### **curl**
+#### **cURL**
 
 <!-- prettier-ignore -->
 ```sh
-curl -X POST ...
+curl -X POST \
+    -H "Authorization: Basic <YOUR-API-TOKEN>" \
+    -H "Content-Type: application/json" \
+    -d '[...PARAMETERS]' \
+    "https://api.domain.com/v1/admin/api-call-log/read-history-stat"
 ```
 
 <!-- tabs:end -->
@@ -65,11 +69,15 @@ Read statistics for the last 60 minutes.
 const res = await api.call( "/v1/admin/api-call-log/read-latest-stat", [method_id] );
 ```
 
-#### **curl**
+#### **cURL**
 
 <!-- prettier-ignore -->
 ```sh
-curl -X POST ...
+curl -X POST \
+    -H "Authorization: Basic <YOUR-API-TOKEN>" \
+    -H "Content-Type: application/json" \
+    -d '[...PARAMETERS]' \
+    "https://api.domain.com/v1/admin/api-call-log/read-latest-stat"
 ```
 
 <!-- tabs:end -->
@@ -104,11 +112,15 @@ Read users.
 const res = await api.call( "/v1/admin/api-call-log/read-log", [options] );
 ```
 
-#### **curl**
+#### **cURL**
 
 <!-- prettier-ignore -->
 ```sh
-curl -X POST ...
+curl -X POST \
+    -H "Authorization: Basic <YOUR-API-TOKEN>" \
+    -H "Content-Type: application/json" \
+    -d '[...PARAMETERS]' \
+    "https://api.domain.com/v1/admin/api-call-log/read-log"
 ```
 
 <!-- tabs:end -->

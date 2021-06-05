@@ -30,11 +30,15 @@ Confirm user email using email confirmation token.
 const res = await api.call( "/v1/session/confirm-email-by-token", token );
 ```
 
-#### **curl**
+#### **cURL**
 
 <!-- prettier-ignore -->
 ```sh
-curl -X POST ...
+curl -X POST \
+    -H "Authorization: Basic <YOUR-API-TOKEN>" \
+    -H "Content-Type: application/json" \
+    -d '[...PARAMETERS]' \
+    "https://api.domain.com/v1/session/confirm-email-by-token"
 ```
 
 <!-- tabs:end -->
@@ -67,11 +71,15 @@ Send confirmation email.
 const res = await api.call( "/v1/session/send-confirmation-email", user_id );
 ```
 
-#### **curl**
+#### **cURL**
 
 <!-- prettier-ignore -->
 ```sh
-curl -X POST ...
+curl -X POST \
+    -H "Authorization: Basic <YOUR-API-TOKEN>" \
+    -H "Content-Type: application/json" \
+    -d '[...PARAMETERS]' \
+    "https://api.domain.com/v1/session/send-confirmation-email"
 ```
 
 <!-- tabs:end -->
@@ -104,11 +112,15 @@ Send password reset email.
 const res = await api.call( "/v1/session/send-password-reset-email", user_id );
 ```
 
-#### **curl**
+#### **cURL**
 
 <!-- prettier-ignore -->
 ```sh
-curl -X POST ...
+curl -X POST \
+    -H "Authorization: Basic <YOUR-API-TOKEN>" \
+    -H "Content-Type: application/json" \
+    -d '[...PARAMETERS]' \
+    "https://api.domain.com/v1/session/send-password-reset-email"
 ```
 
 <!-- tabs:end -->
@@ -141,11 +153,15 @@ Set user password using password recovery token.
 const res = await api.call( "/v1/session/set-password-by-token", token, password );
 ```
 
-#### **curl**
+#### **cURL**
 
 <!-- prettier-ignore -->
 ```sh
-curl -X POST ...
+curl -X POST \
+    -H "Authorization: Basic <YOUR-API-TOKEN>" \
+    -H "Content-Type: application/json" \
+    -d '[...PARAMETERS]' \
+    "https://api.domain.com/v1/session/set-password-by-token"
 ```
 
 <!-- tabs:end -->
@@ -185,11 +201,15 @@ Signin user.
 const res = await api.call( "/v1/session/signin", [credentials], [signinPermissions] );
 ```
 
-#### **curl**
+#### **cURL**
 
 <!-- prettier-ignore -->
 ```sh
-curl -X POST ...
+curl -X POST \
+    -H "Authorization: Basic <YOUR-API-TOKEN>" \
+    -H "Content-Type: application/json" \
+    -d '[...PARAMETERS]' \
+    "https://api.domain.com/v1/session/signin"
 ```
 
 <!-- tabs:end -->
@@ -256,11 +276,15 @@ Signout user, remove user session.
 const res = await api.call( "/v1/session/signout" );
 ```
 
-#### **curl**
+#### **cURL**
 
 <!-- prettier-ignore -->
 ```sh
-curl -X POST ...
+curl -X POST \
+    -H "Authorization: Basic <YOUR-API-TOKEN>" \
+    -H "Content-Type: application/json" \
+    -d '[...PARAMETERS]' \
+    "https://api.domain.com/v1/session/signout"
 ```
 
 <!-- tabs:end -->
@@ -288,11 +312,15 @@ Signup user.
 const res = await api.call( "/v1/session/signup", fields );
 ```
 
-#### **curl**
+#### **cURL**
 
 <!-- prettier-ignore -->
 ```sh
-curl -X POST ...
+curl -X POST \
+    -H "Authorization: Basic <YOUR-API-TOKEN>" \
+    -H "Content-Type: application/json" \
+    -d '[...PARAMETERS]' \
+    "https://api.domain.com/v1/session/signup"
 ```
 
 <!-- tabs:end -->

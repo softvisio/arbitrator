@@ -33,11 +33,15 @@ Create user.
 const res = await api.call( "/v1/admin/users/create", fields );
 ```
 
-#### **curl**
+#### **cURL**
 
 <!-- prettier-ignore -->
 ```sh
-curl -X POST ...
+curl -X POST \
+    -H "Authorization: Basic <YOUR-API-TOKEN>" \
+    -H "Content-Type: application/json" \
+    -d '[...PARAMETERS]' \
+    "https://api.domain.com/v1/admin/users/create"
 ```
 
 <!-- tabs:end -->
@@ -87,11 +91,15 @@ Remove user.
 const res = await api.call( "/v1/admin/users/delete", userId );
 ```
 
-#### **curl**
+#### **cURL**
 
 <!-- prettier-ignore -->
 ```sh
-curl -X POST ...
+curl -X POST \
+    -H "Authorization: Basic <YOUR-API-TOKEN>" \
+    -H "Content-Type: application/json" \
+    -d '[...PARAMETERS]' \
+    "https://api.domain.com/v1/admin/users/delete"
 ```
 
 <!-- tabs:end -->
@@ -124,11 +132,15 @@ Get user permissions.
 const res = await api.call( "/v1/admin/users/get-permissions", userId );
 ```
 
-#### **curl**
+#### **cURL**
 
 <!-- prettier-ignore -->
 ```sh
-curl -X POST ...
+curl -X POST \
+    -H "Authorization: Basic <YOUR-API-TOKEN>" \
+    -H "Content-Type: application/json" \
+    -d '[...PARAMETERS]' \
+    "https://api.domain.com/v1/admin/users/get-permissions"
 ```
 
 <!-- tabs:end -->
@@ -161,11 +173,15 @@ Read users.
 const res = await api.call( "/v1/admin/users/read", [options] );
 ```
 
-#### **curl**
+#### **cURL**
 
 <!-- prettier-ignore -->
 ```sh
-curl -X POST ...
+curl -X POST \
+    -H "Authorization: Basic <YOUR-API-TOKEN>" \
+    -H "Content-Type: application/json" \
+    -d '[...PARAMETERS]' \
+    "https://api.domain.com/v1/admin/users/read"
 ```
 
 <!-- tabs:end -->
@@ -213,11 +229,15 @@ Set user enabled.
 const res = await api.call( "/v1/admin/users/set-enabled", userId, enabled );
 ```
 
-#### **curl**
+#### **cURL**
 
 <!-- prettier-ignore -->
 ```sh
-curl -X POST ...
+curl -X POST \
+    -H "Authorization: Basic <YOUR-API-TOKEN>" \
+    -H "Content-Type: application/json" \
+    -d '[...PARAMETERS]' \
+    "https://api.domain.com/v1/admin/users/set-enabled"
 ```
 
 <!-- tabs:end -->
@@ -257,11 +277,15 @@ Set user password.
 const res = await api.call( "/v1/admin/users/set-password", userId, [pasword] );
 ```
 
-#### **curl**
+#### **cURL**
 
 <!-- prettier-ignore -->
 ```sh
-curl -X POST ...
+curl -X POST \
+    -H "Authorization: Basic <YOUR-API-TOKEN>" \
+    -H "Content-Type: application/json" \
+    -d '[...PARAMETERS]' \
+    "https://api.domain.com/v1/admin/users/set-password"
 ```
 
 <!-- tabs:end -->
@@ -301,11 +325,15 @@ Set user permissions.
 const res = await api.call( "/v1/admin/users/set-permissions", userId, permissions );
 ```
 
-#### **curl**
+#### **cURL**
 
 <!-- prettier-ignore -->
 ```sh
-curl -X POST ...
+curl -X POST \
+    -H "Authorization: Basic <YOUR-API-TOKEN>" \
+    -H "Content-Type: application/json" \
+    -d '[...PARAMETERS]' \
+    "https://api.domain.com/v1/admin/users/set-permissions"
 ```
 
 <!-- tabs:end -->
@@ -347,11 +375,15 @@ Change user name.
 const res = await api.call( "/v1/admin/users/set-username", user_id, new_username, [new_password] );
 ```
 
-#### **curl**
+#### **cURL**
 
 <!-- prettier-ignore -->
 ```sh
-curl -X POST ...
+curl -X POST \
+    -H "Authorization: Basic <YOUR-API-TOKEN>" \
+    -H "Content-Type: application/json" \
+    -d '[...PARAMETERS]' \
+    "https://api.domain.com/v1/admin/users/set-username"
 ```
 
 <!-- tabs:end -->
@@ -398,11 +430,15 @@ Suggest user name.
 const res = await api.call( "/v1/admin/users/suggest", [options] );
 ```
 
-#### **curl**
+#### **cURL**
 
 <!-- prettier-ignore -->
 ```sh
-curl -X POST ...
+curl -X POST \
+    -H "Authorization: Basic <YOUR-API-TOKEN>" \
+    -H "Content-Type: application/json" \
+    -d '[...PARAMETERS]' \
+    "https://api.domain.com/v1/admin/users/suggest"
 ```
 
 <!-- tabs:end -->
@@ -442,11 +478,15 @@ Set user permissions.
 const res = await api.call( "/v1/admin/users/update-permissions", userId, permissions );
 ```
 
-#### **curl**
+#### **cURL**
 
 <!-- prettier-ignore -->
 ```sh
-curl -X POST ...
+curl -X POST \
+    -H "Authorization: Basic <YOUR-API-TOKEN>" \
+    -H "Content-Type: application/json" \
+    -d '[...PARAMETERS]' \
+    "https://api.domain.com/v1/admin/users/update-permissions"
 ```
 
 <!-- tabs:end -->

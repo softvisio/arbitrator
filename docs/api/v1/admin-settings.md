@@ -26,11 +26,15 @@ Read application settings.
 const res = await api.call( "/v1/admin/settings/read" );
 ```
 
-#### **curl**
+#### **cURL**
 
 <!-- prettier-ignore -->
 ```sh
-curl -X POST ...
+curl -X POST \
+    -H "Authorization: Basic <YOUR-API-TOKEN>" \
+    -H "Content-Type: application/json" \
+    -d '[...PARAMETERS]' \
+    "https://api.domain.com/v1/admin/settings/read"
 ```
 
 <!-- tabs:end -->
@@ -58,11 +62,15 @@ Test SMTP server settings.
 const res = await api.call( "/v1/admin/settings/test-smtp", settings );
 ```
 
-#### **curl**
+#### **cURL**
 
 <!-- prettier-ignore -->
 ```sh
-curl -X POST ...
+curl -X POST \
+    -H "Authorization: Basic <YOUR-API-TOKEN>" \
+    -H "Content-Type: application/json" \
+    -d '[...PARAMETERS]' \
+    "https://api.domain.com/v1/admin/settings/test-smtp"
 ```
 
 <!-- tabs:end -->
@@ -108,11 +116,15 @@ Update application settings.
 const res = await api.call( "/v1/admin/settings/update", settings );
 ```
 
-#### **curl**
+#### **cURL**
 
 <!-- prettier-ignore -->
 ```sh
-curl -X POST ...
+curl -X POST \
+    -H "Authorization: Basic <YOUR-API-TOKEN>" \
+    -H "Content-Type: application/json" \
+    -d '[...PARAMETERS]' \
+    "https://api.domain.com/v1/admin/settings/update"
 ```
 
 <!-- tabs:end -->

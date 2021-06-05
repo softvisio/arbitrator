@@ -30,11 +30,15 @@ Generate new API token.
 const res = await api.call( "/v1/api-tokens/create", name );
 ```
 
-#### **curl**
+#### **cURL**
 
 <!-- prettier-ignore -->
 ```sh
-curl -X POST ...
+curl -X POST \
+    -H "Authorization: Basic <YOUR-API-TOKEN>" \
+    -H "Content-Type: application/json" \
+    -d '[...PARAMETERS]' \
+    "https://api.domain.com/v1/api-tokens/create"
 ```
 
 <!-- tabs:end -->
@@ -67,11 +71,15 @@ Remove API token.
 const res = await api.call( "/v1/api-tokens/delete", tokenId );
 ```
 
-#### **curl**
+#### **cURL**
 
 <!-- prettier-ignore -->
 ```sh
-curl -X POST ...
+curl -X POST \
+    -H "Authorization: Basic <YOUR-API-TOKEN>" \
+    -H "Content-Type: application/json" \
+    -d '[...PARAMETERS]' \
+    "https://api.domain.com/v1/api-tokens/delete"
 ```
 
 <!-- tabs:end -->
@@ -104,11 +112,15 @@ Get user permissions.
 const res = await api.call( "/v1/api-tokens/get-permissions", tokenId );
 ```
 
-#### **curl**
+#### **cURL**
 
 <!-- prettier-ignore -->
 ```sh
-curl -X POST ...
+curl -X POST \
+    -H "Authorization: Basic <YOUR-API-TOKEN>" \
+    -H "Content-Type: application/json" \
+    -d '[...PARAMETERS]' \
+    "https://api.domain.com/v1/api-tokens/get-permissions"
 ```
 
 <!-- tabs:end -->
@@ -141,11 +153,15 @@ Read api tokens.
 const res = await api.call( "/v1/api-tokens/read", [options] );
 ```
 
-#### **curl**
+#### **cURL**
 
 <!-- prettier-ignore -->
 ```sh
-curl -X POST ...
+curl -X POST \
+    -H "Authorization: Basic <YOUR-API-TOKEN>" \
+    -H "Content-Type: application/json" \
+    -d '[...PARAMETERS]' \
+    "https://api.domain.com/v1/api-tokens/read"
 ```
 
 <!-- tabs:end -->
@@ -178,11 +194,15 @@ Set API token enabled.
 const res = await api.call( "/v1/api-tokens/set-enabled", tokenId, enabled );
 ```
 
-#### **curl**
+#### **cURL**
 
 <!-- prettier-ignore -->
 ```sh
-curl -X POST ...
+curl -X POST \
+    -H "Authorization: Basic <YOUR-API-TOKEN>" \
+    -H "Content-Type: application/json" \
+    -d '[...PARAMETERS]' \
+    "https://api.domain.com/v1/api-tokens/set-enabled"
 ```
 
 <!-- tabs:end -->
@@ -222,11 +242,15 @@ Set user permissions.
 const res = await api.call( "/v1/api-tokens/set-permissions", tokenId, permissions );
 ```
 
-#### **curl**
+#### **cURL**
 
 <!-- prettier-ignore -->
 ```sh
-curl -X POST ...
+curl -X POST \
+    -H "Authorization: Basic <YOUR-API-TOKEN>" \
+    -H "Content-Type: application/json" \
+    -d '[...PARAMETERS]' \
+    "https://api.domain.com/v1/api-tokens/set-permissions"
 ```
 
 <!-- tabs:end -->
@@ -268,11 +292,15 @@ Set user permissions.
 const res = await api.call( "/v1/api-tokens/update-permissions", tokenId, permissions );
 ```
 
-#### **curl**
+#### **cURL**
 
 <!-- prettier-ignore -->
 ```sh
-curl -X POST ...
+curl -X POST \
+    -H "Authorization: Basic <YOUR-API-TOKEN>" \
+    -H "Content-Type: application/json" \
+    -d '[...PARAMETERS]' \
+    "https://api.domain.com/v1/api-tokens/update-permissions"
 ```
 
 <!-- tabs:end -->
