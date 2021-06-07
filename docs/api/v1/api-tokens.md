@@ -34,7 +34,8 @@ const res = await api.call( "/v1/api-tokens/create", name );
 
 <!-- prettier-ignore -->
 ```sh
-curl -X POST \
+curl \
+    -X POST \
     -H "Authorization: Basic <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
     -d '[...PARAMETERS]' \
@@ -75,7 +76,8 @@ const res = await api.call( "/v1/api-tokens/delete", tokenId );
 
 <!-- prettier-ignore -->
 ```sh
-curl -X POST \
+curl \
+    -X POST \
     -H "Authorization: Basic <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
     -d '[...PARAMETERS]' \
@@ -116,7 +118,8 @@ const res = await api.call( "/v1/api-tokens/get-permissions", tokenId );
 
 <!-- prettier-ignore -->
 ```sh
-curl -X POST \
+curl \
+    -X POST \
     -H "Authorization: Basic <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
     -d '[...PARAMETERS]' \
@@ -157,7 +160,8 @@ const res = await api.call( "/v1/api-tokens/read", [options] );
 
 <!-- prettier-ignore -->
 ```sh
-curl -X POST \
+curl \
+    -X POST \
     -H "Authorization: Basic <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
     -d '[...PARAMETERS]' \
@@ -198,7 +202,8 @@ const res = await api.call( "/v1/api-tokens/set-enabled", tokenId, enabled );
 
 <!-- prettier-ignore -->
 ```sh
-curl -X POST \
+curl \
+    -X POST \
     -H "Authorization: Basic <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
     -d '[...PARAMETERS]' \
@@ -246,7 +251,8 @@ const res = await api.call( "/v1/api-tokens/set-permissions", tokenId, permissio
 
 <!-- prettier-ignore -->
 ```sh
-curl -X POST \
+curl \
+    -X POST \
     -H "Authorization: Basic <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
     -d '[...PARAMETERS]' \
@@ -296,7 +302,8 @@ const res = await api.call( "/v1/api-tokens/update-permissions", tokenId, permis
 
 <!-- prettier-ignore -->
 ```sh
-curl -X POST \
+curl \
+    -X POST \
     -H "Authorization: Basic <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
     -d '[...PARAMETERS]' \

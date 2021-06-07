@@ -37,7 +37,8 @@ const res = await api.call( "/v1/admin/users/create", fields );
 
 <!-- prettier-ignore -->
 ```sh
-curl -X POST \
+curl \
+    -X POST \
     -H "Authorization: Basic <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
     -d '[...PARAMETERS]' \
@@ -95,7 +96,8 @@ const res = await api.call( "/v1/admin/users/delete", userId );
 
 <!-- prettier-ignore -->
 ```sh
-curl -X POST \
+curl \
+    -X POST \
     -H "Authorization: Basic <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
     -d '[...PARAMETERS]' \
@@ -136,7 +138,8 @@ const res = await api.call( "/v1/admin/users/get-permissions", userId );
 
 <!-- prettier-ignore -->
 ```sh
-curl -X POST \
+curl \
+    -X POST \
     -H "Authorization: Basic <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
     -d '[...PARAMETERS]' \
@@ -177,7 +180,8 @@ const res = await api.call( "/v1/admin/users/read", [options] );
 
 <!-- prettier-ignore -->
 ```sh
-curl -X POST \
+curl \
+    -X POST \
     -H "Authorization: Basic <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
     -d '[...PARAMETERS]' \
@@ -233,7 +237,8 @@ const res = await api.call( "/v1/admin/users/set-enabled", userId, enabled );
 
 <!-- prettier-ignore -->
 ```sh
-curl -X POST \
+curl \
+    -X POST \
     -H "Authorization: Basic <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
     -d '[...PARAMETERS]' \
@@ -281,7 +286,8 @@ const res = await api.call( "/v1/admin/users/set-password", userId, [pasword] );
 
 <!-- prettier-ignore -->
 ```sh
-curl -X POST \
+curl \
+    -X POST \
     -H "Authorization: Basic <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
     -d '[...PARAMETERS]' \
@@ -329,7 +335,8 @@ const res = await api.call( "/v1/admin/users/set-permissions", userId, permissio
 
 <!-- prettier-ignore -->
 ```sh
-curl -X POST \
+curl \
+    -X POST \
     -H "Authorization: Basic <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
     -d '[...PARAMETERS]' \
@@ -379,7 +386,8 @@ const res = await api.call( "/v1/admin/users/set-username", user_id, new_usernam
 
 <!-- prettier-ignore -->
 ```sh
-curl -X POST \
+curl \
+    -X POST \
     -H "Authorization: Basic <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
     -d '[...PARAMETERS]' \
@@ -434,7 +442,8 @@ const res = await api.call( "/v1/admin/users/suggest", [options] );
 
 <!-- prettier-ignore -->
 ```sh
-curl -X POST \
+curl \
+    -X POST \
     -H "Authorization: Basic <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
     -d '[...PARAMETERS]' \
@@ -482,7 +491,8 @@ const res = await api.call( "/v1/admin/users/update-permissions", userId, permis
 
 <!-- prettier-ignore -->
 ```sh
-curl -X POST \
+curl \
+    -X POST \
     -H "Authorization: Basic <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
     -d '[...PARAMETERS]' \

@@ -30,7 +30,8 @@ const res = await api.call( "/v1/admin/settings/read" );
 
 <!-- prettier-ignore -->
 ```sh
-curl -X POST \
+curl \
+    -X POST \
     -H "Authorization: Basic <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
     -d '[...PARAMETERS]' \
@@ -66,7 +67,8 @@ const res = await api.call( "/v1/admin/settings/test-smtp", settings );
 
 <!-- prettier-ignore -->
 ```sh
-curl -X POST \
+curl \
+    -X POST \
     -H "Authorization: Basic <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
     -d '[...PARAMETERS]' \
@@ -120,7 +122,8 @@ const res = await api.call( "/v1/admin/settings/update", settings );
 
 <!-- prettier-ignore -->
 ```sh
-curl -X POST \
+curl \
+    -X POST \
     -H "Authorization: Basic <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
     -d '[...PARAMETERS]' \

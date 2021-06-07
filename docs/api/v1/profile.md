@@ -30,7 +30,8 @@ const res = await api.call( "/v1/profile/read" );
 
 <!-- prettier-ignore -->
 ```sh
-curl -X POST \
+curl \
+    -X POST \
     -H "Authorization: Basic <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
     -d '[...PARAMETERS]' \
@@ -66,7 +67,8 @@ const res = await api.call( "/v1/profile/set-email", [email] );
 
 <!-- prettier-ignore -->
 ```sh
-curl -X POST \
+curl \
+    -X POST \
     -H "Authorization: Basic <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
     -d '[...PARAMETERS]' \
@@ -107,7 +109,8 @@ const res = await api.call( "/v1/profile/set-telegram-username", [username] );
 
 <!-- prettier-ignore -->
 ```sh
-curl -X POST \
+curl \
+    -X POST \
     -H "Authorization: Basic <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
     -d '[...PARAMETERS]' \

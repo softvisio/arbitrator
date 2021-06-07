@@ -1,4 +1,4 @@
-[🡐 Back](/)
+[🡠 Back](/)
 
 [RPC **v1** endpoints:](./)
 

@@ -1,4 +1,4 @@
-[🡐 Back](/)
+[🡠 Back](/)
 
 [API **v1** endpoints:](./)
 
