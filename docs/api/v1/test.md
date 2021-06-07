@@ -28,7 +28,7 @@ const res = await api.call( "/v1/test/test", [args] );
 #### **cURL**
 
 <!-- prettier-ignore -->
-```sh
+```shell
 curl \
     -X POST \
     -H "Authorization: Basic <YOUR-API-TOKEN>" \
@@ -70,7 +70,7 @@ const res = await api.call( "/v1/test/upload", [request], [data] );
 #### **cURL**
 
 <!-- prettier-ignore -->
-```sh
+```shell
 curl \
     -X POST \
     -H "Authorization: Basic <YOUR-API-TOKEN>" \

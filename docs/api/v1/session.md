@@ -33,7 +33,7 @@ const res = await api.call( "/v1/session/confirm-email-by-token", token );
 #### **cURL**
 
 <!-- prettier-ignore -->
-```sh
+```shell
 curl \
     -X POST \
     -H "Authorization: Basic <YOUR-API-TOKEN>" \
@@ -75,7 +75,7 @@ const res = await api.call( "/v1/session/send-confirmation-email", user_id );
 #### **cURL**
 
 <!-- prettier-ignore -->
-```sh
+```shell
 curl \
     -X POST \
     -H "Authorization: Basic <YOUR-API-TOKEN>" \
@@ -117,7 +117,7 @@ const res = await api.call( "/v1/session/send-password-reset-email", user_id );
 #### **cURL**
 
 <!-- prettier-ignore -->
-```sh
+```shell
 curl \
     -X POST \
     -H "Authorization: Basic <YOUR-API-TOKEN>" \
@@ -159,7 +159,7 @@ const res = await api.call( "/v1/session/set-password-by-token", token, password
 #### **cURL**
 
 <!-- prettier-ignore -->
-```sh
+```shell
 curl \
     -X POST \
     -H "Authorization: Basic <YOUR-API-TOKEN>" \
@@ -208,7 +208,7 @@ const res = await api.call( "/v1/session/signin", [credentials], [signinPermissi
 #### **cURL**
 
 <!-- prettier-ignore -->
-```sh
+```shell
 curl \
     -X POST \
     -H "Authorization: Basic <YOUR-API-TOKEN>" \
@@ -284,7 +284,7 @@ const res = await api.call( "/v1/session/signout" );
 #### **cURL**
 
 <!-- prettier-ignore -->
-```sh
+```shell
 curl \
     -X POST \
     -H "Authorization: Basic <YOUR-API-TOKEN>" \
@@ -321,7 +321,7 @@ const res = await api.call( "/v1/session/signup", fields );
 #### **cURL**
 
 <!-- prettier-ignore -->
-```sh
+```shell
 curl \
     -X POST \
     -H "Authorization: Basic <YOUR-API-TOKEN>" \

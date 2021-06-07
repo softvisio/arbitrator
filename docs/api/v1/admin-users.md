@@ -36,7 +36,7 @@ const res = await api.call( "/v1/admin/users/create", fields );
 #### **cURL**
 
 <!-- prettier-ignore -->
-```sh
+```shell
 curl \
     -X POST \
     -H "Authorization: Basic <YOUR-API-TOKEN>" \
@@ -95,7 +95,7 @@ const res = await api.call( "/v1/admin/users/delete", userId );
 #### **cURL**
 
 <!-- prettier-ignore -->
-```sh
+```shell
 curl \
     -X POST \
     -H "Authorization: Basic <YOUR-API-TOKEN>" \
@@ -137,7 +137,7 @@ const res = await api.call( "/v1/admin/users/get-permissions", userId );
 #### **cURL**
 
 <!-- prettier-ignore -->
-```sh
+```shell
 curl \
     -X POST \
     -H "Authorization: Basic <YOUR-API-TOKEN>" \
@@ -179,7 +179,7 @@ const res = await api.call( "/v1/admin/users/read", [options] );
 #### **cURL**
 
 <!-- prettier-ignore -->
-```sh
+```shell
 curl \
     -X POST \
     -H "Authorization: Basic <YOUR-API-TOKEN>" \
@@ -236,7 +236,7 @@ const res = await api.call( "/v1/admin/users/set-enabled", userId, enabled );
 #### **cURL**
 
 <!-- prettier-ignore -->
-```sh
+```shell
 curl \
     -X POST \
     -H "Authorization: Basic <YOUR-API-TOKEN>" \
@@ -285,7 +285,7 @@ const res = await api.call( "/v1/admin/users/set-password", userId, [pasword] );
 #### **cURL**
 
 <!-- prettier-ignore -->
-```sh
+```shell
 curl \
     -X POST \
     -H "Authorization: Basic <YOUR-API-TOKEN>" \
@@ -334,7 +334,7 @@ const res = await api.call( "/v1/admin/users/set-permissions", userId, permissio
 #### **cURL**
 
 <!-- prettier-ignore -->
-```sh
+```shell
 curl \
     -X POST \
     -H "Authorization: Basic <YOUR-API-TOKEN>" \
@@ -385,7 +385,7 @@ const res = await api.call( "/v1/admin/users/set-username", user_id, new_usernam
 #### **cURL**
 
 <!-- prettier-ignore -->
-```sh
+```shell
 curl \
     -X POST \
     -H "Authorization: Basic <YOUR-API-TOKEN>" \
@@ -441,7 +441,7 @@ const res = await api.call( "/v1/admin/users/suggest", [options] );
 #### **cURL**
 
 <!-- prettier-ignore -->
-```sh
+```shell
 curl \
     -X POST \
     -H "Authorization: Basic <YOUR-API-TOKEN>" \
@@ -490,7 +490,7 @@ const res = await api.call( "/v1/admin/users/update-permissions", userId, permis
 #### **cURL**
 
 <!-- prettier-ignore -->
-```sh
+```shell
 curl \
     -X POST \
     -H "Authorization: Basic <YOUR-API-TOKEN>" \

@@ -33,7 +33,7 @@ const res = await api.call( "/v1/api-tokens/create", name );
 #### **cURL**
 
 <!-- prettier-ignore -->
-```sh
+```shell
 curl \
     -X POST \
     -H "Authorization: Basic <YOUR-API-TOKEN>" \
@@ -75,7 +75,7 @@ const res = await api.call( "/v1/api-tokens/delete", tokenId );
 #### **cURL**
 
 <!-- prettier-ignore -->
-```sh
+```shell
 curl \
     -X POST \
     -H "Authorization: Basic <YOUR-API-TOKEN>" \
@@ -117,7 +117,7 @@ const res = await api.call( "/v1/api-tokens/get-permissions", tokenId );
 #### **cURL**
 
 <!-- prettier-ignore -->
-```sh
+```shell
 curl \
     -X POST \
     -H "Authorization: Basic <YOUR-API-TOKEN>" \
@@ -159,7 +159,7 @@ const res = await api.call( "/v1/api-tokens/read", [options] );
 #### **cURL**
 
 <!-- prettier-ignore -->
-```sh
+```shell
 curl \
     -X POST \
     -H "Authorization: Basic <YOUR-API-TOKEN>" \
@@ -201,7 +201,7 @@ const res = await api.call( "/v1/api-tokens/set-enabled", tokenId, enabled );
 #### **cURL**
 
 <!-- prettier-ignore -->
-```sh
+```shell
 curl \
     -X POST \
     -H "Authorization: Basic <YOUR-API-TOKEN>" \
@@ -250,7 +250,7 @@ const res = await api.call( "/v1/api-tokens/set-permissions", tokenId, permissio
 #### **cURL**
 
 <!-- prettier-ignore -->
-```sh
+```shell
 curl \
     -X POST \
     -H "Authorization: Basic <YOUR-API-TOKEN>" \
@@ -301,7 +301,7 @@ const res = await api.call( "/v1/api-tokens/update-permissions", tokenId, permis
 #### **cURL**
 
 <!-- prettier-ignore -->
-```sh
+```shell
 curl \
     -X POST \
     -H "Authorization: Basic <YOUR-API-TOKEN>" \

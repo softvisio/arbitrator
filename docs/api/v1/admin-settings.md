@@ -29,7 +29,7 @@ const res = await api.call( "/v1/admin/settings/read" );
 #### **cURL**
 
 <!-- prettier-ignore -->
-```sh
+```shell
 curl \
     -X POST \
     -H "Authorization: Basic <YOUR-API-TOKEN>" \
@@ -66,7 +66,7 @@ const res = await api.call( "/v1/admin/settings/test-smtp", settings );
 #### **cURL**
 
 <!-- prettier-ignore -->
-```sh
+```shell
 curl \
     -X POST \
     -H "Authorization: Basic <YOUR-API-TOKEN>" \
@@ -121,7 +121,7 @@ const res = await api.call( "/v1/admin/settings/update", settings );
 #### **cURL**
 
 <!-- prettier-ignore -->
-```sh
+```shell
 curl \
     -X POST \
     -H "Authorization: Basic <YOUR-API-TOKEN>" \

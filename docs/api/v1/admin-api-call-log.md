@@ -29,7 +29,7 @@ const res = await api.call( "/v1/admin/api-call-log/read-history-stat", method_i
 #### **cURL**
 
 <!-- prettier-ignore -->
-```sh
+```shell
 curl \
     -X POST \
     -H "Authorization: Basic <YOUR-API-TOKEN>" \
@@ -73,7 +73,7 @@ const res = await api.call( "/v1/admin/api-call-log/read-latest-stat", [method_i
 #### **cURL**
 
 <!-- prettier-ignore -->
-```sh
+```shell
 curl \
     -X POST \
     -H "Authorization: Basic <YOUR-API-TOKEN>" \
@@ -117,7 +117,7 @@ const res = await api.call( "/v1/admin/api-call-log/read-log", [options] );
 #### **cURL**
 
 <!-- prettier-ignore -->
-```sh
+```shell
 curl \
     -X POST \
     -H "Authorization: Basic <YOUR-API-TOKEN>" \

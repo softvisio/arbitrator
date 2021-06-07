@@ -29,7 +29,7 @@ const res = await api.call( "/v1/profile/read" );
 #### **cURL**
 
 <!-- prettier-ignore -->
-```sh
+```shell
 curl \
     -X POST \
     -H "Authorization: Basic <YOUR-API-TOKEN>" \
@@ -66,7 +66,7 @@ const res = await api.call( "/v1/profile/set-email", [email] );
 #### **cURL**
 
 <!-- prettier-ignore -->
-```sh
+```shell
 curl \
     -X POST \
     -H "Authorization: Basic <YOUR-API-TOKEN>" \
@@ -108,7 +108,7 @@ const res = await api.call( "/v1/profile/set-telegram-username", [username] );
 #### **cURL**
 
 <!-- prettier-ignore -->
-```sh
+```shell
 curl \
     -X POST \
     -H "Authorization: Basic <YOUR-API-TOKEN>" \
