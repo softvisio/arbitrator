@@ -1,16 +1,16 @@
 # API v1
 
-## App API call log.
+## App API call log
 
 Methods:
 
--   [Read statistics for the given API method for the last 30 days.](#read-history-stat)
--   [Read statistics for the last 60 minutes.](#read-latest-stat)
--   [Read users.](#read-log)
+-   [Read statistics for the given API method for the last 30 days](#read-history-stat)
+-   [Read statistics for the last 60 minutes](#read-latest-stat)
+-   [Read API method access log](#read-log)
 
 <a id="read-history-stat"></a>
 
-### Read statistics for the given API method for the last 30 days.
+### Read statistics for the given API method for the last 30 days
 
 <!-- tabs:start -->
 
@@ -52,7 +52,7 @@ Statistics updated every 1 minute. Data resolution is 10 minutes.
 
 <a id="read-latest-stat"></a>
 
-### Read statistics for the last 60 minutes.
+### Read statistics for the last 60 minutes
 
 <!-- tabs:start -->
 
@@ -94,7 +94,7 @@ Statistics updated every 10 seconds. Data resolution is 1 minute.
 
 <a id="read-log"></a>
 
-### Read users.
+### Read API method access log
 
 <!-- tabs:start -->
 
