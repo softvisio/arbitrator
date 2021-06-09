@@ -1,4 +1,4 @@
-> :information_source: Please, see the full project documentation here: [**https://softvisio.github.io/arbitrator/**](https://softvisio.github.io/arbitrator/).
+> :information_source: Please, see the full project documentation here: [https://softvisio.github.io/arbitrator/](https://softvisio.github.io/arbitrator/).
 
 > :warning: Do not edit. This file is generated automatocally by `@softvisio/cli`.
 

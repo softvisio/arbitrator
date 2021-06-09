@@ -6,18 +6,20 @@
         <meta name="viewport" content="width=device-width,initial-scale=1" />
 
         <link rel="icon" href="assets/logo.png" />
+        <link rel="stylesheet" id="lightTheme" href="https://cdn.jsdelivr.net/npm/docsify-themeable/dist/css/theme-simple.css" />
+        <link rel="stylesheet" id="darkTheme" href="https://cdn.jsdelivr.net/npm/docsify-themeable/dist/css/theme-simple-dark.css" />
         <link rel="stylesheet" href="https://softvisio.github.io/cli/assets/theme/theme.css" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" />
     </head>
     <body>
         <nav>
-            <a href="#/changelog">Change log</a> • <a href="https://github.com/softvisio/arbitrator/discussions" title="Discussions"><i class="far fa-comments"></i></a> • <a href="https://github.com/softvisio/arbitrator/issues" title="Issues"><i class="fas fa-bug"></i></a> • <a href="#toggleTheme"><i class="fas fa-adjust"></i> Theme</a>
+            <a href="#/changelog">Changelog</a> • <a href="https://github.com/softvisio/arbitrator/discussions" title="Discussions"><i class="far fa-comments"></i></a> • <a href="https://github.com/softvisio/arbitrator/issues" title="Issues"><i class="fas fa-bug"></i></a> • <a href="#toggleTheme"><i class="fas fa-adjust"></i> Theme</a>
         </nav>
         <div id="app"></div>
-        <div id="goToTop"><a href="#goToTop">🡡 Top</a></div>
+        <div id="gotoTop"><a href="#gotoTop">🡡 Top</a></div>
 
         <script>
-            window.$docsify = { name: "arbitrator", repo: "https://github.com/softvisio/arbitrator", loadSidebar: true, auto2top: true, relativePath: true, maxLevel: 3, externalLinkTarget: "_self", subMaxLevel: 3, search: { depth: 3 }, tabs: {}, alias: { "/api-sdk": "https://raw.githubusercontent.com/softvisio/core/main/docs/api-sdk.md", "/changelog": "https://raw.githubusercontent.com/softvisio/arbitrator/master/CHANGELOG.md" }, logo: 'assets/logo.png height="50"' };
+            window.$docsify = { name: "arbitrator", repo: "https://github.com/softvisio/arbitrator", loadSidebar: true, auto2top: true, relativePath: true, maxLevel: 2, externalLinkTarget: "_self", subMaxLevel: 2, search: { depth: 3 }, tabs: {}, alias: { "/api-sdk": "https://raw.githubusercontent.com/softvisio/core/main/docs/api-sdk.md", "/changelog": "https://raw.githubusercontent.com/softvisio/arbitrator/master/CHANGELOG.md" }, logo: 'assets/logo.png height="50"' };
         </script>
 
         <script src="https://softvisio.github.io/cli/assets/theme/theme.js"></script>

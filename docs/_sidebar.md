@@ -4,9 +4,9 @@
 
 -   [How to use](/api-sdk)
 
-    -   [API v1](/api/v1/)
-    -   [RPC v1](/rpc/v1/)
+    -   [API v1](/api-v1.md)
+    -   [RPC v1](/rpc-v1.md)
 
 **LINKS**
 
--   [CHANGE LOG](/changelog)
+-   [Changelog](/changelog)
