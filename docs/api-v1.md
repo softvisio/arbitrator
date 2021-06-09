@@ -4,93 +4,9 @@
 
 Methods:
 
--   [Read statistics for the given API method for the last 30 days](#admin-api-call-log-read-history-stat)
--   [Read statistics for the last 60 minutes](#admin-api-call-log-read-latest-stat)
 -   [Read API method access log](#admin-api-call-log-read-log)
-
-<a id="admin-api-call-log-read-history-stat"></a>
-
-### Read statistics for the given API method for the last 30 days
-
-<!-- tabs:start -->
-
-#### **JavaScript**
-
-<!-- prettier-ignore -->
-```js
-const res = await api.call( "/v1/admin/api-call-log/read-history-stat", method_id );
-```
-
-#### **cURL**
-
-<!-- prettier-ignore -->
-```shell
-curl \
-    -X POST \
-    -H "Authorization: Basic <YOUR-API-TOKEN>" \
-    -H "Content-Type: application/json" \
-    -d '[...PARAMETERS]' \
-    "https://api.domain.com/v1/admin/api-call-log/read-history-stat"
-```
-
-<!-- tabs:end -->
-
-Statistics updated every 1 minute. Data resolution is 10 minutes.
-
-**Permissions**
-
--   "admin";
-
-**Parameters**
-
--   **method_id** `[required]`
-
-    <!-- prettier-ignore -->
-    ```yaml
-    type: string
-    ```
-
-<a id="admin-api-call-log-read-latest-stat"></a>
-
-### Read statistics for the last 60 minutes
-
-<!-- tabs:start -->
-
-#### **JavaScript**
-
-<!-- prettier-ignore -->
-```js
-const res = await api.call( "/v1/admin/api-call-log/read-latest-stat", [method_id] );
-```
-
-#### **cURL**
-
-<!-- prettier-ignore -->
-```shell
-curl \
-    -X POST \
-    -H "Authorization: Basic <YOUR-API-TOKEN>" \
-    -H "Content-Type: application/json" \
-    -d '[...PARAMETERS]' \
-    "https://api.domain.com/v1/admin/api-call-log/read-latest-stat"
-```
-
-<!-- tabs:end -->
-
-Statistics updated every 10 seconds. Data resolution is 1 minute.
-
-**Permissions**
-
--   "admin";
-
-**Parameters**
-
--   **method_id** `[not required]`
-
-    <!-- prettier-ignore -->
-    ```yaml
-    type: string
-    ```
+-   [Read statistics for the last 60 minutes](#admin-api-call-log-read-latest-stat)
+-   [Read statistics for the given API method for the last 30 days](#admin-api-call-log-read-history-stat)
 
 <a id="admin-api-call-log-read-log"></a>
 
@@ -137,13 +53,97 @@ curl \
             required: true
     ```
 
+<a id="admin-api-call-log-read-latest-stat"></a>
+
+### Read statistics for the last 60 minutes
+
+<!-- tabs:start -->
+
+#### **JavaScript**
+
+<!-- prettier-ignore -->
+```js
+const res = await api.call( "/v1/admin/api-call-log/read-latest-stat", [method_id] );
+```
+
+#### **cURL**
+
+<!-- prettier-ignore -->
+```shell
+curl \
+    -X POST \
+    -H "Authorization: Basic <YOUR-API-TOKEN>" \
+    -H "Content-Type: application/json" \
+    -d '[...PARAMETERS]' \
+    "https://api.domain.com/v1/admin/api-call-log/read-latest-stat"
+```
+
+<!-- tabs:end -->
+
+Statistics updated every 10 seconds. Data resolution is 1 minute.
+
+**Permissions**
+
+-   "admin";
+
+**Parameters**
+
+-   **method_id** `[not required]`
+
+    <!-- prettier-ignore -->
+    ```yaml
+    type: string
+    ```
+
+<a id="admin-api-call-log-read-history-stat"></a>
+
+### Read statistics for the given API method for the last 30 days
+
+<!-- tabs:start -->
+
+#### **JavaScript**
+
+<!-- prettier-ignore -->
+```js
+const res = await api.call( "/v1/admin/api-call-log/read-history-stat", method_id );
+```
+
+#### **cURL**
+
+<!-- prettier-ignore -->
+```shell
+curl \
+    -X POST \
+    -H "Authorization: Basic <YOUR-API-TOKEN>" \
+    -H "Content-Type: application/json" \
+    -d '[...PARAMETERS]' \
+    "https://api.domain.com/v1/admin/api-call-log/read-history-stat"
+```
+
+<!-- tabs:end -->
+
+Statistics updated every 1 minute. Data resolution is 10 minutes.
+
+**Permissions**
+
+-   "admin";
+
+**Parameters**
+
+-   **method_id** `[required]`
+
+    <!-- prettier-ignore -->
+    ```yaml
+    type: string
+    ```
+
 ## Application settings
 
 Methods:
 
 -   [Read application settings](#admin-settings-read)
--   [Test SMTP server settings](#admin-settings-test-smtp)
 -   [Update application settings](#admin-settings-update)
+-   [Test SMTP server settings](#admin-settings-test-smtp)
 
 <a id="admin-settings-read"></a>
 
@@ -179,6 +179,46 @@ curl \
 **Parameters**
 
 Method require no parameters.
+
+<a id="admin-settings-update"></a>
+
+### Update application settings
+
+<!-- tabs:start -->
+
+#### **JavaScript**
+
+<!-- prettier-ignore -->
+```js
+const res = await api.call( "/v1/admin/settings/update", settings );
+```
+
+#### **cURL**
+
+<!-- prettier-ignore -->
+```shell
+curl \
+    -X POST \
+    -H "Authorization: Basic <YOUR-API-TOKEN>" \
+    -H "Content-Type: application/json" \
+    -d '[...PARAMETERS]' \
+    "https://api.domain.com/v1/admin/settings/update"
+```
+
+<!-- tabs:end -->
+
+**Permissions**
+
+-   "admin";
+
+**Parameters**
+
+-   **settings** `[required]` - application settings object
+
+    <!-- prettier-ignore -->
+    ```yaml
+    type: object
+    ```
 
 <a id="admin-settings-test-smtp"></a>
 
@@ -233,9 +273,24 @@ curl \
     additionalProperties: false
     ```
 
-<a id="admin-settings-update"></a>
+## Application users management
 
-### Update application settings
+Methods:
+
+-   [Read users](#admin-users-read)
+-   [Create user](#admin-users-create)
+-   [Remove user](#admin-users-delete)
+-   [Set user enabled](#admin-users-set-enabled)
+-   [Set user password](#admin-users-set-password)
+-   [Get user permissions](#admin-users-get-permissions)
+-   [Set user permissions](#admin-users-set-permissions)
+-   [Update user permissions](#admin-users-update-permissions)
+-   [Suggest user name](#admin-users-suggest)
+-   [Change user name](#admin-users-set-username)
+
+<a id="admin-users-read"></a>
+
+### Read users
 
 <!-- tabs:start -->
 
@@ -243,7 +298,7 @@ curl \
 
 <!-- prettier-ignore -->
 ```js
-const res = await api.call( "/v1/admin/settings/update", settings );
+const res = await api.call( "/v1/admin/users/read", [options] );
 ```
 
 #### **cURL**
@@ -255,7 +310,7 @@ curl \
     -H "Authorization: Basic <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
     -d '[...PARAMETERS]' \
-    "https://api.domain.com/v1/admin/settings/update"
+    "https://api.domain.com/v1/admin/users/read"
 ```
 
 <!-- tabs:end -->
@@ -266,27 +321,27 @@ curl \
 
 **Parameters**
 
--   **settings** `[required]` - application settings object
+-   **options** `[not required]`
 
     <!-- prettier-ignore -->
     ```yaml
-    type: object
+    apiRead:
+        id:
+            type: string
+            conditions:
+                - "="
+            sortable: true
+        search:
+            type: string
+            conditions:
+                - like
+        name:
+            sortable: true
+        created:
+            sortable: true
+        enabled:
+            sortable: true
     ```
-
-## Application users management
-
-Methods:
-
--   [Create user](#admin-users-create)
--   [Remove user](#admin-users-delete)
--   [Get user permissions](#admin-users-get-permissions)
--   [Read users](#admin-users-read)
--   [Set user enabled](#admin-users-set-enabled)
--   [Set user password](#admin-users-set-password)
--   [Set user permissions](#admin-users-set-permissions)
--   [Change user name](#admin-users-set-username)
--   [Suggest user name](#admin-users-suggest)
--   [Update user permissions](#admin-users-update-permissions)
 
 <a id="admin-users-create"></a>
 
@@ -385,101 +440,6 @@ curl \
     type: string
     ```
 
-<a id="admin-users-get-permissions"></a>
-
-### Get user permissions
-
-<!-- tabs:start -->
-
-#### **JavaScript**
-
-<!-- prettier-ignore -->
-```js
-const res = await api.call( "/v1/admin/users/get-permissions", userId );
-```
-
-#### **cURL**
-
-<!-- prettier-ignore -->
-```shell
-curl \
-    -X POST \
-    -H "Authorization: Basic <YOUR-API-TOKEN>" \
-    -H "Content-Type: application/json" \
-    -d '[...PARAMETERS]' \
-    "https://api.domain.com/v1/admin/users/get-permissions"
-```
-
-<!-- tabs:end -->
-
-**Permissions**
-
--   "admin";
-
-**Parameters**
-
--   **userId** `[required]`
-
-    <!-- prettier-ignore -->
-    ```yaml
-    type: string
-    ```
-
-<a id="admin-users-read"></a>
-
-### Read users
-
-<!-- tabs:start -->
-
-#### **JavaScript**
-
-<!-- prettier-ignore -->
-```js
-const res = await api.call( "/v1/admin/users/read", [options] );
-```
-
-#### **cURL**
-
-<!-- prettier-ignore -->
-```shell
-curl \
-    -X POST \
-    -H "Authorization: Basic <YOUR-API-TOKEN>" \
-    -H "Content-Type: application/json" \
-    -d '[...PARAMETERS]' \
-    "https://api.domain.com/v1/admin/users/read"
-```
-
-<!-- tabs:end -->
-
-**Permissions**
-
--   "admin";
-
-**Parameters**
-
--   **options** `[not required]`
-
-    <!-- prettier-ignore -->
-    ```yaml
-    apiRead:
-        id:
-            type: string
-            conditions:
-                - "="
-            sortable: true
-        search:
-            type: string
-            conditions:
-                - like
-        name:
-            sortable: true
-        created:
-            sortable: true
-        enabled:
-            sortable: true
-    ```
-
 <a id="admin-users-set-enabled"></a>
 
 ### Set user enabled
@@ -574,6 +534,46 @@ curl \
     type: string
     ```
 
+<a id="admin-users-get-permissions"></a>
+
+### Get user permissions
+
+<!-- tabs:start -->
+
+#### **JavaScript**
+
+<!-- prettier-ignore -->
+```js
+const res = await api.call( "/v1/admin/users/get-permissions", userId );
+```
+
+#### **cURL**
+
+<!-- prettier-ignore -->
+```shell
+curl \
+    -X POST \
+    -H "Authorization: Basic <YOUR-API-TOKEN>" \
+    -H "Content-Type: application/json" \
+    -d '[...PARAMETERS]' \
+    "https://api.domain.com/v1/admin/users/get-permissions"
+```
+
+<!-- tabs:end -->
+
+**Permissions**
+
+-   "admin";
+
+**Parameters**
+
+-   **userId** `[required]`
+
+    <!-- prettier-ignore -->
+    ```yaml
+    type: string
+    ```
+
 <a id="admin-users-set-permissions"></a>
 
 ### Set user permissions
@@ -621,6 +621,102 @@ curl \
     type: object
     additionalProperties:
         type: boolean
+    ```
+
+<a id="admin-users-update-permissions"></a>
+
+### Update user permissions
+
+<!-- tabs:start -->
+
+#### **JavaScript**
+
+<!-- prettier-ignore -->
+```js
+const res = await api.call( "/v1/admin/users/update-permissions", userId, permissions );
+```
+
+#### **cURL**
+
+<!-- prettier-ignore -->
+```shell
+curl \
+    -X POST \
+    -H "Authorization: Basic <YOUR-API-TOKEN>" \
+    -H "Content-Type: application/json" \
+    -d '[...PARAMETERS]' \
+    "https://api.domain.com/v1/admin/users/update-permissions"
+```
+
+<!-- tabs:end -->
+
+**Permissions**
+
+-   "admin";
+
+**Parameters**
+
+-   **userId** `[required]`
+
+    <!-- prettier-ignore -->
+    ```yaml
+    type: string
+    ```
+
+-   **permissions** `[required]`
+
+    <!-- prettier-ignore -->
+    ```yaml
+    type: object
+    additionalProperties:
+        type: boolean
+    ```
+
+<a id="admin-users-suggest"></a>
+
+### Suggest user name
+
+<!-- tabs:start -->
+
+#### **JavaScript**
+
+<!-- prettier-ignore -->
+```js
+const res = await api.call( "/v1/admin/users/suggest", [options] );
+```
+
+#### **cURL**
+
+<!-- prettier-ignore -->
+```shell
+curl \
+    -X POST \
+    -H "Authorization: Basic <YOUR-API-TOKEN>" \
+    -H "Content-Type: application/json" \
+    -d '[...PARAMETERS]' \
+    "https://api.domain.com/v1/admin/users/suggest"
+```
+
+<!-- tabs:end -->
+
+**Permissions**
+
+-   "admin";
+
+**Parameters**
+
+-   **options** `[not required]`
+
+    <!-- prettier-ignore -->
+    ```yaml
+    type: object
+    properties:
+        where:
+            type: object
+            properties:
+                name:
+                    type: array
+                    items: [{operator: {type: string, enum: [like]}}, {name: {type: string}}]
     ```
 
 <a id="admin-users-set-username"></a>
@@ -677,9 +773,21 @@ curl \
     type: string
     ```
 
-<a id="admin-users-suggest"></a>
+## API access tokens
 
-### Suggest user name
+Methods:
+
+-   [Read tokens](#api-tokens-read)
+-   [Generate new token](#api-tokens-create)
+-   [Remove token](#api-tokens-delete)
+-   [Set token enabled](#api-tokens-set-enabled)
+-   [Get token permissions](#api-tokens-get-permissions)
+-   [Set token permissions](#api-tokens-set-permissions)
+-   [Update token permissions](#api-tokens-update-permissions)
+
+<a id="api-tokens-read"></a>
+
+### Read tokens
 
 <!-- tabs:start -->
 
@@ -687,7 +795,7 @@ curl \
 
 <!-- prettier-ignore -->
 ```js
-const res = await api.call( "/v1/admin/users/suggest", [options] );
+const res = await api.call( "/v1/api-tokens/read", [options] );
 ```
 
 #### **cURL**
@@ -699,14 +807,14 @@ curl \
     -H "Authorization: Basic <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
     -d '[...PARAMETERS]' \
-    "https://api.domain.com/v1/admin/users/suggest"
+    "https://api.domain.com/v1/api-tokens/read"
 ```
 
 <!-- tabs:end -->
 
 **Permissions**
 
--   "admin";
+-   "user" - any authenticated user;
 
 **Parameters**
 
@@ -715,75 +823,7 @@ curl \
     <!-- prettier-ignore -->
     ```yaml
     type: object
-    properties:
-        where:
-            type: object
-            properties:
-                name:
-                    type: array
-                    items: [{operator: {type: string, enum: [like]}}, {name: {type: string}}]
     ```
-
-<a id="admin-users-update-permissions"></a>
-
-### Update user permissions
-
-<!-- tabs:start -->
-
-#### **JavaScript**
-
-<!-- prettier-ignore -->
-```js
-const res = await api.call( "/v1/admin/users/update-permissions", userId, permissions );
-```
-
-#### **cURL**
-
-<!-- prettier-ignore -->
-```shell
-curl \
-    -X POST \
-    -H "Authorization: Basic <YOUR-API-TOKEN>" \
-    -H "Content-Type: application/json" \
-    -d '[...PARAMETERS]' \
-    "https://api.domain.com/v1/admin/users/update-permissions"
-```
-
-<!-- tabs:end -->
-
-**Permissions**
-
--   "admin";
-
-**Parameters**
-
--   **userId** `[required]`
-
-    <!-- prettier-ignore -->
-    ```yaml
-    type: string
-    ```
-
--   **permissions** `[required]`
-
-    <!-- prettier-ignore -->
-    ```yaml
-    type: object
-    additionalProperties:
-        type: boolean
-    ```
-
-## API access tokens
-
-Methods:
-
--   [Generate new token](#api-tokens-create)
--   [Remove token](#api-tokens-delete)
--   [Get token permissions](#api-tokens-get-permissions)
--   [Read tokens](#api-tokens-read)
--   [Set token enabled](#api-tokens-set-enabled)
--   [Set token permissions](#api-tokens-set-permissions)
--   [Update token permissions](#api-tokens-update-permissions)
 
 <a id="api-tokens-create"></a>
 
@@ -865,86 +905,6 @@ curl \
     type: string
     ```
 
-<a id="api-tokens-get-permissions"></a>
-
-### Get token permissions
-
-<!-- tabs:start -->
-
-#### **JavaScript**
-
-<!-- prettier-ignore -->
-```js
-const res = await api.call( "/v1/api-tokens/get-permissions", tokenId );
-```
-
-#### **cURL**
-
-<!-- prettier-ignore -->
-```shell
-curl \
-    -X POST \
-    -H "Authorization: Basic <YOUR-API-TOKEN>" \
-    -H "Content-Type: application/json" \
-    -d '[...PARAMETERS]' \
-    "https://api.domain.com/v1/api-tokens/get-permissions"
-```
-
-<!-- tabs:end -->
-
-**Permissions**
-
--   "user" - any authenticated user;
-
-**Parameters**
-
--   **tokenId** `[required]`
-
-    <!-- prettier-ignore -->
-    ```yaml
-    type: string
-    ```
-
-<a id="api-tokens-read"></a>
-
-### Read tokens
-
-<!-- tabs:start -->
-
-#### **JavaScript**
-
-<!-- prettier-ignore -->
-```js
-const res = await api.call( "/v1/api-tokens/read", [options] );
-```
-
-#### **cURL**
-
-<!-- prettier-ignore -->
-```shell
-curl \
-    -X POST \
-    -H "Authorization: Basic <YOUR-API-TOKEN>" \
-    -H "Content-Type: application/json" \
-    -d '[...PARAMETERS]' \
-    "https://api.domain.com/v1/api-tokens/read"
-```
-
-<!-- tabs:end -->
-
-**Permissions**
-
--   "user" - any authenticated user;
-
-**Parameters**
-
--   **options** `[not required]`
-
-    <!-- prettier-ignore -->
-    ```yaml
-    type: object
-    ```
-
 <a id="api-tokens-set-enabled"></a>
 
 ### Set token enabled
@@ -990,6 +950,46 @@ curl \
     <!-- prettier-ignore -->
     ```yaml
     type: boolean
+    ```
+
+<a id="api-tokens-get-permissions"></a>
+
+### Get token permissions
+
+<!-- tabs:start -->
+
+#### **JavaScript**
+
+<!-- prettier-ignore -->
+```js
+const res = await api.call( "/v1/api-tokens/get-permissions", tokenId );
+```
+
+#### **cURL**
+
+<!-- prettier-ignore -->
+```shell
+curl \
+    -X POST \
+    -H "Authorization: Basic <YOUR-API-TOKEN>" \
+    -H "Content-Type: application/json" \
+    -d '[...PARAMETERS]' \
+    "https://api.domain.com/v1/api-tokens/get-permissions"
+```
+
+<!-- tabs:end -->
+
+**Permissions**
+
+-   "user" - any authenticated user;
+
+**Parameters**
+
+-   **tokenId** `[required]`
+
+    <!-- prettier-ignore -->
+    ```yaml
+    type: string
     ```
 
 <a id="api-tokens-set-permissions"></a>
@@ -1217,180 +1217,13 @@ curl \
 
 Methods:
 
--   [Confirm user email using email confirmation token](#session-confirm-email-by-token)
--   [Send confirmation email](#session-send-confirmation-email)
--   [Send password reset email](#session-send-password-reset-email)
--   [Set user password using password recovery token](#session-set-password-by-token)
 -   [Signin](#session-signin)
 -   [Signout](#session-signout)
 -   [Signup](#session-signup)
-
-<a id="session-confirm-email-by-token"></a>
-
-### Confirm user email using email confirmation token
-
-<!-- tabs:start -->
-
-#### **JavaScript**
-
-<!-- prettier-ignore -->
-```js
-const res = await api.call( "/v1/session/confirm-email-by-token", token );
-```
-
-#### **cURL**
-
-<!-- prettier-ignore -->
-```shell
-curl \
-    -X POST \
-    -H "Authorization: Basic <YOUR-API-TOKEN>" \
-    -H "Content-Type: application/json" \
-    -d '[...PARAMETERS]' \
-    "https://api.domain.com/v1/session/confirm-email-by-token"
-```
-
-<!-- tabs:end -->
-
-**Permissions**
-
--   "\*" - any connected user;
-
-**Parameters**
-
--   **token** `[required]` - Email confirmation token.
-
-    <!-- prettier-ignore -->
-    ```yaml
-    type: string
-    ```
-
-<a id="session-send-confirmation-email"></a>
-
-### Send confirmation email
-
-<!-- tabs:start -->
-
-#### **JavaScript**
-
-<!-- prettier-ignore -->
-```js
-const res = await api.call( "/v1/session/send-confirmation-email", user_id );
-```
-
-#### **cURL**
-
-<!-- prettier-ignore -->
-```shell
-curl \
-    -X POST \
-    -H "Authorization: Basic <YOUR-API-TOKEN>" \
-    -H "Content-Type: application/json" \
-    -d '[...PARAMETERS]' \
-    "https://api.domain.com/v1/session/send-confirmation-email"
-```
-
-<!-- tabs:end -->
-
-**Permissions**
-
--   "\*" - any connected user;
-
-**Parameters**
-
--   **user_id** `[required]` - User name or email.
-
-    <!-- prettier-ignore -->
-    ```yaml
-    type: string
-    ```
-
-<a id="session-send-password-reset-email"></a>
-
-### Send password reset email
-
-<!-- tabs:start -->
-
-#### **JavaScript**
-
-<!-- prettier-ignore -->
-```js
-const res = await api.call( "/v1/session/send-password-reset-email", user_id );
-```
-
-#### **cURL**
-
-<!-- prettier-ignore -->
-```shell
-curl \
-    -X POST \
-    -H "Authorization: Basic <YOUR-API-TOKEN>" \
-    -H "Content-Type: application/json" \
-    -d '[...PARAMETERS]' \
-    "https://api.domain.com/v1/session/send-password-reset-email"
-```
-
-<!-- tabs:end -->
-
-**Permissions**
-
--   "\*" - any connected user;
-
-**Parameters**
-
--   **user_id** `[required]` - User name or email.
-
-    <!-- prettier-ignore -->
-    ```yaml
-    type: string
-    ```
-
-<a id="session-set-password-by-token"></a>
-
-### Set user password using password recovery token
-
-<!-- tabs:start -->
-
-#### **JavaScript**
-
-<!-- prettier-ignore -->
-```js
-const res = await api.call( "/v1/session/set-password-by-token", token, password );
-```
-
-#### **cURL**
-
-<!-- prettier-ignore -->
-```shell
-curl \
-    -X POST \
-    -H "Authorization: Basic <YOUR-API-TOKEN>" \
-    -H "Content-Type: application/json" \
-    -d '[...PARAMETERS]' \
-    "https://api.domain.com/v1/session/set-password-by-token"
-```
-
-<!-- tabs:end -->
-
-**Permissions**
-
--   "\*" - any connected user;
-
-**Parameters**
-
--   **token** `[required]`
-
-    <!-- prettier-ignore -->
-    ```yaml
-    type: string
-    ```
-
--   **password** `[required]`
-
-    <!-- prettier-ignore -->
-    ```yaml
-    type: string
-    ```
+-   [Send confirmation email](#session-send-confirmation-email)
+-   [Confirm user email using email confirmation token](#session-confirm-email-by-token)
+-   [Send password reset email](#session-send-password-reset-email)
+-   [Set user password using password recovery token](#session-set-password-by-token)
 
 <a id="session-signin"></a>
 
@@ -1550,6 +1383,173 @@ curl \
             type: string
     required:
         - username
+    ```
+
+<a id="session-send-confirmation-email"></a>
+
+### Send confirmation email
+
+<!-- tabs:start -->
+
+#### **JavaScript**
+
+<!-- prettier-ignore -->
+```js
+const res = await api.call( "/v1/session/send-confirmation-email", user_id );
+```
+
+#### **cURL**
+
+<!-- prettier-ignore -->
+```shell
+curl \
+    -X POST \
+    -H "Authorization: Basic <YOUR-API-TOKEN>" \
+    -H "Content-Type: application/json" \
+    -d '[...PARAMETERS]' \
+    "https://api.domain.com/v1/session/send-confirmation-email"
+```
+
+<!-- tabs:end -->
+
+**Permissions**
+
+-   "\*" - any connected user;
+
+**Parameters**
+
+-   **user_id** `[required]` - User name or email.
+
+    <!-- prettier-ignore -->
+    ```yaml
+    type: string
+    ```
+
+<a id="session-confirm-email-by-token"></a>
+
+### Confirm user email using email confirmation token
+
+<!-- tabs:start -->
+
+#### **JavaScript**
+
+<!-- prettier-ignore -->
+```js
+const res = await api.call( "/v1/session/confirm-email-by-token", token );
+```
+
+#### **cURL**
+
+<!-- prettier-ignore -->
+```shell
+curl \
+    -X POST \
+    -H "Authorization: Basic <YOUR-API-TOKEN>" \
+    -H "Content-Type: application/json" \
+    -d '[...PARAMETERS]' \
+    "https://api.domain.com/v1/session/confirm-email-by-token"
+```
+
+<!-- tabs:end -->
+
+**Permissions**
+
+-   "\*" - any connected user;
+
+**Parameters**
+
+-   **token** `[required]` - Email confirmation token.
+
+    <!-- prettier-ignore -->
+    ```yaml
+    type: string
+    ```
+
+<a id="session-send-password-reset-email"></a>
+
+### Send password reset email
+
+<!-- tabs:start -->
+
+#### **JavaScript**
+
+<!-- prettier-ignore -->
+```js
+const res = await api.call( "/v1/session/send-password-reset-email", user_id );
+```
+
+#### **cURL**
+
+<!-- prettier-ignore -->
+```shell
+curl \
+    -X POST \
+    -H "Authorization: Basic <YOUR-API-TOKEN>" \
+    -H "Content-Type: application/json" \
+    -d '[...PARAMETERS]' \
+    "https://api.domain.com/v1/session/send-password-reset-email"
+```
+
+<!-- tabs:end -->
+
+**Permissions**
+
+-   "\*" - any connected user;
+
+**Parameters**
+
+-   **user_id** `[required]` - User name or email.
+
+    <!-- prettier-ignore -->
+    ```yaml
+    type: string
+    ```
+
+<a id="session-set-password-by-token"></a>
+
+### Set user password using password recovery token
+
+<!-- tabs:start -->
+
+#### **JavaScript**
+
+<!-- prettier-ignore -->
+```js
+const res = await api.call( "/v1/session/set-password-by-token", token, password );
+```
+
+#### **cURL**
+
+<!-- prettier-ignore -->
+```shell
+curl \
+    -X POST \
+    -H "Authorization: Basic <YOUR-API-TOKEN>" \
+    -H "Content-Type: application/json" \
+    -d '[...PARAMETERS]' \
+    "https://api.domain.com/v1/session/set-password-by-token"
+```
+
+<!-- tabs:end -->
+
+**Permissions**
+
+-   "\*" - any connected user;
+
+**Parameters**
+
+-   **token** `[required]`
+
+    <!-- prettier-ignore -->
+    ```yaml
+    type: string
+    ```
+
+-   **password** `[required]`
+
+    <!-- prettier-ignore -->
+    ```yaml
+    type: string
     ```
 
 ## Test
