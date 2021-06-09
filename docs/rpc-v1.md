@@ -1,15 +1,15 @@
 # RPC v1
 
-## Test.
+## Test
 
 Methods:
 
--   [Test method.](#test)
--   [Test method.](#upload)
+-   [Test method](#test-test)
+-   [Test upload](#test-upload)
 
-<a id="test"></a>
+<a id="test-test"></a>
 
-### Test method.
+### Test method
 
 <!-- tabs:start -->
 
@@ -47,9 +47,9 @@ curl \
     type: string
     ```
 
-<a id="upload"></a>
+<a id="test-upload"></a>
 
-### Test method.
+### Test upload
 
 <!-- tabs:start -->
 

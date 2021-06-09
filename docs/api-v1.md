@@ -1,14 +1,14 @@
 # API v1
 
-## App API call log
+## Application API call log
 
 Methods:
 
--   [Read statistics for the given API method for the last 30 days](#read-history-stat)
--   [Read statistics for the last 60 minutes](#read-latest-stat)
--   [Read API method access log](#read-log)
+-   [Read statistics for the given API method for the last 30 days](#admin-api-call-log-read-history-stat)
+-   [Read statistics for the last 60 minutes](#admin-api-call-log-read-latest-stat)
+-   [Read API method access log](#admin-api-call-log-read-log)
 
-<a id="read-history-stat"></a>
+<a id="admin-api-call-log-read-history-stat"></a>
 
 ### Read statistics for the given API method for the last 30 days
 
@@ -50,7 +50,7 @@ Statistics updated every 1 minute. Data resolution is 10 minutes.
     type: string
     ```
 
-<a id="read-latest-stat"></a>
+<a id="admin-api-call-log-read-latest-stat"></a>
 
 ### Read statistics for the last 60 minutes
 
@@ -92,7 +92,7 @@ Statistics updated every 10 seconds. Data resolution is 1 minute.
     type: string
     ```
 
-<a id="read-log"></a>
+<a id="admin-api-call-log-read-log"></a>
 
 ### Read API method access log
 
@@ -137,17 +137,17 @@ curl \
             required: true
     ```
 
-## App settings.
+## Application settings
 
 Methods:
 
--   [Read application settings.](#read)
--   [Test SMTP server settings.](#test-smtp)
--   [Update application settings.](#update)
+-   [Read application settings](#admin-settings-read)
+-   [Test SMTP server settings](#admin-settings-test-smtp)
+-   [Update application settings](#admin-settings-update)
 
-<a id="read"></a>
+<a id="admin-settings-read"></a>
 
-### Read application settings.
+### Read application settings
 
 <!-- tabs:start -->
 
@@ -180,9 +180,9 @@ curl \
 
 Method require no parameters.
 
-<a id="test-smtp"></a>
+<a id="admin-settings-test-smtp"></a>
 
-### Test SMTP server settings.
+### Test SMTP server settings
 
 <!-- tabs:start -->
 
@@ -233,9 +233,9 @@ curl \
     additionalProperties: false
     ```
 
-<a id="update"></a>
+<a id="admin-settings-update"></a>
 
-### Update application settings.
+### Update application settings
 
 <!-- tabs:start -->
 
@@ -273,24 +273,24 @@ curl \
     type: object
     ```
 
-## App users management.
+## Application users management
 
 Methods:
 
--   [Create user.](#create)
--   [Remove user.](#delete)
--   [Get user permissions.](#get-permissions)
--   [Read users.](#read)
--   [Set user enabled.](#set-enabled)
--   [Set user password.](#set-password)
--   [Set user permissions.](#set-permissions)
--   [Change user name.](#set-username)
--   [Suggest user name.](#suggest)
--   [Set user permissions.](#update-permissions)
+-   [Create user](#admin-users-create)
+-   [Remove user](#admin-users-delete)
+-   [Get user permissions](#admin-users-get-permissions)
+-   [Read users](#admin-users-read)
+-   [Set user enabled](#admin-users-set-enabled)
+-   [Set user password](#admin-users-set-password)
+-   [Set user permissions](#admin-users-set-permissions)
+-   [Change user name](#admin-users-set-username)
+-   [Suggest user name](#admin-users-suggest)
+-   [Update user permissions](#admin-users-update-permissions)
 
-<a id="create"></a>
+<a id="admin-users-create"></a>
 
-### Create user.
+### Create user
 
 <!-- tabs:start -->
 
@@ -345,9 +345,9 @@ curl \
         - username
     ```
 
-<a id="delete"></a>
+<a id="admin-users-delete"></a>
 
-### Remove user.
+### Remove user
 
 <!-- tabs:start -->
 
@@ -385,9 +385,9 @@ curl \
     type: string
     ```
 
-<a id="get-permissions"></a>
+<a id="admin-users-get-permissions"></a>
 
-### Get user permissions.
+### Get user permissions
 
 <!-- tabs:start -->
 
@@ -425,9 +425,9 @@ curl \
     type: string
     ```
 
-<a id="read"></a>
+<a id="admin-users-read"></a>
 
-### Read users.
+### Read users
 
 <!-- tabs:start -->
 
@@ -480,9 +480,9 @@ curl \
             sortable: true
     ```
 
-<a id="set-enabled"></a>
+<a id="admin-users-set-enabled"></a>
 
-### Set user enabled.
+### Set user enabled
 
 <!-- tabs:start -->
 
@@ -527,9 +527,9 @@ curl \
     type: boolean
     ```
 
-<a id="set-password"></a>
+<a id="admin-users-set-password"></a>
 
-### Set user password.
+### Set user password
 
 <!-- tabs:start -->
 
@@ -574,9 +574,9 @@ curl \
     type: string
     ```
 
-<a id="set-permissions"></a>
+<a id="admin-users-set-permissions"></a>
 
-### Set user permissions.
+### Set user permissions
 
 <!-- tabs:start -->
 
@@ -623,9 +623,9 @@ curl \
         type: boolean
     ```
 
-<a id="set-username"></a>
+<a id="admin-users-set-username"></a>
 
-### Change user name.
+### Change user name
 
 <!-- tabs:start -->
 
@@ -677,9 +677,9 @@ curl \
     type: string
     ```
 
-<a id="suggest"></a>
+<a id="admin-users-suggest"></a>
 
-### Suggest user name.
+### Suggest user name
 
 <!-- tabs:start -->
 
@@ -724,9 +724,9 @@ curl \
                     items: [{operator: {type: string, enum: [like]}}, {name: {type: string}}]
     ```
 
-<a id="update-permissions"></a>
+<a id="admin-users-update-permissions"></a>
 
-### Set user permissions.
+### Update user permissions
 
 <!-- tabs:start -->
 
@@ -773,21 +773,21 @@ curl \
         type: boolean
     ```
 
-## User API access tokens management.
+## API access tokens
 
 Methods:
 
--   [Generate new API token.](#create)
--   [Remove API token.](#delete)
--   [Get user permissions.](#get-permissions)
--   [Read api tokens.](#read)
--   [Set API token enabled.](#set-enabled)
--   [Set user permissions.](#set-permissions)
--   [Set user permissions.](#update-permissions)
+-   [Generate new token](#api-tokens-create)
+-   [Remove token](#api-tokens-delete)
+-   [Get token permissions](#api-tokens-get-permissions)
+-   [Read tokens](#api-tokens-read)
+-   [Set token enabled](#api-tokens-set-enabled)
+-   [Set token permissions](#api-tokens-set-permissions)
+-   [Update token permissions](#api-tokens-update-permissions)
 
-<a id="create"></a>
+<a id="api-tokens-create"></a>
 
-### Generate new API token.
+### Generate new token
 
 <!-- tabs:start -->
 
@@ -825,9 +825,9 @@ curl \
     type: string
     ```
 
-<a id="delete"></a>
+<a id="api-tokens-delete"></a>
 
-### Remove API token.
+### Remove token
 
 <!-- tabs:start -->
 
@@ -865,9 +865,9 @@ curl \
     type: string
     ```
 
-<a id="get-permissions"></a>
+<a id="api-tokens-get-permissions"></a>
 
-### Get user permissions.
+### Get token permissions
 
 <!-- tabs:start -->
 
@@ -905,9 +905,9 @@ curl \
     type: string
     ```
 
-<a id="read"></a>
+<a id="api-tokens-read"></a>
 
-### Read api tokens.
+### Read tokens
 
 <!-- tabs:start -->
 
@@ -945,9 +945,9 @@ curl \
     type: object
     ```
 
-<a id="set-enabled"></a>
+<a id="api-tokens-set-enabled"></a>
 
-### Set API token enabled.
+### Set token enabled
 
 <!-- tabs:start -->
 
@@ -992,9 +992,9 @@ curl \
     type: boolean
     ```
 
-<a id="set-permissions"></a>
+<a id="api-tokens-set-permissions"></a>
 
-### Set user permissions.
+### Set token permissions
 
 <!-- tabs:start -->
 
@@ -1041,9 +1041,9 @@ curl \
         type: boolean
     ```
 
-<a id="update-permissions"></a>
+<a id="api-tokens-update-permissions"></a>
 
-### Set user permissions.
+### Update token permissions
 
 <!-- tabs:start -->
 
@@ -1090,17 +1090,17 @@ curl \
         type: boolean
     ```
 
-## Profile.
+## User profile
 
 Methods:
 
--   [Read authenticated used profile.](#read)
--   [Set user email.](#set-email)
--   [Set user telegram name.](#set-telegram-username)
+-   [Read user profile](#profile-read)
+-   [Set user email](#profile-set-email)
+-   [Set user telegram name](#profile-set-telegram-username)
 
-<a id="read"></a>
+<a id="profile-read"></a>
 
-### Read authenticated used profile.
+### Read user profile
 
 <!-- tabs:start -->
 
@@ -1133,9 +1133,9 @@ curl \
 
 Method require no parameters.
 
-<a id="set-email"></a>
+<a id="profile-set-email"></a>
 
-### Set user email.
+### Set user email
 
 <!-- tabs:start -->
 
@@ -1173,9 +1173,9 @@ curl \
     type: string
     ```
 
-<a id="set-telegram-username"></a>
+<a id="profile-set-telegram-username"></a>
 
-### Set user telegram name.
+### Set user telegram name
 
 <!-- tabs:start -->
 
@@ -1213,21 +1213,21 @@ curl \
     type: string
     ```
 
-## Session.
+## Session
 
 Methods:
 
--   [Confirm user email using email confirmation token.](#confirm-email-by-token)
--   [Send confirmation email.](#send-confirmation-email)
--   [Send password reset email.](#send-password-reset-email)
--   [Set user password using password recovery token.](#set-password-by-token)
--   [Signin user.](#signin)
--   [Signout user, remove user session.](#signout)
--   [Signup user.](#signup)
+-   [Confirm user email using email confirmation token](#session-confirm-email-by-token)
+-   [Send confirmation email](#session-send-confirmation-email)
+-   [Send password reset email](#session-send-password-reset-email)
+-   [Set user password using password recovery token](#session-set-password-by-token)
+-   [Signin](#session-signin)
+-   [Signout](#session-signout)
+-   [Signup](#session-signup)
 
-<a id="confirm-email-by-token"></a>
+<a id="session-confirm-email-by-token"></a>
 
-### Confirm user email using email confirmation token.
+### Confirm user email using email confirmation token
 
 <!-- tabs:start -->
 
@@ -1265,9 +1265,9 @@ curl \
     type: string
     ```
 
-<a id="send-confirmation-email"></a>
+<a id="session-send-confirmation-email"></a>
 
-### Send confirmation email.
+### Send confirmation email
 
 <!-- tabs:start -->
 
@@ -1305,9 +1305,9 @@ curl \
     type: string
     ```
 
-<a id="send-password-reset-email"></a>
+<a id="session-send-password-reset-email"></a>
 
-### Send password reset email.
+### Send password reset email
 
 <!-- tabs:start -->
 
@@ -1345,9 +1345,9 @@ curl \
     type: string
     ```
 
-<a id="set-password-by-token"></a>
+<a id="session-set-password-by-token"></a>
 
-### Set user password using password recovery token.
+### Set user password using password recovery token
 
 <!-- tabs:start -->
 
@@ -1392,9 +1392,9 @@ curl \
     type: string
     ```
 
-<a id="signin"></a>
+<a id="session-signin"></a>
 
-### Signin user.
+### Signin
 
 <!-- tabs:start -->
 
@@ -1466,9 +1466,9 @@ If `credentials` parameter is specified - will try to sign in user using usernam
                 type: string
     ```
 
-<a id="signout"></a>
+<a id="session-signout"></a>
 
-### Signout user, remove user session.
+### Signout
 
 <!-- tabs:start -->
 
@@ -1501,9 +1501,9 @@ curl \
 
 Method require no parameters.
 
-<a id="signup"></a>
+<a id="session-signup"></a>
 
-### Signup user.
+### Signup
 
 <!-- tabs:start -->
 
@@ -1552,16 +1552,16 @@ curl \
         - username
     ```
 
-## Test.
+## Test
 
 Methods:
 
--   [Test method.](#test)
--   [Test method.](#upload)
+-   [Test method](#test-test)
+-   [Test upload](#test-upload)
 
-<a id="test"></a>
+<a id="test-test"></a>
 
-### Test method.
+### Test method
 
 <!-- tabs:start -->
 
@@ -1599,9 +1599,9 @@ curl \
     type: string
     ```
 
-<a id="upload"></a>
+<a id="test-upload"></a>
 
-### Test method.
+### Test upload
 
 <!-- tabs:start -->
 
