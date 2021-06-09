@@ -21,7 +21,7 @@ Methods:
 const res = await api.call( "/v1/admin/api-call-log/read-log", [options] );
 ```
 
-#### **cURL**
+#### **Shell**
 
 <!-- prettier-ignore -->
 ```shell
@@ -66,7 +66,7 @@ curl \
 const res = await api.call( "/v1/admin/api-call-log/read-latest-stat", [method_id] );
 ```
 
-#### **cURL**
+#### **Shell**
 
 <!-- prettier-ignore -->
 ```shell
@@ -108,7 +108,7 @@ Statistics updated every 10 seconds. Data resolution is 1 minute.
 const res = await api.call( "/v1/admin/api-call-log/read-history-stat", method_id );
 ```
 
-#### **cURL**
+#### **Shell**
 
 <!-- prettier-ignore -->
 ```shell
@@ -158,7 +158,7 @@ Methods:
 const res = await api.call( "/v1/admin/settings/read" );
 ```
 
-#### **cURL**
+#### **Shell**
 
 <!-- prettier-ignore -->
 ```shell
@@ -193,7 +193,7 @@ Method require no parameters.
 const res = await api.call( "/v1/admin/settings/update", settings );
 ```
 
-#### **cURL**
+#### **Shell**
 
 <!-- prettier-ignore -->
 ```shell
@@ -233,7 +233,7 @@ curl \
 const res = await api.call( "/v1/admin/settings/test-smtp", settings );
 ```
 
-#### **cURL**
+#### **Shell**
 
 <!-- prettier-ignore -->
 ```shell
@@ -301,7 +301,7 @@ Methods:
 const res = await api.call( "/v1/admin/users/read", [options] );
 ```
 
-#### **cURL**
+#### **Shell**
 
 <!-- prettier-ignore -->
 ```shell
@@ -356,7 +356,7 @@ curl \
 const res = await api.call( "/v1/admin/users/create", fields );
 ```
 
-#### **cURL**
+#### **Shell**
 
 <!-- prettier-ignore -->
 ```shell
@@ -413,7 +413,7 @@ curl \
 const res = await api.call( "/v1/admin/users/delete", userId );
 ```
 
-#### **cURL**
+#### **Shell**
 
 <!-- prettier-ignore -->
 ```shell
@@ -453,7 +453,7 @@ curl \
 const res = await api.call( "/v1/admin/users/set-enabled", userId, enabled );
 ```
 
-#### **cURL**
+#### **Shell**
 
 <!-- prettier-ignore -->
 ```shell
@@ -500,7 +500,7 @@ curl \
 const res = await api.call( "/v1/admin/users/set-password", userId, [pasword] );
 ```
 
-#### **cURL**
+#### **Shell**
 
 <!-- prettier-ignore -->
 ```shell
@@ -547,7 +547,7 @@ curl \
 const res = await api.call( "/v1/admin/users/get-permissions", userId );
 ```
 
-#### **cURL**
+#### **Shell**
 
 <!-- prettier-ignore -->
 ```shell
@@ -587,7 +587,7 @@ curl \
 const res = await api.call( "/v1/admin/users/set-permissions", userId, permissions );
 ```
 
-#### **cURL**
+#### **Shell**
 
 <!-- prettier-ignore -->
 ```shell
@@ -636,7 +636,7 @@ curl \
 const res = await api.call( "/v1/admin/users/update-permissions", userId, permissions );
 ```
 
-#### **cURL**
+#### **Shell**
 
 <!-- prettier-ignore -->
 ```shell
@@ -685,7 +685,7 @@ curl \
 const res = await api.call( "/v1/admin/users/suggest", [options] );
 ```
 
-#### **cURL**
+#### **Shell**
 
 <!-- prettier-ignore -->
 ```shell
@@ -732,7 +732,7 @@ curl \
 const res = await api.call( "/v1/admin/users/set-username", user_id, new_username, [new_password] );
 ```
 
-#### **cURL**
+#### **Shell**
 
 <!-- prettier-ignore -->
 ```shell
@@ -798,7 +798,7 @@ Methods:
 const res = await api.call( "/v1/api-tokens/read", [options] );
 ```
 
-#### **cURL**
+#### **Shell**
 
 <!-- prettier-ignore -->
 ```shell
@@ -838,7 +838,7 @@ curl \
 const res = await api.call( "/v1/api-tokens/create", name );
 ```
 
-#### **cURL**
+#### **Shell**
 
 <!-- prettier-ignore -->
 ```shell
@@ -878,7 +878,7 @@ curl \
 const res = await api.call( "/v1/api-tokens/delete", tokenId );
 ```
 
-#### **cURL**
+#### **Shell**
 
 <!-- prettier-ignore -->
 ```shell
@@ -918,7 +918,7 @@ curl \
 const res = await api.call( "/v1/api-tokens/set-enabled", tokenId, enabled );
 ```
 
-#### **cURL**
+#### **Shell**
 
 <!-- prettier-ignore -->
 ```shell
@@ -965,7 +965,7 @@ curl \
 const res = await api.call( "/v1/api-tokens/get-permissions", tokenId );
 ```
 
-#### **cURL**
+#### **Shell**
 
 <!-- prettier-ignore -->
 ```shell
@@ -1005,7 +1005,7 @@ curl \
 const res = await api.call( "/v1/api-tokens/set-permissions", tokenId, permissions );
 ```
 
-#### **cURL**
+#### **Shell**
 
 <!-- prettier-ignore -->
 ```shell
@@ -1054,7 +1054,7 @@ curl \
 const res = await api.call( "/v1/api-tokens/update-permissions", tokenId, permissions );
 ```
 
-#### **cURL**
+#### **Shell**
 
 <!-- prettier-ignore -->
 ```shell
@@ -1111,7 +1111,7 @@ Methods:
 const res = await api.call( "/v1/profile/read" );
 ```
 
-#### **cURL**
+#### **Shell**
 
 <!-- prettier-ignore -->
 ```shell
@@ -1146,7 +1146,7 @@ Method require no parameters.
 const res = await api.call( "/v1/profile/set-email", [email] );
 ```
 
-#### **cURL**
+#### **Shell**
 
 <!-- prettier-ignore -->
 ```shell
@@ -1186,7 +1186,7 @@ curl \
 const res = await api.call( "/v1/profile/set-telegram-username", [username] );
 ```
 
-#### **cURL**
+#### **Shell**
 
 <!-- prettier-ignore -->
 ```shell
@@ -1238,7 +1238,7 @@ Methods:
 const res = await api.call( "/v1/session/signin", [credentials], [signinPermissions] );
 ```
 
-#### **cURL**
+#### **Shell**
 
 <!-- prettier-ignore -->
 ```shell
@@ -1312,7 +1312,7 @@ If `credentials` parameter is specified - will try to sign in user using usernam
 const res = await api.call( "/v1/session/signout" );
 ```
 
-#### **cURL**
+#### **Shell**
 
 <!-- prettier-ignore -->
 ```shell
@@ -1347,7 +1347,7 @@ Method require no parameters.
 const res = await api.call( "/v1/session/signup", fields );
 ```
 
-#### **cURL**
+#### **Shell**
 
 <!-- prettier-ignore -->
 ```shell
@@ -1398,7 +1398,7 @@ curl \
 const res = await api.call( "/v1/session/send-confirmation-email", user_id );
 ```
 
-#### **cURL**
+#### **Shell**
 
 <!-- prettier-ignore -->
 ```shell
@@ -1438,7 +1438,7 @@ curl \
 const res = await api.call( "/v1/session/confirm-email-by-token", token );
 ```
 
-#### **cURL**
+#### **Shell**
 
 <!-- prettier-ignore -->
 ```shell
@@ -1478,7 +1478,7 @@ curl \
 const res = await api.call( "/v1/session/send-password-reset-email", user_id );
 ```
 
-#### **cURL**
+#### **Shell**
 
 <!-- prettier-ignore -->
 ```shell
@@ -1518,7 +1518,7 @@ curl \
 const res = await api.call( "/v1/session/set-password-by-token", token, password );
 ```
 
-#### **cURL**
+#### **Shell**
 
 <!-- prettier-ignore -->
 ```shell
@@ -1572,7 +1572,7 @@ Methods:
 const res = await api.call( "/v1/test/test", [args] );
 ```
 
-#### **cURL**
+#### **Shell**
 
 <!-- prettier-ignore -->
 ```shell
@@ -1612,7 +1612,7 @@ curl \
 const res = await api.call( "/v1/test/upload", [request], [data] );
 ```
 
-#### **cURL**
+#### **Shell**
 
 <!-- prettier-ignore -->
 ```shell

@@ -20,7 +20,7 @@ Methods:
 const res = await api.call( "/v1/test/test", [args] );
 ```
 
-#### **cURL**
+#### **Shell**
 
 <!-- prettier-ignore -->
 ```shell
@@ -60,7 +60,7 @@ curl \
 const res = await api.call( "/v1/test/upload", [request], [data] );
 ```
 
-#### **cURL**
+#### **Shell**
 
 <!-- prettier-ignore -->
 ```shell
