@@ -3,7 +3,7 @@ permissions: ["*"]
 
 methods:
   test:
-    title: Test method
+    title: Test
     params:
       - name: args
         schema:

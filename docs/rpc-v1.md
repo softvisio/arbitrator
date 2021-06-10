@@ -4,12 +4,10 @@
 
 Methods:
 
--   [Test method](#test-test)
+-   [Test](#test-1)
 -   [Test upload](#test-upload)
 
-<a id="test-test"></a>
-
-### Test method
+### Test
 
 <!-- tabs:start -->
 
@@ -38,8 +36,6 @@ Playwright methods might throw errors if they are unable to fulfill a request. F
 
 For certain types of errors Playwright uses specific error classes. These classes are available via playwright.errors.
 
-**Permissions:** `*`, `guest`, `root`, `user`
-
 **Parameters:**
 
 -   **`args?`** \<string\> Parameter summary.
@@ -65,8 +61,6 @@ For certain types of errors Playwright uses specific error classes. These classe
     type: object
     ```
 
-<a id="test-upload"></a>
-
 ### Test upload
 
 <!-- tabs:start -->
@@ -91,8 +85,6 @@ curl \
 ```
 
 <!-- tabs:end -->
-
-**Permissions:** `*`
 
 **Parameters:**
 

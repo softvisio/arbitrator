@@ -4,11 +4,9 @@
 
 Methods:
 
--   [Read API method access log](#admin-api-call-log-read-log)
--   [Read statistics for the last 60 minutes](#admin-api-call-log-read-latest-stat)
--   [Read statistics for the given API method for the last 30 days](#admin-api-call-log-read-history-stat)
-
-<a id="admin-api-call-log-read-log"></a>
+-   [Read API method access log](#read-api-method-access-log)
+-   [Read statistics for the last 60 minutes](#read-statistics-for-the-last-60-minutes)
+-   [Read statistics for the given API method for the last 30 days](#read-statistics-for-the-given-api-method-for-the-last-30-days)
 
 ### Read API method access log
 
@@ -51,8 +49,6 @@ curl \
             required: true
     ```
 
-<a id="admin-api-call-log-read-latest-stat"></a>
-
 ### Read statistics for the last 60 minutes
 
 <!-- tabs:start -->
@@ -90,8 +86,6 @@ Statistics updated every 10 seconds. Data resolution is 1 minute.
     ```yaml
     type: string
     ```
-
-<a id="admin-api-call-log-read-history-stat"></a>
 
 ### Read statistics for the given API method for the last 30 days
 
@@ -135,11 +129,9 @@ Statistics updated every 1 minute. Data resolution is 10 minutes.
 
 Methods:
 
--   [Read application settings](#admin-settings-read)
--   [Update application settings](#admin-settings-update)
--   [Test SMTP server settings](#admin-settings-test-smtp)
-
-<a id="admin-settings-read"></a>
+-   [Read application settings](#read-application-settings)
+-   [Update application settings](#update-application-settings)
+-   [Test SMTP server settings](#test-smtp-server-settings)
 
 ### Read application settings
 
@@ -167,12 +159,6 @@ curl \
 <!-- tabs:end -->
 
 **Permissions:** `admin`
-
-**Parameters:**
-
-Method require no parameters.
-
-<a id="admin-settings-update"></a>
 
 ### Update application settings
 
@@ -209,8 +195,6 @@ curl \
     ```yaml
     type: object
     ```
-
-<a id="admin-settings-test-smtp"></a>
 
 ### Test SMTP server settings
 
@@ -265,18 +249,16 @@ curl \
 
 Methods:
 
--   [Read users](#admin-users-read)
--   [Create user](#admin-users-create)
--   [Remove user](#admin-users-delete)
--   [Set user enabled](#admin-users-set-enabled)
--   [Set user password](#admin-users-set-password)
--   [Get user permissions](#admin-users-get-permissions)
--   [Set user permissions](#admin-users-set-permissions)
--   [Update user permissions](#admin-users-update-permissions)
--   [Suggest user name](#admin-users-suggest)
--   [Change user name](#admin-users-set-username)
-
-<a id="admin-users-read"></a>
+-   [Read users](#read-users)
+-   [Create user](#create-user)
+-   [Remove user](#remove-user)
+-   [Set user enabled](#set-user-enabled)
+-   [Set user password](#set-user-password)
+-   [Get user permissions](#get-user-permissions)
+-   [Set user permissions](#set-user-permissions)
+-   [Update user permissions](#update-user-permissions)
+-   [Suggest user name](#suggest-user-name)
+-   [Change user name](#change-user-name)
 
 ### Read users
 
@@ -328,8 +310,6 @@ curl \
         enabled:
             sortable: true
     ```
-
-<a id="admin-users-create"></a>
 
 ### Create user
 
@@ -384,8 +364,6 @@ curl \
         - username
     ```
 
-<a id="admin-users-delete"></a>
-
 ### Remove user
 
 <!-- tabs:start -->
@@ -421,8 +399,6 @@ curl \
     ```yaml
     type: string
     ```
-
-<a id="admin-users-set-enabled"></a>
 
 ### Set user enabled
 
@@ -467,8 +443,6 @@ curl \
     type: boolean
     ```
 
-<a id="admin-users-set-password"></a>
-
 ### Set user password
 
 <!-- tabs:start -->
@@ -512,8 +486,6 @@ curl \
     type: string
     ```
 
-<a id="admin-users-get-permissions"></a>
-
 ### Get user permissions
 
 <!-- tabs:start -->
@@ -549,8 +521,6 @@ curl \
     ```yaml
     type: string
     ```
-
-<a id="admin-users-set-permissions"></a>
 
 ### Set user permissions
 
@@ -597,8 +567,6 @@ curl \
         type: boolean
     ```
 
-<a id="admin-users-update-permissions"></a>
-
 ### Update user permissions
 
 <!-- tabs:start -->
@@ -644,8 +612,6 @@ curl \
         type: boolean
     ```
 
-<a id="admin-users-suggest"></a>
-
 ### Suggest user name
 
 <!-- tabs:start -->
@@ -688,8 +654,6 @@ curl \
                     type: array
                     items: [{operator: {type: string, enum: [like]}}, {name: {type: string}}]
     ```
-
-<a id="admin-users-set-username"></a>
 
 ### Change user name
 
@@ -745,15 +709,13 @@ curl \
 
 Methods:
 
--   [Read tokens](#api-tokens-read)
--   [Generate new token](#api-tokens-create)
--   [Remove token](#api-tokens-delete)
--   [Set token enabled](#api-tokens-set-enabled)
--   [Get token permissions](#api-tokens-get-permissions)
--   [Set token permissions](#api-tokens-set-permissions)
--   [Update token permissions](#api-tokens-update-permissions)
-
-<a id="api-tokens-read"></a>
+-   [Read tokens](#read-tokens)
+-   [Generate new token](#generate-new-token)
+-   [Remove token](#remove-token)
+-   [Set token enabled](#set-token-enabled)
+-   [Get token permissions](#get-token-permissions)
+-   [Set token permissions](#set-token-permissions)
+-   [Update token permissions](#update-token-permissions)
 
 ### Read tokens
 
@@ -791,8 +753,6 @@ curl \
     type: object
     ```
 
-<a id="api-tokens-create"></a>
-
 ### Generate new token
 
 <!-- tabs:start -->
@@ -829,8 +789,6 @@ curl \
     type: string
     ```
 
-<a id="api-tokens-delete"></a>
-
 ### Remove token
 
 <!-- tabs:start -->
@@ -866,8 +824,6 @@ curl \
     ```yaml
     type: string
     ```
-
-<a id="api-tokens-set-enabled"></a>
 
 ### Set token enabled
 
@@ -912,8 +868,6 @@ curl \
     type: boolean
     ```
 
-<a id="api-tokens-get-permissions"></a>
-
 ### Get token permissions
 
 <!-- tabs:start -->
@@ -949,8 +903,6 @@ curl \
     ```yaml
     type: string
     ```
-
-<a id="api-tokens-set-permissions"></a>
 
 ### Set token permissions
 
@@ -996,8 +948,6 @@ curl \
     additionalProperties:
         type: boolean
     ```
-
-<a id="api-tokens-update-permissions"></a>
 
 ### Update token permissions
 
@@ -1048,11 +998,9 @@ curl \
 
 Methods:
 
--   [Read user profile](#profile-read)
--   [Set user email](#profile-set-email)
--   [Set user telegram name](#profile-set-telegram-username)
-
-<a id="profile-read"></a>
+-   [Read user profile](#read-user-profile)
+-   [Set user email](#set-user-email)
+-   [Set user telegram name](#set-user-telegram-name)
 
 ### Read user profile
 
@@ -1080,12 +1028,6 @@ curl \
 <!-- tabs:end -->
 
 **Permissions:** `user`
-
-**Parameters:**
-
-Method require no parameters.
-
-<a id="profile-set-email"></a>
 
 ### Set user email
 
@@ -1122,8 +1064,6 @@ curl \
     ```yaml
     type: string
     ```
-
-<a id="profile-set-telegram-username"></a>
 
 ### Set user telegram name
 
@@ -1165,15 +1105,13 @@ curl \
 
 Methods:
 
--   [Signin](#session-signin)
--   [Signout](#session-signout)
--   [Signup](#session-signup)
--   [Send confirmation email](#session-send-confirmation-email)
--   [Confirm user email using email confirmation token](#session-confirm-email-by-token)
--   [Send password reset email](#session-send-password-reset-email)
--   [Set user password using password recovery token](#session-set-password-by-token)
-
-<a id="session-signin"></a>
+-   [Signin](#signin)
+-   [Signout](#signout)
+-   [Signup](#signup)
+-   [Send confirmation email](#send-confirmation-email)
+-   [Confirm user email using email confirmation token](#confirm-user-email-using-email-confirmation-token)
+-   [Send password reset email](#send-password-reset-email)
+-   [Set user password using password recovery token](#set-user-password-using-password-recovery-token)
 
 ### Signin
 
@@ -1245,8 +1183,6 @@ If `credentials` parameter is specified - will try to sign in user using usernam
                 type: string
     ```
 
-<a id="session-signout"></a>
-
 ### Signout
 
 <!-- tabs:start -->
@@ -1273,12 +1209,6 @@ curl \
 <!-- tabs:end -->
 
 **Permissions:** `*`
-
-**Parameters:**
-
-Method require no parameters.
-
-<a id="session-signup"></a>
 
 ### Signup
 
@@ -1327,8 +1257,6 @@ curl \
         - username
     ```
 
-<a id="session-send-confirmation-email"></a>
-
 ### Send confirmation email
 
 <!-- tabs:start -->
@@ -1364,8 +1292,6 @@ curl \
     ```yaml
     type: string
     ```
-
-<a id="session-confirm-email-by-token"></a>
 
 ### Confirm user email using email confirmation token
 
@@ -1403,8 +1329,6 @@ curl \
     type: string
     ```
 
-<a id="session-send-password-reset-email"></a>
-
 ### Send password reset email
 
 <!-- tabs:start -->
@@ -1440,8 +1364,6 @@ curl \
     ```yaml
     type: string
     ```
-
-<a id="session-set-password-by-token"></a>
 
 ### Set user password using password recovery token
 
@@ -1490,12 +1412,10 @@ curl \
 
 Methods:
 
--   [Test method](#test-test)
+-   [Test](#test-1)
 -   [Test upload](#test-upload)
 
-<a id="test-test"></a>
-
-### Test method
+### Test
 
 <!-- tabs:start -->
 
@@ -1530,8 +1450,6 @@ curl \
     ```yaml
     type: string
     ```
-
-<a id="test-upload"></a>
 
 ### Test upload
 
