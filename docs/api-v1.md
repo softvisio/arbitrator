@@ -15,7 +15,7 @@ Methods:
 #### **JavaScript**
 
 <!-- prettier-ignore -->
-```js
+```javascript
 const res = await api.call( "/v1/admin/api-call-log/read-log", [options] );
 ```
 
@@ -56,7 +56,7 @@ curl \
 #### **JavaScript**
 
 <!-- prettier-ignore -->
-```js
+```javascript
 const res = await api.call( "/v1/admin/api-call-log/read-latest-stat", [method_id] );
 ```
 
@@ -94,7 +94,7 @@ Statistics updated every 10 seconds. Data resolution is 1 minute.
 #### **JavaScript**
 
 <!-- prettier-ignore -->
-```js
+```javascript
 const res = await api.call( "/v1/admin/api-call-log/read-history-stat", method_id );
 ```
 
@@ -140,7 +140,7 @@ Methods:
 #### **JavaScript**
 
 <!-- prettier-ignore -->
-```js
+```javascript
 const res = await api.call( "/v1/admin/settings/read" );
 ```
 
@@ -167,7 +167,7 @@ curl \
 #### **JavaScript**
 
 <!-- prettier-ignore -->
-```js
+```javascript
 const res = await api.call( "/v1/admin/settings/update", settings );
 ```
 
@@ -203,7 +203,7 @@ curl \
 #### **JavaScript**
 
 <!-- prettier-ignore -->
-```js
+```javascript
 const res = await api.call( "/v1/admin/settings/test-smtp", settings );
 ```
 
@@ -267,7 +267,7 @@ Methods:
 #### **JavaScript**
 
 <!-- prettier-ignore -->
-```js
+```javascript
 const res = await api.call( "/v1/admin/users/read", [options] );
 ```
 
@@ -318,7 +318,7 @@ curl \
 #### **JavaScript**
 
 <!-- prettier-ignore -->
-```js
+```javascript
 const res = await api.call( "/v1/admin/users/create", fields );
 ```
 
@@ -371,7 +371,7 @@ curl \
 #### **JavaScript**
 
 <!-- prettier-ignore -->
-```js
+```javascript
 const res = await api.call( "/v1/admin/users/delete", user_id );
 ```
 
@@ -407,7 +407,7 @@ curl \
 #### **JavaScript**
 
 <!-- prettier-ignore -->
-```js
+```javascript
 const res = await api.call( "/v1/admin/users/set-enabled", user_id, enabled );
 ```
 
@@ -450,7 +450,7 @@ curl \
 #### **JavaScript**
 
 <!-- prettier-ignore -->
-```js
+```javascript
 const res = await api.call( "/v1/admin/users/set-password", user_id, [pasword] );
 ```
 
@@ -493,7 +493,7 @@ curl \
 #### **JavaScript**
 
 <!-- prettier-ignore -->
-```js
+```javascript
 const res = await api.call( "/v1/admin/users/get-permissions", user_id );
 ```
 
@@ -529,7 +529,7 @@ curl \
 #### **JavaScript**
 
 <!-- prettier-ignore -->
-```js
+```javascript
 const res = await api.call( "/v1/admin/users/set-permissions", user_id, permissions );
 ```
 
@@ -574,7 +574,7 @@ curl \
 #### **JavaScript**
 
 <!-- prettier-ignore -->
-```js
+```javascript
 const res = await api.call( "/v1/admin/users/update-permissions", user_id, permissions );
 ```
 
@@ -619,7 +619,7 @@ curl \
 #### **JavaScript**
 
 <!-- prettier-ignore -->
-```js
+```javascript
 const res = await api.call( "/v1/admin/users/suggest", [options] );
 ```
 
@@ -662,7 +662,7 @@ curl \
 #### **JavaScript**
 
 <!-- prettier-ignore -->
-```js
+```javascript
 const res = await api.call( "/v1/admin/users/set-username", user_id, new_username, [new_password] );
 ```
 
@@ -724,7 +724,7 @@ Methods:
 #### **JavaScript**
 
 <!-- prettier-ignore -->
-```js
+```javascript
 const res = await api.call( "/v1/api-tokens/read", [options] );
 ```
 
@@ -760,7 +760,7 @@ curl \
 #### **JavaScript**
 
 <!-- prettier-ignore -->
-```js
+```javascript
 const res = await api.call( "/v1/api-tokens/create", name );
 ```
 
@@ -796,7 +796,7 @@ curl \
 #### **JavaScript**
 
 <!-- prettier-ignore -->
-```js
+```javascript
 const res = await api.call( "/v1/api-tokens/delete", token_id );
 ```
 
@@ -832,7 +832,7 @@ curl \
 #### **JavaScript**
 
 <!-- prettier-ignore -->
-```js
+```javascript
 const res = await api.call( "/v1/api-tokens/set-enabled", token_id, enabled );
 ```
 
@@ -875,7 +875,7 @@ curl \
 #### **JavaScript**
 
 <!-- prettier-ignore -->
-```js
+```javascript
 const res = await api.call( "/v1/api-tokens/get-permissions", token_id );
 ```
 
@@ -911,7 +911,7 @@ curl \
 #### **JavaScript**
 
 <!-- prettier-ignore -->
-```js
+```javascript
 const res = await api.call( "/v1/api-tokens/set-permissions", token_id, permissions );
 ```
 
@@ -956,7 +956,7 @@ curl \
 #### **JavaScript**
 
 <!-- prettier-ignore -->
-```js
+```javascript
 const res = await api.call( "/v1/api-tokens/update-permissions", token_id, permissions );
 ```
 
@@ -1009,7 +1009,7 @@ Methods:
 #### **JavaScript**
 
 <!-- prettier-ignore -->
-```js
+```javascript
 const res = await api.call( "/v1/profile/read" );
 ```
 
@@ -1036,7 +1036,7 @@ curl \
 #### **JavaScript**
 
 <!-- prettier-ignore -->
-```js
+```javascript
 const res = await api.call( "/v1/profile/set-email", [email] );
 ```
 
@@ -1072,7 +1072,7 @@ curl \
 #### **JavaScript**
 
 <!-- prettier-ignore -->
-```js
+```javascript
 const res = await api.call( "/v1/profile/set-telegram-username", [telegram_username] );
 ```
 
@@ -1120,7 +1120,7 @@ Methods:
 #### **JavaScript**
 
 <!-- prettier-ignore -->
-```js
+```javascript
 const res = await api.call( "/v1/session/signin", [credentials], [signin_permissions] );
 ```
 
@@ -1190,7 +1190,7 @@ If `credentials` parameter is specified - will try to sign in user using usernam
 #### **JavaScript**
 
 <!-- prettier-ignore -->
-```js
+```javascript
 const res = await api.call( "/v1/session/signout" );
 ```
 
@@ -1217,7 +1217,7 @@ curl \
 #### **JavaScript**
 
 <!-- prettier-ignore -->
-```js
+```javascript
 const res = await api.call( "/v1/session/signup", fields );
 ```
 
@@ -1264,7 +1264,7 @@ curl \
 #### **JavaScript**
 
 <!-- prettier-ignore -->
-```js
+```javascript
 const res = await api.call( "/v1/session/send-confirmation-email", user_id );
 ```
 
@@ -1300,7 +1300,7 @@ curl \
 #### **JavaScript**
 
 <!-- prettier-ignore -->
-```js
+```javascript
 const res = await api.call( "/v1/session/confirm-email-by-token", token );
 ```
 
@@ -1336,7 +1336,7 @@ curl \
 #### **JavaScript**
 
 <!-- prettier-ignore -->
-```js
+```javascript
 const res = await api.call( "/v1/session/send-password-reset-email", user_id );
 ```
 
@@ -1372,7 +1372,7 @@ curl \
 #### **JavaScript**
 
 <!-- prettier-ignore -->
-```js
+```javascript
 const res = await api.call( "/v1/session/set-password-by-token", token, password );
 ```
 
@@ -1422,7 +1422,7 @@ Methods:
 #### **JavaScript**
 
 <!-- prettier-ignore -->
-```js
+```javascript
 const res = await api.call( "/v1/test/test", [args] );
 ```
 
@@ -1458,7 +1458,7 @@ curl \
 #### **JavaScript**
 
 <!-- prettier-ignore -->
-```js
+```javascript
 const res = await api.call( "/v1/test/upload", [request], [data] );
 ```
 

@@ -14,7 +14,7 @@ Methods:
 #### **JavaScript**
 
 <!-- prettier-ignore -->
-```js
+```javascript
 const res = await api.call( "/v1/test/test", [args], [test] );
 ```
 
@@ -68,7 +68,7 @@ For certain types of errors Playwright uses specific error classes. These classe
 #### **JavaScript**
 
 <!-- prettier-ignore -->
-```js
+```javascript
 const res = await api.call( "/v1/test/upload", request, [data] );
 ```
 
