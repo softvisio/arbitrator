@@ -39,7 +39,7 @@ curl \
 
 **Parameters:**
 
--   **`options`** <sup>[not required]</sup>
+-   **`options?`** \<\>
 
     <!-- prettier-ignore -->
     ```yaml
@@ -84,7 +84,7 @@ Statistics updated every 10 seconds. Data resolution is 1 minute.
 
 **Parameters:**
 
--   **`method_id`** <sup>[not required]</sup>
+-   **`method_id?`** \<string\>
 
     <!-- prettier-ignore -->
     ```yaml
@@ -124,7 +124,7 @@ Statistics updated every 1 minute. Data resolution is 10 minutes.
 
 **Parameters:**
 
--   **`method_id`** <sup>[required]</sup>
+-   **`method_id`** \<string\>
 
     <!-- prettier-ignore -->
     ```yaml
@@ -203,7 +203,7 @@ curl \
 
 **Parameters:**
 
--   **`settings`** <sup>[required]</sup> Application settings object.
+-   **`settings`** \<object\> Application settings object.
 
     <!-- prettier-ignore -->
     ```yaml
@@ -241,7 +241,7 @@ curl \
 
 **Parameters:**
 
--   **`settings`** <sup>[required]</sup>
+-   **`settings`** \<object\>
 
     <!-- prettier-ignore -->
     ```yaml
@@ -307,7 +307,7 @@ curl \
 
 **Parameters:**
 
--   **`options`** <sup>[not required]</sup>
+-   **`options?`** \<\>
 
     <!-- prettier-ignore -->
     ```yaml
@@ -360,7 +360,7 @@ curl \
 
 **Parameters:**
 
--   **`fields`** <sup>[required]</sup>
+-   **`fields`** \<object\>
 
     <!-- prettier-ignore -->
     ```yaml
@@ -415,7 +415,7 @@ curl \
 
 **Parameters:**
 
--   **`user_id`** <sup>[required]</sup>
+-   **`user_id`** \<string\>
 
     <!-- prettier-ignore -->
     ```yaml
@@ -453,14 +453,14 @@ curl \
 
 **Parameters:**
 
--   **`user_id`** <sup>[required]</sup> User id or name.
+-   **`user_id`** \<string\> User id or name.
 
     <!-- prettier-ignore -->
     ```yaml
     type: string
     ```
 
--   **`enabled`** <sup>[required]</sup>
+-   **`enabled`** \<boolean\>
 
     <!-- prettier-ignore -->
     ```yaml
@@ -498,14 +498,14 @@ curl \
 
 **Parameters:**
 
--   **`user_id`** <sup>[required]</sup> User id or name.
+-   **`user_id`** \<string\> User id or name.
 
     <!-- prettier-ignore -->
     ```yaml
     type: string
     ```
 
--   **`pasword`** <sup>[not required]</sup>
+-   **`pasword?`** \<string\>
 
     <!-- prettier-ignore -->
     ```yaml
@@ -543,7 +543,7 @@ curl \
 
 **Parameters:**
 
--   **`user_id`** <sup>[required]</sup>
+-   **`user_id`** \<string\>
 
     <!-- prettier-ignore -->
     ```yaml
@@ -581,14 +581,14 @@ curl \
 
 **Parameters:**
 
--   **`user_id`** <sup>[required]</sup>
+-   **`user_id`** \<string\>
 
     <!-- prettier-ignore -->
     ```yaml
     type: string
     ```
 
--   **`permissions`** <sup>[required]</sup>
+-   **`permissions`** \<object\>
 
     <!-- prettier-ignore -->
     ```yaml
@@ -628,14 +628,14 @@ curl \
 
 **Parameters:**
 
--   **`user_id`** <sup>[required]</sup>
+-   **`user_id`** \<string\>
 
     <!-- prettier-ignore -->
     ```yaml
     type: string
     ```
 
--   **`permissions`** <sup>[required]</sup>
+-   **`permissions`** \<object\>
 
     <!-- prettier-ignore -->
     ```yaml
@@ -675,7 +675,7 @@ curl \
 
 **Parameters:**
 
--   **`options`** <sup>[not required]</sup>
+-   **`options?`** \<object\>
 
     <!-- prettier-ignore -->
     ```yaml
@@ -720,21 +720,21 @@ curl \
 
 **Parameters:**
 
--   **`user_id`** <sup>[required]</sup>
+-   **`user_id`** \<string\>
 
     <!-- prettier-ignore -->
     ```yaml
     type: string
     ```
 
--   **`new_username`** <sup>[required]</sup>
+-   **`new_username`** \<string\>
 
     <!-- prettier-ignore -->
     ```yaml
     type: string
     ```
 
--   **`new_password`** <sup>[not required]</sup>
+-   **`new_password?`** \<string\>
 
     <!-- prettier-ignore -->
     ```yaml
@@ -784,7 +784,7 @@ curl \
 
 **Parameters:**
 
--   **`options`** <sup>[not required]</sup>
+-   **`options?`** \<object\>
 
     <!-- prettier-ignore -->
     ```yaml
@@ -822,7 +822,7 @@ curl \
 
 **Parameters:**
 
--   **`name`** <sup>[required]</sup>
+-   **`name`** \<string\>
 
     <!-- prettier-ignore -->
     ```yaml
@@ -860,7 +860,7 @@ curl \
 
 **Parameters:**
 
--   **`token_id`** <sup>[required]</sup>
+-   **`token_id`** \<string\>
 
     <!-- prettier-ignore -->
     ```yaml
@@ -898,14 +898,14 @@ curl \
 
 **Parameters:**
 
--   **`token_id`** <sup>[required]</sup>
+-   **`token_id`** \<string\>
 
     <!-- prettier-ignore -->
     ```yaml
     type: string
     ```
 
--   **`enabled`** <sup>[required]</sup>
+-   **`enabled`** \<boolean\>
 
     <!-- prettier-ignore -->
     ```yaml
@@ -943,7 +943,7 @@ curl \
 
 **Parameters:**
 
--   **`token_id`** <sup>[required]</sup>
+-   **`token_id`** \<string\>
 
     <!-- prettier-ignore -->
     ```yaml
@@ -981,14 +981,14 @@ curl \
 
 **Parameters:**
 
--   **`token_id`** <sup>[required]</sup>
+-   **`token_id`** \<string\>
 
     <!-- prettier-ignore -->
     ```yaml
     type: string
     ```
 
--   **`permissions`** <sup>[required]</sup>
+-   **`permissions`** \<object\>
 
     <!-- prettier-ignore -->
     ```yaml
@@ -1028,14 +1028,14 @@ curl \
 
 **Parameters:**
 
--   **`token_id`** <sup>[required]</sup>
+-   **`token_id`** \<string\>
 
     <!-- prettier-ignore -->
     ```yaml
     type: string
     ```
 
--   **`permissions`** <sup>[required]</sup>
+-   **`permissions`** \<object\>
 
     <!-- prettier-ignore -->
     ```yaml
@@ -1116,7 +1116,7 @@ curl \
 
 **Parameters:**
 
--   **`email`** <sup>[not required]</sup>
+-   **`email?`** \<string\> Email address to set, if not specified, current email address will be removed.
 
     <!-- prettier-ignore -->
     ```yaml
@@ -1133,7 +1133,7 @@ curl \
 
 <!-- prettier-ignore -->
 ```js
-const res = await api.call( "/v1/profile/set-telegram-username", [username] );
+const res = await api.call( "/v1/profile/set-telegram-username", [telegram_username] );
 ```
 
 #### **Shell**
@@ -1154,7 +1154,7 @@ curl \
 
 **Parameters:**
 
--   **`username`** <sup>[not required]</sup>
+-   **`telegram_username?`** \<string\> Telegram username to set, if not specified current telegram user name will be removed.
 
     <!-- prettier-ignore -->
     ```yaml
@@ -1216,7 +1216,7 @@ If `credentials` parameter is specified - will try to sign in user using usernam
 
 **Parameters:**
 
--   **`credentials`** <sup>[not required]</sup>
+-   **`credentials?`** \<object\>
 
     <!-- prettier-ignore -->
     ```yaml
@@ -1232,7 +1232,7 @@ If `credentials` parameter is specified - will try to sign in user using usernam
     additionalProperties: false
     ```
 
--   **`signin_permissions`** <sup>[not required]</sup> Array of permissions. Only user, who has this permissions can sign in. If `null` permissions will not check.
+-   **`signin_permissions?`** \<\> Array of permissions. Only user, who has this permissions can sign in. If `null` permissions will not check.
 
     <!-- prettier-ignore -->
     ```yaml
@@ -1309,7 +1309,7 @@ curl \
 
 **Parameters:**
 
--   **`fields`** <sup>[required]</sup>
+-   **`fields`** \<object\>
 
     <!-- prettier-ignore -->
     ```yaml
@@ -1358,7 +1358,7 @@ curl \
 
 **Parameters:**
 
--   **`user_id`** <sup>[required]</sup> User name or email.
+-   **`user_id`** \<string\> User name or email.
 
     <!-- prettier-ignore -->
     ```yaml
@@ -1396,7 +1396,7 @@ curl \
 
 **Parameters:**
 
--   **`token`** <sup>[required]</sup> Email confirmation token.
+-   **`token`** \<string\> Email confirmation token.
 
     <!-- prettier-ignore -->
     ```yaml
@@ -1434,7 +1434,7 @@ curl \
 
 **Parameters:**
 
--   **`user_id`** <sup>[required]</sup> User name or email.
+-   **`user_id`** \<string\> User name or email.
 
     <!-- prettier-ignore -->
     ```yaml
@@ -1472,14 +1472,14 @@ curl \
 
 **Parameters:**
 
--   **`token`** <sup>[required]</sup>
+-   **`token`** \<string\>
 
     <!-- prettier-ignore -->
     ```yaml
     type: string
     ```
 
--   **`password`** <sup>[required]</sup>
+-   **`password`** \<string\>
 
     <!-- prettier-ignore -->
     ```yaml
@@ -1524,7 +1524,7 @@ curl \
 
 **Parameters:**
 
--   **`args`** <sup>[not required]</sup>
+-   **`args?`** \<string\>
 
     <!-- prettier-ignore -->
     ```yaml
@@ -1562,14 +1562,14 @@ curl \
 
 **Parameters:**
 
--   **`request`** <sup>[not required]</sup>
+-   **`request?`** \<object\>
 
     <!-- prettier-ignore -->
     ```yaml
     type: object
     ```
 
--   **`data`** <sup>[not required]</sup>
+-   **`data?`** \<object\>
 
     <!-- prettier-ignore -->
     ```yaml
