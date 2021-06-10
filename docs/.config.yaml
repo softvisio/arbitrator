@@ -1,7 +1,7 @@
 logo: true
 
 aliases:
-  /api-sdk: https://raw.githubusercontent.com/softvisio/core/main/docs/api.md
+  /api: https://raw.githubusercontent.com/softvisio/core/main/docs/api.md
 
 api: [lib/api]
 rpc: [lib/rpc]
