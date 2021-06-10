@@ -17,7 +17,7 @@ Methods:
 
 <!-- prettier-ignore -->
 ```js
-const res = await api.call( "/v1/test/test", [args] );
+const res = await api.call( "/v1/test/test", [args], [test] );
 ```
 
 #### **Shell**
@@ -26,7 +26,7 @@ const res = await api.call( "/v1/test/test", [args] );
 ```shell
 curl \
     -X POST \
-    -H "Authorization: Basic <YOUR-API-TOKEN>" \
+    -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
     -d '[...PARAMETERS]' \
     "https://api.domain.com/v1/test/test"
@@ -34,17 +34,35 @@ curl \
 
 <!-- tabs:end -->
 
-**Permissions**
+Playwright methods might throw errors if they are unable to fulfill a request. For example, page.waitForSelector(selector[, options]) might fail if the selector doesn't match any nodes during the given timeframe.
 
--   "\*" - any connected user;
+For certain types of errors Playwright uses specific error classes. These classes are available via playwright.errors.
 
-**Parameters**
+**Permissions:** `*`, `guest`, `root`, `user`
 
--   **args** `[not required]`
+**Parameters:**
+
+-   **`args`** <sup>[not required]</sup> Parameter summary.
+
+    Parameter description, Playwright enables fast, reliable and capable automation across all modern browsers. This guide covers those key differentiators to help you decide on the right tool for your automated tests.
+
+    Support for all browsers
+    Fast and reliable execution
+    Powerful automation capabilities
+    Integrates with your workflow
+    Limitations
+    Release notes
 
     <!-- prettier-ignore -->
     ```yaml
     type: string
+    ```
+
+-   **`test`** <sup>[not required]</sup> Test parameter.
+
+    <!-- prettier-ignore -->
+    ```yaml
+    type: object
     ```
 
 <a id="test-upload"></a>
@@ -57,7 +75,7 @@ curl \
 
 <!-- prettier-ignore -->
 ```js
-const res = await api.call( "/v1/test/upload", [request], [data] );
+const res = await api.call( "/v1/test/upload", request, [data] );
 ```
 
 #### **Shell**
@@ -66,7 +84,7 @@ const res = await api.call( "/v1/test/upload", [request], [data] );
 ```shell
 curl \
     -X POST \
-    -H "Authorization: Basic <YOUR-API-TOKEN>" \
+    -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
     -d '[...PARAMETERS]' \
     "https://api.domain.com/v1/test/upload"
@@ -74,20 +92,18 @@ curl \
 
 <!-- tabs:end -->
 
-**Permissions**
+**Permissions:** `*`
 
--   "\*" - any connected user;
+**Parameters:**
 
-**Parameters**
-
--   **request** `[not required]`
+-   **`request`** <sup>[required]</sup>
 
     <!-- prettier-ignore -->
     ```yaml
     type: object
     ```
 
--   **data** `[not required]`
+-   **`data`** <sup>[not required]</sup>
 
     <!-- prettier-ignore -->
     ```yaml
