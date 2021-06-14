@@ -1148,7 +1148,7 @@ If `credentials` parameter is specified - will try to sign in user using usernam
 
 -   `403`: Not authorized.
 
--   Any other status means bad request, internal or connection error. Refer to the response `reason` property for more information.
+-   Any other status means bad request, internal or connection error. Refer to the response `statusText` property for more information.
 
 **Permissions:** `*`
 
@@ -1487,9 +1487,11 @@ curl \
     type: object
     ```
 
--   **`data?`** \<object\>
+-   **`data?`** \<string,object\>
 
     <!-- prettier-ignore -->
     ```yaml
-    type: object
+    type:
+        - string
+        - object
     ```

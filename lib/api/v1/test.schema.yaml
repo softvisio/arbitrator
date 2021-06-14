@@ -19,4 +19,4 @@ methods:
           type: object
       - name: data
         schema:
-          type: object
+          type: [string, object]
