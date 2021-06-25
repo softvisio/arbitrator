@@ -37,7 +37,7 @@ curl \
 
 **Parameters:**
 
--   **`options?`** <\>
+-   **`options?`** <undefined\>
 
     <!-- prettier-ignore -->
     ```yaml
@@ -289,7 +289,7 @@ curl \
 
 **Parameters:**
 
--   **`options?`** <\>
+-   **`options?`** <undefined\>
 
     <!-- prettier-ignore -->
     ```yaml
@@ -1170,7 +1170,7 @@ If `credentials` parameter is specified - will try to sign in user using usernam
     additionalProperties: false
     ```
 
--   **`signin_permissions?`** <\> Array of permissions. Only user, who has this permissions can sign in. If `null` permissions will not check.
+-   **`signin_permissions?`** <undefined\> Array of permissions. Only user, who has this permissions can sign in. If `null` permissions will not check.
 
     <!-- prettier-ignore -->
     ```yaml
@@ -1487,7 +1487,7 @@ curl \
     type: object
     ```
 
--   **`data?`** <string,object\>
+-   **`data?`** <string\> | <Object\>
 
     <!-- prettier-ignore -->
     ```yaml
