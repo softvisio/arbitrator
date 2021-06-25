@@ -38,7 +38,7 @@ For certain types of errors Playwright uses specific error classes. These classe
 
 **Parameters:**
 
--   **`args?`** \<string\> Parameter summary.
+-   **`args?`** <string\> Parameter summary.
 
     Parameter description, Playwright enables fast, reliable and capable automation across all modern browsers. This guide covers those key differentiators to help you decide on the right tool for your automated tests.
 
@@ -54,7 +54,7 @@ For certain types of errors Playwright uses specific error classes. These classe
     type: string
     ```
 
--   **`test?`** \<object\> Test parameter.
+-   **`test?`** <Object\> Test parameter.
 
     <!-- prettier-ignore -->
     ```yaml
@@ -88,14 +88,14 @@ curl \
 
 **Parameters:**
 
--   **`request`** \<object\>
+-   **`request`** <Object\>
 
     <!-- prettier-ignore -->
     ```yaml
     type: object
     ```
 
--   **`data?`** \<object\>
+-   **`data?`** <Object\>
 
     <!-- prettier-ignore -->
     ```yaml
