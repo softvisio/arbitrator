@@ -2,11 +2,6 @@
 
 ## Test
 
-Methods:
-
--   [Test](#test-1)
--   [Test upload](#test-upload)
-
 ### Test
 
 <!-- tabs:start -->

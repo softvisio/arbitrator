@@ -2,12 +2,6 @@
 
 ## Application API call log
 
-Methods:
-
--   [Read API method access log](#read-api-method-access-log)
--   [Read statistics for the last 60 minutes](#read-statistics-for-the-last-60-minutes)
--   [Read statistics for the given API method for the last 30 days](#read-statistics-for-the-given-api-method-for-the-last-30-days)
-
 ### Read API method access log
 
 <!-- tabs:start -->
@@ -127,12 +121,6 @@ Statistics updated every 1 minute. Data resolution is 10 minutes.
 
 ## Application settings
 
-Methods:
-
--   [Read application settings](#read-application-settings)
--   [Update application settings](#update-application-settings)
--   [Test SMTP server settings](#test-smtp-server-settings)
-
 ### Read application settings
 
 <!-- tabs:start -->
@@ -246,19 +234,6 @@ curl \
     ```
 
 ## Application users management
-
-Methods:
-
--   [Read users](#read-users)
--   [Create user](#create-user)
--   [Remove user](#remove-user)
--   [Set user enabled](#set-user-enabled)
--   [Set user password](#set-user-password)
--   [Get user permissions](#get-user-permissions)
--   [Set user permissions](#set-user-permissions)
--   [Update user permissions](#update-user-permissions)
--   [Suggest user name](#suggest-user-name)
--   [Change user name](#change-user-name)
 
 ### Read users
 
@@ -707,16 +682,6 @@ curl \
 
 ## API access tokens
 
-Methods:
-
--   [Read tokens](#read-tokens)
--   [Generate new token](#generate-new-token)
--   [Remove token](#remove-token)
--   [Set token enabled](#set-token-enabled)
--   [Get token permissions](#get-token-permissions)
--   [Set token permissions](#set-token-permissions)
--   [Update token permissions](#update-token-permissions)
-
 ### Read tokens
 
 <!-- tabs:start -->
@@ -996,12 +961,6 @@ curl \
 
 ## User profile
 
-Methods:
-
--   [Read user profile](#read-user-profile)
--   [Set user email](#set-user-email)
--   [Set user telegram name](#set-user-telegram-name)
-
 ### Read user profile
 
 <!-- tabs:start -->
@@ -1102,16 +1061,6 @@ curl \
     ```
 
 ## Session
-
-Methods:
-
--   [Signin](#signin)
--   [Signout](#signout)
--   [Signup](#signup)
--   [Send confirmation email](#send-confirmation-email)
--   [Confirm user email using email confirmation token](#confirm-user-email-using-email-confirmation-token)
--   [Send password reset email](#send-password-reset-email)
--   [Set user password using password recovery token](#set-user-password-using-password-recovery-token)
 
 ### Signin
 
@@ -1409,11 +1358,6 @@ curl \
     ```
 
 ## Test
-
-Methods:
-
--   [Test](#test-1)
--   [Test upload](#test-upload)
 
 ### Test
 
