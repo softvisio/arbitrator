@@ -33,6 +33,9 @@ curl \
 
 -   **`options?`** <undefined\>
 
+    <details>
+        <summary>JSON schema</summary>
+
     <!-- prettier-ignore -->
     ```yaml
     apiRead:
@@ -42,6 +45,8 @@ curl \
                 - "="
             required: true
     ```
+
+    </details>
 
 ### Read statistics for the last 60 minutes
 
@@ -76,10 +81,15 @@ Statistics updated every 10 seconds. Data resolution is 1 minute.
 
 -   **`method_id?`** <string\>
 
+    <details>
+        <summary>JSON schema</summary>
+
     <!-- prettier-ignore -->
     ```yaml
     type: string
     ```
+
+    </details>
 
 ### Read statistics for the given API method for the last 30 days
 
@@ -114,10 +124,15 @@ Statistics updated every 1 minute. Data resolution is 10 minutes.
 
 -   **`method_id`** <string\>
 
+    <details>
+        <summary>JSON schema</summary>
+
     <!-- prettier-ignore -->
     ```yaml
     type: string
     ```
+
+    </details>
 
 ## Application settings
 
@@ -179,10 +194,15 @@ curl \
 
 -   **`settings`** <Object\> Application settings object.
 
+    <details>
+        <summary>JSON schema</summary>
+
     <!-- prettier-ignore -->
     ```yaml
     type: object
     ```
+
+    </details>
 
 ### Test SMTP server settings
 
@@ -215,6 +235,9 @@ curl \
 
 -   **`settings`** <Object\>
 
+    <details>
+        <summary>JSON schema</summary>
+
     <!-- prettier-ignore -->
     ```yaml
     type: object
@@ -232,6 +255,8 @@ curl \
     required: []
     additionalProperties: false
     ```
+
+    </details>
 
 ## Application users management
 
@@ -266,6 +291,9 @@ curl \
 
 -   **`options?`** <undefined\>
 
+    <details>
+        <summary>JSON schema</summary>
+
     <!-- prettier-ignore -->
     ```yaml
     apiRead:
@@ -285,6 +313,8 @@ curl \
         enabled:
             sortable: true
     ```
+
+    </details>
 
 ### Create user
 
@@ -317,6 +347,9 @@ curl \
 
 -   **`fields`** <Object\>
 
+    <details>
+        <summary>JSON schema</summary>
+
     <!-- prettier-ignore -->
     ```yaml
     type: object
@@ -338,6 +371,8 @@ curl \
     required:
         - username
     ```
+
+    </details>
 
 ### Remove user
 
@@ -370,10 +405,15 @@ curl \
 
 -   **`user_id`** <string\>
 
+    <details>
+        <summary>JSON schema</summary>
+
     <!-- prettier-ignore -->
     ```yaml
     type: string
     ```
+
+    </details>
 
 ### Set user enabled
 
@@ -406,17 +446,27 @@ curl \
 
 -   **`user_id`** <string\> User id or name.
 
+    <details>
+        <summary>JSON schema</summary>
+
     <!-- prettier-ignore -->
     ```yaml
     type: string
     ```
 
+    </details>
+
 -   **`enabled`** <boolean\>
+
+    <details>
+        <summary>JSON schema</summary>
 
     <!-- prettier-ignore -->
     ```yaml
     type: boolean
     ```
+
+    </details>
 
 ### Set user password
 
@@ -449,17 +499,27 @@ curl \
 
 -   **`user_id`** <string\> User id or name.
 
+    <details>
+        <summary>JSON schema</summary>
+
     <!-- prettier-ignore -->
     ```yaml
     type: string
     ```
+
+    </details>
 
 -   **`pasword?`** <string\>
 
+    <details>
+        <summary>JSON schema</summary>
+
     <!-- prettier-ignore -->
     ```yaml
     type: string
     ```
+
+    </details>
 
 ### Get user permissions
 
@@ -492,10 +552,15 @@ curl \
 
 -   **`user_id`** <string\>
 
+    <details>
+        <summary>JSON schema</summary>
+
     <!-- prettier-ignore -->
     ```yaml
     type: string
     ```
+
+    </details>
 
 ### Set user permissions
 
@@ -528,12 +593,20 @@ curl \
 
 -   **`user_id`** <string\>
 
+    <details>
+        <summary>JSON schema</summary>
+
     <!-- prettier-ignore -->
     ```yaml
     type: string
     ```
 
+    </details>
+
 -   **`permissions`** <Object\>
+
+    <details>
+        <summary>JSON schema</summary>
 
     <!-- prettier-ignore -->
     ```yaml
@@ -541,6 +614,8 @@ curl \
     additionalProperties:
         type: boolean
     ```
+
+    </details>
 
 ### Update user permissions
 
@@ -573,12 +648,20 @@ curl \
 
 -   **`user_id`** <string\>
 
+    <details>
+        <summary>JSON schema</summary>
+
     <!-- prettier-ignore -->
     ```yaml
     type: string
     ```
 
+    </details>
+
 -   **`permissions`** <Object\>
+
+    <details>
+        <summary>JSON schema</summary>
 
     <!-- prettier-ignore -->
     ```yaml
@@ -586,6 +669,8 @@ curl \
     additionalProperties:
         type: boolean
     ```
+
+    </details>
 
 ### Suggest user name
 
@@ -618,6 +703,9 @@ curl \
 
 -   **`options?`** <Object\>
 
+    <details>
+        <summary>JSON schema</summary>
+
     <!-- prettier-ignore -->
     ```yaml
     type: object
@@ -629,6 +717,8 @@ curl \
                     type: array
                     items: [{operator: {type: string, enum: [like]}}, {name: {type: string}}]
     ```
+
+    </details>
 
 ### Change user name
 
@@ -661,24 +751,39 @@ curl \
 
 -   **`user_id`** <string\>
 
+    <details>
+        <summary>JSON schema</summary>
+
     <!-- prettier-ignore -->
     ```yaml
     type: string
     ```
+
+    </details>
 
 -   **`new_username`** <string\>
 
+    <details>
+        <summary>JSON schema</summary>
+
     <!-- prettier-ignore -->
     ```yaml
     type: string
     ```
+
+    </details>
 
 -   **`new_password?`** <string\>
 
+    <details>
+        <summary>JSON schema</summary>
+
     <!-- prettier-ignore -->
     ```yaml
     type: string
     ```
+
+    </details>
 
 ## API access tokens
 
@@ -713,10 +818,15 @@ curl \
 
 -   **`options?`** <Object\>
 
+    <details>
+        <summary>JSON schema</summary>
+
     <!-- prettier-ignore -->
     ```yaml
     type: object
     ```
+
+    </details>
 
 ### Generate new token
 
@@ -749,10 +859,15 @@ curl \
 
 -   **`name`** <string\>
 
+    <details>
+        <summary>JSON schema</summary>
+
     <!-- prettier-ignore -->
     ```yaml
     type: string
     ```
+
+    </details>
 
 ### Remove token
 
@@ -785,10 +900,15 @@ curl \
 
 -   **`token_id`** <string\>
 
+    <details>
+        <summary>JSON schema</summary>
+
     <!-- prettier-ignore -->
     ```yaml
     type: string
     ```
+
+    </details>
 
 ### Set token enabled
 
@@ -821,17 +941,27 @@ curl \
 
 -   **`token_id`** <string\>
 
+    <details>
+        <summary>JSON schema</summary>
+
     <!-- prettier-ignore -->
     ```yaml
     type: string
     ```
 
+    </details>
+
 -   **`enabled`** <boolean\>
+
+    <details>
+        <summary>JSON schema</summary>
 
     <!-- prettier-ignore -->
     ```yaml
     type: boolean
     ```
+
+    </details>
 
 ### Get token permissions
 
@@ -864,10 +994,15 @@ curl \
 
 -   **`token_id`** <string\>
 
+    <details>
+        <summary>JSON schema</summary>
+
     <!-- prettier-ignore -->
     ```yaml
     type: string
     ```
+
+    </details>
 
 ### Set token permissions
 
@@ -900,12 +1035,20 @@ curl \
 
 -   **`token_id`** <string\>
 
+    <details>
+        <summary>JSON schema</summary>
+
     <!-- prettier-ignore -->
     ```yaml
     type: string
     ```
 
+    </details>
+
 -   **`permissions`** <Object\>
+
+    <details>
+        <summary>JSON schema</summary>
 
     <!-- prettier-ignore -->
     ```yaml
@@ -913,6 +1056,8 @@ curl \
     additionalProperties:
         type: boolean
     ```
+
+    </details>
 
 ### Update token permissions
 
@@ -945,12 +1090,20 @@ curl \
 
 -   **`token_id`** <string\>
 
+    <details>
+        <summary>JSON schema</summary>
+
     <!-- prettier-ignore -->
     ```yaml
     type: string
     ```
 
+    </details>
+
 -   **`permissions`** <Object\>
+
+    <details>
+        <summary>JSON schema</summary>
 
     <!-- prettier-ignore -->
     ```yaml
@@ -958,6 +1111,8 @@ curl \
     additionalProperties:
         type: boolean
     ```
+
+    </details>
 
 ## User profile
 
@@ -1019,10 +1174,15 @@ curl \
 
 -   **`email?`** <string\> Email address to set, if not specified, current email address will be removed.
 
+    <details>
+        <summary>JSON schema</summary>
+
     <!-- prettier-ignore -->
     ```yaml
     type: string
     ```
+
+    </details>
 
 ### Set user telegram name
 
@@ -1055,10 +1215,15 @@ curl \
 
 -   **`telegram_username?`** <string\> Telegram username to set, if not specified current telegram user name will be removed.
 
+    <details>
+        <summary>JSON schema</summary>
+
     <!-- prettier-ignore -->
     ```yaml
     type: string
     ```
+
+    </details>
 
 ## Session
 
@@ -1105,6 +1270,9 @@ If `credentials` parameter is specified - will try to sign in user using usernam
 
 -   **`credentials?`** <Object\>
 
+    <details>
+        <summary>JSON schema</summary>
+
     <!-- prettier-ignore -->
     ```yaml
     type: object
@@ -1119,7 +1287,12 @@ If `credentials` parameter is specified - will try to sign in user using usernam
     additionalProperties: false
     ```
 
+    </details>
+
 -   **`signin_permissions?`** <undefined\> Array of permissions. Only user, who has this permissions can sign in. If `null` permissions will not check.
+
+    <details>
+        <summary>JSON schema</summary>
 
     <!-- prettier-ignore -->
     ```yaml
@@ -1131,6 +1304,8 @@ If `credentials` parameter is specified - will try to sign in user using usernam
             items:
                 type: string
     ```
+
+    </details>
 
 ### Signout
 
@@ -1190,6 +1365,9 @@ curl \
 
 -   **`fields`** <Object\>
 
+    <details>
+        <summary>JSON schema</summary>
+
     <!-- prettier-ignore -->
     ```yaml
     type: object
@@ -1205,6 +1383,8 @@ curl \
     required:
         - username
     ```
+
+    </details>
 
 ### Send confirmation email
 
@@ -1237,10 +1417,15 @@ curl \
 
 -   **`user_id`** <string\> User name or email.
 
+    <details>
+        <summary>JSON schema</summary>
+
     <!-- prettier-ignore -->
     ```yaml
     type: string
     ```
+
+    </details>
 
 ### Confirm user email using email confirmation token
 
@@ -1273,10 +1458,15 @@ curl \
 
 -   **`token`** <string\> Email confirmation token.
 
+    <details>
+        <summary>JSON schema</summary>
+
     <!-- prettier-ignore -->
     ```yaml
     type: string
     ```
+
+    </details>
 
 ### Send password reset email
 
@@ -1309,10 +1499,15 @@ curl \
 
 -   **`user_id`** <string\> User name or email.
 
+    <details>
+        <summary>JSON schema</summary>
+
     <!-- prettier-ignore -->
     ```yaml
     type: string
     ```
+
+    </details>
 
 ### Set user password using password recovery token
 
@@ -1345,17 +1540,27 @@ curl \
 
 -   **`token`** <string\>
 
+    <details>
+        <summary>JSON schema</summary>
+
     <!-- prettier-ignore -->
     ```yaml
     type: string
     ```
+
+    </details>
 
 -   **`password`** <string\>
 
+    <details>
+        <summary>JSON schema</summary>
+
     <!-- prettier-ignore -->
     ```yaml
     type: string
     ```
+
+    </details>
 
 ## Test
 
@@ -1390,10 +1595,15 @@ curl \
 
 -   **`args?`** <string\>
 
+    <details>
+        <summary>JSON schema</summary>
+
     <!-- prettier-ignore -->
     ```yaml
     type: string
     ```
+
+    </details>
 
 ### Test upload
 
@@ -1426,12 +1636,20 @@ curl \
 
 -   **`request?`** <Object\>
 
+    <details>
+        <summary>JSON schema</summary>
+
     <!-- prettier-ignore -->
     ```yaml
     type: object
     ```
 
+    </details>
+
 -   **`data?`** <string\> | <Object\>
+
+    <details>
+        <summary>JSON schema</summary>
 
     <!-- prettier-ignore -->
     ```yaml
@@ -1439,3 +1657,5 @@ curl \
         - string
         - object
     ```
+
+    </details>

@@ -44,17 +44,27 @@ For certain types of errors Playwright uses specific error classes. These classe
     Limitations
     Release notes
 
+    <details>
+        <summary>JSON schema</summary>
+
     <!-- prettier-ignore -->
     ```yaml
     type: string
     ```
 
+    </details>
+
 -   **`test?`** <Object\> Test parameter.
+
+    <details>
+        <summary>JSON schema</summary>
 
     <!-- prettier-ignore -->
     ```yaml
     type: object
     ```
+
+    </details>
 
 ### Test upload
 
@@ -85,14 +95,24 @@ curl \
 
 -   **`request`** <Object\>
 
+    <details>
+        <summary>JSON schema</summary>
+
     <!-- prettier-ignore -->
     ```yaml
     type: object
     ```
+
+    </details>
 
 -   **`data?`** <Object\>
 
+    <details>
+        <summary>JSON schema</summary>
+
     <!-- prettier-ignore -->
     ```yaml
     type: object
     ```
+
+    </details>
