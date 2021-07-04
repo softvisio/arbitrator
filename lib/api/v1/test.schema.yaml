@@ -14,7 +14,7 @@ methods:
     upload: true
     uploadMaxSize: 10000000
     params:
-      - name: request
+      - name: file
         schema:
           type: object
       - name: data

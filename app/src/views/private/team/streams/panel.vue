@@ -31,11 +31,9 @@ export default {
             var button = e.detail.sender,
                 file = button.getFiles()[0];
 
-            const res = await this.$api
-                .upload( "test/upload", file, { "a": 1 }, upload => {
-                    console.log( upload.progressText );
-                } )
-                .start();
+            const upload = this.$api.upload( "test/upload", file, { "a": 1 } ).on( "progress", upload => console.log( "---", upload.progressText ) );
+
+            const res = await upload.start();
 
             console.log( res );
         },

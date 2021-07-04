@@ -47,7 +47,8 @@ export default {
 
         // XXX
         setTeam ( team ) {
-            console.log( team );
+
+            // console.log( team );
         },
     },
 };
