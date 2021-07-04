@@ -1613,7 +1613,7 @@ curl \
 
 <!-- prettier-ignore -->
 ```javascript
-const res = await api.call( "/v1/test/upload", [request], [data] );
+const res = await api.call( "/v1/test/upload", [file], [data] );
 ```
 
 #### **Shell**
@@ -1634,7 +1634,7 @@ curl \
 
 **Parameters:**
 
--   **`request?`** <Object\>
+-   **`file?`** <Object\>
 
     <details>
         <summary>JSON schema</summary>
