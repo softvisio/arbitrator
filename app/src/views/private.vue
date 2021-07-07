@@ -9,7 +9,6 @@
 
             <MenuSheet ref="menu" @showProfileDialog="showProfileDialog">
                 <template #top>
-                    <ext-button iconCls="fas fa-cog" text="Settings" textAlign="left" :hidden="!isAdmin" @tap="showSettingsDialog"/>
                     <ext-button iconCls="fas fa-users" text="Users" textAlign="left" :hidden="!isAdmin" @tap="showUsersDialog"/>
                 </template>
             </MenuSheet>
@@ -22,7 +21,6 @@
 <script>
 import Avatar from ":softvisio/components/menu/avatar";
 import MenuSheet from ":softvisio/components/menu/sheet";
-import SettingsDialog from "./private/settings/dialog";
 import UsersDialog from ":softvisio/components/users/dialog";
 import ProfileDialog from "./private/profile/dialog";
 import TeamPanel from "./private/team/panel";
@@ -106,14 +104,6 @@ export default {
 
         showMenu () {
             this.$refs.menu.show();
-        },
-
-        async showSettingsDialog () {
-            this.$refs.menu.hide();
-
-            const cmp = await this.$mount( SettingsDialog );
-
-            cmp.ext.show();
         },
 
         async showUsersDialog () {
