@@ -134,130 +134,6 @@ Statistics updated every 1 minute. Data resolution is 10 minutes.
 
     </details>
 
-## Application settings
-
-### Read application settings
-
-<!-- tabs:start -->
-
-#### **JavaScript**
-
-<!-- prettier-ignore -->
-```javascript
-const res = await api.call( "/v1/admin/settings/read" );
-```
-
-#### **Shell**
-
-<!-- prettier-ignore -->
-```shell
-curl \
-    -X POST \
-    -H "Authorization: Bearer <YOUR-API-TOKEN>" \
-    -H "Content-Type: application/json" \
-    -d '[...PARAMETERS]' \
-    "https://api.domain.com/v1/admin/settings/read"
-```
-
-<!-- tabs:end -->
-
-**Permissions:** `admin`
-
-### Update application settings
-
-<!-- tabs:start -->
-
-#### **JavaScript**
-
-<!-- prettier-ignore -->
-```javascript
-const res = await api.call( "/v1/admin/settings/update", settings );
-```
-
-#### **Shell**
-
-<!-- prettier-ignore -->
-```shell
-curl \
-    -X POST \
-    -H "Authorization: Bearer <YOUR-API-TOKEN>" \
-    -H "Content-Type: application/json" \
-    -d '[...PARAMETERS]' \
-    "https://api.domain.com/v1/admin/settings/update"
-```
-
-<!-- tabs:end -->
-
-**Permissions:** `admin`
-
-**Parameters:**
-
--   **`settings`** <Object\> Application settings object.
-
-    <details>
-        <summary>JSON schema</summary>
-
-    <!-- prettier-ignore -->
-    ```yaml
-    type: object
-    ```
-
-    </details>
-
-### Test SMTP server settings
-
-<!-- tabs:start -->
-
-#### **JavaScript**
-
-<!-- prettier-ignore -->
-```javascript
-const res = await api.call( "/v1/admin/settings/test-smtp", settings );
-```
-
-#### **Shell**
-
-<!-- prettier-ignore -->
-```shell
-curl \
-    -X POST \
-    -H "Authorization: Bearer <YOUR-API-TOKEN>" \
-    -H "Content-Type: application/json" \
-    -d '[...PARAMETERS]' \
-    "https://api.domain.com/v1/admin/settings/test-smtp"
-```
-
-<!-- tabs:end -->
-
-**Permissions:** `admin`
-
-**Parameters:**
-
--   **`settings`** <Object\>
-
-    <details>
-        <summary>JSON schema</summary>
-
-    <!-- prettier-ignore -->
-    ```yaml
-    type: object
-    properties:
-        smtp_hostname:
-            type: string
-        smtp_port:
-            type: integer
-            minimum: 0
-            maximum: 65535
-        smtp_username:
-            type: string
-        smtp_password:
-            type: string
-    required: []
-    additionalProperties: false
-    ```
-
-    </details>
-
 ## Application users management
 
 ### Read users
@@ -1167,6 +1043,10 @@ curl \
 ```
 
 <!-- tabs:end -->
+
+-   `id` <Object\> Simplae ID type.
+-   `text` <string\> Text parameter.
+-   Returns: <Result\>
 
 **Permissions:** `user`
 
