@@ -1044,10 +1044,6 @@ curl \
 
 <!-- tabs:end -->
 
--   `id` <Object\> Simplae ID type.
--   `text` <string\> Text parameter.
--   Returns: <Result\>
-
 **Permissions:** `user`
 
 **Parameters:**
