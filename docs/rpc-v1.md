@@ -27,13 +27,7 @@ curl \
 
 <!-- tabs:end -->
 
-Playwright methods might throw errors if they are unable to fulfill a request. For example, page.waitForSelector(selector[, options]) might fail if the selector doesn't match any nodes during the given timeframe.
-
-For certain types of errors Playwright uses specific error classes. These classes are available via playwright.errors.
-
-**Parameters:**
-
--   **`args?`** <string\> Parameter summary.
+-   `args?` <string\> Parameter summary.
 
     Parameter description, Playwright enables fast, reliable and capable automation across all modern browsers. This guide covers those key differentiators to help you decide on the right tool for your automated tests.
 
@@ -44,27 +38,11 @@ For certain types of errors Playwright uses specific error classes. These classe
     Limitations
     Release notes
 
-    <details>
-        <summary>JSON schema</summary>
+-   `test?` <Object\> Test parameter.
 
-    <!-- prettier-ignore -->
-    ```yaml
-    type: string
-    ```
+Playwright methods might throw errors if they are unable to fulfill a request. For example, page.waitForSelector(selector[, options]) might fail if the selector doesn't match any nodes during the given timeframe.
 
-    </details>
-
--   **`test?`** <Object\> Test parameter.
-
-    <details>
-        <summary>JSON schema</summary>
-
-    <!-- prettier-ignore -->
-    ```yaml
-    type: object
-    ```
-
-    </details>
+For certain types of errors Playwright uses specific error classes. These classes are available via playwright.errors.
 
 ### Test upload
 
@@ -91,28 +69,6 @@ curl \
 
 <!-- tabs:end -->
 
-**Parameters:**
+-   `request` <Object\>
 
--   **`request`** <Object\>
-
-    <details>
-        <summary>JSON schema</summary>
-
-    <!-- prettier-ignore -->
-    ```yaml
-    type: object
-    ```
-
-    </details>
-
--   **`data?`** <Object\>
-
-    <details>
-        <summary>JSON schema</summary>
-
-    <!-- prettier-ignore -->
-    ```yaml
-    type: object
-    ```
-
-    </details>
+-   `data?` <Object\>
