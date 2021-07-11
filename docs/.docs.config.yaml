@@ -3,5 +3,10 @@ logo: true
 aliases:
   /api: https://raw.githubusercontent.com/softvisio/core/main/docs/api.md
 
-api: [lib/api]
-rpc: [lib/rpc]
+api:
+  location: lib/api
+  url: wss://arbitrator.net/api/
+
+rpc:
+  location: lib/rpc
+  url: wss://arbitrator:8080/

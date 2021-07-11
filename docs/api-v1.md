@@ -1,5 +1,28 @@
 # API v1
 
+### API connect URLs
+
+-   API HTTP URL: `https://arbitrator.net/api/`
+-   API WebSockets URL: `wss://arbitrator.net/api/`
+
+<!-- tabs:start -->
+
+#### **WebSockets**
+
+<!-- prettier-ignore -->
+```javascript
+const api = API.new( "wss://arbitrator.net/api/" )
+```
+
+#### **HTTP**
+
+<!-- prettier-ignore -->
+```javascript
+const api = API.new( "https://arbitrator.net/api/" )
+```
+
+<!-- tabs:end -->
+
 ## Application API call log
 
 ### Read API method access log
@@ -22,7 +45,7 @@ curl \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
     -d '[...PARAMETERS]' \
-    "https://api.domain.com/v1/admin/api-call-log/read-log"
+    "https://arbitrator.net/api/v1/admin/api-call-log/read-log"
 ```
 
 <!-- tabs:end -->
@@ -50,7 +73,7 @@ curl \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
     -d '[...PARAMETERS]' \
-    "https://api.domain.com/v1/admin/api-call-log/read-latest-stat"
+    "https://arbitrator.net/api/v1/admin/api-call-log/read-latest-stat"
 ```
 
 <!-- tabs:end -->
@@ -80,7 +103,7 @@ curl \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
     -d '[...PARAMETERS]' \
-    "https://api.domain.com/v1/admin/api-call-log/read-history-stat"
+    "https://arbitrator.net/api/v1/admin/api-call-log/read-history-stat"
 ```
 
 <!-- tabs:end -->
@@ -112,7 +135,7 @@ curl \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
     -d '[...PARAMETERS]' \
-    "https://api.domain.com/v1/admin/users/read"
+    "https://arbitrator.net/api/v1/admin/users/read"
 ```
 
 <!-- tabs:end -->
@@ -140,7 +163,7 @@ curl \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
     -d '[...PARAMETERS]' \
-    "https://api.domain.com/v1/admin/users/create"
+    "https://arbitrator.net/api/v1/admin/users/create"
 ```
 
 <!-- tabs:end -->
@@ -168,7 +191,7 @@ curl \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
     -d '[...PARAMETERS]' \
-    "https://api.domain.com/v1/admin/users/delete"
+    "https://arbitrator.net/api/v1/admin/users/delete"
 ```
 
 <!-- tabs:end -->
@@ -196,7 +219,7 @@ curl \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
     -d '[...PARAMETERS]' \
-    "https://api.domain.com/v1/admin/users/set-enabled"
+    "https://arbitrator.net/api/v1/admin/users/set-enabled"
 ```
 
 <!-- tabs:end -->
@@ -226,7 +249,7 @@ curl \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
     -d '[...PARAMETERS]' \
-    "https://api.domain.com/v1/admin/users/set-password"
+    "https://arbitrator.net/api/v1/admin/users/set-password"
 ```
 
 <!-- tabs:end -->
@@ -256,7 +279,7 @@ curl \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
     -d '[...PARAMETERS]' \
-    "https://api.domain.com/v1/admin/users/get-permissions"
+    "https://arbitrator.net/api/v1/admin/users/get-permissions"
 ```
 
 <!-- tabs:end -->
@@ -284,7 +307,7 @@ curl \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
     -d '[...PARAMETERS]' \
-    "https://api.domain.com/v1/admin/users/set-permissions"
+    "https://arbitrator.net/api/v1/admin/users/set-permissions"
 ```
 
 <!-- tabs:end -->
@@ -314,7 +337,7 @@ curl \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
     -d '[...PARAMETERS]' \
-    "https://api.domain.com/v1/admin/users/update-permissions"
+    "https://arbitrator.net/api/v1/admin/users/update-permissions"
 ```
 
 <!-- tabs:end -->
@@ -344,7 +367,7 @@ curl \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
     -d '[...PARAMETERS]' \
-    "https://api.domain.com/v1/admin/users/suggest"
+    "https://arbitrator.net/api/v1/admin/users/suggest"
 ```
 
 <!-- tabs:end -->
@@ -372,7 +395,7 @@ curl \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
     -d '[...PARAMETERS]' \
-    "https://api.domain.com/v1/admin/users/set-username"
+    "https://arbitrator.net/api/v1/admin/users/set-username"
 ```
 
 <!-- tabs:end -->
@@ -406,7 +429,7 @@ curl \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
     -d '[...PARAMETERS]' \
-    "https://api.domain.com/v1/api-tokens/read"
+    "https://arbitrator.net/api/v1/api-tokens/read"
 ```
 
 <!-- tabs:end -->
@@ -434,7 +457,7 @@ curl \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
     -d '[...PARAMETERS]' \
-    "https://api.domain.com/v1/api-tokens/create"
+    "https://arbitrator.net/api/v1/api-tokens/create"
 ```
 
 <!-- tabs:end -->
@@ -462,7 +485,7 @@ curl \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
     -d '[...PARAMETERS]' \
-    "https://api.domain.com/v1/api-tokens/delete"
+    "https://arbitrator.net/api/v1/api-tokens/delete"
 ```
 
 <!-- tabs:end -->
@@ -490,7 +513,7 @@ curl \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
     -d '[...PARAMETERS]' \
-    "https://api.domain.com/v1/api-tokens/set-enabled"
+    "https://arbitrator.net/api/v1/api-tokens/set-enabled"
 ```
 
 <!-- tabs:end -->
@@ -520,7 +543,7 @@ curl \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
     -d '[...PARAMETERS]' \
-    "https://api.domain.com/v1/api-tokens/get-permissions"
+    "https://arbitrator.net/api/v1/api-tokens/get-permissions"
 ```
 
 <!-- tabs:end -->
@@ -548,7 +571,7 @@ curl \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
     -d '[...PARAMETERS]' \
-    "https://api.domain.com/v1/api-tokens/set-permissions"
+    "https://arbitrator.net/api/v1/api-tokens/set-permissions"
 ```
 
 <!-- tabs:end -->
@@ -582,7 +605,7 @@ curl \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
     -d '[...PARAMETERS]' \
-    "https://api.domain.com/v1/api-tokens/update-permissions"
+    "https://arbitrator.net/api/v1/api-tokens/update-permissions"
 ```
 
 <!-- tabs:end -->
@@ -618,7 +641,7 @@ curl \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
     -d '[...PARAMETERS]' \
-    "https://api.domain.com/v1/profile/read"
+    "https://arbitrator.net/api/v1/profile/read"
 ```
 
 <!-- tabs:end -->
@@ -643,7 +666,7 @@ curl \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
     -d '[...PARAMETERS]' \
-    "https://api.domain.com/v1/profile/set-email"
+    "https://arbitrator.net/api/v1/profile/set-email"
 ```
 
 <!-- tabs:end -->
@@ -671,7 +694,7 @@ curl \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
     -d '[...PARAMETERS]' \
-    "https://api.domain.com/v1/profile/set-telegram-username"
+    "https://arbitrator.net/api/v1/profile/set-telegram-username"
 ```
 
 <!-- tabs:end -->
@@ -701,7 +724,7 @@ curl \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
     -d '[...PARAMETERS]' \
-    "https://api.domain.com/v1/session/signin"
+    "https://arbitrator.net/api/v1/session/signin"
 ```
 
 <!-- tabs:end -->
@@ -743,7 +766,7 @@ curl \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
     -d '[...PARAMETERS]' \
-    "https://api.domain.com/v1/session/signout"
+    "https://arbitrator.net/api/v1/session/signout"
 ```
 
 <!-- tabs:end -->
@@ -768,7 +791,7 @@ curl \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
     -d '[...PARAMETERS]' \
-    "https://api.domain.com/v1/session/signup"
+    "https://arbitrator.net/api/v1/session/signup"
 ```
 
 <!-- tabs:end -->
@@ -796,7 +819,7 @@ curl \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
     -d '[...PARAMETERS]' \
-    "https://api.domain.com/v1/session/send-confirmation-email"
+    "https://arbitrator.net/api/v1/session/send-confirmation-email"
 ```
 
 <!-- tabs:end -->
@@ -824,7 +847,7 @@ curl \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
     -d '[...PARAMETERS]' \
-    "https://api.domain.com/v1/session/confirm-email-by-token"
+    "https://arbitrator.net/api/v1/session/confirm-email-by-token"
 ```
 
 <!-- tabs:end -->
@@ -852,7 +875,7 @@ curl \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
     -d '[...PARAMETERS]' \
-    "https://api.domain.com/v1/session/send-password-reset-email"
+    "https://arbitrator.net/api/v1/session/send-password-reset-email"
 ```
 
 <!-- tabs:end -->
@@ -880,7 +903,7 @@ curl \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
     -d '[...PARAMETERS]' \
-    "https://api.domain.com/v1/session/set-password-by-token"
+    "https://arbitrator.net/api/v1/session/set-password-by-token"
 ```
 
 <!-- tabs:end -->
@@ -912,7 +935,7 @@ curl \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
     -d '[...PARAMETERS]' \
-    "https://api.domain.com/v1/test/test"
+    "https://arbitrator.net/api/v1/test/test"
 ```
 
 <!-- tabs:end -->
@@ -940,7 +963,7 @@ curl \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
     -d '[...PARAMETERS]' \
-    "https://api.domain.com/v1/test/upload"
+    "https://arbitrator.net/api/v1/test/upload"
 ```
 
 <!-- tabs:end -->

@@ -1,5 +1,28 @@
 # RPC v1
 
+### API connect URLs
+
+-   API HTTP URL: `https://arbitrator:8080/`
+-   API WebSockets URL: `wss://arbitrator:8080/`
+
+<!-- tabs:start -->
+
+#### **WebSockets**
+
+<!-- prettier-ignore -->
+```javascript
+const api = API.new( "wss://arbitrator:8080/" )
+```
+
+#### **HTTP**
+
+<!-- prettier-ignore -->
+```javascript
+const api = API.new( "https://arbitrator:8080/" )
+```
+
+<!-- tabs:end -->
+
 ## Test
 
 ### Test
@@ -22,7 +45,7 @@ curl \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
     -d '[...PARAMETERS]' \
-    "https://api.domain.com/v1/test/test"
+    "https://arbitrator:8080/v1/test/test"
 ```
 
 <!-- tabs:end -->
@@ -64,7 +87,7 @@ curl \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
     -d '[...PARAMETERS]' \
-    "https://api.domain.com/v1/test/upload"
+    "https://arbitrator:8080/v1/test/upload"
 ```
 
 <!-- tabs:end -->
