@@ -75,7 +75,7 @@ For certain types of errors Playwright uses specific error classes. These classe
 
 <!-- prettier-ignore -->
 ```javascript
-const res = await api.call( "/v1/test/upload", request, data? );
+const res = await api.call( "/v1/test/upload", file, data? );
 ```
 
 #### **Shell**
@@ -86,12 +86,12 @@ curl \
     -X POST \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
-    -d '[request, data?]' \
+    -d '[file, data?]' \
     "https://arbitrator:8080/v1/test/upload"
 ```
 
 <!-- tabs:end -->
 
--   `request` <Object\>
+-   `file` <Object\>
 
 -   `data?` <Object\>
