@@ -50,7 +50,7 @@ curl \
 
 <!-- tabs:end -->
 
--   `options?` <undefined\>
+-   `options?`
 -   **Method access permissions:** `admin`.
 
 ### Read statistics for the last 60 minutes
@@ -140,7 +140,7 @@ curl \
 
 <!-- tabs:end -->
 
--   `options?` <undefined\>
+-   `options?`
 -   **Method access permissions:** `admin`.
 
 ### Create user
@@ -728,7 +728,7 @@ curl \
 
 -   `credentials?` <Object\>
 
--   `signin_permissions?` <undefined\> Array of permissions. Only user, who has this permissions can sign in. If `null` permissions will not check.
+-   `signin_permissions?` <null\> | <Array\> Array of permissions. Only user, who has this permissions can sign in. If `null` permissions will not check.
 -   **Method access permissions:** `*`.
 
 If `credentials` parameter is specified - will try to sign in user using username and password, otherwise will try to sign in user, using currently used api token.
