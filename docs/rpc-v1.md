@@ -33,7 +33,7 @@ const api = API.new( "https://arbitrator:8080/" )
 
 <!-- prettier-ignore -->
 ```javascript
-const res = await api.call( "/v1/test/test", args?, test? );
+const res = await api.call( "/v1/test/test", [args], [test] );
 ```
 
 #### **Shell**
@@ -44,7 +44,7 @@ curl \
     -X POST \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
-    -d '[args?, test?]' \
+    -d '[...PARAMETERS]' \
     "https://arbitrator:8080/v1/test/test"
 ```
 
@@ -75,7 +75,7 @@ For certain types of errors Playwright uses specific error classes. These classe
 
 <!-- prettier-ignore -->
 ```javascript
-const res = await api.call( "/v1/test/upload", request, data? );
+const res = await api.call( "/v1/test/upload", request, [data] );
 ```
 
 #### **Shell**
@@ -86,7 +86,7 @@ curl \
     -X POST \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
-    -d '[request, data?]' \
+    -d '[...PARAMETERS]' \
     "https://arbitrator:8080/v1/test/upload"
 ```
 

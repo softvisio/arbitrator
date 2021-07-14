@@ -33,7 +33,7 @@ const api = API.new( "https://arbitrator.net/api/" )
 
 <!-- prettier-ignore -->
 ```javascript
-const res = await api.call( "/v1/admin/api-call-log/read-log", options? );
+const res = await api.call( "/v1/admin/api-call-log/read-log", [options] );
 ```
 
 #### **Shell**
@@ -44,7 +44,7 @@ curl \
     -X POST \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
-    -d '[options?]' \
+    -d '[...PARAMETERS]' \
     "https://arbitrator.net/api/v1/admin/api-call-log/read-log"
 ```
 
@@ -61,7 +61,7 @@ curl \
 
 <!-- prettier-ignore -->
 ```javascript
-const res = await api.call( "/v1/admin/api-call-log/read-latest-stat", method_id? );
+const res = await api.call( "/v1/admin/api-call-log/read-latest-stat", [method_id] );
 ```
 
 #### **Shell**
@@ -72,7 +72,7 @@ curl \
     -X POST \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
-    -d '[method_id?]' \
+    -d '[...PARAMETERS]' \
     "https://arbitrator.net/api/v1/admin/api-call-log/read-latest-stat"
 ```
 
@@ -102,7 +102,7 @@ curl \
     -X POST \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
-    -d '[method_id]' \
+    -d '[...PARAMETERS]' \
     "https://arbitrator.net/api/v1/admin/api-call-log/read-history-stat"
 ```
 
@@ -123,7 +123,7 @@ Statistics updated every 1 minute. Data resolution is 10 minutes.
 
 <!-- prettier-ignore -->
 ```javascript
-const res = await api.call( "/v1/admin/users/read", options? );
+const res = await api.call( "/v1/admin/users/read", [options] );
 ```
 
 #### **Shell**
@@ -134,7 +134,7 @@ curl \
     -X POST \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
-    -d '[options?]' \
+    -d '[...PARAMETERS]' \
     "https://arbitrator.net/api/v1/admin/users/read"
 ```
 
@@ -162,7 +162,7 @@ curl \
     -X POST \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
-    -d '[fields]' \
+    -d '[...PARAMETERS]' \
     "https://arbitrator.net/api/v1/admin/users/create"
 ```
 
@@ -190,7 +190,7 @@ curl \
     -X POST \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
-    -d '[user_id]' \
+    -d '[...PARAMETERS]' \
     "https://arbitrator.net/api/v1/admin/users/delete"
 ```
 
@@ -218,7 +218,7 @@ curl \
     -X POST \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
-    -d '[user_id, enabled]' \
+    -d '[...PARAMETERS]' \
     "https://arbitrator.net/api/v1/admin/users/set-enabled"
 ```
 
@@ -237,7 +237,7 @@ curl \
 
 <!-- prettier-ignore -->
 ```javascript
-const res = await api.call( "/v1/admin/users/set-password", user_id, pasword? );
+const res = await api.call( "/v1/admin/users/set-password", user_id, [pasword] );
 ```
 
 #### **Shell**
@@ -248,7 +248,7 @@ curl \
     -X POST \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
-    -d '[user_id, pasword?]' \
+    -d '[...PARAMETERS]' \
     "https://arbitrator.net/api/v1/admin/users/set-password"
 ```
 
@@ -278,7 +278,7 @@ curl \
     -X POST \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
-    -d '[user_id]' \
+    -d '[...PARAMETERS]' \
     "https://arbitrator.net/api/v1/admin/users/get-permissions"
 ```
 
@@ -306,7 +306,7 @@ curl \
     -X POST \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
-    -d '[user_id, permissions]' \
+    -d '[...PARAMETERS]' \
     "https://arbitrator.net/api/v1/admin/users/set-permissions"
 ```
 
@@ -336,7 +336,7 @@ curl \
     -X POST \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
-    -d '[user_id, permissions]' \
+    -d '[...PARAMETERS]' \
     "https://arbitrator.net/api/v1/admin/users/update-permissions"
 ```
 
@@ -355,7 +355,7 @@ curl \
 
 <!-- prettier-ignore -->
 ```javascript
-const res = await api.call( "/v1/admin/users/suggest", options? );
+const res = await api.call( "/v1/admin/users/suggest", [options] );
 ```
 
 #### **Shell**
@@ -366,7 +366,7 @@ curl \
     -X POST \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
-    -d '[options?]' \
+    -d '[...PARAMETERS]' \
     "https://arbitrator.net/api/v1/admin/users/suggest"
 ```
 
@@ -383,7 +383,7 @@ curl \
 
 <!-- prettier-ignore -->
 ```javascript
-const res = await api.call( "/v1/admin/users/set-username", user_id, new_username, new_password? );
+const res = await api.call( "/v1/admin/users/set-username", user_id, new_username, [new_password] );
 ```
 
 #### **Shell**
@@ -394,7 +394,7 @@ curl \
     -X POST \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
-    -d '[user_id, new_username, new_password?]' \
+    -d '[...PARAMETERS]' \
     "https://arbitrator.net/api/v1/admin/users/set-username"
 ```
 
@@ -417,7 +417,7 @@ curl \
 
 <!-- prettier-ignore -->
 ```javascript
-const res = await api.call( "/v1/api-tokens/read", options? );
+const res = await api.call( "/v1/api-tokens/read", [options] );
 ```
 
 #### **Shell**
@@ -428,7 +428,7 @@ curl \
     -X POST \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
-    -d '[options?]' \
+    -d '[...PARAMETERS]' \
     "https://arbitrator.net/api/v1/api-tokens/read"
 ```
 
@@ -456,7 +456,7 @@ curl \
     -X POST \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
-    -d '[name]' \
+    -d '[...PARAMETERS]' \
     "https://arbitrator.net/api/v1/api-tokens/create"
 ```
 
@@ -484,7 +484,7 @@ curl \
     -X POST \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
-    -d '[token_id]' \
+    -d '[...PARAMETERS]' \
     "https://arbitrator.net/api/v1/api-tokens/delete"
 ```
 
@@ -512,7 +512,7 @@ curl \
     -X POST \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
-    -d '[token_id, enabled]' \
+    -d '[...PARAMETERS]' \
     "https://arbitrator.net/api/v1/api-tokens/set-enabled"
 ```
 
@@ -542,7 +542,7 @@ curl \
     -X POST \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
-    -d '[token_id]' \
+    -d '[...PARAMETERS]' \
     "https://arbitrator.net/api/v1/api-tokens/get-permissions"
 ```
 
@@ -570,7 +570,7 @@ curl \
     -X POST \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
-    -d '[token_id, permissions]' \
+    -d '[...PARAMETERS]' \
     "https://arbitrator.net/api/v1/api-tokens/set-permissions"
 ```
 
@@ -604,7 +604,7 @@ curl \
     -X POST \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
-    -d '[token_id, permissions]' \
+    -d '[...PARAMETERS]' \
     "https://arbitrator.net/api/v1/api-tokens/update-permissions"
 ```
 
@@ -637,7 +637,10 @@ const res = await api.call( "/v1/profile/read" );
 <!-- prettier-ignore -->
 ```shell
 curl \
+    -X POST \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
+    -H "Content-Type: application/json" \
+    -d '[...PARAMETERS]' \
     "https://arbitrator.net/api/v1/profile/read"
 ```
 
@@ -651,7 +654,7 @@ curl \
 
 <!-- prettier-ignore -->
 ```javascript
-const res = await api.call( "/v1/profile/set-email", email? );
+const res = await api.call( "/v1/profile/set-email", [email] );
 ```
 
 #### **Shell**
@@ -662,7 +665,7 @@ curl \
     -X POST \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
-    -d '[email?]' \
+    -d '[...PARAMETERS]' \
     "https://arbitrator.net/api/v1/profile/set-email"
 ```
 
@@ -679,7 +682,7 @@ curl \
 
 <!-- prettier-ignore -->
 ```javascript
-const res = await api.call( "/v1/profile/set-telegram-username", telegram_username? );
+const res = await api.call( "/v1/profile/set-telegram-username", [telegram_username] );
 ```
 
 #### **Shell**
@@ -690,7 +693,7 @@ curl \
     -X POST \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
-    -d '[telegram_username?]' \
+    -d '[...PARAMETERS]' \
     "https://arbitrator.net/api/v1/profile/set-telegram-username"
 ```
 
@@ -709,7 +712,7 @@ curl \
 
 <!-- prettier-ignore -->
 ```javascript
-const res = await api.call( "/v1/session/signin", credentials?, signin_permissions? );
+const res = await api.call( "/v1/session/signin", [credentials], [signin_permissions] );
 ```
 
 #### **Shell**
@@ -720,7 +723,7 @@ curl \
     -X POST \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
-    -d '[credentials?, signin_permissions?]' \
+    -d '[...PARAMETERS]' \
     "https://arbitrator.net/api/v1/session/signin"
 ```
 
@@ -759,7 +762,10 @@ const res = await api.call( "/v1/session/signout" );
 <!-- prettier-ignore -->
 ```shell
 curl \
+    -X POST \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
+    -H "Content-Type: application/json" \
+    -d '[...PARAMETERS]' \
     "https://arbitrator.net/api/v1/session/signout"
 ```
 
@@ -784,7 +790,7 @@ curl \
     -X POST \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
-    -d '[fields]' \
+    -d '[...PARAMETERS]' \
     "https://arbitrator.net/api/v1/session/signup"
 ```
 
@@ -812,7 +818,7 @@ curl \
     -X POST \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
-    -d '[user_id]' \
+    -d '[...PARAMETERS]' \
     "https://arbitrator.net/api/v1/session/send-confirmation-email"
 ```
 
@@ -840,7 +846,7 @@ curl \
     -X POST \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
-    -d '[token]' \
+    -d '[...PARAMETERS]' \
     "https://arbitrator.net/api/v1/session/confirm-email-by-token"
 ```
 
@@ -868,7 +874,7 @@ curl \
     -X POST \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
-    -d '[user_id]' \
+    -d '[...PARAMETERS]' \
     "https://arbitrator.net/api/v1/session/send-password-reset-email"
 ```
 
@@ -896,7 +902,7 @@ curl \
     -X POST \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
-    -d '[token, password]' \
+    -d '[...PARAMETERS]' \
     "https://arbitrator.net/api/v1/session/set-password-by-token"
 ```
 
@@ -917,7 +923,7 @@ curl \
 
 <!-- prettier-ignore -->
 ```javascript
-const res = await api.call( "/v1/test/test", args? );
+const res = await api.call( "/v1/test/test", [args] );
 ```
 
 #### **Shell**
@@ -928,7 +934,7 @@ curl \
     -X POST \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
-    -d '[args?]' \
+    -d '[...PARAMETERS]' \
     "https://arbitrator.net/api/v1/test/test"
 ```
 
@@ -945,7 +951,7 @@ curl \
 
 <!-- prettier-ignore -->
 ```javascript
-const res = await api.call( "/v1/test/upload", file?, data? );
+const res = await api.call( "/v1/test/upload", [file], [data] );
 ```
 
 #### **Shell**
@@ -956,7 +962,7 @@ curl \
     -X POST \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
-    -d '[file?, data?]' \
+    -d '[...PARAMETERS]' \
     "https://arbitrator.net/api/v1/test/upload"
 ```
 
