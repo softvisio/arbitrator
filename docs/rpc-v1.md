@@ -92,6 +92,6 @@ curl \
 
 <!-- tabs:end -->
 
--   `file` <Object\>
+-   `file` <File\> Uploaded file.
 
 -   `data?` <Object\>

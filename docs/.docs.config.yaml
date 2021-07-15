@@ -3,6 +3,10 @@ logo: true
 aliases:
   /api: https://raw.githubusercontent.com/softvisio/core/main/docs/api.md
 
+externalTypes:
+  - https://softvisio.github.io/core/
+  - https://softvisio.github.io/result/
+
 api:
   location: lib/api
   url: wss://arbitrator.net/api/
