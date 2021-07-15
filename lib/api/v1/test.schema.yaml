@@ -11,8 +11,9 @@ methods:
 
   upload:
     title: Test upload
-    upload: true
-    uploadMaxSize: 10000000
+    meta:
+      type: upload
+      uploadMaxSize: 10000000
     params:
       - name: file
         schema:
