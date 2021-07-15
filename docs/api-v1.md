@@ -50,7 +50,7 @@ curl \
 
 <!-- tabs:end -->
 
--   `options?` - `options?` <Object\>
+-   `options?` <Object\>
     -   `where` <Object\> Set of fields filters:
         -   `method_id` <Array\> Filter by `method_id` field value:
             -   `operator` <string\> Filter operator, one of: `"="`.
@@ -146,7 +146,7 @@ curl \
 
 <!-- tabs:end -->
 
--   `options?` - `options?` <Object\>
+-   `options?` <Object\>
     -   `where` <Object\> Set of fields filters:
         -   `id?` <Array\> Filter by `id` field value:
             -   `operator` <string\> Filter operator, one of: `"="`.
