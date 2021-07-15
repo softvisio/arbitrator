@@ -52,11 +52,11 @@ curl \
 
 -   `options?` <Object\>
     -   `where` <Object\> Set of fields filters:
-        -   `method_id` <Array\> Filter by `method_id` field value:
-            -   `operator` <string\> Filter operator, one of: `"="`.
+        -   `method_id` <Array\> **Required.** Filter by the `method_id` field value:
+            -   `operator` <string\> Filter operator, one of the: `"="`.
             -   `value` <string\> Field value.
-    -   `offset?` <integer\> Starting position. **Default:** `0`.
-    -   `limit?` <integer\> Max rows to return.
+    -   `offset` <integer\> Return result, starting from the specified row. `0` - from the first row. **Default:** `0`.
+    -   `limit` <integer\> Max rows to return.
 -   **Method access permissions:** `admin`.
 
 ### Read statistics for the last 60 minutes
@@ -148,17 +148,17 @@ curl \
 
 -   `options?` <Object\>
     -   `where` <Object\> Set of fields filters:
-        -   `id?` <Array\> Filter by `id` field value:
-            -   `operator` <string\> Filter operator, one of: `"="`.
+        -   `id` <Array\> Filter by the `id` field value:
+            -   `operator` <string\> Filter operator, one of the: `"="`.
             -   `value` <string\> Field value.
-        -   `search?` <Array\> Filter by `search` field value:
-            -   `operator` <string\> Filter operator, one of: `"like"`.
+        -   `search` <Array\> Filter by the `search` field value:
+            -   `operator` <string\> Filter operator, one of the: `"like"`.
             -   `value` <string\> Field value.
-    -   `order_by?` <Array\> Array of the sort conditions.
+    -   `order_by` <Array\> Array of the sort conditions:
         -   `field` <string\> Field to sort by, possible fields: `"id"`, `"name"`, `"created"`, `"enabled"`.
-        -   `direction` <string\> Sort direction, can be one of: `"asc"`, `"desc"`. **Default:** `"asc"`.
-    -   `offset?` <integer\> Starting position. **Default:** `0`.
-    -   `limit?` <integer\> Max rows to return.
+        -   `direction` <string\> Sort direction, can be one of the: `"asc"`, `"desc"`. **Default:** `"asc"`.
+    -   `offset` <integer\> Return result, starting from the specified row. `0` - from the first row. **Default:** `0`.
+    -   `limit` <integer\> Max rows to return.
 -   **Method access permissions:** `admin`.
 
 ### Create user
