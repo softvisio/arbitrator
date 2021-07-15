@@ -50,7 +50,13 @@ curl \
 
 <!-- tabs:end -->
 
--   `options?`
+-   `options?` - `options?` <Object\>
+    -   `where` <Object\> Set of fields filters:
+        -   `method_id` <Array\> Filter by `method_id` field value:
+            -   `operator` <string\> Filter operator, one of: `"="`.
+            -   `value` <string\> Field value.
+    -   `offset?` <integer\> Starting position. **Default:** `0`.
+    -   `limit?` <integer\> Max rows to return.
 -   **Method access permissions:** `admin`.
 
 ### Read statistics for the last 60 minutes
@@ -140,7 +146,19 @@ curl \
 
 <!-- tabs:end -->
 
--   `options?`
+-   `options?` - `options?` <Object\>
+    -   `where` <Object\> Set of fields filters:
+        -   `id?` <Array\> Filter by `id` field value:
+            -   `operator` <string\> Filter operator, one of: `"="`.
+            -   `value` <string\> Field value.
+        -   `search?` <Array\> Filter by `search` field value:
+            -   `operator` <string\> Filter operator, one of: `"like"`.
+            -   `value` <string\> Field value.
+    -   `order_by?` <Array\> Array of the sort conditions.
+        -   `field` <string\> Field to sort by, possible fields: `"id"`, `"name"`, `"created"`, `"enabled"`.
+        -   `direction` <string\> Sort direction, can be one of: `"asc"`, `"desc"`. **Default:** `"asc"`.
+    -   `offset?` <integer\> Starting position. **Default:** `0`.
+    -   `limit?` <integer\> Max rows to return.
 -   **Method access permissions:** `admin`.
 
 ### Create user
