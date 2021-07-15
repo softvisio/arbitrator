@@ -52,7 +52,7 @@ curl \
 
 -   `options?` <Object\>
     -   `where` <Object\> Set of fields filters:
-        -   `method_id` <Array\> **Required.** Filter by the `method_id` field value:
+        -   `method_id` <Array\> **Required**. Filter by the `method_id` field value:
             -   `operator` <string\> Filter operator, one of the: `"="`.
             -   `value` <string\> Field value.
     -   `offset` <integer\> Return result, starting from the specified row. `0` - from the first row. **Default:** `0`.
