@@ -62,18 +62,18 @@ curl \
     Example (this is abstract data structure example, not related to the current method):
 
     ```json
-
+    {
         "where": {
             "field_a": [">=", 100],
             "field_b": ["!=", null],
-            "field_c": ["=", "string"],
+            "field_c": ["=", "string"]
         },
         "order_by": [
             ["field_a", "asc"],
-            ["field_b", ["desc"]],
+            ["field_b", ["desc"]]
         ],
         "offset": 100,
-        "limit": 50,
+        "limit": 50
     }
     ```
 
@@ -184,18 +184,18 @@ curl \
     Example (this is abstract data structure example, not related to the current method):
 
     ```json
-
+    {
         "where": {
             "field_a": [">=", 100],
             "field_b": ["!=", null],
-            "field_c": ["=", "string"],
+            "field_c": ["=", "string"]
         },
         "order_by": [
             ["field_a", "asc"],
-            ["field_b", ["desc"]],
+            ["field_b", ["desc"]]
         ],
         "offset": 100,
-        "limit": 50,
+        "limit": 50
     }
     ```
 
