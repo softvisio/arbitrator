@@ -38,6 +38,8 @@ const res = await api.call( "/v1/admin/api-call-log/read-log", options? );
 
 #### **Shell**
 
+-   **Method access permissions:** `admin`.
+
 <!-- prettier-ignore -->
 ```shell
 curl \
@@ -73,7 +75,6 @@ curl \
         "limit": 50
     }
     ```
--   **Method access permissions:** `admin`.
 
 ### Read statistics for the last 60 minutes
 
@@ -88,6 +89,8 @@ const res = await api.call( "/v1/admin/api-call-log/read-latest-stat", method_id
 
 #### **Shell**
 
+-   **Method access permissions:** `admin`.
+
 <!-- prettier-ignore -->
 ```shell
 curl \
@@ -101,7 +104,6 @@ curl \
 <!-- tabs:end -->
 
 -   `method_id?` <string\>
--   **Method access permissions:** `admin`.
 
 Statistics updated every 10 seconds. Data resolution is 1 minute.
 
@@ -118,6 +120,8 @@ const res = await api.call( "/v1/admin/api-call-log/read-history-stat", method_i
 
 #### **Shell**
 
+-   **Method access permissions:** `admin`.
+
 <!-- prettier-ignore -->
 ```shell
 curl \
@@ -131,7 +135,6 @@ curl \
 <!-- tabs:end -->
 
 -   `method_id` <string\>
--   **Method access permissions:** `admin`.
 
 Statistics updated every 1 minute. Data resolution is 10 minutes.
 
@@ -149,6 +152,8 @@ const res = await api.call( "/v1/admin/users/read", options? );
 ```
 
 #### **Shell**
+
+-   **Method access permissions:** `admin`.
 
 <!-- prettier-ignore -->
 ```shell
@@ -191,7 +196,6 @@ curl \
         "limit": 50
     }
     ```
--   **Method access permissions:** `admin`.
 
 ### Create user
 
@@ -206,6 +210,8 @@ const res = await api.call( "/v1/admin/users/create", fields );
 
 #### **Shell**
 
+-   **Method access permissions:** `admin`.
+
 <!-- prettier-ignore -->
 ```shell
 curl \
@@ -219,7 +225,6 @@ curl \
 <!-- tabs:end -->
 
 -   `fields` <Object\>
--   **Method access permissions:** `admin`.
 
 ### Remove user
 
@@ -234,6 +239,8 @@ const res = await api.call( "/v1/admin/users/delete", user_id );
 
 #### **Shell**
 
+-   **Method access permissions:** `admin`.
+
 <!-- prettier-ignore -->
 ```shell
 curl \
@@ -247,7 +254,6 @@ curl \
 <!-- tabs:end -->
 
 -   `user_id` <string\>
--   **Method access permissions:** `admin`.
 
 ### Set user enabled
 
@@ -261,6 +267,8 @@ const res = await api.call( "/v1/admin/users/set-enabled", user_id, enabled );
 ```
 
 #### **Shell**
+
+-   **Method access permissions:** `admin`.
 
 <!-- prettier-ignore -->
 ```shell
@@ -277,7 +285,6 @@ curl \
 -   `user_id` <string\> User id or name.
 
 -   `enabled` <boolean\>
--   **Method access permissions:** `admin`.
 
 ### Set user password
 
@@ -291,6 +298,8 @@ const res = await api.call( "/v1/admin/users/set-password", user_id, pasword? );
 ```
 
 #### **Shell**
+
+-   **Method access permissions:** `admin`.
 
 <!-- prettier-ignore -->
 ```shell
@@ -307,7 +316,6 @@ curl \
 -   `user_id` <string\> User id or name.
 
 -   `pasword?` <string\>
--   **Method access permissions:** `admin`.
 
 ### Get user permissions
 
@@ -322,6 +330,8 @@ const res = await api.call( "/v1/admin/users/get-permissions", user_id );
 
 #### **Shell**
 
+-   **Method access permissions:** `admin`.
+
 <!-- prettier-ignore -->
 ```shell
 curl \
@@ -335,7 +345,6 @@ curl \
 <!-- tabs:end -->
 
 -   `user_id` <string\>
--   **Method access permissions:** `admin`.
 
 ### Set user permissions
 
@@ -349,6 +358,8 @@ const res = await api.call( "/v1/admin/users/set-permissions", user_id, permissi
 ```
 
 #### **Shell**
+
+-   **Method access permissions:** `admin`.
 
 <!-- prettier-ignore -->
 ```shell
@@ -365,7 +376,6 @@ curl \
 -   `user_id` <string\>
 
 -   `permissions` <Object\>
--   **Method access permissions:** `admin`.
 
 ### Update user permissions
 
@@ -379,6 +389,8 @@ const res = await api.call( "/v1/admin/users/update-permissions", user_id, permi
 ```
 
 #### **Shell**
+
+-   **Method access permissions:** `admin`.
 
 <!-- prettier-ignore -->
 ```shell
@@ -395,7 +407,6 @@ curl \
 -   `user_id` <string\>
 
 -   `permissions` <Object\>
--   **Method access permissions:** `admin`.
 
 ### Suggest user name
 
@@ -410,6 +421,8 @@ const res = await api.call( "/v1/admin/users/suggest", options? );
 
 #### **Shell**
 
+-   **Method access permissions:** `admin`.
+
 <!-- prettier-ignore -->
 ```shell
 curl \
@@ -423,7 +436,6 @@ curl \
 <!-- tabs:end -->
 
 -   `options?` <Object\>
--   **Method access permissions:** `admin`.
 
 ### Change user name
 
@@ -437,6 +449,8 @@ const res = await api.call( "/v1/admin/users/set-username", user_id, new_usernam
 ```
 
 #### **Shell**
+
+-   **Method access permissions:** `admin`.
 
 <!-- prettier-ignore -->
 ```shell
@@ -455,7 +469,6 @@ curl \
 -   `new_username` <string\>
 
 -   `new_password?` <string\>
--   **Method access permissions:** `admin`.
 
 ## API access tokens
 
@@ -472,6 +485,8 @@ const res = await api.call( "/v1/api-tokens/read", options? );
 
 #### **Shell**
 
+-   **Method access permissions:** `user`.
+
 <!-- prettier-ignore -->
 ```shell
 curl \
@@ -485,7 +500,6 @@ curl \
 <!-- tabs:end -->
 
 -   `options?` <Object\>
--   **Method access permissions:** `user`.
 
 ### Generate new token
 
@@ -500,6 +514,8 @@ const res = await api.call( "/v1/api-tokens/create", name );
 
 #### **Shell**
 
+-   **Method access permissions:** `user`.
+
 <!-- prettier-ignore -->
 ```shell
 curl \
@@ -513,7 +529,6 @@ curl \
 <!-- tabs:end -->
 
 -   `name` <string\>
--   **Method access permissions:** `user`.
 
 ### Remove token
 
@@ -528,6 +543,8 @@ const res = await api.call( "/v1/api-tokens/delete", token_id );
 
 #### **Shell**
 
+-   **Method access permissions:** `user`.
+
 <!-- prettier-ignore -->
 ```shell
 curl \
@@ -541,7 +558,6 @@ curl \
 <!-- tabs:end -->
 
 -   `token_id` <string\>
--   **Method access permissions:** `user`.
 
 ### Set token enabled
 
@@ -555,6 +571,8 @@ const res = await api.call( "/v1/api-tokens/set-enabled", token_id, enabled );
 ```
 
 #### **Shell**
+
+-   **Method access permissions:** `user`.
 
 <!-- prettier-ignore -->
 ```shell
@@ -571,7 +589,6 @@ curl \
 -   `token_id` <string\>
 
 -   `enabled` <boolean\>
--   **Method access permissions:** `user`.
 
 ### Get token permissions
 
@@ -586,6 +603,8 @@ const res = await api.call( "/v1/api-tokens/get-permissions", token_id );
 
 #### **Shell**
 
+-   **Method access permissions:** `user`.
+
 <!-- prettier-ignore -->
 ```shell
 curl \
@@ -599,7 +618,6 @@ curl \
 <!-- tabs:end -->
 
 -   `token_id` <string\>
--   **Method access permissions:** `user`.
 
 ### Set token permissions
 
@@ -613,6 +631,8 @@ const res = await api.call( "/v1/api-tokens/set-permissions", token_id, permissi
 ```
 
 #### **Shell**
+
+-   **Method access permissions:** `user`.
 
 <!-- prettier-ignore -->
 ```shell
@@ -631,7 +651,6 @@ curl \
 -   `permissions` <Object\> Object contains permissions to set:
     -   Key <string\> Permission name.
     -   Value <boolean\> `true` to enable permission.
--   **Method access permissions:** `user`.
 
 Set API token permissions. Old permissions will be replaced with the new.
 
@@ -647,6 +666,8 @@ const res = await api.call( "/v1/api-tokens/update-permissions", token_id, permi
 ```
 
 #### **Shell**
+
+-   **Method access permissions:** `user`.
 
 <!-- prettier-ignore -->
 ```shell
@@ -665,7 +686,6 @@ curl \
 -   `permissions` <Object\> Object contains permissions to update:
     -   Key <string\> Permission name.
     -   Value <boolean\> `true` to enable permission.
--   **Method access permissions:** `user`.
 
 Update token permissions. Permissions will be added or replaced.
 
@@ -683,6 +703,8 @@ const res = await api.call( "/v1/profile/read" );
 ```
 
 #### **Shell**
+
+-   **Method access permissions:** `user`.
 
 <!-- prettier-ignore -->
 ```shell
@@ -706,6 +728,8 @@ const res = await api.call( "/v1/profile/set-email", email? );
 
 #### **Shell**
 
+-   **Method access permissions:** `user`.
+
 <!-- prettier-ignore -->
 ```shell
 curl \
@@ -719,7 +743,6 @@ curl \
 <!-- tabs:end -->
 
 -   `email?` <string\> Email address to set, if not specified, current email address will be removed.
--   **Method access permissions:** `user`.
 
 ### Set user telegram name
 
@@ -734,6 +757,8 @@ const res = await api.call( "/v1/profile/set-telegram-username", telegram_userna
 
 #### **Shell**
 
+-   **Method access permissions:** `user`.
+
 <!-- prettier-ignore -->
 ```shell
 curl \
@@ -747,7 +772,6 @@ curl \
 <!-- tabs:end -->
 
 -   `telegram_username?` <string\> Telegram username to set, if not specified current telegram user name will be removed.
--   **Method access permissions:** `user`.
 
 ## Session
 
@@ -764,6 +788,8 @@ const res = await api.call( "/v1/session/signin", credentials?, signin_permissio
 
 #### **Shell**
 
+-   **Method access permissions:** `*`.
+
 <!-- prettier-ignore -->
 ```shell
 curl \
@@ -779,7 +805,6 @@ curl \
 -   `credentials?` <Object\>
 
 -   `signin_permissions?` <null\> | <Array\> Array of permissions. Only user, who has this permissions can sign in. If `null` permissions will not check.
--   **Method access permissions:** `*`.
 
 If `credentials` parameter is specified - will try to sign in user using username and password, otherwise will try to sign in user, using currently used api token.
 
@@ -806,6 +831,8 @@ const res = await api.call( "/v1/session/signout" );
 
 #### **Shell**
 
+-   **Method access permissions:** `*`.
+
 <!-- prettier-ignore -->
 ```shell
 curl \
@@ -828,6 +855,8 @@ const res = await api.call( "/v1/session/signup", fields );
 
 #### **Shell**
 
+-   **Method access permissions:** `*`.
+
 <!-- prettier-ignore -->
 ```shell
 curl \
@@ -841,7 +870,6 @@ curl \
 <!-- tabs:end -->
 
 -   `fields` <Object\>
--   **Method access permissions:** `*`.
 
 ### Send confirmation email
 
@@ -856,6 +884,8 @@ const res = await api.call( "/v1/session/send-confirmation-email", user_id );
 
 #### **Shell**
 
+-   **Method access permissions:** `*`.
+
 <!-- prettier-ignore -->
 ```shell
 curl \
@@ -869,7 +899,6 @@ curl \
 <!-- tabs:end -->
 
 -   `user_id` <string\> User name or email.
--   **Method access permissions:** `*`.
 
 ### Confirm user email using email confirmation token
 
@@ -884,6 +913,8 @@ const res = await api.call( "/v1/session/confirm-email-by-token", token );
 
 #### **Shell**
 
+-   **Method access permissions:** `*`.
+
 <!-- prettier-ignore -->
 ```shell
 curl \
@@ -897,7 +928,6 @@ curl \
 <!-- tabs:end -->
 
 -   `token` <string\> Email confirmation token.
--   **Method access permissions:** `*`.
 
 ### Send password reset email
 
@@ -912,6 +942,8 @@ const res = await api.call( "/v1/session/send-password-reset-email", user_id );
 
 #### **Shell**
 
+-   **Method access permissions:** `*`.
+
 <!-- prettier-ignore -->
 ```shell
 curl \
@@ -925,7 +957,6 @@ curl \
 <!-- tabs:end -->
 
 -   `user_id` <string\> User name or email.
--   **Method access permissions:** `*`.
 
 ### Set user password using password recovery token
 
@@ -939,6 +970,8 @@ const res = await api.call( "/v1/session/set-password-by-token", token, password
 ```
 
 #### **Shell**
+
+-   **Method access permissions:** `*`.
 
 <!-- prettier-ignore -->
 ```shell
@@ -955,7 +988,6 @@ curl \
 -   `token` <string\>
 
 -   `password` <string\>
--   **Method access permissions:** `*`.
 
 ## Test
 
@@ -972,6 +1004,8 @@ const res = await api.call( "/v1/test/test", args? );
 
 #### **Shell**
 
+-   **Method access permissions:** `*`.
+
 <!-- prettier-ignore -->
 ```shell
 curl \
@@ -985,7 +1019,6 @@ curl \
 <!-- tabs:end -->
 
 -   `args?` <string\>
--   **Method access permissions:** `*`.
 
 ### Test upload
 
@@ -999,6 +1032,8 @@ const res = await api.call( "/v1/test/upload", file?, data? );
 ```
 
 #### **Shell**
+
+-   **Method access permissions:** `*`.
 
 <!-- prettier-ignore -->
 ```shell
@@ -1015,4 +1050,3 @@ curl \
 -   `file?` <File\>
 
 -   `data?` <string\> | <Object\>
--   **Method access permissions:** `*`.
