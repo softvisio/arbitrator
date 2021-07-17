@@ -17,7 +17,7 @@ methods:
     params:
       - name: file
         schema:
-          type: object
+          instanceof: File
       - name: data
         schema:
           type: [string, object]

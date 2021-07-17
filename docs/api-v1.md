@@ -51,12 +51,32 @@ curl \
 <!-- tabs:end -->
 
 -   `options?` <Object\>
+
     -   `where` <Object\> Set of fields filters:
         -   `method_id` <Array\> **Required**. Filter by the `method_id` field value:
             -   `operator` <string\> Filter operator, one of the: `"="`.
             -   `value` <string\> Field value.
     -   `offset` <integer\> Return result, starting from the specified row. `0` - from the first row. **Default:** `0`.
     -   `limit` <integer\> Max rows to return.
+
+    Example (this is abstract data structure example, not related to the current method):
+
+    ```json
+
+        "where": {
+            "field_a": [">=", 100],
+            "field_b": ["!=", null],
+            "field_c": ["=", "string"],
+        },
+        "order_by": [
+            ["field_a", "asc"],
+            ["field_b", ["desc"]],
+        ],
+        "offset": 100,
+        "limit": 50,
+    }
+    ```
+
 -   **Method access permissions:** `admin`.
 
 ### Read statistics for the last 60 minutes
@@ -147,6 +167,7 @@ curl \
 <!-- tabs:end -->
 
 -   `options?` <Object\>
+
     -   `where` <Object\> Set of fields filters:
         -   `id` <Array\> Filter by the `id` field value:
             -   `operator` <string\> Filter operator, one of the: `"="`.
@@ -159,6 +180,25 @@ curl \
         -   `direction` <string\> Sort direction, can be one of the: `"asc"`, `"desc"`. **Default:** `"asc"`.
     -   `offset` <integer\> Return result, starting from the specified row. `0` - from the first row. **Default:** `0`.
     -   `limit` <integer\> Max rows to return.
+
+    Example (this is abstract data structure example, not related to the current method):
+
+    ```json
+
+        "where": {
+            "field_a": [">=", 100],
+            "field_b": ["!=", null],
+            "field_c": ["=", "string"],
+        },
+        "order_by": [
+            ["field_a", "asc"],
+            ["field_b", ["desc"]],
+        ],
+        "offset": 100,
+        "limit": 50,
+    }
+    ```
+
 -   **Method access permissions:** `admin`.
 
 ### Create user
@@ -980,7 +1020,7 @@ curl \
 
 <!-- tabs:end -->
 
--   `file?` <Object\>
+-   `file?` <File\>
 
 -   `data?` <string\> | <Object\>
 -   **Method access permissions:** `*`.

@@ -34,10 +34,10 @@ methods:
       uploadMaxSize: 10000000
     params:
       - name: file
-        description: <File\> Uploaded file.
+        description: Uploaded file.
         required: true
         schema:
-          type: object
+          instanceof: File
       - name: data
         schema:
           type: object
