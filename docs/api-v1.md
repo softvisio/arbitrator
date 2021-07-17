@@ -27,7 +27,7 @@ const api = API.new( "https://arbitrator.net/api/" )
 
 ### Read API method access log
 
--   **Method access permissions:** `admin`.
+Method access permissions: `"admin"`.
 
 <!-- tabs:start -->
 
@@ -53,35 +53,32 @@ curl \
 <!-- tabs:end -->
 
 -   `options?` <Object\>
-
     -   `where` <Object\> Set of fields filters:
         -   `method_id` <Array\> **Required**. Filter by the `method_id` field value:
             -   `operator` <string\> Filter operator, one of the: `"="`.
             -   `value` <string\> Field value.
     -   `offset` <integer\> Return result, starting from the specified row. `0` - from the first row. **Default:** `0`.
     -   `limit` <integer\> Max rows to return.
-
-    Example (this is abstract data structure example, not related to the current method):
-
-    ```json
-    {
-        "where": {
-            "field_a": [">=", 100],
-            "field_b": ["!=", null],
-            "field_c": ["=", "string"]
-        },
-        "order_by": [
-            ["field_a", "asc"],
-            ["field_b", "desc"]
-        ],
-        "offset": 100,
-        "limit": 50
-    }
-    ```
+    -   Example (this is abstract data structure example, not related to the current method):
+        ```json
+        {
+            "where": {
+                "field_a": [">=", 100],
+                "field_b": ["!=", null],
+                "field_c": ["=", "string"]
+            },
+            "order_by": [
+                ["field_a", "asc"],
+                ["field_b", "desc"]
+            ],
+            "offset": 100,
+            "limit": 50
+        }
+        ```
 
 ### Read statistics for the last 60 minutes
 
--   **Method access permissions:** `admin`.
+Method access permissions: `"admin"`.
 
 <!-- tabs:start -->
 
@@ -112,7 +109,7 @@ Statistics updated every 10 seconds. Data resolution is 1 minute.
 
 ### Read statistics for the given API method for the last 30 days
 
--   **Method access permissions:** `admin`.
+Method access permissions: `"admin"`.
 
 <!-- tabs:start -->
 
@@ -145,7 +142,7 @@ Statistics updated every 1 minute. Data resolution is 10 minutes.
 
 ### Read users
 
--   **Method access permissions:** `admin`.
+Method access permissions: `"admin"`.
 
 <!-- tabs:start -->
 
@@ -171,7 +168,6 @@ curl \
 <!-- tabs:end -->
 
 -   `options?` <Object\>
-
     -   `where` <Object\> Set of fields filters:
         -   `id` <Array\> Filter by the `id` field value:
             -   `operator` <string\> Filter operator, one of the: `"="`.
@@ -179,33 +175,31 @@ curl \
         -   `search` <Array\> Filter by the `search` field value:
             -   `operator` <string\> Filter operator, one of the: `"like"`.
             -   `value` <string\> Field value.
-    -   `order_by` <Array\> Array of the sort conditions:
+    -   `order_by` <Array\> Array of the sort conditions. Each sort condition must be represented with the two-elements <Array\> with the following structure:
         -   `field` <string\> Field to sort by, possible fields: `"id"`, `"name"`, `"created"`, `"enabled"`.
         -   `direction` <string\> Sort direction, can be one of the: `"asc"`, `"desc"`. **Default:** `"asc"`.
     -   `offset` <integer\> Return result, starting from the specified row. `0` - from the first row. **Default:** `0`.
     -   `limit` <integer\> Max rows to return.
-
-    Example (this is abstract data structure example, not related to the current method):
-
-    ```json
-    {
-        "where": {
-            "field_a": [">=", 100],
-            "field_b": ["!=", null],
-            "field_c": ["=", "string"]
-        },
-        "order_by": [
-            ["field_a", "asc"],
-            ["field_b", "desc"]
-        ],
-        "offset": 100,
-        "limit": 50
-    }
-    ```
+    -   Example (this is abstract data structure example, not related to the current method):
+        ```json
+        {
+            "where": {
+                "field_a": [">=", 100],
+                "field_b": ["!=", null],
+                "field_c": ["=", "string"]
+            },
+            "order_by": [
+                ["field_a", "asc"],
+                ["field_b", "desc"]
+            ],
+            "offset": 100,
+            "limit": 50
+        }
+        ```
 
 ### Create user
 
--   **Method access permissions:** `admin`.
+Method access permissions: `"admin"`.
 
 <!-- tabs:start -->
 
@@ -234,7 +228,7 @@ curl \
 
 ### Remove user
 
--   **Method access permissions:** `admin`.
+Method access permissions: `"admin"`.
 
 <!-- tabs:start -->
 
@@ -263,7 +257,7 @@ curl \
 
 ### Set user enabled
 
--   **Method access permissions:** `admin`.
+Method access permissions: `"admin"`.
 
 <!-- tabs:start -->
 
@@ -294,7 +288,7 @@ curl \
 
 ### Set user password
 
--   **Method access permissions:** `admin`.
+Method access permissions: `"admin"`.
 
 <!-- tabs:start -->
 
@@ -325,7 +319,7 @@ curl \
 
 ### Get user permissions
 
--   **Method access permissions:** `admin`.
+Method access permissions: `"admin"`.
 
 <!-- tabs:start -->
 
@@ -354,7 +348,7 @@ curl \
 
 ### Set user permissions
 
--   **Method access permissions:** `admin`.
+Method access permissions: `"admin"`.
 
 <!-- tabs:start -->
 
@@ -385,7 +379,7 @@ curl \
 
 ### Update user permissions
 
--   **Method access permissions:** `admin`.
+Method access permissions: `"admin"`.
 
 <!-- tabs:start -->
 
@@ -416,7 +410,7 @@ curl \
 
 ### Suggest user name
 
--   **Method access permissions:** `admin`.
+Method access permissions: `"admin"`.
 
 <!-- tabs:start -->
 
@@ -445,7 +439,7 @@ curl \
 
 ### Change user name
 
--   **Method access permissions:** `admin`.
+Method access permissions: `"admin"`.
 
 <!-- tabs:start -->
 
@@ -480,7 +474,7 @@ curl \
 
 ### Read tokens
 
--   **Method access permissions:** `user`.
+Method access permissions: `"user"`.
 
 <!-- tabs:start -->
 
@@ -509,7 +503,7 @@ curl \
 
 ### Generate new token
 
--   **Method access permissions:** `user`.
+Method access permissions: `"user"`.
 
 <!-- tabs:start -->
 
@@ -538,7 +532,7 @@ curl \
 
 ### Remove token
 
--   **Method access permissions:** `user`.
+Method access permissions: `"user"`.
 
 <!-- tabs:start -->
 
@@ -567,7 +561,7 @@ curl \
 
 ### Set token enabled
 
--   **Method access permissions:** `user`.
+Method access permissions: `"user"`.
 
 <!-- tabs:start -->
 
@@ -598,7 +592,7 @@ curl \
 
 ### Get token permissions
 
--   **Method access permissions:** `user`.
+Method access permissions: `"user"`.
 
 <!-- tabs:start -->
 
@@ -627,7 +621,7 @@ curl \
 
 ### Set token permissions
 
--   **Method access permissions:** `user`.
+Method access permissions: `"user"`.
 
 <!-- tabs:start -->
 
@@ -662,7 +656,7 @@ Set API token permissions. Old permissions will be replaced with the new.
 
 ### Update token permissions
 
--   **Method access permissions:** `user`.
+Method access permissions: `"user"`.
 
 <!-- tabs:start -->
 
@@ -699,7 +693,7 @@ Update token permissions. Permissions will be added or replaced.
 
 ### Read user profile
 
--   **Method access permissions:** `user`.
+Method access permissions: `"user"`.
 
 <!-- tabs:start -->
 
@@ -723,7 +717,7 @@ curl \
 
 ### Set user email
 
--   **Method access permissions:** `user`.
+Method access permissions: `"user"`.
 
 <!-- tabs:start -->
 
@@ -752,7 +746,7 @@ curl \
 
 ### Set user telegram name
 
--   **Method access permissions:** `user`.
+Method access permissions: `"user"`.
 
 <!-- tabs:start -->
 
@@ -783,7 +777,7 @@ curl \
 
 ### Signin
 
--   **Method access permissions:** `*`.
+Method access permissions: `"*"`.
 
 <!-- tabs:start -->
 
@@ -826,7 +820,7 @@ If `credentials` parameter is specified - will try to sign in user using usernam
 
 ### Signout
 
--   **Method access permissions:** `*`.
+Method access permissions: `"*"`.
 
 <!-- tabs:start -->
 
@@ -850,7 +844,7 @@ curl \
 
 ### Signup
 
--   **Method access permissions:** `*`.
+Method access permissions: `"*"`.
 
 <!-- tabs:start -->
 
@@ -879,7 +873,7 @@ curl \
 
 ### Send confirmation email
 
--   **Method access permissions:** `*`.
+Method access permissions: `"*"`.
 
 <!-- tabs:start -->
 
@@ -908,7 +902,7 @@ curl \
 
 ### Confirm user email using email confirmation token
 
--   **Method access permissions:** `*`.
+Method access permissions: `"*"`.
 
 <!-- tabs:start -->
 
@@ -937,7 +931,7 @@ curl \
 
 ### Send password reset email
 
--   **Method access permissions:** `*`.
+Method access permissions: `"*"`.
 
 <!-- tabs:start -->
 
@@ -966,7 +960,7 @@ curl \
 
 ### Set user password using password recovery token
 
--   **Method access permissions:** `*`.
+Method access permissions: `"*"`.
 
 <!-- tabs:start -->
 
@@ -999,7 +993,7 @@ curl \
 
 ### Test
 
--   **Method access permissions:** `*`.
+Method access permissions: `"*"`.
 
 <!-- tabs:start -->
 
@@ -1028,7 +1022,7 @@ curl \
 
 ### Test upload
 
--   **Method access permissions:** `*`.
+Method access permissions: `"*"`.
 
 <!-- tabs:start -->
 
