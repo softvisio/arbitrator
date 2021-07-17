@@ -283,7 +283,6 @@ curl \
 <!-- tabs:end -->
 
 -   `user_id` <string\> User id or name.
-
 -   `enabled` <boolean\>
 
 ### Set user password
@@ -314,7 +313,6 @@ curl \
 <!-- tabs:end -->
 
 -   `user_id` <string\> User id or name.
-
 -   `pasword?` <string\>
 
 ### Get user permissions
@@ -374,7 +372,6 @@ curl \
 <!-- tabs:end -->
 
 -   `user_id` <string\>
-
 -   `permissions` <Object\>
 
 ### Update user permissions
@@ -405,7 +402,6 @@ curl \
 <!-- tabs:end -->
 
 -   `user_id` <string\>
-
 -   `permissions` <Object\>
 
 ### Suggest user name
@@ -465,9 +461,7 @@ curl \
 <!-- tabs:end -->
 
 -   `user_id` <string\>
-
 -   `new_username` <string\>
-
 -   `new_password?` <string\>
 
 ## API access tokens
@@ -587,7 +581,6 @@ curl \
 <!-- tabs:end -->
 
 -   `token_id` <string\>
-
 -   `enabled` <boolean\>
 
 ### Get token permissions
@@ -647,7 +640,6 @@ curl \
 <!-- tabs:end -->
 
 -   `token_id` <string\> Token ID.
-
 -   `permissions` <Object\> Object contains permissions to set:
     -   Key <string\> Permission name.
     -   Value <boolean\> `true` to enable permission.
@@ -682,7 +674,6 @@ curl \
 <!-- tabs:end -->
 
 -   `token_id` <string\> Token ID.
-
 -   `permissions` <Object\> Object contains permissions to update:
     -   Key <string\> Permission name.
     -   Value <boolean\> `true` to enable permission.
@@ -803,7 +794,6 @@ curl \
 <!-- tabs:end -->
 
 -   `credentials?` <Object\>
-
 -   `signin_permissions?` <null\> | <Array\> Array of permissions. Only user, who has this permissions can sign in. If `null` permissions will not check.
 
 If `credentials` parameter is specified - will try to sign in user using username and password, otherwise will try to sign in user, using currently used api token.
@@ -986,7 +976,6 @@ curl \
 <!-- tabs:end -->
 
 -   `token` <string\>
-
 -   `password` <string\>
 
 ## Test
@@ -1048,5 +1037,4 @@ curl \
 <!-- tabs:end -->
 
 -   `file?` <File> Maximim file size: `52428800` bytes.
-
 -   `data?` <string\> | <Object\>
