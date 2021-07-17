@@ -58,8 +58,7 @@ curl \
             -   `value` <string\> Field value.
     -   `offset` <integer\> Return result, starting from the specified row. `0` - from the first row. **Default:** `0`.
     -   `limit` <integer\> Max rows to return.
-
-    Example (this is abstract data structure example, not related to the current method):
+        Example (this is abstract data structure example, not related to the current method):
 
     ```json
     {
@@ -180,8 +179,7 @@ curl \
         -   `direction` <string\> Sort direction, can be one of the: `"asc"`, `"desc"`. **Default:** `"asc"`.
     -   `offset` <integer\> Return result, starting from the specified row. `0` - from the first row. **Default:** `0`.
     -   `limit` <integer\> Max rows to return.
-
-    Example (this is abstract data structure example, not related to the current method):
+        Example (this is abstract data structure example, not related to the current method):
 
     ```json
     {
