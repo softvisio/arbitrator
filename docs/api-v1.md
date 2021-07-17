@@ -59,7 +59,7 @@ curl \
             -   `value` <string\> Field value.
     -   `offset` <integer\> Return result, starting from the specified row. `0` - from the first row. **Default:** `0`.
     -   `limit` <integer\> Max rows to return. Maximum allowed value: `100`. **Default:** `100`.
-    -   Example (this is abstract data structure example, not related to the current method):
+    -   Example (this is the abstract data structure example, not related to the current method):
         ```json
         {
             "where": {
@@ -180,7 +180,7 @@ curl \
         -   `direction` <string\> Sort direction, can be `"asc"` or `"desc"`. **Default:** `"asc"`.
     -   `offset` <integer\> Return result, starting from the specified row. `0` - from the first row. **Default:** `0`.
     -   `limit` <integer\> Max rows to return. Maximum allowed value: `100`. **Default:** `100`.
-    -   Example (this is abstract data structure example, not related to the current method):
+    -   Example (this is the abstract data structure example, not related to the current method):
         ```json
         {
             "where": {
