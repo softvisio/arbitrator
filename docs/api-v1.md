@@ -27,6 +27,8 @@ const api = API.new( "https://arbitrator.net/api/" )
 
 ### Read API method access log
 
+-   **Method access permissions:** `admin`.
+
 <!-- tabs:start -->
 
 #### **JavaScript**
@@ -37,8 +39,6 @@ const res = await api.call( "/v1/admin/api-call-log/read-log", options? );
 ```
 
 #### **Shell**
-
--   **Method access permissions:** `admin`.
 
 <!-- prettier-ignore -->
 ```shell
@@ -78,6 +78,8 @@ curl \
 
 ### Read statistics for the last 60 minutes
 
+-   **Method access permissions:** `admin`.
+
 <!-- tabs:start -->
 
 #### **JavaScript**
@@ -88,8 +90,6 @@ const res = await api.call( "/v1/admin/api-call-log/read-latest-stat", method_id
 ```
 
 #### **Shell**
-
--   **Method access permissions:** `admin`.
 
 <!-- prettier-ignore -->
 ```shell
@@ -109,6 +109,8 @@ Statistics updated every 10 seconds. Data resolution is 1 minute.
 
 ### Read statistics for the given API method for the last 30 days
 
+-   **Method access permissions:** `admin`.
+
 <!-- tabs:start -->
 
 #### **JavaScript**
@@ -119,8 +121,6 @@ const res = await api.call( "/v1/admin/api-call-log/read-history-stat", method_i
 ```
 
 #### **Shell**
-
--   **Method access permissions:** `admin`.
 
 <!-- prettier-ignore -->
 ```shell
@@ -142,6 +142,8 @@ Statistics updated every 1 minute. Data resolution is 10 minutes.
 
 ### Read users
 
+-   **Method access permissions:** `admin`.
+
 <!-- tabs:start -->
 
 #### **JavaScript**
@@ -152,8 +154,6 @@ const res = await api.call( "/v1/admin/users/read", options? );
 ```
 
 #### **Shell**
-
--   **Method access permissions:** `admin`.
 
 <!-- prettier-ignore -->
 ```shell
@@ -199,6 +199,8 @@ curl \
 
 ### Create user
 
+-   **Method access permissions:** `admin`.
+
 <!-- tabs:start -->
 
 #### **JavaScript**
@@ -209,8 +211,6 @@ const res = await api.call( "/v1/admin/users/create", fields );
 ```
 
 #### **Shell**
-
--   **Method access permissions:** `admin`.
 
 <!-- prettier-ignore -->
 ```shell
@@ -228,6 +228,8 @@ curl \
 
 ### Remove user
 
+-   **Method access permissions:** `admin`.
+
 <!-- tabs:start -->
 
 #### **JavaScript**
@@ -238,8 +240,6 @@ const res = await api.call( "/v1/admin/users/delete", user_id );
 ```
 
 #### **Shell**
-
--   **Method access permissions:** `admin`.
 
 <!-- prettier-ignore -->
 ```shell
@@ -257,6 +257,8 @@ curl \
 
 ### Set user enabled
 
+-   **Method access permissions:** `admin`.
+
 <!-- tabs:start -->
 
 #### **JavaScript**
@@ -267,8 +269,6 @@ const res = await api.call( "/v1/admin/users/set-enabled", user_id, enabled );
 ```
 
 #### **Shell**
-
--   **Method access permissions:** `admin`.
 
 <!-- prettier-ignore -->
 ```shell
@@ -288,6 +288,8 @@ curl \
 
 ### Set user password
 
+-   **Method access permissions:** `admin`.
+
 <!-- tabs:start -->
 
 #### **JavaScript**
@@ -298,8 +300,6 @@ const res = await api.call( "/v1/admin/users/set-password", user_id, pasword? );
 ```
 
 #### **Shell**
-
--   **Method access permissions:** `admin`.
 
 <!-- prettier-ignore -->
 ```shell
@@ -319,6 +319,8 @@ curl \
 
 ### Get user permissions
 
+-   **Method access permissions:** `admin`.
+
 <!-- tabs:start -->
 
 #### **JavaScript**
@@ -329,8 +331,6 @@ const res = await api.call( "/v1/admin/users/get-permissions", user_id );
 ```
 
 #### **Shell**
-
--   **Method access permissions:** `admin`.
 
 <!-- prettier-ignore -->
 ```shell
@@ -348,6 +348,8 @@ curl \
 
 ### Set user permissions
 
+-   **Method access permissions:** `admin`.
+
 <!-- tabs:start -->
 
 #### **JavaScript**
@@ -358,8 +360,6 @@ const res = await api.call( "/v1/admin/users/set-permissions", user_id, permissi
 ```
 
 #### **Shell**
-
--   **Method access permissions:** `admin`.
 
 <!-- prettier-ignore -->
 ```shell
@@ -379,6 +379,8 @@ curl \
 
 ### Update user permissions
 
+-   **Method access permissions:** `admin`.
+
 <!-- tabs:start -->
 
 #### **JavaScript**
@@ -389,8 +391,6 @@ const res = await api.call( "/v1/admin/users/update-permissions", user_id, permi
 ```
 
 #### **Shell**
-
--   **Method access permissions:** `admin`.
 
 <!-- prettier-ignore -->
 ```shell
@@ -410,6 +410,8 @@ curl \
 
 ### Suggest user name
 
+-   **Method access permissions:** `admin`.
+
 <!-- tabs:start -->
 
 #### **JavaScript**
@@ -420,8 +422,6 @@ const res = await api.call( "/v1/admin/users/suggest", options? );
 ```
 
 #### **Shell**
-
--   **Method access permissions:** `admin`.
 
 <!-- prettier-ignore -->
 ```shell
@@ -439,6 +439,8 @@ curl \
 
 ### Change user name
 
+-   **Method access permissions:** `admin`.
+
 <!-- tabs:start -->
 
 #### **JavaScript**
@@ -449,8 +451,6 @@ const res = await api.call( "/v1/admin/users/set-username", user_id, new_usernam
 ```
 
 #### **Shell**
-
--   **Method access permissions:** `admin`.
 
 <!-- prettier-ignore -->
 ```shell
@@ -474,6 +474,8 @@ curl \
 
 ### Read tokens
 
+-   **Method access permissions:** `user`.
+
 <!-- tabs:start -->
 
 #### **JavaScript**
@@ -484,8 +486,6 @@ const res = await api.call( "/v1/api-tokens/read", options? );
 ```
 
 #### **Shell**
-
--   **Method access permissions:** `user`.
 
 <!-- prettier-ignore -->
 ```shell
@@ -503,6 +503,8 @@ curl \
 
 ### Generate new token
 
+-   **Method access permissions:** `user`.
+
 <!-- tabs:start -->
 
 #### **JavaScript**
@@ -513,8 +515,6 @@ const res = await api.call( "/v1/api-tokens/create", name );
 ```
 
 #### **Shell**
-
--   **Method access permissions:** `user`.
 
 <!-- prettier-ignore -->
 ```shell
@@ -532,6 +532,8 @@ curl \
 
 ### Remove token
 
+-   **Method access permissions:** `user`.
+
 <!-- tabs:start -->
 
 #### **JavaScript**
@@ -542,8 +544,6 @@ const res = await api.call( "/v1/api-tokens/delete", token_id );
 ```
 
 #### **Shell**
-
--   **Method access permissions:** `user`.
 
 <!-- prettier-ignore -->
 ```shell
@@ -561,6 +561,8 @@ curl \
 
 ### Set token enabled
 
+-   **Method access permissions:** `user`.
+
 <!-- tabs:start -->
 
 #### **JavaScript**
@@ -571,8 +573,6 @@ const res = await api.call( "/v1/api-tokens/set-enabled", token_id, enabled );
 ```
 
 #### **Shell**
-
--   **Method access permissions:** `user`.
 
 <!-- prettier-ignore -->
 ```shell
@@ -592,6 +592,8 @@ curl \
 
 ### Get token permissions
 
+-   **Method access permissions:** `user`.
+
 <!-- tabs:start -->
 
 #### **JavaScript**
@@ -602,8 +604,6 @@ const res = await api.call( "/v1/api-tokens/get-permissions", token_id );
 ```
 
 #### **Shell**
-
--   **Method access permissions:** `user`.
 
 <!-- prettier-ignore -->
 ```shell
@@ -621,6 +621,8 @@ curl \
 
 ### Set token permissions
 
+-   **Method access permissions:** `user`.
+
 <!-- tabs:start -->
 
 #### **JavaScript**
@@ -631,8 +633,6 @@ const res = await api.call( "/v1/api-tokens/set-permissions", token_id, permissi
 ```
 
 #### **Shell**
-
--   **Method access permissions:** `user`.
 
 <!-- prettier-ignore -->
 ```shell
@@ -656,6 +656,8 @@ Set API token permissions. Old permissions will be replaced with the new.
 
 ### Update token permissions
 
+-   **Method access permissions:** `user`.
+
 <!-- tabs:start -->
 
 #### **JavaScript**
@@ -666,8 +668,6 @@ const res = await api.call( "/v1/api-tokens/update-permissions", token_id, permi
 ```
 
 #### **Shell**
-
--   **Method access permissions:** `user`.
 
 <!-- prettier-ignore -->
 ```shell
@@ -693,6 +693,8 @@ Update token permissions. Permissions will be added or replaced.
 
 ### Read user profile
 
+-   **Method access permissions:** `user`.
+
 <!-- tabs:start -->
 
 #### **JavaScript**
@@ -703,8 +705,6 @@ const res = await api.call( "/v1/profile/read" );
 ```
 
 #### **Shell**
-
--   **Method access permissions:** `user`.
 
 <!-- prettier-ignore -->
 ```shell
@@ -717,6 +717,8 @@ curl \
 
 ### Set user email
 
+-   **Method access permissions:** `user`.
+
 <!-- tabs:start -->
 
 #### **JavaScript**
@@ -727,8 +729,6 @@ const res = await api.call( "/v1/profile/set-email", email? );
 ```
 
 #### **Shell**
-
--   **Method access permissions:** `user`.
 
 <!-- prettier-ignore -->
 ```shell
@@ -746,6 +746,8 @@ curl \
 
 ### Set user telegram name
 
+-   **Method access permissions:** `user`.
+
 <!-- tabs:start -->
 
 #### **JavaScript**
@@ -756,8 +758,6 @@ const res = await api.call( "/v1/profile/set-telegram-username", telegram_userna
 ```
 
 #### **Shell**
-
--   **Method access permissions:** `user`.
 
 <!-- prettier-ignore -->
 ```shell
@@ -777,6 +777,8 @@ curl \
 
 ### Signin
 
+-   **Method access permissions:** `*`.
+
 <!-- tabs:start -->
 
 #### **JavaScript**
@@ -787,8 +789,6 @@ const res = await api.call( "/v1/session/signin", credentials?, signin_permissio
 ```
 
 #### **Shell**
-
--   **Method access permissions:** `*`.
 
 <!-- prettier-ignore -->
 ```shell
@@ -820,6 +820,8 @@ If `credentials` parameter is specified - will try to sign in user using usernam
 
 ### Signout
 
+-   **Method access permissions:** `*`.
+
 <!-- tabs:start -->
 
 #### **JavaScript**
@@ -830,8 +832,6 @@ const res = await api.call( "/v1/session/signout" );
 ```
 
 #### **Shell**
-
--   **Method access permissions:** `*`.
 
 <!-- prettier-ignore -->
 ```shell
@@ -844,6 +844,8 @@ curl \
 
 ### Signup
 
+-   **Method access permissions:** `*`.
+
 <!-- tabs:start -->
 
 #### **JavaScript**
@@ -854,8 +856,6 @@ const res = await api.call( "/v1/session/signup", fields );
 ```
 
 #### **Shell**
-
--   **Method access permissions:** `*`.
 
 <!-- prettier-ignore -->
 ```shell
@@ -873,6 +873,8 @@ curl \
 
 ### Send confirmation email
 
+-   **Method access permissions:** `*`.
+
 <!-- tabs:start -->
 
 #### **JavaScript**
@@ -883,8 +885,6 @@ const res = await api.call( "/v1/session/send-confirmation-email", user_id );
 ```
 
 #### **Shell**
-
--   **Method access permissions:** `*`.
 
 <!-- prettier-ignore -->
 ```shell
@@ -902,6 +902,8 @@ curl \
 
 ### Confirm user email using email confirmation token
 
+-   **Method access permissions:** `*`.
+
 <!-- tabs:start -->
 
 #### **JavaScript**
@@ -912,8 +914,6 @@ const res = await api.call( "/v1/session/confirm-email-by-token", token );
 ```
 
 #### **Shell**
-
--   **Method access permissions:** `*`.
 
 <!-- prettier-ignore -->
 ```shell
@@ -931,6 +931,8 @@ curl \
 
 ### Send password reset email
 
+-   **Method access permissions:** `*`.
+
 <!-- tabs:start -->
 
 #### **JavaScript**
@@ -941,8 +943,6 @@ const res = await api.call( "/v1/session/send-password-reset-email", user_id );
 ```
 
 #### **Shell**
-
--   **Method access permissions:** `*`.
 
 <!-- prettier-ignore -->
 ```shell
@@ -960,6 +960,8 @@ curl \
 
 ### Set user password using password recovery token
 
+-   **Method access permissions:** `*`.
+
 <!-- tabs:start -->
 
 #### **JavaScript**
@@ -970,8 +972,6 @@ const res = await api.call( "/v1/session/set-password-by-token", token, password
 ```
 
 #### **Shell**
-
--   **Method access permissions:** `*`.
 
 <!-- prettier-ignore -->
 ```shell
@@ -993,6 +993,8 @@ curl \
 
 ### Test
 
+-   **Method access permissions:** `*`.
+
 <!-- tabs:start -->
 
 #### **JavaScript**
@@ -1003,8 +1005,6 @@ const res = await api.call( "/v1/test/test", args? );
 ```
 
 #### **Shell**
-
--   **Method access permissions:** `*`.
 
 <!-- prettier-ignore -->
 ```shell
@@ -1022,6 +1022,8 @@ curl \
 
 ### Test upload
 
+-   **Method access permissions:** `*`.
+
 <!-- tabs:start -->
 
 #### **JavaScript**
@@ -1032,8 +1034,6 @@ const res = await api.call( "/v1/test/upload", file?, data? );
 ```
 
 #### **Shell**
-
--   **Method access permissions:** `*`.
 
 <!-- prettier-ignore -->
 ```shell
