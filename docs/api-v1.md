@@ -51,7 +51,6 @@ curl \
 <!-- tabs:end -->
 
 -   `options?` <Object\>
-
     -   `where` <Object\> Set of fields filters:
         -   `method_id` <Array\> **Required**. Filter by the `method_id` field value:
             -   `operator` <string\> Filter operator, one of the: `"="`.
@@ -59,7 +58,6 @@ curl \
     -   `offset` <integer\> Return result, starting from the specified row. `0` - from the first row. **Default:** `0`.
     -   `limit` <integer\> Max rows to return.
         Example (this is abstract data structure example, not related to the current method):
-
     ```json
     {
         "where": {
@@ -75,7 +73,6 @@ curl \
         "limit": 50
     }
     ```
-
 -   **Method access permissions:** `admin`.
 
 ### Read statistics for the last 60 minutes
@@ -166,7 +163,6 @@ curl \
 <!-- tabs:end -->
 
 -   `options?` <Object\>
-
     -   `where` <Object\> Set of fields filters:
         -   `id` <Array\> Filter by the `id` field value:
             -   `operator` <string\> Filter operator, one of the: `"="`.
@@ -180,7 +176,6 @@ curl \
     -   `offset` <integer\> Return result, starting from the specified row. `0` - from the first row. **Default:** `0`.
     -   `limit` <integer\> Max rows to return.
         Example (this is abstract data structure example, not related to the current method):
-
     ```json
     {
         "where": {
@@ -196,7 +191,6 @@ curl \
         "limit": 50
     }
     ```
-
 -   **Method access permissions:** `admin`.
 
 ### Create user
