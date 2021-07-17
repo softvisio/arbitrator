@@ -1047,6 +1047,6 @@ curl \
 
 <!-- tabs:end -->
 
--   `file?` <File\>
+-   `file?` <File> Maximim file size: `52428800` bytes.
 
 -   `data?` <string\> | <Object\>

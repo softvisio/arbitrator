@@ -31,7 +31,8 @@ methods:
     title: Test upload
     meta:
       type: upload
-      uploadMaxSize: 10000000
+      uploadMaxSize: 52_428_800 # 50Mb
+      uploadContentType: ["text/plain", "text/html"]
     params:
       - name: file
         description: Uploaded file.

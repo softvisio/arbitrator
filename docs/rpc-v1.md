@@ -92,6 +92,9 @@ curl \
 
 <!-- tabs:end -->
 
--   `file` <File\> Uploaded file.
+-   `file` <File> Uploaded file. Maximim file size: `52428800` bytes. Allowed content types:
+
+    -   `"text/plain"`
+    -   `"text/html"`
 
 -   `data?` <Object\>
