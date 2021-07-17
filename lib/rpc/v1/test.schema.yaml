@@ -12,16 +12,7 @@ methods:
     params:
       - name: args
         description: |-
-          Parameter summary.
-
-          Parameter description, Playwright enables fast, reliable and capable automation across all modern browsers. This guide covers those key differentiators to help you decide on the right tool for your automated tests.
-
-          Support for all browsers
-          Fast and reliable execution
-          Powerful automation capabilities
-          Integrates with your workflow
-          Limitations
-          Release notes
+          Parameter description. Playwright enables fast, reliable and capable automation across all modern browsers. This guide covers those key differentiators to help you decide on the right tool for your automated tests.
         schema: { type: string }
       - name: test
         description: Test parameter.
