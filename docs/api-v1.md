@@ -70,7 +70,7 @@ curl \
         },
         "order_by": [
             ["field_a", "asc"],
-            ["field_b", ["desc"]]
+            ["field_b", "desc"]
         ],
         "offset": 100,
         "limit": 50
@@ -192,7 +192,7 @@ curl \
         },
         "order_by": [
             ["field_a", "asc"],
-            ["field_b", ["desc"]]
+            ["field_b", "desc"]
         ],
         "offset": 100,
         "limit": 50
