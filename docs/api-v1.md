@@ -55,8 +55,8 @@ curl \
 -   `options?` <Object\>
     -   `where` <Object\> Set of fields filters:
         -   `method_id` <Array\> **Required**. Filter by the `method_id` field value:
-            -   `operator` <string\> Filter operator, one of the: `"="`.
-            -   `value` <string\> Field value.
+            -   <string\> Filter operator, one of the: `"="`.
+            -   <string\> Field value.
     -   `offset` <integer\> Return result, starting from the specified row. `0` - from the first row. **Default:** `0`.
     -   `limit` <integer\> Max rows to return. Maximum allowed value: `100`. **Default:** `100`.
     -   Example (this is the abstract data structure example, not related to the current method):
@@ -170,14 +170,14 @@ curl \
 -   `options?` <Object\>
     -   `where` <Object\> Set of fields filters:
         -   `id` <Array\> Filter by the `id` field value:
-            -   `operator` <string\> Filter operator, one of the: `"="`.
-            -   `value` <string\> Field value.
+            -   <string\> Filter operator, one of the: `"="`.
+            -   <string\> Field value.
         -   `search` <Array\> Filter by the `search` field value:
-            -   `operator` <string\> Filter operator, one of the: `"like"`.
-            -   `value` <string\> Field value.
+            -   <string\> Filter operator, one of the: `"like"`.
+            -   <string\> Field value.
     -   `order_by` <Array\> Array of the sort conditions. **Default:** `[["name","desc"]]`. Each sort condition must be represented with the two-elements <Array\> with the following structure:
-        -   `field` <string\> Field to sort by, possible fields: `"id"`, `"name"`, `"created"`, `"enabled"`.
-        -   `direction` <string\> Sort direction, can be `"asc"` or `"desc"`. **Default:** `"asc"`.
+        -   <string\> Field name to sort by, possible fields: `"id"`, `"name"`, `"created"`, `"enabled"`.
+        -   <string\> Sort direction, can be `"asc"` or `"desc"`. **Default:** `"asc"`.
     -   `offset` <integer\> Return result, starting from the specified row. `0` - from the first row. **Default:** `0`.
     -   `limit` <integer\> Max rows to return. Maximum allowed value: `100`. **Default:** `100`.
     -   Example (this is the abstract data structure example, not related to the current method):
