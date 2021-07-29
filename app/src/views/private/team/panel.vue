@@ -19,13 +19,14 @@
                 <ext-button text="Refresh"/>
             </ext-toolbar>
         </ext-panel>
-        <ext-panel iconCls="fas fa-user-friends" title="Users" layout="fit">
+        <ext-panel iconCls="fas fa-user-friends" title="Users" layout="vbox">
             <ext-toolbar docked="top">
                 <ext-container html="Teams"/>
                 <ext-spacer/>
                 <ext-button text="Refresh"/>
             </ext-toolbar>
-            <ext-chart layout="fit" theme="midnight" @ready="chartReady"/>
+            <ext-chart flex="1" @ready="chartReady"/>
+            <ext-chart flex="1" @ready="chartReady"/>
         </ext-panel>
         <ext-panel iconCls="fas fa-flag-checkered" title="Reports"/>
         <ext-panel iconCls="fas fa-ad" title="Teams"/>
@@ -45,20 +46,6 @@ const StreamsPanel = defineAsyncComponent( () => import( "./streams/panel" ) );
 export default {
     "components": { StreamsPanel },
 
-    "computed": {
-        darkMode () {
-            return this.$store.theme.darkMode;
-        },
-    },
-
-    "watch": {
-        darkMode ( darkMode ) {
-            if ( !this.chart ) return;
-
-            this.chart.setTheme( darkMode ? "midnight" : "green" );
-        },
-    },
-
     "methods": {
 
         // XXX
@@ -68,9 +55,7 @@ export default {
         },
 
         chartReady ( e ) {
-            const chart = ( this.chart = e.detail.cmp );
-
-            chart.setTheme( this.darkMode ? "midnight" : "green" );
+            const chart = e.detail.cmp;
 
             chart.setLegend( {
                 "docked": "right",
