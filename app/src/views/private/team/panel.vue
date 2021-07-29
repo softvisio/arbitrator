@@ -45,6 +45,20 @@ const StreamsPanel = defineAsyncComponent( () => import( "./streams/panel" ) );
 export default {
     "components": { StreamsPanel },
 
+    "computed": {
+        darkMode () {
+            return this.$store.theme.darkMode;
+        },
+    },
+
+    "watch": {
+        darkMode ( darkMode ) {
+            if ( !this.chart ) return;
+
+            this.chart.setTheme( darkMode ? "midnight" : "green" );
+        },
+    },
+
     "methods": {
 
         // XXX
@@ -54,7 +68,9 @@ export default {
         },
 
         chartReady ( e ) {
-            const chart = e.detail.cmp;
+            const chart = ( this.chart = e.detail.cmp );
+
+            chart.setTheme( this.darkMode ? "midnight" : "green" );
 
             chart.setLegend( {
                 "docked": "right",
