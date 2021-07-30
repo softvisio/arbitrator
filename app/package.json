@@ -3,6 +3,9 @@
     "version": "0.0.0",
     "private": true,
     "type": "module",
+    "imports": {
+        "#core/*": "@softvisio/core/*"
+    },
     "scripts": {
         "build": "env VUE_APP_BUILD_CORDOVA= vue-cli-service build --mode=production",
         "build-cordova": "env VUE_APP_BUILD_CORDOVA=true vue-cli-service build --mode=production",
