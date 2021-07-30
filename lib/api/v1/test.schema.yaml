@@ -13,7 +13,7 @@ methods:
     title: Test upload
     meta:
       type: upload
-      uploadMaxSize: 52_428_800 # 50Mb
+      uploadMaxSize: .inf # infinity
     params:
       - name: file
         schema:
