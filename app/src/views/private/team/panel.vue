@@ -36,7 +36,7 @@
 
 <script>
 import { defineAsyncComponent } from "vue";
-import ":ext-charts";
+import ":softvisio/components/charts";
 
 const StreamsPanel = defineAsyncComponent( () => import( "./streams/panel" ) );
 
