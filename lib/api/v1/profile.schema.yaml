@@ -1,1 +1,1 @@
-extends: "#core/app/api/prototypes/profile"
+extends: "#app/api/prototypes/profile"
