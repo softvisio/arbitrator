@@ -1,1 +1,1 @@
-extends: "#app/api/prototypes/session"
+extends: "#app/prototypes/session"

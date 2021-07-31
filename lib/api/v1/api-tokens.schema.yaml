@@ -1,1 +1,1 @@
-extends: "#app/api/prototypes/api-tokens"
+extends: "#app/prototypes/api-tokens"

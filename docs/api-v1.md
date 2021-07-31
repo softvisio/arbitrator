@@ -716,6 +716,35 @@ Method access permissions: `"user"`.
 
 <!-- prettier-ignore -->
 ```javascript
+const res = await api.call( "/v1/profile/set-password", password );
+```
+
+#### **Shell**
+
+<!-- prettier-ignore -->
+```shell
+curl \
+    -X POST \
+    -H "Authorization: Bearer <YOUR-API-TOKEN>" \
+    -H "Content-Type: application/json" \
+    -d '[password]' \
+    "https://arbitrator.net/api/v1/profile/set-password"
+```
+
+<!-- tabs:end -->
+
+-   `password` <string\> New password.
+
+### Set user email
+
+Method access permissions: `"user"`.
+
+<!-- tabs:start -->
+
+#### **JavaScript**
+
+<!-- prettier-ignore -->
+```javascript
 const res = await api.call( "/v1/profile/set-email", email? );
 ```
 
