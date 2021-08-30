@@ -1,4 +1,4 @@
-FROM softvisio/core
+FROM softvisio/node
 
 RUN \
     # setup node build environment
