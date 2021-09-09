@@ -13,6 +13,8 @@
         "serve": "vue-cli-service serve"
     },
     "devDependencies": {
-        "@softvisio/vue-ext": "^3.0.0"
+        "@softvisio/vue-ext": "^3.0.0",
+        "@vue/cli-plugin-babel": "^5.0.0-beta.3",
+        "vue-cli-plugin-webpack-bundle-analyzer": "^4.0.0"
     }
 }
