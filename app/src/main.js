@@ -1,5 +1,5 @@
-import createApp from ":softvisio";
+import App from "#vue";
 
-const app = await createApp();
+const app = await App.new();
 
-app.mount( "#app" );
+app.mount();

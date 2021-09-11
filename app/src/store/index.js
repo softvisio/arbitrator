@@ -1,4 +1,4 @@
-import Store from ":softvisio/store";
+import Store from "#vue/store";
 
 // import * as CONST from "@/const";
 

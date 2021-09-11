@@ -1,3 +1,3 @@
-const config = require( "@softvisio/vue-ext/resources/vue.config.cjs" );
+const config = require( "#vue/vue.config.cjs" );
 
 module.exports = config;

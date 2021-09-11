@@ -14,9 +14,9 @@
 </template>
 
 <script>
-import ":softvisio/components/froala";
+import "#vue/components/froala";
 
-// import Panel from ":softvisio/components/profile/panel";
+// import Panel from "#vue/components/profile/panel";
 
 export default {
 

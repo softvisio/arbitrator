@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import ProfileDialog from ":softvisio/components/profile/dialog";
+import ProfileDialog from "#vue/components/profile/dialog";
 
 export default {
     "components": { ProfileDialog },

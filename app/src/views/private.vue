@@ -19,9 +19,9 @@
 </template>
 
 <script>
-import Avatar from ":softvisio/components/menu/avatar";
-import MenuSheet from ":softvisio/components/menu/sheet";
-import UsersDialog from ":softvisio/components/users/dialog";
+import Avatar from "#vue/components/menu/avatar";
+import MenuSheet from "#vue/components/menu/sheet";
+import UsersDialog from "#vue/components/users/dialog";
 import ProfileDialog from "./private/profile/dialog";
 import TeamPanel from "./private/team/panel";
 
