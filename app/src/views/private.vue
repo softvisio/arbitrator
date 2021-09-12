@@ -1,26 +1,25 @@
 <template>
     <ext-panel ref="panel" layout="fit" scrollable="true" @ready="ready">
-        <ext-titlebar docked="top" titleAlign="left" :title="title" margin="0 0 1 0" padding="0 0 0 10">
-            <ext-image :src="logo" align="left" width="32" height="32" style="background-color: white" margin="0 10 0 0"/>
-            <ext-button ref="teamsButton" align="right" iconCls="fas fa-user-friends" text="Select Team" textAlign="left" width="200" padding="0 0 0 5" ui="action" stretchMenu="true"/>
-            <ext-button align="right" iconCls="fas fa-plus" tooltip="Create team" :hidden="!canCreateTeam" margin="0 10 0 0" ui="action" @tap="showCreateTeamDialog"/>
-            <Avatar align="right"/>
-            <ext-button align="right" iconCls="fas fa-bars" margin="0 0 0 5" ui="action" @tap="showMenu"/>
-
-            <MenuSheet ref="menu" @showProfileDialog="showProfileDialog">
-                <template #top>
-                    <ext-button iconCls="fas fa-users" text="Users" textAlign="left" :hidden="!isAdmin" @tap="showUsersDialog"/>
-                </template>
-            </MenuSheet>
-        </ext-titlebar>
+        <Title ref="title" @showProfileDialog="showProfileDialog">
+            <template #logo>
+                <ext-image :src="logo" align="left" width="32" height="32" style="background-color: white" margin="0 10 0 0"/>
+            </template>
+            <template #title>
+                <ext-button ref="teamsButton" align="right" iconCls="fas fa-user-friends" text="Select Team" textAlign="left" width="200" padding="0 0 0 5" ui="action" stretchMenu="true"/>
+                <ext-button align="right" iconCls="fas fa-plus" tooltip="Create team" :hidden="!canCreateTeam" margin="0 10 0 0" ui="action" @tap="showCreateTeamDialog"/>
+            </template>
+            <template #menuTop>
+                <ext-button iconCls="fas fa-tachometer-alt" text="Dashboard" textAlign="left" :hidden="!isAdmin" @tap="showDashboardDialog"/>
+                <ext-button iconCls="fas fa-users" text="Users" textAlign="left" :hidden="!isAdmin" @tap="showUsersDialog"/>
+            </template>
+        </Title>
 
         <TeamPanel ref="teamPanel"/>
     </ext-panel>
 </template>
 
 <script>
-import Avatar from "#vue/components/menu/avatar";
-import MenuSheet from "#vue/components/menu/sheet";
+import Title from "#vue/components/title/titlebar";
 import UsersDialog from "#vue/components/users/dialog";
 import ProfileDialog from "./private/profile/dialog";
 import TeamPanel from "./private/team/panel";
@@ -30,7 +29,7 @@ import TeamPanel from "./private/team/panel";
 import LOGO from "@/assets/logo.png";
 
 export default {
-    "components": { Avatar, MenuSheet, TeamPanel },
+    "components": { Title, TeamPanel },
 
     data () {
         return {
@@ -39,10 +38,6 @@ export default {
     },
 
     "computed": {
-        title () {
-            return this.$store.session.title;
-        },
-
         isAdmin () {
             return this.$store.session.hasPermissions( "admin" );
         },
@@ -102,12 +97,8 @@ export default {
             }
         },
 
-        showMenu () {
-            this.$refs.menu.show();
-        },
-
         async showUsersDialog () {
-            this.$refs.menu.hide();
+            this.$refs.title.hideMenu();
 
             const cmp = await this.$mount( UsersDialog );
 
@@ -115,8 +106,6 @@ export default {
         },
 
         async showProfileDialog () {
-            this.$refs.menu.hide();
-
             const cmp = await this.$mount( ProfileDialog );
 
             cmp.ext.show();
