@@ -1,15 +1,16 @@
 <template>
     <ext-panel ref="panel" layout="fit" scrollable="true" @ready="ready">
-        <Title ref="title" @showProfileDialog="showProfileDialog">
-            <template #logo>
-                <ext-image :src="logo" align="left" width="32" height="32" style="background-color: white" margin="0 10 0 0"/>
-            </template>
+        <Title ref="title" notifications="true" @showProfileDialog="showProfileDialog">
+            <!-- <template #logo> -->
+            <!--     <ext-image :src="logo" align="left" width="32" height="32" style="background-color: white" margin="0 10 0 0"/> -->
+            <!-- </template> -->
+
             <template #title>
                 <ext-button ref="teamsButton" align="right" iconCls="fas fa-user-friends" text="Select Team" textAlign="left" width="200" padding="0 0 0 5" ui="action" stretchMenu="true"/>
-                <ext-button align="right" iconCls="fas fa-plus" tooltip="Create team" :hidden="!canCreateTeam" margin="0 10 0 0" ui="action" @tap="showCreateTeamDialog"/>
+                <ext-button align="right" iconCls="fas fa-plus" tooltip="Create team" :hidden1="!canCreateTeam" margin="0 10 0 0" ui="action" @tap="showCreateTeamDialog"/>
             </template>
+
             <template #menuTop>
-                <ext-button iconCls="fas fa-tachometer-alt" text="Dashboard" textAlign="left" :hidden="!isAdmin" @tap="showDashboardDialog"/>
                 <ext-button iconCls="fas fa-users" text="Users" textAlign="left" :hidden="!isAdmin" @tap="showUsersDialog"/>
             </template>
         </Title>

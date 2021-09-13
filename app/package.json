@@ -14,7 +14,8 @@
         "serve": "vue-cli-service serve"
     },
     "devDependencies": {
-        "@softvisio/vue-ext": "^4.0.0",
+        "@softvisio/vue": "github:softvisio/vue#main",
+        "@softvisio/vue-ext": "github:softvisio/vue-ext#main",
         "@vue/cli-plugin-babel": "^5.0.0-beta.3",
         "vue-cli-plugin-webpack-bundle-analyzer": "^4.0.0"
     }
