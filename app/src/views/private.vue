@@ -1,6 +1,6 @@
 <template>
     <ext-panel ref="panel" layout="fit" scrollable="true" @ready="ready">
-        <Title ref="title" notifications="true" @showProfileDialog="showProfileDialog">
+        <Title ref="title" @showProfileDialog="showProfileDialog">
             <!-- <template #logo> -->
             <!--     <ext-image :src="logo" align="left" width="32" height="32" style="background-color: white" margin="0 10 0 0"/> -->
             <!-- </template> -->
