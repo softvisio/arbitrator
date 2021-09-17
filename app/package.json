@@ -11,7 +11,7 @@
         "build": "env VUE_APP_BUILD_CORDOVA= vue-cli-service build --mode=production",
         "build-cordova": "env VUE_APP_BUILD_CORDOVA=true vue-cli-service build --mode=production",
         "build-cordova-devel": "env VUE_APP_BUILD_CORDOVA=true vue-cli-service build --mode=development",
-        "serve": "vue-cli-service serve"
+        "serve": "env NODE_PRESERVE_SYMLINKS_MAIN=1 vue-cli-service serve"
     },
     "devDependencies": {
         "@softvisio/vue": "github:softvisio/vue#main",
