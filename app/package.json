@@ -14,7 +14,6 @@
         "serve": "env NODE_PRESERVE_SYMLINKS_MAIN=1 vue-cli-service serve"
     },
     "devDependencies": {
-        "@softvisio/vue": "github:softvisio/vue#main",
-        "@softvisio/vue-ext": "github:softvisio/vue-ext#main"
+        "@softvisio/vue-ext": "^4.2.0"
     }
 }
