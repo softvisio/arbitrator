@@ -8,9 +8,9 @@
         "#vue/*": "@softvisio/vue-ext/*"
     },
     "scripts": {
-        "build": "export VUE_APP_BUILD_CORDOVA= && vue-cli-service build --mode=production",
-        "build-cordova": "export VUE_APP_BUILD_CORDOVA=1 && vue-cli-service build --mode=production",
-        "build-cordova-devel": "export VUE_APP_BUILD_CORDOVA=1 && vue-cli-service build --mode=development",
+        "build": "export NODE_PRESERVE_SYMLINKS_MAIN=1 && export VUE_APP_BUILD_CORDOVA= && vue-cli-service build --mode=production",
+        "build-cordova": "export NODE_PRESERVE_SYMLINKS_MAIN=1 && export VUE_APP_BUILD_CORDOVA=1 && vue-cli-service build --mode=production",
+        "build-cordova-devel": "export NODE_PRESERVE_SYMLINKS_MAIN=1 && export VUE_APP_BUILD_CORDOVA=1 && vue-cli-service build --mode=development",
         "serve": "export NODE_PRESERVE_SYMLINKS_MAIN=1 && vue-cli-service serve"
     },
     "devDependencies": {
