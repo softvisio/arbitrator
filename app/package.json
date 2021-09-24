@@ -14,6 +14,6 @@
         "serve": "nenv NODE_PRESERVE_SYMLINKS_MAIN=1 vue-cli-service serve"
     },
     "devDependencies": {
-        "@softvisio/vue-ext": "^4.2.0"
+        "@softvisio/vue-ext": "^5.0.0"
     }
 }

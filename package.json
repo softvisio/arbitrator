@@ -10,7 +10,7 @@
         "#resources/*": "./resources/*"
     },
     "dependencies": {
-        "@softvisio/core": "^4.19.2"
+        "@softvisio/core": "^5.0.0"
     },
     "packages": [
         "app"
