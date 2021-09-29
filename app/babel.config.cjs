@@ -1,3 +1,3 @@
-const config = require( "#vue/babel.config.cjs" );
+const config = require( "#vue/babel.config" );
 
 module.exports = config;
