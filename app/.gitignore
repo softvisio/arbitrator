@@ -1,6 +1,8 @@
 # common
 /data/
 /wiki/
+/env.local.yaml
+/env.*.local.yaml
 
 # cordova
 /hooks/
@@ -11,6 +13,4 @@
 /node_modules/
 
 # vue
-/.env.local
-/.env.*.local
 /www/
