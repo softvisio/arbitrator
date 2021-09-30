@@ -10,9 +10,9 @@
 
         <title><%= APP_TITLE %></title>
 
-        <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
+        <link rel="icon" href="favicon.ico" />
 
-        <% if ( process.env.BUILD_CORDOVA ) { %>
+        <% if ( process.env.WEBPACK_BUILD_CORDOVA ) { %>
         <script src="cordova.js" type="text/javascript" integrity="" crossorigin="anonymous"></script>
         <% } %>
     </head>
