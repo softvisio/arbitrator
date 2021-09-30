@@ -8,10 +8,10 @@
         "#vue/*": "@softvisio/vue-ext/*"
     },
     "scripts": {
-        "build": "nenv NODE_PRESERVE_SYMLINKS=1 NODE_PRESERVE_SYMLINKS_MAIN=1 run build --mode=production",
-        "build-cordova": "nenv NODE_PRESERVE_SYMLINKS=1 NODE_PRESERVE_SYMLINKS_MAIN=1 run build --cordova --mode=production",
-        "build-cordova-devel": "nenv NODE_PRESERVE_SYMLINKS=1 NODE_PRESERVE_SYMLINKS_MAIN=1 run build --cordova --mode=development",
-        "serve": "nenv NODE_PRESERVE_SYMLINKS=1 NODE_PRESERVE_SYMLINKS_MAIN=1 run serve"
+        "build": "run build --mode=production",
+        "build-cordova": "run build --cordova --mode=production",
+        "build-cordova-devel": "run build --cordova --mode=development",
+        "serve": "run serve"
     },
     "devDependencies": {
         "@softvisio/vue-ext": "^5.0.0"
