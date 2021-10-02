@@ -1,4 +1,4 @@
-FROM softvisio/node
+FROM zerocluster/node
 
 RUN \
     # setup node build environment
