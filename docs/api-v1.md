@@ -11,14 +11,18 @@
 
 <!-- prettier-ignore -->
 ```javascript
-const api = API.new( "wss://arbitrator.net/api/" )
+import Api from "@softvisio/core/api";
+
+const api = Api.new( "wss://arbitrator.net/api/" )
 ```
 
 #### **HTTP**
 
 <!-- prettier-ignore -->
 ```javascript
-const api = API.new( "https://arbitrator.net/api/" )
+import Api from "@softvisio/core/api";
+
+const api = Api.new( "https://arbitrator.net/api/" )
 ```
 
 <!-- tabs:end -->

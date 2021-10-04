@@ -11,14 +11,18 @@
 
 <!-- prettier-ignore -->
 ```javascript
-const api = API.new( "wss://arbitrator:8080/" )
+import Api from "@softvisio/core/api";
+
+const api = Api.new( "wss://arbitrator:8080/" )
 ```
 
 #### **HTTP**
 
 <!-- prettier-ignore -->
 ```javascript
-const api = API.new( "https://arbitrator:8080/" )
+import Api from "@softvisio/core/api";
+
+const api = Api.new( "https://arbitrator:8080/" )
 ```
 
 <!-- tabs:end -->
