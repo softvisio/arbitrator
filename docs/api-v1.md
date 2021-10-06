@@ -39,7 +39,7 @@ Method access permissions: `"admin"`.
 
 <!-- prettier-ignore -->
 ```javascript
-const res = await api.call( "/v1/admin/apiCallLog/readLog", options? );
+const res = await api.call( "/v1/admin/api-call-log/read-log", options? );
 ```
 
 #### **Shell**
@@ -51,7 +51,7 @@ curl \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
     -d '[options?]' \
-    "https://arbitrator.net/api/v1/admin/apiCallLog/readLog"
+    "https://arbitrator.net/api/v1/admin/api-call-log/read-log"
 ```
 
 <!-- tabs:end -->
@@ -71,7 +71,7 @@ curl \
                 "field_b": ["!=", null],
                 "field_c": ["=", "string"]
             },
-            "orderBy": [
+            "order_by": [
                 ["field_a", "asc"],
                 ["field_b", "desc"]
             ],
@@ -90,7 +90,7 @@ Method access permissions: `"admin"`.
 
 <!-- prettier-ignore -->
 ```javascript
-const res = await api.call( "/v1/admin/apiCallLog/readLatestStat", methodId? );
+const res = await api.call( "/v1/admin/api-call-log/read-latest-stat", method_id? );
 ```
 
 #### **Shell**
@@ -101,13 +101,13 @@ curl \
     -X POST \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
-    -d '[methodId?]' \
-    "https://arbitrator.net/api/v1/admin/apiCallLog/readLatestStat"
+    -d '[method_id?]' \
+    "https://arbitrator.net/api/v1/admin/api-call-log/read-latest-stat"
 ```
 
 <!-- tabs:end -->
 
--   `methodId?` <string\>
+-   `method_id?` <string\>
 
 Statistics updated every 10 seconds. Data resolution is 1 minute.
 
@@ -121,7 +121,7 @@ Method access permissions: `"admin"`.
 
 <!-- prettier-ignore -->
 ```javascript
-const res = await api.call( "/v1/admin/apiCallLog/readHistoryStat", methodId );
+const res = await api.call( "/v1/admin/api-call-log/read-history-stat", method_id );
 ```
 
 #### **Shell**
@@ -132,13 +132,13 @@ curl \
     -X POST \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
-    -d '[methodId]' \
-    "https://arbitrator.net/api/v1/admin/apiCallLog/readHistoryStat"
+    -d '[method_id]' \
+    "https://arbitrator.net/api/v1/admin/api-call-log/read-history-stat"
 ```
 
 <!-- tabs:end -->
 
--   `methodId` <string\>
+-   `method_id` <string\>
 
 Statistics updated every 1 minute. Data resolution is 10 minutes.
 
@@ -179,7 +179,7 @@ curl \
         -   `search` <Array\> Filter by the `search` field value:
             -   <string\> Filter operator, one of the: `"like"`.
             -   <string\> Field value.
-    -   `orderBy` <Array\> Array of the sort conditions. **Default:** `[["name","desc"]]`. Each sort condition must be represented with the two-elements <Array\> with the following structure:
+    -   `order_by` <Array\> Array of the sort conditions. **Default:** `[["name","desc"]]`. Each sort condition must be represented with the two-elements <Array\> with the following structure:
         -   <string\> Field name to sort by, possible fields: `"id"`, `"name"`, `"created"`, `"enabled"`.
         -   <string\> Sort direction, can be `"asc"` or `"desc"`. **Default:** `"asc"`.
     -   `offset` <integer\> Return result, starting from the specified row. `0` - from the first row. **Default:** `0`.
@@ -192,7 +192,7 @@ curl \
                 "field_b": ["!=", null],
                 "field_c": ["=", "string"]
             },
-            "orderBy": [
+            "order_by": [
                 ["field_a", "asc"],
                 ["field_b", "desc"]
             ],
@@ -240,7 +240,7 @@ Method access permissions: `"admin"`.
 
 <!-- prettier-ignore -->
 ```javascript
-const res = await api.call( "/v1/admin/users/delete", userId );
+const res = await api.call( "/v1/admin/users/delete", user_id );
 ```
 
 #### **Shell**
@@ -251,13 +251,13 @@ curl \
     -X POST \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
-    -d '[userId]' \
+    -d '[user_id]' \
     "https://arbitrator.net/api/v1/admin/users/delete"
 ```
 
 <!-- tabs:end -->
 
--   `userId` <string\>
+-   `user_id` <string\>
 
 ### Set user enabled
 
@@ -269,7 +269,7 @@ Method access permissions: `"admin"`.
 
 <!-- prettier-ignore -->
 ```javascript
-const res = await api.call( "/v1/admin/users/setEnabled", userId, enabled );
+const res = await api.call( "/v1/admin/users/set-enabled", user_id, enabled );
 ```
 
 #### **Shell**
@@ -280,13 +280,13 @@ curl \
     -X POST \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
-    -d '[userId, enabled]' \
-    "https://arbitrator.net/api/v1/admin/users/setEnabled"
+    -d '[user_id, enabled]' \
+    "https://arbitrator.net/api/v1/admin/users/set-enabled"
 ```
 
 <!-- tabs:end -->
 
--   `userId` <string\> User id or name.
+-   `user_id` <string\> User id or name.
 -   `enabled` <boolean\>
 
 ### Set user password
@@ -299,7 +299,7 @@ Method access permissions: `"admin"`.
 
 <!-- prettier-ignore -->
 ```javascript
-const res = await api.call( "/v1/admin/users/setPassword", userId, pasword? );
+const res = await api.call( "/v1/admin/users/set-password", user_id, pasword? );
 ```
 
 #### **Shell**
@@ -310,13 +310,13 @@ curl \
     -X POST \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
-    -d '[userId, pasword?]' \
-    "https://arbitrator.net/api/v1/admin/users/setPassword"
+    -d '[user_id, pasword?]' \
+    "https://arbitrator.net/api/v1/admin/users/set-password"
 ```
 
 <!-- tabs:end -->
 
--   `userId` <string\> User id or name.
+-   `user_id` <string\> User id or name.
 -   `pasword?` <string\>
 
 ### Get user permissions
@@ -329,7 +329,7 @@ Method access permissions: `"admin"`.
 
 <!-- prettier-ignore -->
 ```javascript
-const res = await api.call( "/v1/admin/users/getPermissions", userId );
+const res = await api.call( "/v1/admin/users/get-permissions", user_id );
 ```
 
 #### **Shell**
@@ -340,13 +340,13 @@ curl \
     -X POST \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
-    -d '[userId]' \
-    "https://arbitrator.net/api/v1/admin/users/getPermissions"
+    -d '[user_id]' \
+    "https://arbitrator.net/api/v1/admin/users/get-permissions"
 ```
 
 <!-- tabs:end -->
 
--   `userId` <string\>
+-   `user_id` <string\>
 
 ### Set user permissions
 
@@ -358,7 +358,7 @@ Method access permissions: `"admin"`.
 
 <!-- prettier-ignore -->
 ```javascript
-const res = await api.call( "/v1/admin/users/setPermissions", userId, permissions );
+const res = await api.call( "/v1/admin/users/set-permissions", user_id, permissions );
 ```
 
 #### **Shell**
@@ -369,13 +369,13 @@ curl \
     -X POST \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
-    -d '[userId, permissions]' \
-    "https://arbitrator.net/api/v1/admin/users/setPermissions"
+    -d '[user_id, permissions]' \
+    "https://arbitrator.net/api/v1/admin/users/set-permissions"
 ```
 
 <!-- tabs:end -->
 
--   `userId` <string\>
+-   `user_id` <string\>
 -   `permissions` <Object\>
 
 ### Update user permissions
@@ -388,7 +388,7 @@ Method access permissions: `"admin"`.
 
 <!-- prettier-ignore -->
 ```javascript
-const res = await api.call( "/v1/admin/users/updatePermissions", userId, permissions );
+const res = await api.call( "/v1/admin/users/update-permissions", user_id, permissions );
 ```
 
 #### **Shell**
@@ -399,13 +399,13 @@ curl \
     -X POST \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
-    -d '[userId, permissions]' \
-    "https://arbitrator.net/api/v1/admin/users/updatePermissions"
+    -d '[user_id, permissions]' \
+    "https://arbitrator.net/api/v1/admin/users/update-permissions"
 ```
 
 <!-- tabs:end -->
 
--   `userId` <string\>
+-   `user_id` <string\>
 -   `permissions` <Object\>
 
 ### Suggest user name
@@ -447,7 +447,7 @@ Method access permissions: `"admin"`.
 
 <!-- prettier-ignore -->
 ```javascript
-const res = await api.call( "/v1/admin/users/setUsername", userId, newUsername, newPassword? );
+const res = await api.call( "/v1/admin/users/set-username", user_id, new_username, new_password? );
 ```
 
 #### **Shell**
@@ -458,15 +458,15 @@ curl \
     -X POST \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
-    -d '[userId, newUsername, newPassword?]' \
-    "https://arbitrator.net/api/v1/admin/users/setUsername"
+    -d '[user_id, new_username, new_password?]' \
+    "https://arbitrator.net/api/v1/admin/users/set-username"
 ```
 
 <!-- tabs:end -->
 
--   `userId` <string\>
--   `newUsername` <string\>
--   `newPassword?` <string\>
+-   `user_id` <string\>
+-   `new_username` <string\>
+-   `new_password?` <string\>
 
 ### Delete user sessions
 
@@ -478,7 +478,7 @@ Method access permissions: `"admin"`.
 
 <!-- prettier-ignore -->
 ```javascript
-const res = await api.call( "/v1/admin/users/deleteSessions", userId );
+const res = await api.call( "/v1/admin/users/delete-sessions", user_id );
 ```
 
 #### **Shell**
@@ -489,13 +489,13 @@ curl \
     -X POST \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
-    -d '[userId]' \
-    "https://arbitrator.net/api/v1/admin/users/deleteSessions"
+    -d '[user_id]' \
+    "https://arbitrator.net/api/v1/admin/users/delete-sessions"
 ```
 
 <!-- tabs:end -->
 
--   `userId` <string\>
+-   `user_id` <string\>
 
 ## API access tokens
 
@@ -509,7 +509,7 @@ Method access permissions: `"user"`.
 
 <!-- prettier-ignore -->
 ```javascript
-const res = await api.call( "/v1/apiTokens/read", options? );
+const res = await api.call( "/v1/api-tokens/read", options? );
 ```
 
 #### **Shell**
@@ -521,7 +521,7 @@ curl \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
     -d '[options?]' \
-    "https://arbitrator.net/api/v1/apiTokens/read"
+    "https://arbitrator.net/api/v1/api-tokens/read"
 ```
 
 <!-- tabs:end -->
@@ -538,7 +538,7 @@ Method access permissions: `"user"`.
 
 <!-- prettier-ignore -->
 ```javascript
-const res = await api.call( "/v1/apiTokens/create", name );
+const res = await api.call( "/v1/api-tokens/create", name );
 ```
 
 #### **Shell**
@@ -550,7 +550,7 @@ curl \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
     -d '[name]' \
-    "https://arbitrator.net/api/v1/apiTokens/create"
+    "https://arbitrator.net/api/v1/api-tokens/create"
 ```
 
 <!-- tabs:end -->
@@ -567,7 +567,7 @@ Method access permissions: `"user"`.
 
 <!-- prettier-ignore -->
 ```javascript
-const res = await api.call( "/v1/apiTokens/delete", tokenId );
+const res = await api.call( "/v1/api-tokens/delete", token_id );
 ```
 
 #### **Shell**
@@ -578,13 +578,13 @@ curl \
     -X POST \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
-    -d '[tokenId]' \
-    "https://arbitrator.net/api/v1/apiTokens/delete"
+    -d '[token_id]' \
+    "https://arbitrator.net/api/v1/api-tokens/delete"
 ```
 
 <!-- tabs:end -->
 
--   `tokenId` <string\>
+-   `token_id` <string\>
 
 ### Set token enabled
 
@@ -596,7 +596,7 @@ Method access permissions: `"user"`.
 
 <!-- prettier-ignore -->
 ```javascript
-const res = await api.call( "/v1/apiTokens/setEnabled", tokenId, enabled );
+const res = await api.call( "/v1/api-tokens/set-enabled", token_id, enabled );
 ```
 
 #### **Shell**
@@ -607,13 +607,13 @@ curl \
     -X POST \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
-    -d '[tokenId, enabled]' \
-    "https://arbitrator.net/api/v1/apiTokens/setEnabled"
+    -d '[token_id, enabled]' \
+    "https://arbitrator.net/api/v1/api-tokens/set-enabled"
 ```
 
 <!-- tabs:end -->
 
--   `tokenId` <string\>
+-   `token_id` <string\>
 -   `enabled` <boolean\>
 
 ### Get token permissions
@@ -626,7 +626,7 @@ Method access permissions: `"user"`.
 
 <!-- prettier-ignore -->
 ```javascript
-const res = await api.call( "/v1/apiTokens/getPermissions", tokenId );
+const res = await api.call( "/v1/api-tokens/get-permissions", token_id );
 ```
 
 #### **Shell**
@@ -637,13 +637,13 @@ curl \
     -X POST \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
-    -d '[tokenId]' \
-    "https://arbitrator.net/api/v1/apiTokens/getPermissions"
+    -d '[token_id]' \
+    "https://arbitrator.net/api/v1/api-tokens/get-permissions"
 ```
 
 <!-- tabs:end -->
 
--   `tokenId` <string\>
+-   `token_id` <string\>
 
 ### Set token permissions
 
@@ -655,7 +655,7 @@ Method access permissions: `"user"`.
 
 <!-- prettier-ignore -->
 ```javascript
-const res = await api.call( "/v1/apiTokens/setPermissions", tokenId, permissions );
+const res = await api.call( "/v1/api-tokens/set-permissions", token_id, permissions );
 ```
 
 #### **Shell**
@@ -666,13 +666,13 @@ curl \
     -X POST \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
-    -d '[tokenId, permissions]' \
-    "https://arbitrator.net/api/v1/apiTokens/setPermissions"
+    -d '[token_id, permissions]' \
+    "https://arbitrator.net/api/v1/api-tokens/set-permissions"
 ```
 
 <!-- tabs:end -->
 
--   `tokenId` <string\> Token ID.
+-   `token_id` <string\> Token ID.
 -   `permissions` <Object\> Object contains permissions to set:
     -   Key <string\> Permission name.
     -   Value <boolean\> `true` to enable permission.
@@ -689,7 +689,7 @@ Method access permissions: `"user"`.
 
 <!-- prettier-ignore -->
 ```javascript
-const res = await api.call( "/v1/apiTokens/updatePermissions", tokenId, permissions );
+const res = await api.call( "/v1/api-tokens/update-permissions", token_id, permissions );
 ```
 
 #### **Shell**
@@ -700,13 +700,13 @@ curl \
     -X POST \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
-    -d '[tokenId, permissions]' \
-    "https://arbitrator.net/api/v1/apiTokens/updatePermissions"
+    -d '[token_id, permissions]' \
+    "https://arbitrator.net/api/v1/api-tokens/update-permissions"
 ```
 
 <!-- tabs:end -->
 
--   `tokenId` <string\> Token ID.
+-   `token_id` <string\> Token ID.
 -   `permissions` <Object\> Object contains permissions to update:
     -   Key <string\> Permission name.
     -   Value <boolean\> `true` to enable permission.
@@ -750,7 +750,7 @@ curl \
         -   `search` <Array\> Filter by the `search` field value:
             -   <string\> Filter operator, one of the: `"like"`.
             -   <string\> Field value.
-    -   `orderBy` <Array\> Array of the sort conditions. **Default:** `[["date","desc"]]`. Each sort condition must be represented with the two-elements <Array\> with the following structure:
+    -   `order_by` <Array\> Array of the sort conditions. **Default:** `[["date","desc"]]`. Each sort condition must be represented with the two-elements <Array\> with the following structure:
         -   <string\> Field name to sort by, possible fields: `"id"`, `"name"`, `"created"`, `"enabled"`.
         -   <string\> Sort direction, can be `"asc"` or `"desc"`. **Default:** `"asc"`.
     -   `offset` <integer\> Return result, starting from the specified row. `0` - from the first row. **Default:** `0`.
@@ -763,7 +763,7 @@ curl \
                 "field_b": ["!=", null],
                 "field_c": ["=", "string"]
             },
-            "orderBy": [
+            "order_by": [
                 ["field_a", "asc"],
                 ["field_b", "desc"]
             ],
@@ -782,7 +782,7 @@ Method access permissions: `"*"`.
 
 <!-- prettier-ignore -->
 ```javascript
-const res = await api.call( "/v1/notifications/markRead", notifications? );
+const res = await api.call( "/v1/notifications/mark-read", notifications? );
 ```
 
 #### **Shell**
@@ -794,7 +794,7 @@ curl \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
     -d '[notifications?]' \
-    "https://arbitrator.net/api/v1/notifications/markRead"
+    "https://arbitrator.net/api/v1/notifications/mark-read"
 ```
 
 <!-- tabs:end -->
@@ -811,7 +811,7 @@ Method access permissions: `"*"`.
 
 <!-- prettier-ignore -->
 ```javascript
-const res = await api.call( "/v1/notifications/markUnread", notifications? );
+const res = await api.call( "/v1/notifications/mark-unread", notifications? );
 ```
 
 #### **Shell**
@@ -823,7 +823,7 @@ curl \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
     -d '[notifications?]' \
-    "https://arbitrator.net/api/v1/notifications/markUnread"
+    "https://arbitrator.net/api/v1/notifications/mark-unread"
 ```
 
 <!-- tabs:end -->
@@ -895,7 +895,7 @@ Method access permissions: `"user"`.
 
 <!-- prettier-ignore -->
 ```javascript
-const res = await api.call( "/v1/profile/setPassword", password );
+const res = await api.call( "/v1/profile/set-password", password );
 ```
 
 #### **Shell**
@@ -907,7 +907,7 @@ curl \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
     -d '[password]' \
-    "https://arbitrator.net/api/v1/profile/setPassword"
+    "https://arbitrator.net/api/v1/profile/set-password"
 ```
 
 <!-- tabs:end -->
@@ -924,7 +924,7 @@ Method access permissions: `"user"`.
 
 <!-- prettier-ignore -->
 ```javascript
-const res = await api.call( "/v1/profile/setEmail", email? );
+const res = await api.call( "/v1/profile/set-email", email? );
 ```
 
 #### **Shell**
@@ -936,7 +936,7 @@ curl \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
     -d '[email?]' \
-    "https://arbitrator.net/api/v1/profile/setEmail"
+    "https://arbitrator.net/api/v1/profile/set-email"
 ```
 
 <!-- tabs:end -->
@@ -953,7 +953,7 @@ Method access permissions: `"user"`.
 
 <!-- prettier-ignore -->
 ```javascript
-const res = await api.call( "/v1/profile/setTelegramUsername", telegramUsername? );
+const res = await api.call( "/v1/profile/set-telegram-username", telegram_username? );
 ```
 
 #### **Shell**
@@ -964,13 +964,13 @@ curl \
     -X POST \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
-    -d '[telegramUsername?]' \
-    "https://arbitrator.net/api/v1/profile/setTelegramUsername"
+    -d '[telegram_username?]' \
+    "https://arbitrator.net/api/v1/profile/set-telegram-username"
 ```
 
 <!-- tabs:end -->
 
--   `telegramUsername?` <string\> Telegram username to set, if not specified current telegram user name will be removed.
+-   `telegram_username?` <string\> Telegram username to set, if not specified current telegram user name will be removed.
 
 ### Delete sessions
 
@@ -982,7 +982,7 @@ Method access permissions: `"user"`.
 
 <!-- prettier-ignore -->
 ```javascript
-const res = await api.call( "/v1/profile/deleteSessions" );
+const res = await api.call( "/v1/profile/delete-sessions" );
 ```
 
 #### **Shell**
@@ -991,7 +991,7 @@ const res = await api.call( "/v1/profile/deleteSessions" );
 ```shell
 curl \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
-    "https://arbitrator.net/api/v1/profile/deleteSessions"
+    "https://arbitrator.net/api/v1/profile/delete-sessions"
 ```
 
 <!-- tabs:end -->
@@ -1008,7 +1008,7 @@ Method access permissions: `"*"`.
 
 <!-- prettier-ignore -->
 ```javascript
-const res = await api.call( "/v1/session/signin", credentials?, signinPermissions? );
+const res = await api.call( "/v1/session/signin", credentials?, signin_permissions? );
 ```
 
 #### **Shell**
@@ -1019,14 +1019,14 @@ curl \
     -X POST \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
-    -d '[credentials?, signinPermissions?]' \
+    -d '[credentials?, signin_permissions?]' \
     "https://arbitrator.net/api/v1/session/signin"
 ```
 
 <!-- tabs:end -->
 
 -   `credentials?` <Object\>
--   `signinPermissions?` <null\> | <Array\> Array of permissions. Only user, who has this permissions can sign in. If `null` permissions will not check.
+-   `signin_permissions?` <null\> | <Array\> Array of permissions. Only user, who has this permissions can sign in. If `null` permissions will not check.
 
 If `credentials` parameter is specified - will try to sign in user using username and password, otherwise will try to sign in user, using currently used api token.
 
@@ -1103,7 +1103,7 @@ Method access permissions: `"*"`.
 
 <!-- prettier-ignore -->
 ```javascript
-const res = await api.call( "/v1/session/sendConfirmationEmail", userId );
+const res = await api.call( "/v1/session/send-confirmation-email", user_id );
 ```
 
 #### **Shell**
@@ -1114,13 +1114,13 @@ curl \
     -X POST \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
-    -d '[userId]' \
-    "https://arbitrator.net/api/v1/session/sendConfirmationEmail"
+    -d '[user_id]' \
+    "https://arbitrator.net/api/v1/session/send-confirmation-email"
 ```
 
 <!-- tabs:end -->
 
--   `userId` <string\> User name or email.
+-   `user_id` <string\> User name or email.
 
 ### Confirm user email using email confirmation token
 
@@ -1132,7 +1132,7 @@ Method access permissions: `"*"`.
 
 <!-- prettier-ignore -->
 ```javascript
-const res = await api.call( "/v1/session/confirmEmailByToken", token );
+const res = await api.call( "/v1/session/confirm-email-by-token", token );
 ```
 
 #### **Shell**
@@ -1144,7 +1144,7 @@ curl \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
     -d '[token]' \
-    "https://arbitrator.net/api/v1/session/confirmEmailByToken"
+    "https://arbitrator.net/api/v1/session/confirm-email-by-token"
 ```
 
 <!-- tabs:end -->
@@ -1161,7 +1161,7 @@ Method access permissions: `"*"`.
 
 <!-- prettier-ignore -->
 ```javascript
-const res = await api.call( "/v1/session/sendPasswordResetEmail", userId );
+const res = await api.call( "/v1/session/send-password-reset-email", user_id );
 ```
 
 #### **Shell**
@@ -1172,13 +1172,13 @@ curl \
     -X POST \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
-    -d '[userId]' \
-    "https://arbitrator.net/api/v1/session/sendPasswordResetEmail"
+    -d '[user_id]' \
+    "https://arbitrator.net/api/v1/session/send-password-reset-email"
 ```
 
 <!-- tabs:end -->
 
--   `userId` <string\> User name or email.
+-   `user_id` <string\> User name or email.
 
 ### Set user password using password recovery token
 
@@ -1190,7 +1190,7 @@ Method access permissions: `"*"`.
 
 <!-- prettier-ignore -->
 ```javascript
-const res = await api.call( "/v1/session/setPasswordByToken", token, password );
+const res = await api.call( "/v1/session/set-password-by-token", token, password );
 ```
 
 #### **Shell**
@@ -1202,7 +1202,7 @@ curl \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
     -d '[token, password]' \
-    "https://arbitrator.net/api/v1/session/setPasswordByToken"
+    "https://arbitrator.net/api/v1/session/set-password-by-token"
 ```
 
 <!-- tabs:end -->
