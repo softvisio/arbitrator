@@ -9,9 +9,8 @@
     },
     "scripts": {
         "build": "softvisio-webpack build --mode=production",
-        "build-cordova": "softvisio-webpack build --cordova --mode=production",
-        "build-cordova-devel": "softvisio-webpack build --cordova --mode=development",
-        "serve": "softvisio-webpack serve"
+        "build-cordova": "softvisio-webpack build --mode=production --cordova",
+        "serve": "softvisio-webpack serve --mode=development"
     },
     "devDependencies": {
         "@softvisio/vue-ext": "^6.0.0"
