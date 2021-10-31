@@ -1,5 +1,6 @@
 {
     "module": "main",
     "type": "pgsql",
-    "patch": null
+    "patch": null,
+    "emits": []
 }
