@@ -44,7 +44,7 @@ export default {
         },
 
         canCreateTeam () {
-            return this.$store.session.hasPermissions( "create-teams" );
+            return this.$store.session.hasPermissions( "create_teams" );
         },
     },
 
