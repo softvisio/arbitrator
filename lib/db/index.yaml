@@ -1,0 +1,4 @@
+module: main
+type: pgsql
+patch: ~
+emits: []
