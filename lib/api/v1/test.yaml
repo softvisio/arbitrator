@@ -11,13 +11,10 @@ methods:
 
   upload:
     title: Test upload
-    meta:
-      type: upload
-      uploadMaxSize: .inf # infinity
     params:
       - name: file
         schema:
-          instanceof: File
+          file: { maxSize: .inf, contentType: "" }
       - name: data
         schema:
           type: [string, object]
