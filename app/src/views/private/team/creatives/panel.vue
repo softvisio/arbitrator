@@ -1,18 +1,17 @@
 <template>
     <ext-tabpanel tabBar='{"items":[{"iconCls":"fas fa-redo"}]}'>
-        <!-- <ext&#45;toolbar docked="top"> -->
-        <!--     <ext&#45;container html="Creatives"/> -->
-        <!--     <ext&#45;spacer/> -->
-        <!--     <ext&#45;button ref="refreshButton" iconCls="fas fa&#45;redo" text="Refresh"/> -->
-        <!-- </ext&#45;toolbar> -->
+        <ext-toolbar docked="top">
+            <ext-container html="Creatives"/>
+            <ext-spacer/>
+            <ext-button ref="refreshButton" iconCls="fas fa-redo" text="Refresh"/>
+        </ext-toolbar>
 
-        <!-- <ext&#45;tabbar> -->
-        <!--     <ext&#45;tab iconCls="fas fa&#45;redo"/> -->
-        <!-- </ext&#45;tabbar> -->
+        <ext-tabbar>
+            <ext-tab iconCls="fas fa-redo"/>
+        </ext-tabbar>
 
-        <!-- <ext&#45;panel/> -->
-        <!-- <ext&#45;panel/> -->
-        <!-- <ext&#45;tab> -->
+        <ext-panel/>
+        <ext-panel/>
     </ext-tabpanel>
 </template>
 

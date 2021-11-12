@@ -21,3 +21,16 @@ methods:
       - name: data
         schema:
           type: [string, object]
+
+  read:
+    title: Get API method access log
+    meta:
+      type: read
+      readMaxResults: 500
+      readMaxLimit: 100
+      readDefaultOrderBy: [["id", "asc"]]
+    params:
+      - name: options
+        schema:
+          apiRead:
+            id: { type: string, sortable: true }

@@ -12,13 +12,18 @@
         <!--     <StreamsPanel/> -->
         <!-- </ext-panel> -->
 
-        <ext-panel iconCls="far fa-images" title="Creatives">
+        <ext-panel iconCls="far fa-images" title="Creatives" layout="fit">
             <ext-toolbar docked="top">
                 <ext-container html="Creatives"/>
                 <ext-spacer/>
-                <ext-button text="Refresh"/>
+                <ext-button text="Refresh" @tap="_reloadCreatives"/>
             </ext-toolbar>
+
+            <ext-grid scrollToTopOnRefresh1="true" @ready="_gridReady">
+                <ext-column text="ID" dataIndex="id" flex="1"/>
+            </ext-grid>
         </ext-panel>
+
         <ext-panel iconCls="fas fa-user-friends" title="Users" layout="vbox">
             <ext-toolbar docked="top">
                 <ext-container html="Teams"/>
@@ -28,6 +33,7 @@
             <ext-chart flex="1" @ready="chartReady"/>
             <ext-chart flex="1" @ready="chartReady"/>
         </ext-panel>
+
         <ext-panel iconCls="fas fa-flag-checkered" title="Reports"/>
         <ext-panel iconCls="fas fa-ad" title="Teams"/>
         <ext-panel iconCls="fas fa-dollar-sign" title="Account"/>
@@ -47,6 +53,50 @@ export default {
     "components": { StreamsPanel },
 
     "methods": {
+        _gridReady ( e ) {
+            const cmp = e.detail.cmp;
+
+            // cmp.setScrollToTopOnRefresh( true );
+
+            const model = Ext.define( "", {
+                "extend": "Ext.data.Model",
+                "proxy": {
+                    "api": {
+                        "read": "test/read",
+                    },
+                },
+
+                "fields": [{ "name": "id", "type": "string" }],
+            } );
+
+            // this.creativesStore = Ext.create( "Ext.data.virtual.Store", {
+            //     "model": model,
+            //     "autoLoad": true,
+
+            //     // "pageSize": 300,
+            //     // "leadingBufferZone": 50,
+            // } );
+
+            this.creativesStore = Ext.create( "Ext.data.Store", {
+                "model": model,
+                "autoLoad": true,
+                "pageSize": 100,
+            } );
+
+            cmp.setPlugins( ["autopaging"] );
+
+            cmp.setStore( this.creativesStore );
+
+            // store.load();
+        },
+
+        _reloadCreatives () {
+
+            // this.creativesStore.reload();
+            // this.creativesStore.load(1);
+
+            this.creativesStore.loadPage( 1 );
+        },
 
         // XXX
         setTeam ( team ) {
