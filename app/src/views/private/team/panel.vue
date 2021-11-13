@@ -69,14 +69,6 @@ export default {
                 "fields": [{ "name": "id", "type": "string" }],
             } );
 
-            // this.creativesStore = Ext.create( "Ext.data.virtual.Store", {
-            //     "model": model,
-            //     "autoLoad": true,
-
-            //     // "pageSize": 300,
-            //     // "leadingBufferZone": 50,
-            // } );
-
             this.creativesStore = Ext.create( "Ext.data.Store", {
                 "model": model,
                 "autoLoad": true,
