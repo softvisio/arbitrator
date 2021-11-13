@@ -14,7 +14,7 @@ methods:
     params:
       - name: file
         schema:
-          file: { maxSize: .inf, contentType: "" }
+          file: { maxSize: 10_000_000, contentType: "text/plain" }
       - name: data
         schema:
           type: [string, object]
@@ -23,7 +23,7 @@ methods:
     title: Get API method access log
     meta:
       type: read
-      readMaxResults: 500
+      readMaxResults: 540
       readMaxLimit: 100
       readDefaultOrderBy: [["id", "asc"]]
     params:

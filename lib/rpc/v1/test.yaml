@@ -20,16 +20,12 @@ methods:
 
   upload:
     title: Test upload
-    meta:
-      type: upload
-      uploadMaxSize: 52_428_800 # 50Mb
-      uploadContentType: ["text/plain", "text/html"]
     params:
       - name: file
         description: Uploaded file.
         required: true
         schema:
-          instanceof: File
+          file: { maxSize: 52_428_800, contentType: ["text/plain", "text/html"] } # 50Mb
       - name: data
         schema:
           type: object
