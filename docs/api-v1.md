@@ -470,7 +470,7 @@ curl \
 
 ## API access tokens
 
-### Read tokens
+### Get tokens
 
 Method access permissions: `"user"`.
 
@@ -480,7 +480,7 @@ Method access permissions: `"user"`.
 
 <!-- prettier-ignore -->
 ```javascript
-const res = await api.call( "/v1/api-tokens/read", options? );
+const res = await api.call( "/v1/api-tokens/get-api-tokens" );
 ```
 
 #### **Shell**
@@ -488,16 +488,11 @@ const res = await api.call( "/v1/api-tokens/read", options? );
 <!-- prettier-ignore -->
 ```shell
 curl \
-    -X POST \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
-    -H "Content-Type: application/json" \
-    -d '[options?]' \
-    "https://arbitrator.net/api/v1/api-tokens/read"
+    "https://arbitrator.net/api/v1/api-tokens/get-api-tokens"
 ```
 
 <!-- tabs:end -->
-
--   `options?` <Object\>
 
 ### Generate new token
 
