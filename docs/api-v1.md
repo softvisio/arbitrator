@@ -29,7 +29,7 @@ const api = Api.new( "https://arbitrator.net/api/" )
 
 ## Application API call log
 
-### Read API method access log
+### Get API method access log
 
 Method access permissions: `"admin"`.
 
@@ -39,7 +39,7 @@ Method access permissions: `"admin"`.
 
 <!-- prettier-ignore -->
 ```javascript
-const res = await api.call( "/v1/admin/api-call-log/read-log", options? );
+const res = await api.call( "/v1/admin/api-call-log/read-api-method-access-log", options? );
 ```
 
 #### **Shell**
@@ -51,7 +51,7 @@ curl \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
     -d '[options?]' \
-    "https://arbitrator.net/api/v1/admin/api-call-log/read-log"
+    "https://arbitrator.net/api/v1/admin/api-call-log/read-api-method-access-log"
 ```
 
 <!-- tabs:end -->
@@ -62,7 +62,7 @@ curl \
             -   <string\> Filter operator, one of the: `"="`.
             -   <string\> Field value.
     -   `offset` <integer\> Return result, starting from the specified row. `0` - from the first row. **Default:** `0`.
-    -   `limit` <integer\> Max rows to return. Maximum allowed value: `100`. **Default:** `100`.
+    -   `limit` <integer\> Max rows to return.
     -   Example (this is the abstract data structure example, not related to the current method):
         ```json
         {
@@ -90,7 +90,7 @@ Method access permissions: `"admin"`.
 
 <!-- prettier-ignore -->
 ```javascript
-const res = await api.call( "/v1/admin/api-call-log/read-latest-stat", method_id? );
+const res = await api.call( "/v1/admin/api-call-log/get-latest-stats", method_id? );
 ```
 
 #### **Shell**
@@ -102,7 +102,7 @@ curl \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
     -d '[method_id?]' \
-    "https://arbitrator.net/api/v1/admin/api-call-log/read-latest-stat"
+    "https://arbitrator.net/api/v1/admin/api-call-log/get-latest-stats"
 ```
 
 <!-- tabs:end -->
@@ -121,7 +121,7 @@ Method access permissions: `"admin"`.
 
 <!-- prettier-ignore -->
 ```javascript
-const res = await api.call( "/v1/admin/api-call-log/read-history-stat", method_id );
+const res = await api.call( "/v1/admin/api-call-log/get-history-stats", method_id );
 ```
 
 #### **Shell**
@@ -133,7 +133,7 @@ curl \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
     -d '[method_id]' \
-    "https://arbitrator.net/api/v1/admin/api-call-log/read-history-stat"
+    "https://arbitrator.net/api/v1/admin/api-call-log/get-history-stats"
 ```
 
 <!-- tabs:end -->
@@ -179,11 +179,11 @@ curl \
         -   `search` <Array\> Filter by the `search` field value:
             -   <string\> Filter operator, one of the: `"like"`.
             -   <string\> Field value.
-    -   `order_by` <Array\> Array of the sort conditions. **Default:** `[["name","desc"]]`. Each sort condition must be represented with the two-elements <Array\> with the following structure:
+    -   `order_by` <Array\> Array of the sort conditions. Each sort condition must be represented with the two-elements <Array\> with the following structure:
         -   <string\> Field name to sort by, possible fields: `"id"`, `"name"`, `"created"`, `"enabled"`.
         -   <string\> Sort direction, can be `"asc"` or `"desc"`. **Default:** `"asc"`.
     -   `offset` <integer\> Return result, starting from the specified row. `0` - from the first row. **Default:** `0`.
-    -   `limit` <integer\> Max rows to return. Maximum allowed value: `100`. **Default:** `100`.
+    -   `limit` <integer\> Max rows to return.
     -   Example (this is the abstract data structure example, not related to the current method):
         ```json
         {
@@ -407,35 +407,6 @@ curl \
 
 -   `user_id` <string\>
 -   `permissions` <Object\>
-
-### Suggest user name
-
-Method access permissions: `"admin"`.
-
-<!-- tabs:start -->
-
-#### **JavaScript**
-
-<!-- prettier-ignore -->
-```javascript
-const res = await api.call( "/v1/admin/users/suggest", options? );
-```
-
-#### **Shell**
-
-<!-- prettier-ignore -->
-```shell
-curl \
-    -X POST \
-    -H "Authorization: Bearer <YOUR-API-TOKEN>" \
-    -H "Content-Type: application/json" \
-    -d '[options?]' \
-    "https://arbitrator.net/api/v1/admin/users/suggest"
-```
-
-<!-- tabs:end -->
-
--   `options?` <Object\>
 
 ### Change user name
 
@@ -715,9 +686,64 @@ Update token permissions. Permissions will be added or replaced.
 
 ## Notifications
 
+### Get user notifications settings
+
+Method access permissions: `"user"`.
+
+<!-- tabs:start -->
+
+#### **JavaScript**
+
+<!-- prettier-ignore -->
+```javascript
+const res = await api.call( "/v1/notifications/get-notifications-settings" );
+```
+
+#### **Shell**
+
+<!-- prettier-ignore -->
+```shell
+curl \
+    -H "Authorization: Bearer <YOUR-API-TOKEN>" \
+    "https://arbitrator.net/api/v1/notifications/get-notifications-settings"
+```
+
+<!-- tabs:end -->
+
+### Set user notification channel status
+
+Method access permissions: `"user"`.
+
+<!-- tabs:start -->
+
+#### **JavaScript**
+
+<!-- prettier-ignore -->
+```javascript
+const res = await api.call( "/v1/notifications/set-user-notification-channel", type, channel, enabled );
+```
+
+#### **Shell**
+
+<!-- prettier-ignore -->
+```shell
+curl \
+    -X POST \
+    -H "Authorization: Bearer <YOUR-API-TOKEN>" \
+    -H "Content-Type: application/json" \
+    -d '[type, channel, enabled]' \
+    "https://arbitrator.net/api/v1/notifications/set-user-notification-channel"
+```
+
+<!-- tabs:end -->
+
+-   `type` <string\>
+-   `channel` <string\>
+-   `enabled` <boolean\>
+
 ### Read notifications
 
-Method access permissions: `"*"`.
+Method access permissions: `"user"`.
 
 <!-- tabs:start -->
 
@@ -744,17 +770,11 @@ curl \
 
 -   `options?` <Object\>
     -   `where` <Object\> Set of fields filters:
-        -   `id` <Array\> Filter by the `id` field value:
+        -   `done` <Array\> Filter by the `done` field value:
             -   <string\> Filter operator, one of the: `"="`.
-            -   <string\> Field value.
-        -   `search` <Array\> Filter by the `search` field value:
-            -   <string\> Filter operator, one of the: `"like"`.
-            -   <string\> Field value.
-    -   `order_by` <Array\> Array of the sort conditions. **Default:** `[["date","desc"]]`. Each sort condition must be represented with the two-elements <Array\> with the following structure:
-        -   <string\> Field name to sort by, possible fields: `"id"`, `"name"`, `"created"`, `"enabled"`.
-        -   <string\> Sort direction, can be `"asc"` or `"desc"`. **Default:** `"asc"`.
+            -   <boolean\> Field value.
     -   `offset` <integer\> Return result, starting from the specified row. `0` - from the first row. **Default:** `0`.
-    -   `limit` <integer\> Max rows to return. Maximum allowed value: `100`. **Default:** `100`.
+    -   `limit` <integer\> Max rows to return.
     -   Example (this is the abstract data structure example, not related to the current method):
         ```json
         {
@@ -772,9 +792,9 @@ curl \
         }
         ```
 
-### Mark UI notifications as read
+### Set notifications as read
 
-Method access permissions: `"*"`.
+Method access permissions: `"user"`.
 
 <!-- tabs:start -->
 
@@ -782,7 +802,7 @@ Method access permissions: `"*"`.
 
 <!-- prettier-ignore -->
 ```javascript
-const res = await api.call( "/v1/notifications/mark-read", notifications? );
+const res = await api.call( "/v1/notifications/set-read", notifications? );
 ```
 
 #### **Shell**
@@ -794,16 +814,16 @@ curl \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
     -d '[notifications?]' \
-    "https://arbitrator.net/api/v1/notifications/mark-read"
+    "https://arbitrator.net/api/v1/notifications/set-read"
 ```
 
 <!-- tabs:end -->
 
 -   `notifications?` <Array\>
 
-### Mark UI notifications as unread
+### Set all notifications as read
 
-Method access permissions: `"*"`.
+Method access permissions: `"user"`.
 
 <!-- tabs:start -->
 
@@ -811,7 +831,31 @@ Method access permissions: `"*"`.
 
 <!-- prettier-ignore -->
 ```javascript
-const res = await api.call( "/v1/notifications/mark-unread", notifications? );
+const res = await api.call( "/v1/notifications/set-read-all" );
+```
+
+#### **Shell**
+
+<!-- prettier-ignore -->
+```shell
+curl \
+    -H "Authorization: Bearer <YOUR-API-TOKEN>" \
+    "https://arbitrator.net/api/v1/notifications/set-read-all"
+```
+
+<!-- tabs:end -->
+
+### Set notifications as unread
+
+Method access permissions: `"user"`.
+
+<!-- tabs:start -->
+
+#### **JavaScript**
+
+<!-- prettier-ignore -->
+```javascript
+const res = await api.call( "/v1/notifications/set-unread", notifications? );
 ```
 
 #### **Shell**
@@ -823,16 +867,146 @@ curl \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
     -d '[notifications?]' \
-    "https://arbitrator.net/api/v1/notifications/mark-unread"
+    "https://arbitrator.net/api/v1/notifications/set-unread"
 ```
 
 <!-- tabs:end -->
 
 -   `notifications?` <Array\>
 
-### Delete UI notification
+### Set all notifications as unread
 
-Method access permissions: `"*"`.
+Method access permissions: `"user"`.
+
+<!-- tabs:start -->
+
+#### **JavaScript**
+
+<!-- prettier-ignore -->
+```javascript
+const res = await api.call( "/v1/notifications/set-unread-all" );
+```
+
+#### **Shell**
+
+<!-- prettier-ignore -->
+```shell
+curl \
+    -H "Authorization: Bearer <YOUR-API-TOKEN>" \
+    "https://arbitrator.net/api/v1/notifications/set-unread-all"
+```
+
+<!-- tabs:end -->
+
+### Set notifications as done
+
+Method access permissions: `"user"`.
+
+<!-- tabs:start -->
+
+#### **JavaScript**
+
+<!-- prettier-ignore -->
+```javascript
+const res = await api.call( "/v1/notifications/set-done", notifications? );
+```
+
+#### **Shell**
+
+<!-- prettier-ignore -->
+```shell
+curl \
+    -X POST \
+    -H "Authorization: Bearer <YOUR-API-TOKEN>" \
+    -H "Content-Type: application/json" \
+    -d '[notifications?]' \
+    "https://arbitrator.net/api/v1/notifications/set-done"
+```
+
+<!-- tabs:end -->
+
+-   `notifications?` <Array\>
+
+### Set all notifications as done
+
+Method access permissions: `"user"`.
+
+<!-- tabs:start -->
+
+#### **JavaScript**
+
+<!-- prettier-ignore -->
+```javascript
+const res = await api.call( "/v1/notifications/set-done-all" );
+```
+
+#### **Shell**
+
+<!-- prettier-ignore -->
+```shell
+curl \
+    -H "Authorization: Bearer <YOUR-API-TOKEN>" \
+    "https://arbitrator.net/api/v1/notifications/set-done-all"
+```
+
+<!-- tabs:end -->
+
+### Set notifications as undone
+
+Method access permissions: `"user"`.
+
+<!-- tabs:start -->
+
+#### **JavaScript**
+
+<!-- prettier-ignore -->
+```javascript
+const res = await api.call( "/v1/notifications/set-undone", notifications? );
+```
+
+#### **Shell**
+
+<!-- prettier-ignore -->
+```shell
+curl \
+    -X POST \
+    -H "Authorization: Bearer <YOUR-API-TOKEN>" \
+    -H "Content-Type: application/json" \
+    -d '[notifications?]' \
+    "https://arbitrator.net/api/v1/notifications/set-undone"
+```
+
+<!-- tabs:end -->
+
+-   `notifications?` <Array\>
+
+### Set all notifications as undone
+
+Method access permissions: `"user"`.
+
+<!-- tabs:start -->
+
+#### **JavaScript**
+
+<!-- prettier-ignore -->
+```javascript
+const res = await api.call( "/v1/notifications/set-undone-all" );
+```
+
+#### **Shell**
+
+<!-- prettier-ignore -->
+```shell
+curl \
+    -H "Authorization: Bearer <YOUR-API-TOKEN>" \
+    "https://arbitrator.net/api/v1/notifications/set-undone-all"
+```
+
+<!-- tabs:end -->
+
+### Delete notification
+
+Method access permissions: `"user"`.
 
 <!-- tabs:start -->
 
@@ -858,6 +1032,30 @@ curl \
 <!-- tabs:end -->
 
 -   `notifications?` <Array\>
+
+### Delete all notifications
+
+Method access permissions: `"user"`.
+
+<!-- tabs:start -->
+
+#### **JavaScript**
+
+<!-- prettier-ignore -->
+```javascript
+const res = await api.call( "/v1/notifications/delete-all" );
+```
+
+#### **Shell**
+
+<!-- prettier-ignore -->
+```shell
+curl \
+    -H "Authorization: Bearer <YOUR-API-TOKEN>" \
+    "https://arbitrator.net/api/v1/notifications/delete-all"
+```
+
+<!-- tabs:end -->
 
 ## User profile
 
@@ -1268,5 +1466,55 @@ curl \
 
 <!-- tabs:end -->
 
--   `file?` <File\> Maximim file size: `∞` bytes.
+-   `file?` <File\> Maximim file size: `10,000,000` bytes. Allowed content types: `"text/plain"`.
 -   `data?` <string\> | <Object\>
+
+### Get API method access log
+
+Method access permissions: `"*"`.
+
+<!-- tabs:start -->
+
+#### **JavaScript**
+
+<!-- prettier-ignore -->
+```javascript
+const res = await api.call( "/v1/test/read", options? );
+```
+
+#### **Shell**
+
+<!-- prettier-ignore -->
+```shell
+curl \
+    -X POST \
+    -H "Authorization: Bearer <YOUR-API-TOKEN>" \
+    -H "Content-Type: application/json" \
+    -d '[options?]' \
+    "https://arbitrator.net/api/v1/test/read"
+```
+
+<!-- tabs:end -->
+
+-   `options?` <Object\>
+    -   `order_by` <Array\> Array of the sort conditions. Each sort condition must be represented with the two-elements <Array\> with the following structure:
+        -   <string\> Field name to sort by, possible fields: `"id"`.
+        -   <string\> Sort direction, can be `"asc"` or `"desc"`. **Default:** `"asc"`.
+    -   `offset` <integer\> Return result, starting from the specified row. `0` - from the first row. **Default:** `0`.
+    -   `limit` <integer\> Max rows to return.
+    -   Example (this is the abstract data structure example, not related to the current method):
+        ```json
+        {
+            "where": {
+                "field_a": [">=", 100],
+                "field_b": ["!=", null],
+                "field_c": ["=", "string"]
+            },
+            "order_by": [
+                ["field_a", "asc"],
+                ["field_b", "desc"]
+            ],
+            "offset": 100,
+            "limit": 50
+        }
+        ```
