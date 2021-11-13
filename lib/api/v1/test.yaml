@@ -21,13 +21,12 @@ methods:
 
   read:
     title: Get API method access log
-    meta:
-      type: read
-      readMaxResults: 540
-      readMaxLimit: 100
-      readDefaultOrderBy: [["id", "asc"]]
     params:
       - name: options
         schema:
-          apiRead:
-            id: { type: string, sortable: true }
+          read:
+            fields:
+              id: { type: string, sortable: true }
+            order_by: [["id", "asc"]]
+            limit: { max: 100 }
+            max_results: 540
