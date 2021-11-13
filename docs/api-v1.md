@@ -57,12 +57,12 @@ curl \
 <!-- tabs:end -->
 
 -   `options?` <Object\>
-    -   `where` <Object\> Set of fields filters:
+    -   `where` <Object\> Set of the filters by field values:
         -   `method_id` <Array\> **Required**. Filter by the `method_id` field value:
             -   <string\> Filter operator, one of the: `"="`.
             -   <string\> Field value.
-    -   `offset` <integer\> Return result, starting from the specified row. `0` - from the first row. **Default:** `0`.
-    -   `limit` <integer\> Max rows to return.
+    -   `offset` <integer\> Return results, starting from the specified row. `0` - from the first row. **Default:** `0`.
+    -   `limit` <integer\> Max rows to return. Maximum allowed value: `100`. **Default:** `100`.
     -   Example (this is the abstract data structure example, not related to the current method):
         ```json
         {
@@ -172,18 +172,18 @@ curl \
 <!-- tabs:end -->
 
 -   `options?` <Object\>
-    -   `where` <Object\> Set of fields filters:
+    -   `where` <Object\> Set of the filters by field values:
         -   `id` <Array\> Filter by the `id` field value:
             -   <string\> Filter operator, one of the: `"="`.
             -   <string\> Field value.
         -   `search` <Array\> Filter by the `search` field value:
             -   <string\> Filter operator, one of the: `"like"`.
             -   <string\> Field value.
-    -   `order_by` <Array\> Array of the sort conditions. Each sort condition must be represented with the two-elements <Array\> with the following structure:
+    -   `order_by` <Array\> Array of the sort conditions. **Default:** `[["name","desc"]]`. Each sort condition must be represented with the two-elements <Array\> with the following structure:
         -   <string\> Field name to sort by, possible fields: `"id"`, `"name"`, `"created"`, `"enabled"`.
         -   <string\> Sort direction, can be `"asc"` or `"desc"`. **Default:** `"asc"`.
-    -   `offset` <integer\> Return result, starting from the specified row. `0` - from the first row. **Default:** `0`.
-    -   `limit` <integer\> Max rows to return.
+    -   `offset` <integer\> Return results, starting from the specified row. `0` - from the first row. **Default:** `0`.
+    -   `limit` <integer\> Max rows to return. Maximum allowed value: `100`. **Default:** `100`.
     -   Example (this is the abstract data structure example, not related to the current method):
         ```json
         {
@@ -769,12 +769,12 @@ curl \
 <!-- tabs:end -->
 
 -   `options?` <Object\>
-    -   `where` <Object\> Set of fields filters:
+    -   `where` <Object\> Set of the filters by field values:
         -   `done` <Array\> Filter by the `done` field value:
             -   <string\> Filter operator, one of the: `"="`.
             -   <boolean\> Field value.
-    -   `offset` <integer\> Return result, starting from the specified row. `0` - from the first row. **Default:** `0`.
-    -   `limit` <integer\> Max rows to return.
+    -   `offset` <integer\> Return results, starting from the specified row. `0` - from the first row. **Default:** `0`.
+    -   `limit` <integer\> Max rows to return. Maximum allowed value: `100`. **Default:** `100`.
     -   Example (this is the abstract data structure example, not related to the current method):
         ```json
         {
@@ -1497,11 +1497,11 @@ curl \
 <!-- tabs:end -->
 
 -   `options?` <Object\>
-    -   `order_by` <Array\> Array of the sort conditions. Each sort condition must be represented with the two-elements <Array\> with the following structure:
+    -   `order_by` <Array\> Array of the sort conditions. **Default:** `[["id","asc"]]`. Each sort condition must be represented with the two-elements <Array\> with the following structure:
         -   <string\> Field name to sort by, possible fields: `"id"`.
         -   <string\> Sort direction, can be `"asc"` or `"desc"`. **Default:** `"asc"`.
-    -   `offset` <integer\> Return result, starting from the specified row. `0` - from the first row. **Default:** `0`.
-    -   `limit` <integer\> Max rows to return.
+    -   `offset` <integer\> Return results, starting from the specified row. `0` - from the first row. **Default:** `0`.
+    -   `limit` <integer\> Max rows to return. Maximum allowed value: `100`. **Default:** `100`. This method returns `330` rows maximum.
     -   Example (this is the abstract data structure example, not related to the current method):
         ```json
         {
