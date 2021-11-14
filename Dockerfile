@@ -11,5 +11,5 @@ RUN \
     && rm -rf .[!.]* !(www) \
     && popd \
     \
-    # cleanup node build environment
+    # cleanup
     && curl -fsSL https://raw.githubusercontent.com/softvisio/scripts/main/env-build-node.sh | /bin/bash -s -- cleanup
