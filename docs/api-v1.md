@@ -470,7 +470,7 @@ curl \
 
 ## API access tokens
 
-### Get tokens
+### Read API tokens
 
 Method access permissions: `"user"`.
 
@@ -480,7 +480,7 @@ Method access permissions: `"user"`.
 
 <!-- prettier-ignore -->
 ```javascript
-const res = await api.call( "/v1/api-tokens/get-api-tokens" );
+const res = await api.call( "/v1/api-tokens/read-api-tokens", options? );
 ```
 
 #### **Shell**
@@ -488,11 +488,44 @@ const res = await api.call( "/v1/api-tokens/get-api-tokens" );
 <!-- prettier-ignore -->
 ```shell
 curl \
+    -X POST \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
-    "https://arbitrator.net/api/v1/api-tokens/get-api-tokens"
+    -H "Content-Type: application/json" \
+    -d '[options?]' \
+    "https://arbitrator.net/api/v1/api-tokens/read-api-tokens"
 ```
 
 <!-- tabs:end -->
+
+-   `options?` <Object\>
+    -   `where` <Object\> Set of the filters by field values:
+        -   `name` <Array\> Filter by the `name` field value:
+            -   <string\> Filter operator, one of the: `"like"`.
+            -   <string\> Field value.
+        -   `enabled` <Array\> Filter by the `enabled` field value:
+            -   <string\> Filter operator, one of the: `"="`.
+            -   <boolean\> Field value.
+    -   `order_by` <Array\> Array of the sort conditions. **Default:** `[["name","asc"]]`. Each sort condition must be represented with the two-elements <Array\> with the following structure:
+        -   <string\> Field name to sort by, possible fields: `"name"`, `"created"`, `"enabled"`.
+        -   <string\> Sort direction, can be `"asc"` or `"desc"`. **Default:** `"asc"`.
+    -   `offset` <integer\> Return results, starting from the specified row. `0` - from the first row. **Default:** `0`.
+    -   `limit` <integer\> Max rows to return. Maximum allowed value: `100`. **Default:** `100`.
+    -   Example (this is the abstract data structure example, not related to the current method):
+        ```json
+        {
+            "where": {
+                "field_a": [">=", 100],
+                "field_b": ["!=", null],
+                "field_c": ["=", "string"]
+            },
+            "order_by": [
+                ["field_a", "asc"],
+                ["field_b", "desc"]
+            ],
+            "offset": 100,
+            "limit": 50
+        }
+        ```
 
 ### Generate new token
 
@@ -1053,30 +1086,6 @@ curl \
 <!-- tabs:end -->
 
 ## User profile
-
-### Read user profile
-
-Method access permissions: `"user"`.
-
-<!-- tabs:start -->
-
-#### **JavaScript**
-
-<!-- prettier-ignore -->
-```javascript
-const res = await api.call( "/v1/profile/read" );
-```
-
-#### **Shell**
-
-<!-- prettier-ignore -->
-```shell
-curl \
-    -H "Authorization: Bearer <YOUR-API-TOKEN>" \
-    "https://arbitrator.net/api/v1/profile/read"
-```
-
-<!-- tabs:end -->
 
 ### Set user email
 
