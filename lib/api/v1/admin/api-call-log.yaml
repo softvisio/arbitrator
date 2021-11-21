@@ -1,1 +1,1 @@
-extends: "#app/prototypes/admin/api-call-log"
+extends: "#core/app/prototypes/admin/api-call-log"

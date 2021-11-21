@@ -1,1 +1,1 @@
-extends: "#app/prototypes/admin/users"
+extends: "#core/app/prototypes/admin/users"
