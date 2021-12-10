@@ -1,4 +1,14 @@
 module: main
 type: pgsql
 patch: ~
-emits: []
+emits: ["test"]
+cron:
+  # reindex:
+  #   cron: "0 0 * * 0" # 00:00 Sunday
+  #   timezone: ~
+  #   query: "REINDEX DATABASE CONCURRENTLY arbitrator"
+
+  # test:
+  #   cron: "*/5 * * * * *" # 00:00 Sunday
+  #   timezone: ~
+  #   query: "SELECT pg_notify( 'test', json_build_object('date', current_timestamp::text)::text )"
