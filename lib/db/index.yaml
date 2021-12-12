@@ -1,14 +1,26 @@
 module: main
 type: pgsql
 patch: ~
+
 emits: ["test"]
+
 cron:
-  # reindex:
-  #   cron: "0 0 * * 0" # 00:00 Sunday
-  #   timezone: ~
-  #   query: "REINDEX DATABASE CONCURRENTLY arbitrator"
+  vacuum:
+    cron: "0 0 * * 1" # Monday, 00:00
+    timezone: ~
+    query: "VACUUM ANALYZE"
+
+  reindex-database:
+    cron: "0 0 * * 0" # Sunday, 00:00
+    timezone: ~
+    query: "REINDEX DATABASE arbitrator"
+
+  reindex-system:
+    cron: "0 3 * * 0" # Sunday, 02:00
+    timezone: ~
+    query: "REINDEX SYSTEM arbitrator"
 
   # test:
-  #   cron: "*/5 * * * * *" # 00:00 Sunday
+  #   cron: "*/1 * * * * *" # 00:00 Sunday
   #   timezone: ~
-  #   query: "SELECT pg_notify( 'test', json_build_object('date', current_timestamp::text)::text )"
+  #   query: "DO $$ BEGIN PERFORM pg_sleep(5); PERFORM pg_notify( 'test', json_build_object( 'date', current_timestamp::text )::text ); END; $$;"
