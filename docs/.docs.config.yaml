@@ -13,4 +13,4 @@ api:
 
 rpc:
   location: lib/rpc
-  url: wss://arbitrator:8080/
+  url: wss://arbitrator/api/
