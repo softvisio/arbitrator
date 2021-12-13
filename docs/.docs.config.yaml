@@ -9,8 +9,8 @@ externalTypes:
 
 api:
   location: lib/api
-  url: wss://arbitrator.net/api/
+  url: wss://arbitrator.net/api
 
 rpc:
   location: lib/rpc
-  url: wss://arbitrator/api/
+  url: wss://arbitrator/api
