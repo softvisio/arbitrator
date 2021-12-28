@@ -19,6 +19,8 @@
                 <ext-button text="Refresh" @tap="_reloadCreatives"/>
             </ext-toolbar>
 
+            <ext-chart flex="1" title="chart 1" @ready="chartReady"/>
+
             <ext-grid scrollToTopOnRefresh1="true" @ready="_gridReady">
                 <ext-column text="ID" dataIndex="id" flex="1"/>
             </ext-grid>
@@ -30,7 +32,8 @@
                 <ext-spacer/>
                 <ext-button text="Refresh"/>
             </ext-toolbar>
-            <ext-chart flex="1" @ready="chartReady"/>
+            <ext-chart flex="1" title="chart 1" @ready="chartReady"/>
+            <ext-panel title="test"/>
             <ext-chart flex="1" @ready="chartReady"/>
         </ext-panel>
 
@@ -42,7 +45,7 @@
 
 <script>
 import { defineAsyncComponent } from "vue";
-import "#vue/components/charts";
+import "#ext-charts";
 
 const StreamsPanel = defineAsyncComponent( () => import( "./streams/panel" ) );
 
@@ -100,7 +103,7 @@ export default {
             const chart = e.detail.cmp;
 
             chart.setLegend( {
-                "docked": "right",
+                "docked": "bottom",
             } );
 
             chart.setAxes( [
