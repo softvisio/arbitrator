@@ -7,15 +7,15 @@
             <ext-button ref="refreshButton" iconCls="fas fa-redo" text="Refresh"/>
         </ext-toolbar>
 
-        <ext-froalaeditorfield flex="1" editor='{"heightMax":300}'/>
+        <!-- <ext-froalaeditorfield flex="1" editor='{"heightMax":300}'/> -->
 
         <!-- <Panel/> -->
     </ext-panel>
 </template>
 
 <script>
-import "#vue/components/froala-editor";
 
+// import "#vue/components/froala-editor";
 // import Panel from "#vue/components/profile/panel";
 
 export default {
