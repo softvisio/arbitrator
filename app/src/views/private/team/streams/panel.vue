@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import "#vue/components/froala";
+import "#vue/components/froala-editor";
 
 // import Panel from "#vue/components/profile/panel";
 

@@ -19,6 +19,15 @@
                 <ext-button text="Refresh" @tap="_reloadCreatives"/>
             </ext-toolbar>
 
+            <ext-dialog title="aaa" width="90%" height="80%" scrollable1="true" closable="true" layout="vbox" displayed="true">
+                <ext-panel title="test" flex="1" layout="vbox">
+                    <ext-textfield label="Text"/>
+                    <ext-froalaeditorfield flex="1" margin1="0 50 0 50"/>
+                    <ext-textfield label="Text"/>
+                    <!-- <ext-froalaeditor flex="1"/> -->
+                </ext-panel>
+            </ext-dialog>
+
             <ext-chart flex="1" title="chart 1" @ready="chartReady"/>
 
             <ext-grid scrollToTopOnRefresh1="true" @ready="_gridReady">
@@ -46,6 +55,7 @@
 <script>
 import { defineAsyncComponent } from "vue";
 import "#ext-charts";
+import "#vue/components/froala-editor";
 
 const StreamsPanel = defineAsyncComponent( () => import( "./streams/panel" ) );
 
