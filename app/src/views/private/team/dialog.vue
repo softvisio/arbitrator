@@ -7,10 +7,6 @@
 </template>
 
 <script>
-
-// await import( "#vue/components/froala-editor" );
-// await import( "#vue/components/ext-charts" );
-
 import "#vue/components/froala-editor";
 import "#vue/components/ext-charts";
 
