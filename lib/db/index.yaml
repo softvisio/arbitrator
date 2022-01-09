@@ -12,7 +12,7 @@ cron:
       - REINDEX DATABASE CONCURRENTLY CURRENT_DATABASE
       - REINDEX SYSTEM CURRENT_DATABASE
       - VACUUM ANALYZE
-    as_superuser: true
+    run_as_superuser: true
 
   # test:
   #   cron: "*/1 * * * * *" # 00:00 Sunday
