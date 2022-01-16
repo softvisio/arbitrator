@@ -8,10 +8,7 @@ cron:
   maintenance:
     cron: "0 0 * * 0" # Sunday, 00:00
     timezone: ~
-    query:
-      - REINDEX DATABASE CONCURRENTLY CURRENT_DATABASE
-      - REINDEX SYSTEM CURRENT_DATABASE
-      - VACUUM ANALYZE
+    query: VACUUM ANALYZE
     run_as_superuser: true
 
   # test:
