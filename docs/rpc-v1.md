@@ -2,8 +2,8 @@
 
 ### API connect URLs
 
--   API HTTP URL: `https://arbitrator:8080/`
--   API WebSockets URL: `wss://arbitrator:8080/`
+-   API HTTP URL: `https://arbitrator/api/`
+-   API WebSockets URL: `wss://arbitrator/api/`
 
 <!-- tabs:start -->
 
@@ -13,7 +13,7 @@
 ```javascript
 import Api from "@softvisio/core/api";
 
-const api = Api.new( "wss://arbitrator:8080/" )
+const api = Api.new( "wss://arbitrator/api/" )
 ```
 
 #### **HTTP**
@@ -22,7 +22,7 @@ const api = Api.new( "wss://arbitrator:8080/" )
 ```javascript
 import Api from "@softvisio/core/api";
 
-const api = Api.new( "https://arbitrator:8080/" )
+const api = Api.new( "https://arbitrator/api/" )
 ```
 
 <!-- tabs:end -->
@@ -49,7 +49,7 @@ curl \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
     -d '[args?, test?]' \
-    "https://arbitrator:8080/v1/test/test"
+    "https://arbitrator/api/v1/test/test"
 ```
 
 <!-- tabs:end -->
@@ -81,7 +81,7 @@ curl \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
     -d '[file, data?]' \
-    "https://arbitrator:8080/v1/test/upload"
+    "https://arbitrator/api/v1/test/upload"
 ```
 
 <!-- tabs:end -->
