@@ -13,6 +13,6 @@
         "dev": "softvisio-webpack dev --mode=development"
     },
     "devDependencies": {
-        "@softvisio/vue-ext": "^7.0.0-alpha.0"
+        "@softvisio/vue-ext": "^7.0.0"
     }
 }
