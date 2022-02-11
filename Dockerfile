@@ -6,7 +6,7 @@ RUN \
     \
     # build app
     && pushd app \
-    && npm i \
+    && NODE_ENV= npm i \
     && npm run build \
     && rm -rf .[!.]* !(www) \
     && popd \
