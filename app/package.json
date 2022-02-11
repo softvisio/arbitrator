@@ -5,7 +5,8 @@
     "type": "module",
     "imports": {
         "#core/*": "@softvisio/core/*",
-        "#vue/*": "@softvisio/vue-ext/*"
+        "#vue/*": "@softvisio/vue-ext/*",
+        "#resources/*": "./resources/*"
     },
     "scripts": {
         "build": "softvisio-webpack build --mode=production",
