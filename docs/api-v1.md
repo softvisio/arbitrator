@@ -1200,6 +1200,30 @@ curl \
 
 ## Session
 
+### Check authentcation
+
+Method access permissions: `"*"`.
+
+<!-- tabs:start -->
+
+#### **JavaScript**
+
+<!-- prettier-ignore -->
+```javascript
+const res = await api.call( "/v1/session/check-authentication" );
+```
+
+#### **Shell**
+
+<!-- prettier-ignore -->
+```shell
+curl \
+    -H "Authorization: Bearer <YOUR-API-TOKEN>" \
+    "https://arbitrator.net/api/v1/session/check-authentication"
+```
+
+<!-- tabs:end -->
+
 ### Signin
 
 Method access permissions: `"*"`.
@@ -1210,7 +1234,7 @@ Method access permissions: `"*"`.
 
 <!-- prettier-ignore -->
 ```javascript
-const res = await api.call( "/v1/session/signin", credentials?, signin_permissions? );
+const res = await api.call( "/v1/session/signin", credentials, signin_permissions? );
 ```
 
 #### **Shell**
@@ -1221,13 +1245,13 @@ curl \
     -X POST \
     -H "Authorization: Bearer <YOUR-API-TOKEN>" \
     -H "Content-Type: application/json" \
-    -d '[credentials?, signin_permissions?]' \
+    -d '[credentials, signin_permissions?]' \
     "https://arbitrator.net/api/v1/session/signin"
 ```
 
 <!-- tabs:end -->
 
--   `credentials?` <Object\>
+-   `credentials` <Object\>
 -   `signin_permissions?` <null\> | <Array\> Array of permissions. Only user, who has this permissions can sign in. If `null` permissions will not check.
 
 If `credentials` parameter is specified - will try to sign in user using username and password, otherwise will try to sign in user, using currently used api token.
