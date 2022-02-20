@@ -2,7 +2,7 @@
     <ext-tabpanel tabBarPosition="left" tabRotation="none" tabBar='{"layout":{"type":"vbox","pack":"start","align":"start"},"defaults":{"padding":"0 10 0 10","width":80,"height":50,"flex":null,"textAlign":"center","style":"font-size:.5em"}}' layout='{"animation":{"type":"slide","direction":"vertical"}}'>
         <StreamsPanel/>
 
-        <!-- <ext-panel iconCls="fas fa-exchange-alt" title="Streams" layout="fit"> -->
+        <!-- <ext-panel iconCls="fa-solid fa-exchange-alt" title="Streams" layout="fit"> -->
         <!--     <ext-toolbar docked="top"> -->
         <!--         <ext-container html="Streams"/> -->
         <!--         <ext-spacer/> -->
@@ -12,7 +12,7 @@
         <!--     <StreamsPanel/> -->
         <!-- </ext-panel> -->
 
-        <ext-panel iconCls="far fa-images" title="Creatives" layout="fit">
+        <ext-panel iconCls="fa-solid fa-images" title="Creatives" layout="fit">
             <ext-toolbar docked="top">
                 <ext-container html="Creatives"/>
                 <ext-spacer/>
@@ -27,7 +27,7 @@
             </ext-grid>
         </ext-panel>
 
-        <ext-panel iconCls="fas fa-user-friends" title="Users" layout="vbox">
+        <ext-panel iconCls="fa-solid fa-user-friends" title="Users" layout="vbox">
             <ext-toolbar docked="top">
                 <ext-container html="Teams"/>
                 <ext-spacer/>
@@ -37,9 +37,9 @@
             <ext-chart flex="1" @ready="chartReady"/>
         </ext-panel>
 
-        <ext-panel iconCls="fas fa-flag-checkered" title="Reports"/>
-        <ext-panel iconCls="fas fa-ad" title="Teams"/>
-        <ext-panel iconCls="fas fa-dollar-sign" title="Account"/>
+        <ext-panel iconCls="fa-solid fa-flag-checkered" title="Reports"/>
+        <ext-panel iconCls="fa-solid fa-ad" title="Teams"/>
+        <ext-panel iconCls="fa-solid fa-dollar-sign" title="Account"/>
     </ext-tabpanel>
 </template>
 

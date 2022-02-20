@@ -6,12 +6,12 @@
             <!-- </template> -->
 
             <template #title>
-                <ext-button ref="teamsButton" align="right" iconCls="fas fa-user-friends" text="Select Team" textAlign="left" width="200" padding="0 0 0 5" ui="action" stretchMenu="true"/>
-                <ext-button align="right" iconCls="fas fa-plus" tooltip="Create team" :hidden1="!canCreateTeam" margin="0 10 0 0" ui="action" @tap="showCreateTeamDialog"/>
+                <ext-button ref="teamsButton" align="right" iconCls="fa-solid fa-user-friends" text="Select Team" textAlign="left" width="200" padding="0 0 0 5" ui="action" stretchMenu="true"/>
+                <ext-button align="right" iconCls="fa-solid fa-plus" tooltip="Create team" :hidden1="!canCreateTeam" margin="0 10 0 0" ui="action" @tap="showCreateTeamDialog"/>
             </template>
 
             <template #menuTop>
-                <ext-button iconCls="fas fa-users" text="Users" textAlign="left" :hidden="!isAdmin" @tap="showUsersDialog"/>
+                <ext-button iconCls="fa-solid fa-users" text="Users" textAlign="left" :hidden="!isAdmin" @tap="showUsersDialog"/>
             </template>
         </Title>
 
@@ -61,7 +61,7 @@ export default {
                 menu = {
                     "items": this.$store.session.settings.teams.map( team => {
                         return {
-                            "iconCls": "fas fa-user-friends",
+                            "iconCls": "fa-solid fa-user-friends",
                             "text": team.name,
                             "handler": this._switchTeam.bind( this, team ),
                         };
@@ -69,7 +69,7 @@ export default {
                 };
 
                 menu.items.push( {
-                    "iconCls": "fas fa-plus",
+                    "iconCls": "fa-solid fa-plus",
                     "text": "Create New Team",
                     "handler": this.showCreateTeamDialog.bind( this ),
                 } );

@@ -1,10 +1,10 @@
 <template>
-    <ext-panel iconCls="fas fa-exchange-alt" title="Streams" layout="fit">
+    <ext-panel iconCls="fa-solid fa-exchange-alt" title="Streams" layout="fit">
         <ext-toolbar docked="top">
             <ext-container html="Streams"/>
             <ext-spacer/>
             <ext-filebutton text="Upload" @change="upload"/>
-            <ext-button ref="refreshButton" iconCls="fas fa-redo" text="Refresh"/>
+            <ext-button ref="refreshButton" iconCls="fa-solid fa-redo" text="Refresh"/>
         </ext-toolbar>
 
         <!-- <ext-froalaeditorfield flex="1" editor='{"heightMax":300}'/> -->
