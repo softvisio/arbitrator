@@ -2,6 +2,17 @@
     "name": "arbitrator-ui",
     "version": "0.0.0",
     "private": true,
+    "homepage": "https://github.com/softvisio/arbitrator",
+    "bugs": {
+        "url": "https://github.com/softvisio/arbitrator/issues",
+        "email": "zdm <zdm@softvisio.net>"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/softvisio/arbitrator.git"
+    },
+    "license": "Proprietary Software",
+    "author": "zdm <zdm@softvisio.net>",
     "type": "module",
     "imports": {
         "#core/*": "@softvisio/core/*",
