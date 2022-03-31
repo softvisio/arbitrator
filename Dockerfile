@@ -8,7 +8,7 @@ RUN \
     && pushd app \
     && NODE_ENV= npm i \
     && npm run build \
-    && rm -rf .[!.]* !(www) \
+    && mv www /tmp && rm -rf * && mv /tmp/www . \
     && popd \
     \
     # cleanup
