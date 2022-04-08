@@ -16,11 +16,11 @@ services:
       placement:
         max_replicas_per_node: 3
       labels:
-        nginx.server-name:
-        nginx.client-max-body-size: 10m
-        nginx.cache: "true"
-        nginx.cache.max-size: 10g
-        nginx.cache.inactive: 1w
+        nginx.http.server-name:
+        nginx.http.client-max-body-size: 10m
+        nginx.http.cache.enabled: "true"
+        nginx.http.cache.max-size: 10g
+        nginx.http.cache.inactive: 1w
 
     healthcheck:
       test: curl -f http://127.0.0.1/api/healthcheck || exit 1
