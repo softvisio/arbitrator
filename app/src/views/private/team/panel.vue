@@ -191,9 +191,8 @@ export default {
             var xRenderer = am5xy.AxisRendererX.new( root, { "minGridDistance": 30 } );
             xRenderer.labels.template.setAll( {
                 "rotation": -90,
-
-                // "centerY": am5.p50,
-                // "centerX": am5.p100,
+                "centerY": am5.p50,
+                "centerX": am5.p100,
                 "paddingRight": 15,
             } );
 
