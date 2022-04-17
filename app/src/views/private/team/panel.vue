@@ -170,7 +170,6 @@ export default {
             } );
         },
 
-        // XXX
         _amchartReady ( cmp ) {
             const root = cmp.root,
                 am5 = cmp.am5;
