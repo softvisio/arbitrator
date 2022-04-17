@@ -20,7 +20,7 @@
                 <ext-button text="Refresh" @tap="_reloadCreatives"/>
             </ext-toolbar>
 
-            <AmchartsPanel height="300" :animated="false" :responsive="true" :micro="false" @ready="_amchartReady"/>
+            <AmchartsPanel flex="1" :animated="false" :responsive="true" :micro="false" @ready="_amchartReady"/>
 
             <ext-chart flex="1" title="chart 1" @ready="chartReady"/>
 
@@ -183,13 +183,11 @@ export default {
                 "pinchZoomX": true,
             } ) );
 
-            // Add cursor
-            // https://www.amcharts.com/docs/v5/charts/xy-chart/cursor/
+            // add cursor, https://www.amcharts.com/docs/v5/charts/xy-chart/cursor/
             var cursor = chart.set( "cursor", am5xy.XYCursor.new( root, {} ) );
             cursor.lineY.set( "visible", false );
 
-            // Create axes
-            // https://www.amcharts.com/docs/v5/charts/xy-chart/axes/
+            // create axes, https://www.amcharts.com/docs/v5/charts/xy-chart/axes/
             var xRenderer = am5xy.AxisRendererX.new( root, { "minGridDistance": 30 } );
             xRenderer.labels.template.setAll( {
                 "rotation": -90,
@@ -211,8 +209,7 @@ export default {
                 "renderer": am5xy.AxisRendererY.new( root, {} ),
             } ) );
 
-            // Create series
-            // https://www.amcharts.com/docs/v5/charts/xy-chart/series/
+            // create series, https://www.amcharts.com/docs/v5/charts/xy-chart/series/
             var series = chart.series.push( am5xy.ColumnSeries.new( root, {
                 "name": "Series 1",
                 "xAxis": xAxis,
@@ -234,7 +231,7 @@ export default {
                 return chart.get( "colors" ).getIndex( series.columns.indexOf( target ) );
             } );
 
-            // Set data
+            // set data
             var data = [
                 {
                     "country": "USA",
@@ -289,8 +286,7 @@ export default {
             xAxis.data.setAll( data );
             series.data.setAll( data );
 
-            // Make stuff animate on load
-            // https://www.amcharts.com/docs/v5/concepts/animations/
+            // make stuff animate on load, https://www.amcharts.com/docs/v5/concepts/animations/
             series.appear( 1000 );
             chart.appear( 1000, 100 );
         },
