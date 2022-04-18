@@ -19,6 +19,9 @@ methods:
         schema:
           type: [string, object]
 
+  download:
+    title: Test download
+
   read:
     title: Get API method access log
     params:

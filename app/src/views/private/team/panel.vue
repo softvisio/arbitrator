@@ -16,6 +16,7 @@
             <ext-toolbar docked="top">
                 <ext-container html="Creatives"/>
                 <ext-spacer/>
+                <ext-button text="Download" @tap="download"/>
                 <ext-button text="Show Dialog" @tap="showDialog"/>
                 <ext-button text="Refresh" @tap="_reloadCreatives"/>
             </ext-toolbar>
@@ -287,6 +288,17 @@ export default {
             // make stuff animate on load, https://www.amcharts.com/docs/v5/concepts/animations/
             series.appear( 1000 );
             chart.appear( 1000, 100 );
+        },
+
+        async download () {
+            const res = await this.$api.call( "test/download" );
+
+            if ( !res.ok ) {
+                this.$utils.toast( res );
+            }
+            else {
+                this.$utils.saveAs( res.data );
+            }
         },
     },
 };
