@@ -21,7 +21,7 @@
                 <ext-button text="Refresh" @tap="_reloadCreatives"/>
             </ext-toolbar>
 
-            <AmchartsPanel flex="1" :animated="false" :responsive="true" :micro="false" @ready="_amchartReady"/>
+            <AmchartsPanel flex="1" :animated="true" :responsive="true" :micro="false" @ready="_amchartReady"/>
 
             <ext-chart flex="1" title="chart 1" @ready="chartReady"/>
 
@@ -282,8 +282,18 @@ export default {
                 },
             ];
 
-            xAxis.data.setAll( data );
-            series.data.setAll( data );
+            cmp.onData = data => {
+                xAxis.data.setAll( data );
+                series.data.setAll( data );
+            };
+
+            cmp.setData( data );
+
+            setInterval( () => {
+                data.forEach( item => ( item.value = Math.floor( Math.random() * 1000 ) ) );
+
+                cmp.setData( data );
+            }, 3000 );
 
             // make stuff animate on load, https://www.amcharts.com/docs/v5/concepts/animations/
             series.appear( 1000 );
