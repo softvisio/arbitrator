@@ -234,51 +234,43 @@ export default {
             var data = [
                 {
                     "country": "USA",
-                    "value": 2025,
+                    "value": 100,
                 },
                 {
                     "country": "China",
-                    "value": 1882,
+                    "value": 200,
                 },
                 {
                     "country": "Japan",
-                    "value": 1809,
+                    "value": 300,
                 },
                 {
                     "country": "Germany",
-                    "value": 1322,
+                    "value": 400,
                 },
                 {
                     "country": "UK",
-                    "value": 1122,
+                    "value": 500,
                 },
                 {
                     "country": "France",
-                    "value": 1114,
+                    "value": 600,
                 },
                 {
                     "country": "India",
-                    "value": 984,
+                    "value": 700,
                 },
                 {
                     "country": "Spain",
-                    "value": 711,
+                    "value": 800,
                 },
                 {
                     "country": "Netherlands",
-                    "value": 665,
+                    "value": 900,
                 },
                 {
                     "country": "Russia",
                     "value": 580,
-                },
-                {
-                    "country": "South Korea",
-                    "value": 443,
-                },
-                {
-                    "country": "Canada",
-                    "value": 441,
                 },
             ];
 
@@ -289,11 +281,13 @@ export default {
 
             cmp.setData( data );
 
-            setInterval( () => {
+            clearInterval( cmp.interval );
+
+            cmp.interval = setInterval( () => {
                 data.forEach( item => ( item.value = Math.floor( Math.random() * 1000 ) ) );
 
                 cmp.setData( data );
-            }, 3000 );
+            }, 1000 );
 
             // make stuff animate on load, https://www.amcharts.com/docs/v5/concepts/animations/
             series.appear( 1000 );
