@@ -1,7 +1,5 @@
 FROM ghcr.io/zerocluster/node
 
-LABEL org.opencontainers.image.source="https://github.com/zdm/arbitrator"
-
 RUN \
     # install deps
     npm i --omit=dev \
