@@ -21,12 +21,13 @@
                 <ext-button text="Refresh" @tap="_reloadCreatives"/>
             </ext-toolbar>
 
-            <AmchartsPanel flex="1" :animated="true" :responsive="true" :micro="false" @ready="_amchartReady"/>
+            <AmchartsPanel flex="1" :animated="true" :responsive="true" :micro="false" @ready="_amchartReady" @data="_amchartData"/>
 
             <ext-chart flex="1" title="chart 1" @ready="chartReady"/>
 
-            <ext-grid scrollToTopOnRefresh1="true" @ready="_gridReady">
-                <ext-column text="ID" dataIndex="id" flex="1"/>
+            <ext-grid scrollToTopOnRefresh1="true" viewModel="true" @ready="_gridReady">
+                <ext-column text="Id" dataIndex="id" flex="1"/>
+                <ext-column width="200" columnMenu="false" @ready="_actionColReady"/>
             </ext-grid>
         </ext-panel>
 
@@ -72,6 +73,8 @@ export default {
 
             // cmp.setScrollToTopOnRefresh( true );
 
+            cmp.setItemConfig( { "viewModel": true } );
+
             const model = Ext.define( "", {
                 "extend": "Ext.data.Model",
                 "proxy": {
@@ -80,7 +83,14 @@ export default {
                     },
                 },
 
-                "fields": [{ "name": "id", "type": "string" }],
+                "fields": [
+                    { "name": "id", "type": "string" },
+                    {
+                        "nams": "chartData",
+                        "type": "array",
+                        "calculate": data => this._generateChartData(),
+                    },
+                ],
             } );
 
             this.creativesStore = Ext.create( "Ext.data.Store", {
@@ -230,7 +240,31 @@ export default {
                 return chart.get( "colors" ).getIndex( series.columns.indexOf( target ) );
             } );
 
-            // set data
+            // make stuff animate on load, https://www.amcharts.com/docs/v5/concepts/animations/
+            series.appear( 1000 );
+            chart.appear( 1000, 100 );
+
+            cmp.xAxis = xAxis;
+            cmp.series = series;
+
+            cmp.setData( this._generateChartData() );
+
+            // const store = Ext.create( "Ext.data.Store", { "data": this._generateChartData() } );
+            // cmp.setStore( store );
+
+            // clearInterval( cmp.interval );
+
+            // cmp.interval = setInterval( () => {
+            //     cmp.setData( this._generateChartData() );
+            // }, 1000 );
+        },
+
+        _amchartData ( cmp, data ) {
+            cmp.xAxis.data.setAll( data );
+            cmp.series.data.setAll( data );
+        },
+
+        _generateChartData () {
             var data = [
                 {
                     "country": "USA",
@@ -274,24 +308,9 @@ export default {
                 },
             ];
 
-            cmp.onData = data => {
-                xAxis.data.setAll( data );
-                series.data.setAll( data );
-            };
+            data.forEach( item => ( item.value = Math.floor( Math.random() * 1000 ) ) );
 
-            cmp.setData( data );
-
-            clearInterval( cmp.interval );
-
-            cmp.interval = setInterval( () => {
-                data.forEach( item => ( item.value = Math.floor( Math.random() * 1000 ) ) );
-
-                cmp.setData( data );
-            }, 1000 );
-
-            // make stuff animate on load, https://www.amcharts.com/docs/v5/concepts/animations/
-            series.appear( 1000 );
-            chart.appear( 1000, 100 );
+            return data;
         },
 
         async download () {
@@ -303,6 +322,27 @@ export default {
             else {
                 this.$utils.saveAs( res.data );
             }
+        },
+
+        _actionColReady ( e ) {
+            const cmp = e.detail.cmp;
+
+            cmp.setCell( {
+                "xtype": "widgetcell",
+                "widget": {
+                    "xtype": "amcharts5",
+                    "height": 30,
+                    "responsive": true,
+                    "micro": true,
+                    "createChart": this._amchartReady.bind( this ),
+                    "onData": this._amchartData.bind( this ),
+                    "bind": { "data": "{record.chartData}" },
+
+                    // onData ( data ) {
+                    //     console.log( "--- data", data );
+                    // },
+                },
+            } );
         },
     },
 };
