@@ -260,8 +260,8 @@ export default {
         },
 
         _amchartData ( cmp, data ) {
-            cmp.xAxis.data.setAll( data );
-            cmp.series.data.setAll( data );
+            cmp.xAxis.data.setAll( data || [] );
+            cmp.series.data.setAll( data || [] );
         },
 
         _generateChartData () {
@@ -335,10 +335,10 @@ export default {
                     "responsive": true,
                     "micro": true,
                     "createChart": this._amchartReady.bind( this ),
-                    "onData": this._amchartData.bind( this ),
+                    "updateChart": this._amchartData.bind( this ),
                     "bind": { "data": "{record.chartData}" },
 
-                    // onData ( data ) {
+                    // updateChart ( cmp, data ) {
                     //     console.log( "--- data", data );
                     // },
                 },
