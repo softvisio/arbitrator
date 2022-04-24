@@ -12,6 +12,11 @@
         <!--     <StreamsPanel/> -->
         <!-- </ext-panel> -->
 
+        <!-- api call log -->
+        <ext-panel iconCls="fa-solid fa-flag-checkered" layout="fit" title="Reports">
+            <ApiCallLogPanel layout="fit"/>
+        </ext-panel>
+
         <ext-panel iconCls="fa-solid fa-images" title="Creatives" layout="fit">
             <ext-toolbar docked="top">
                 <ext-container html="Creatives"/>
@@ -41,7 +46,6 @@
             <ext-chart flex="1" @ready="chartReady"/>
         </ext-panel>
 
-        <ext-panel iconCls="fa-solid fa-flag-checkered" title="Reports"/>
         <ext-panel iconCls="fa-solid fa-ad" title="Teams"/>
         <ext-panel iconCls="fa-solid fa-dollar-sign" title="Account"/>
     </ext-tabpanel>
@@ -52,6 +56,7 @@ import { defineAsyncComponent } from "vue";
 
 import "#vue/components/froala-editor";
 import "#vue/components/ext-charts";
+import ApiCallLogPanel from "#vue/components/api-call-log/panel";
 
 import AmchartsPanel from "#vue/components/amcharts5/panel";
 import * as am5xy from "@amcharts/amcharts5/xy";
@@ -65,7 +70,7 @@ const Dialog = defineAsyncComponent( () => import( /* webpackPrefetch: true */ "
 // import Dialog from "./dialog";
 
 export default {
-    "components": { StreamsPanel, AmchartsPanel },
+    "components": { StreamsPanel, AmchartsPanel, ApiCallLogPanel },
 
     "methods": {
         _gridReady ( e ) {
@@ -228,7 +233,8 @@ export default {
                 } ),
             } ) );
 
-            series.columns.template.setAll( { "cornerRadiusTL": 5, "cornerRadiusTR": 5 } );
+            // series.columns.template.setAll( { "cornerRadiusTL": 5, "cornerRadiusTR": 5 } );
+
             series.columns.template.adapters.add( "fill", function ( fill, target ) {
                 return chart.get( "colors" ).getIndex( series.columns.indexOf( target ) );
             } );
