@@ -26,7 +26,7 @@
                 <ext-button text="Refresh" @tap="_reloadCreatives"/>
             </ext-toolbar>
 
-            <AmchartsPanel flex="1" :animated="true" :responsive="true" :micro="false" @ready="_amchartCreate" @data="_amchartUpdate"/>
+            <AmchartsPanel flex="1" :animated="true" :responsive="true" :micro="false" @ready="_amchartCreate"/>
 
             <ext-chart flex="1" title="chart 1" @ready="chartReady"/>
 
@@ -184,6 +184,8 @@ export default {
         },
 
         _amchartCreate ( cmp ) {
+            cmp.updateChart = this._amchartUpdate.bind( this );
+
             const root = cmp.root,
                 am5 = cmp.am5;
 
