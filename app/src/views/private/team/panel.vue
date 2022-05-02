@@ -26,7 +26,7 @@
                 <ext-button text="Refresh" @tap="_reloadCreatives"/>
             </ext-toolbar>
 
-            <AmchartsPanel flex="1" :animated="true" :responsive="true" :micro="false" @ready="_amchartCreate"/>
+            <Amcharts5 flex="1" :animated="true" :responsive="true" :micro="false" @ready="_amchartCreate"/>
 
             <ext-chart flex="1" title="chart 1" @ready="chartReady"/>
 
@@ -58,7 +58,7 @@ import "#vue/components/froala-editor";
 import "#vue/components/ext-charts";
 import ApiCallLogPanel from "#vue/components/api-call-log/panel";
 
-import AmchartsPanel from "#vue/components/amcharts5/panel";
+import Amcharts5 from "#vue/components/amcharts5";
 import * as am5xy from "@amcharts/amcharts5/xy";
 
 const StreamsPanel = defineAsyncComponent( () => import( "./streams/panel" ) );
@@ -70,7 +70,7 @@ const Dialog = defineAsyncComponent( () => import( /* webpackPrefetch: true */ "
 // import Dialog from "./dialog";
 
 export default {
-    "components": { StreamsPanel, AmchartsPanel, ApiCallLogPanel },
+    "components": { StreamsPanel, Amcharts5, ApiCallLogPanel },
 
     "methods": {
         _gridReady ( e ) {
