@@ -1,6 +1,6 @@
 <template>
     <ext-panel ref="panel" layout="fit" scrollable="true" @ready="ready">
-        <Title ref="title" @showProfileDialog="showProfileDialog">
+        <AppTitle ref="title" @showProfileDialog="showProfileDialog">
             <!-- <template #logo> -->
             <!--     <ext-image :src="logo" align="left" width="32" height="32" style="background-color: white" margin="0 10 0 0"/> -->
             <!-- </template> -->
@@ -13,14 +13,14 @@
             <template #menuTop>
                 <ext-button iconCls="fa-solid fa-users" text="Users" textAlign="left" :hidden="!isAdmin" @tap="showUsersDialog"/>
             </template>
-        </Title>
+        </AppTitle>
 
         <TeamPanel ref="teamPanel"/>
     </ext-panel>
 </template>
 
 <script>
-import Title from "#vue/components/title/titlebar";
+import AppTitle from "#vue/components/app-title";
 import UsersDialog from "#vue/components/users/dialog";
 import ProfileDialog from "./private/profile/dialog";
 import TeamPanel from "./private/team/panel";
@@ -30,7 +30,7 @@ import TeamPanel from "./private/team/panel";
 import LOGO from "@/assets/logo.png";
 
 export default {
-    "components": { Title, TeamPanel },
+    "components": { AppTitle, TeamPanel },
 
     data () {
         return {
