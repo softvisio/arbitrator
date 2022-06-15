@@ -1,6 +1,6 @@
 <template>
     <ext-panel ref="panel" layout="fit" scrollable="true" @ready="ready">
-        <AppTitle ref="title" @showProfileDialog="showProfileDialog">
+        <AppTitle ref="title" @showAccountDialog="showAccountDialog">
             <!-- <template #logo> -->
             <!--     <ext-image :src="logo" align="left" width="32" height="32" style="background-color: white" margin="0 10 0 0"/> -->
             <!-- </template> -->
@@ -22,7 +22,7 @@
 <script>
 import AppTitle from "#vue/components/app-title";
 import UsersDialog from "#vue/components/users/dialog";
-import ProfileDialog from "./private/profile/dialog";
+import AccountDialog from "./private/account/dialog";
 import TeamPanel from "./private/team/panel";
 
 // import * as CONST from "@/const";
@@ -106,8 +106,8 @@ export default {
             cmp.ext.show();
         },
 
-        async showProfileDialog () {
-            const cmp = await this.$mount( ProfileDialog );
+        async showAccountDialog () {
+            const cmp = await this.$mount( AccountDialog );
 
             cmp.ext.show();
         },

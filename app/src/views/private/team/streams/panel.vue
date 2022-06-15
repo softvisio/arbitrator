@@ -16,7 +16,7 @@
 <script>
 
 // import "#vue/components/froala-editor";
-// import Panel from "#vue/components/profile/panel";
+// import Panel from "#vue/components/account/panel";
 
 export default {
 
