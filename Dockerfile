@@ -4,8 +4,8 @@ RUN \
     # install deps
     npm i --omit=dev \
     \
-    # build app
-    && pushd app \
+    # build frontend
+    && pushd frontend \
     && NODE_ENV= npm i \
     && npm run build \
     && mv www /tmp && rm -rf * && mv /tmp/www . \
