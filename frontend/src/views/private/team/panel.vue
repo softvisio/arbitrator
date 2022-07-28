@@ -1,5 +1,5 @@
 <template>
-    <ext-tabpanel layout='{"animation":{"type":"slide","direction":"vertical"}}' tabBar='{"layout":{"type":"vbox","pack":"start","align":"start"},"defaults":{"padding":"0 10 0 10","width":80,"height":50,"flex":null,"textAlign":"center","style":"font-size:.5em"}}' tabBarPosition="left" tabRotation="none">
+    <ext-tabpanel layout='{"animation":{"direction":"vertical","type":"slide"}}' tabBar='{"defaults":{"flex":null,"height":50,"padding":"0 10 0 10","style":"font-size:.5em","textAlign":"center","width":80},"layout":{"align":"start","pack":"start","type":"vbox"}}' tabBarPosition="left" tabRotation="none">
         <StreamsPanel/>
 
         <!-- <ext-panel iconCls="fa-solid fa-exchange-alt" title="Streams" layout="fit"> -->
