@@ -1,5 +1,5 @@
 <template>
-    <ext-tabpanel tabBarPosition="left" tabRotation="none" tabBar='{"layout":{"type":"vbox","pack":"start","align":"start"},"defaults":{"padding":"0 10 0 10","width":80,"height":50,"flex":null,"textAlign":"center","style":"font-size:.5em"}}' layout='{"animation":{"type":"slide","direction":"vertical"}}'>
+    <ext-tabpanel layout='{"animation":{"type":"slide","direction":"vertical"}}' tabBar='{"layout":{"type":"vbox","pack":"start","align":"start"},"defaults":{"padding":"0 10 0 10","width":80,"height":50,"flex":null,"textAlign":"center","style":"font-size:.5em"}}' tabBarPosition="left" tabRotation="none">
         <StreamsPanel/>
 
         <!-- <ext-panel iconCls="fa-solid fa-exchange-alt" title="Streams" layout="fit"> -->
@@ -17,7 +17,7 @@
             <ApiCallLogPanel layout="fit"/>
         </ext-panel>
 
-        <ext-panel iconCls="fa-solid fa-images" title="Creatives" layout="fit">
+        <ext-panel iconCls="fa-solid fa-images" layout="fit" title="Creatives">
             <ext-toolbar docked="top">
                 <ext-container html="Creatives"/>
                 <ext-spacer/>
@@ -26,17 +26,17 @@
                 <ext-button text="Refresh" @tap="_reloadCreatives"/>
             </ext-toolbar>
 
-            <Amcharts5 flex="1" :animated="true" :responsive="true" :micro="false" @ready="_amchartCreate"/>
+            <Amcharts5 :animated="true" flex="1" :micro="false" :responsive="true" @ready="_amchartCreate"/>
 
             <ext-chart flex="1" title="chart 1" @ready="chartReady"/>
 
             <ext-grid scrollToTopOnRefresh1="true" viewModel="true" @ready="_gridReady">
-                <ext-column text="Id" dataIndex="id" flex="1"/>
-                <ext-column width="200" columnMenu="false" @ready="_actionColReady"/>
+                <ext-column dataIndex="id" flex="1" text="Id"/>
+                <ext-column columnMenu="false" width="200" @ready="_actionColReady"/>
             </ext-grid>
         </ext-panel>
 
-        <ext-panel iconCls="fa-solid fa-user-friends" title="Users" layout="vbox">
+        <ext-panel iconCls="fa-solid fa-user-friends" layout="vbox" title="Users">
             <ext-toolbar docked="top">
                 <ext-container html="Teams"/>
                 <ext-spacer/>

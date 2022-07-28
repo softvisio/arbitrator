@@ -1,5 +1,5 @@
 <template>
-    <ext-panel iconCls="fa-solid fa-exchange-alt" title="Streams" layout="fit">
+    <ext-panel iconCls="fa-solid fa-exchange-alt" layout="fit" title="Streams">
         <ext-toolbar docked="top">
             <ext-container html="Streams"/>
             <ext-spacer/>

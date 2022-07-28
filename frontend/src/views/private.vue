@@ -6,12 +6,12 @@
             <!-- </template> -->
 
             <template #title>
-                <ext-button ref="teamsButton" align="right" iconCls="fa-solid fa-user-friends" text="Select Team" textAlign="left" width="200" padding="0 0 0 5" ui="action" stretchMenu="true"/>
-                <ext-button align="right" iconCls="fa-solid fa-plus" tooltip="Create team" :hidden1="!canCreateTeam" margin="0 10 0 0" ui="action" @tap="showCreateTeamDialog"/>
+                <ext-button ref="teamsButton" align="right" iconCls="fa-solid fa-user-friends" padding="0 0 0 5" stretchMenu="true" text="Select Team" textAlign="left" ui="action" width="200"/>
+                <ext-button align="right" :hidden1="!canCreateTeam" iconCls="fa-solid fa-plus" margin="0 10 0 0" tooltip="Create team" ui="action" @tap="showCreateTeamDialog"/>
             </template>
 
             <template #menuTop>
-                <ext-button iconCls="fa-solid fa-users" text="Users" textAlign="left" :hidden="!isAdmin" @tap="showUsersDialog"/>
+                <ext-button :hidden="!isAdmin" iconCls="fa-solid fa-users" text="Users" textAlign="left" @tap="showUsersDialog"/>
             </template>
         </AppTitle>
 

@@ -1,5 +1,5 @@
 <template>
-    <ext-dialog title="Test Dialog" width="90%" height="90%" scrollable="true" closable="false" layout="hbox">
+    <ext-dialog closable="false" height="90%" layout="hbox" scrollable="true" title="Test Dialog" width="90%">
         <ext-froalaeditorfield flex="1"/>
 
         <ext-chart flex="1" title="chart 1" @ready="chartReady"/>
